@@ -1,0 +1,53 @@
+Erreur systématique due à l'appareil : $\sigma_{sys} = 10$~$\mu m$ \\
+Erreur systématique de la référence : $\sigma_{ideal} = $?~$\mu m$ \\
+Erreur statistique de la référence : $\sigma_{ref} = \sqrt{\sigma_{ideal}^2 + \sigma_{sys}^2}$ (mesurée comme étant $<z_{ref}^2> - <z_{ref}>^2) \Rightarrow \sigma_{ideal}^2 = \sigma_{ref}^2 - \sigma_{sys}^2$.\\
+Comme nous calculons la hauteur absolue en un point $i$ du LEM comme $z_i = (z - <z_{ref}>) + z_{ideal}$ nous avons :
+\begin{equation}
+    \sigma_{z_i}^2 = \sigma_{sys}^2 + \sigma_{ref}^2 + \sigma_{ideal}^2 = 2\sigma_{ref}^2
+\end{equation}
+Comme $<z> = \frac{\sum_{i=1}^N z_i}{N}$ nous avons :
+\begin{equation}
+    \sigma_{<z>}^2 = \sum_i 2\sigma_{ref}^2/N^2
+\end{equation}
+\begin{equation}
+    \sigma_{<z>^2}^2 = (2<z>\sigma_{<z>})^2 = 8\sigma_{ref}^2<z>^2/N
+\end{equation}
+\begin{equation}
+    \sigma_{z_i^2}^2 = (2z-i\sigma_i)^2 = 8\sigma_{ref}^2 z_i^2
+\end{equation}
+\begin{equation}
+    \sigma_{<z^2>}^2 = \sum_i (\sigma_{z_i^2}/N)^2 = 8\sigma_{ref}^2<z^2>/N
+\end{equation}
+Comme $\sigma_z = \sqrt{<z^2> - <z>^2}$ nous avons:
+\begin{equation}
+    \sigma_{\sigma_z}^2 = \left(\frac{\sigma_{<z^2>}}{2\sqrt{<z^2> - <z>^2}}\right)^2 + \left(\frac{\sigma_{<z>^2}}{2\sqrt{<z^2> - <z>^2}}\right)^2 
+\end{equation}
+\begin{equation*}
+    = 2\left(\frac{\sigma_{ref}}{\sigma_z}\right)^2(<z^2> + <z>^2)
+\end{equation*}
+
+En fait, pour étudier les variations de l'épaisseur, connaître l'épaisseur à une constante près est suffisante. On peut se contenter de calculer $\sigma_z$ avec $z$ la simple mesure donnée par l'appareil, correspondant à la distance entre le LEM et le range supérieur. Ici, c'est environ 9~mm. Dans ce cas, l'incertitude sur une mesure $z_i$ est l'incertitude systématique de 10~$\mu$m. On peut alors calculer l'incertitude (au carré) sur la moyenne : \begin{equation}
+    \sigma_{<z>}^2 = \sum_i \sigma_{sys}^2/N
+\end{equation}
+ainsi que l'incertitude (au carré) de la moyenne des carrés : 
+\begin{equation}
+    \sigma_{<z^2>}^2 = \sum_{i=1}^N \frac{4z_i^2 \sigma_{sys}^2}{N^2} = \frac{4<z^2> \sigma_{sys}^2}{N}
+\end{equation}
+L'expression de l'écart type des mesures de $z$ étant $\sigma = \sqrt{<z^2> - <z>^2}$, son incertitude est alors 
+\begin{equation}
+    \sigma_{\sigma}^2 = \left(\frac{\partial \sigma}{\partial <z>}\sigma_{<z>}\right)^2 + \left(\frac{\partial \sigma}{\partial <z^2>}\sigma_{<z^2>}\right)^2
+\end{equation}
+Nous calculons d'abord 
+\begin{equation}
+    \frac{\partial \sigma}{\partial <z>} = -\frac{<z>}{\sigma}
+\end{equation}
+\begin{equation}
+    \frac{\partial \sigma}{\partial <z^2>} = \frac{1}{2\sigma}
+\end{equation}
+et donc
+\begin{equation}
+    \sigma_{\sigma}^2 = \frac{<z>^2}{\sigma^2}\sigma_{<z>}^2 + \frac{1}{4\sigma^2}\sigma_{<z^2>}^2 = \frac{<z>^2}{\sigma^2}\frac{\sigma_{sys}^2}{N} + \frac{<z^2>\sigma_{sys}^2}{N\sigma^2}=\frac{\sigma_{sys}^2}{N\sigma^2}(<z^2> + <z>^2)
+\end{equation}
+\begin{equation}
+    \sigma_{\sigma} = \frac{\sigma_{sys}}{\sigma}\sqrt{\frac{<z^2> + <z>^2}{N}}
+\end{equation}

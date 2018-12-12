@@ -1,0 +1,37 @@
+\chapterstyle{hansen}
+
+\fancypagestyle{myheadings}{%
+    \fancyhf{}
+    \fancyhead[CE]{\textcolor{SchoolColor}{Analyse des performances du prototype $3\times1\times1$ et préparation du plan de lecture de charge du démonstrateur $6\times6\times6$ de détecteur à double phase d'argon de l'expérience WA105}}
+    \fancyfoot[CE]{\parttitle}
+    \fancyhead[CO]{\textcolor{SchoolColor}{\small{\leftmark}}}
+    \fancyfoot[CO]{\small{\rightmark}}
+    \fancyfoot[LE,RO]{\thepage}
+}
+
+\setsecheadstyle{\color{pheniics}\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\color{pheniics}\large\bfseries\sffamily\raggedright}
+\setsubsubsecheadstyle{\color{pheniics}\bfseries\sffamily\raggedright}
+
+\maxsecnumdepth{subsection} % chapters, sections, and subsections are numbered
+\maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
+
+\makeatletter
+%\patchcmd{\@fancyhead}{\rlap}{\color{pheniics_purple}\rlap}{}{}
+\patchcmd{\headrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
+\patchcmd{\@fancyfoot}{\rlap}{\color{pheniics_purple}\rlap}{}{}
+\patchcmd{\footrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
+\makeatother
+
+\defbibheading{bibliography}[\bibname]{%
+    \newpage
+    \section*{Bibliography}%
+    \addcontentsline{toc}{section}{Bibliography}
+}
+
+\AtBeginEnvironment{subappendices}{%
+    \chapter*{Appendix}
+    \addcontentsline{toc}{chapter}{Appendices}
+    \counterwithin{figure}{section}
+    \counterwithin{table}{section}
+}

@@ -1,0 +1,83 @@
+\section{L'invariance de jauge en électromagnétisme}\label{sec::EM_classique}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \be\label{eq::Max_1}
+        \Vec{\nabla}.\Vec{B}=0 \text{ (Pas de monopôles magnétiques)} 
+    \ee 
+    \be\label{eq::Max_2} 
+        \frac{\partial \Vec{B}}{\partial t} + \Vec{\nabla}\times \Vec{E}=\Vec{0} \text{ (Loi de Faraday)}
+    \ee 
+    \be\label{eq::Max_3}
+        \Vec{\nabla}.\Vec{E}=\frac{\rho}{\epsilon_0} \text{ (Loi de Gauss)}
+    \ee
+    \be\label{eq::Max_4}
+        \frac{\partial \Vec{E}}{\partial t}-c^2 \Vec{\nabla}\times \Vec{B} =-\frac{\Vec{j}}{\epsilon_0} \text{ (Loi d'Ampère)}
+    \ee
+    \caption{Les quatre équations de Maxwell}
+\end{wrapfigure}
+
+Le fait que les très célèbres équations de Maxwell (\eqref{eq::Max_1} à \eqref{eq::Max_4}) soient invariante sous une certaine transformation nous a permit dans la section \ref{sec::gauges} de créer une théorie de la physique des particules à bases de symétries de jauge locale, qui se sont révélées extrêmement fructueuse. Nous revenons un peu plus ici sur cette transformation et sur comment elle découle des équations de Maxwell.
+
+La première chose que l'on remarque à propos de ces équations, c'est que ce sont des équations différentielles couplées. Deux d'entre elles font intervenir les variations de $\Vec{E}$ et $\Vec{B}$ simultanément. Nous allons donc chercher à "découpler" ces équations pour trouver une expression pour $\Vec{E}(\Vec{r},t)$ et une expression pour $\Vec{B}(\Vec{r},t)$. Nous tomberons naturellement sur la jauge de Lorenz. 
+
+Prenons la première équation \eqref{eq::Max_1}. Le cours de licence de calcule différentielle nous a appris que le gradient d'un rotationnel est toujours nul. Nous écrivons donc 
+\be \label{eq::B}
+    \Vec{B}=\Vec{\nabla}\times \Vec{A}
+\ee
+Où $\Vec{A}$ est un champ vectoriel quelconque. En mettant ce résultat dans \eqref{eq::Max_2} nous obtenons : 
+\be\nonumber
+    \frac{\partial \Vec{\nabla}\times \Vec{A}}{\partial t} + \Vec{\nabla}\times \Vec{E}=\Vec{0}
+\ee 
+Les opérateurs de dérivations temporels et spatiaux commutent, nous pouvons donc factoriser de la manière suivante : 
+\be
+    \Vec{\nabla}\times \left(\frac{\partial \Vec{A}}{\partial t} +\Vec{E}\right)=\Vec{0}
+\ee 
+De la même manière que le gradient d'un rotationnel fait zéro, le rotationnel d'un gradient fait aussi zéro. Nous pouvons tenter une astuce similaire avec :
+\be \label{eq::E}
+    \frac{\partial \Vec{A}}{\partial t} +\Vec{E} = -\Vec{\nabla}.\phi
+\ee 
+Où $\phi$ est un champ scalaire quelconque.
+
+Si l'on tenait \textit{vraiment} à isoler $\Vec{E}$ et $\Vec{B}$, on utiliserait à présent les deux dernières équations de Maxwell pour avoir les équations du mouvement de $\Vec{A}$ et $\phi$. Mais ce n'est pas le propos ici, vous pouvez vous reporter à n'importe quel cours d'électromagnétisme pour cela (j'ai un faible pour le premier chapitre des cours de Bjorn Felsager\cite{Felsager}). Nous allons plutôt constater ce qu'il se passe si l'on modifie les champs $\Vec{A}$ et $\phi$ de la manière suivante : 
+\beq \label{eq::gauge_transf}
+    \phi(\Vec{r},t) \rightarrow \phi(\Vec{r},t)+\frac{\partial \chi(\Vec{r},t)}{\partial t}\\
+    \Vec{A}(\Vec{r},t) \rightarrow \Vec{A}(\Vec{r},t)-\Vec{\nabla}.\chi(\Vec{r},t)
+\eeq
+Avec $\chi$ un champ scalaire quelconque \textbf{dépendant éventuellement de $\Vec{r}$ et $t$} (je les ai mise exceptionnellement ici pour souligner ce point, mais je les enlève à nouveau dans la suite pour ne pas alourdir les notations). Les champs $\Vec{E}$ et $\Vec{B}$ en sont modifiés ainsi (en reprenant les équations \eqref{eq::B} et \eqref{eq::E}) :
+
+\beq 
+    \Vec{B}=\Vec{\nabla}\times\left(\Vec{A}-\Vec{\nabla}.\chi\right) \nonumber \\
+    \Rightarrow \Vec{B}=\Vec{\nabla}\times\Vec{A}
+\eeq 
+Puisque le rotationnel d'un gradient est nul. On retombe donc sur l'équation \eqref{eq::B}. Il en va de même pour $\Vec{E}$ et l'équation \eqref{eq::E} :
+\beq
+    \Vec{E}=-\frac{\partial \left(\Vec{A}-\Vec{\nabla}.\chi\right)}{\partial t} - \Vec{\nabla}.\left(\phi+\frac{\partial \chi}{\partial t}\right) \nonumber \\
+    \Rightarrow \Vec{E}=-\frac{\partial \Vec{A}}{\partial t}-\frac{\partial \Vec{\nabla}.\chi}{\partial t} - \Vec{\nabla}.\phi+\Vec{\nabla}.\frac{\partial \chi}{\partial t} \nonumber \\
+    \Rightarrow \Vec{E} = -\frac{\partial \Vec{A}}{\partial t} -\Vec{\nabla}.\phi
+\eeq
+
+Ceci signifie que nous pouvons modifier nos champs $\Vec{A}$ et $\phi$ avec n'importe quel champ $\chi$ qui nous arrange sans changer la physique (puisque nous ne \textit{mesurons} pas ces champs). Un choix particulier de $\chi$ s'appelle un choix de jauge, les champs $\Vec{A}$ et $\phi$ sont les champs de jauges, et la transformation \eqref{eq::gauge_transf} est appelée transformation de jauge. Chaque choix peu amener à un résultat exploitable différent, mais nous n'en discuterons pas plus ici.
+
+Passons à présent à la notation relativiste. En prenant pour convention le tenseur métrique 
+\be 
+    \eta_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & -1
+    \end{pmatrix}
+\ee 
+le champ de jauge de l'électromagnétisme s'écrit 
+\be
+    A^{\mu}=(\phi,\Vec{A})
+\ee 
+en covariant et 
+\be\label{eq::gauge_field}
+    A_{\mu}=(\phi,-\Vec{A})
+\ee 
+en contravariant. La transformation de jauge s'écrit alors 
+\be \label{eq::gauge_transf_relat}
+    A_{\mu} \rightarrow A_{\mu}+\partial_{\mu}\chi
+\ee 
+Et c'est de là que démarre la section \ref{sec::gauges}.

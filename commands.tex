@@ -1,0 +1,49 @@
+\def\ds{\displaystyle} 
+\def\sty{\scriptstyle} 
+\def\Vec{\overrightarrow} 
+\def\vep{\varepsilon}
+\def\nabla{\bigtriangledown}
+
+\def\E{    {\mathcal{E}}} 
+\def\F{    {\mathcal{F}}} 
+\def\H{\hat{\mathcal{H}}} 
+\def\M{\hat{\mathcal{M}}} 
+\def\N{\hat{\mathcal{N}}} 
+\def\P{\hat{\mathcal{P}}}
+\def\R{    {\mathcal{R}}}
+\def\L{    {\mathcal{L}}}
+\def\T{\hat{\mathcal{T}}}
+\def\K{\hat{\mathcal{K}}}
+
+\def\U{\hat{U}}
+
+\def\ap{{\hat{a}}^{\,+}} 
+\def\am{{\hat{a}}^{\, }} 
+
+\def\etap{{\hat{\eta}}^{\,+}} 
+\def\etam{{\hat{\eta}}^{\, }} 
+
+\def\be{\boldmath\begin{equation}}
+\def\ee{\end{equation}\unboldmath}
+
+\def\beq{\boldmath\begin{eqnarray}}
+\def\eeq{\end{eqnarray}\unboldmath}
+\def\bs{ \boldmath$}
+\def\es{$ \unboldmath}
+
+\newcommand*\parttitle{}
+\let\origpart\part
+\renewcommand*{\part}[2][]{%
+   \ifx\\#1\\% optional argument not present?
+      \origpart{#2}%
+      \renewcommand*\parttitle{#2}%
+   \else
+      \origpart[#1]{#2}%
+      \renewcommand*\parttitle{#1}%
+   \fi
+}
+
+\makeatletter
+\newcommand{\extraPartText}[1]{\def\@extraPartText{#1}}
+\pretocmd{\@endpart}{\vspace{8ex}\begingroup\flushleft{\@extraPartText}\par\endgroup\let\@extraPartText\relax}{}{}
+\makeatother

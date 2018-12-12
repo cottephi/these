@@ -1,0 +1,82 @@
+\section{Démonstrations diverses}
+
+    \subsection{Equation d'Euler Lagrange en théorie des champs classiques}\label{sec::EL_field}
+    
+        Afin de retrouver l'équation d'Euler Lagrange, partons du lagrangien d'un champ classique s'étendant sur une dimension d'espace et le temps \eqref{eq::lagrangien_fields} :
+        \be
+           L=\int\limits_{x_1}^{x_2} \L(\phi,\dot{\phi},\partial_{x} \phi)dx
+        \ee
+        où $\L$ est défini comme la densité lagrangienne de champ. Nous avons rajouté une dépendance en $\phi$ au lagrangien pour prendre en compte un éventuel potentiel. L'action entre un temps $t_1$ et un temps $t_2$ s'écrit alors
+        \be
+           S(\phi)=\int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2}\L dx dt
+        \ee
+        L'amplitude physique $\phi(x,t)$ est telle que l'action est minimisée, i.e une variation de $\phi$  de la forme \bs\phi'(x,t)=\phi(x,t)+\epsilon \eta(x,t)\es implique que 
+        \be 
+            \frac{dS}{d\epsilon}_{|\epsilon=0}=0
+        \ee
+        où le terme \bs\eta(x,t)\es s'annule en $t_1$, $t_2$, $x_1$ et $x_2$ (Figure \ref{Fig::path}). Ceci implique donc : 
+        \beq\label{eq::EL_field}
+           \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2}\frac{\partial \L}{\partial \phi'}_{|\phi} \eta + \frac{\partial \L}{\partial (\partial_{x} \phi')}_{|\phi} \partial_{x} (\eta) + \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} \partial_{t} (\eta) .dx dt = 0 \nonumber \\
+           \bullet \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2} \frac{\partial \L}{\partial (\partial_{x} \phi')}_{|\phi} \partial_{x} (\eta). d^3x dt = \int\limits_{t_1}^{t_2} \cancelto{0}{\left[ \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} \eta \right]_{x_1}^{x_2}}dt - \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2} \partial_{x} \frac{\partial \L}{\partial (\partial_{x} \phi')}_{|\phi} \eta. dx dt \nonumber \\
+           \bullet \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2} \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} \partial_{t} (\eta). dx dt = \int\limits_{x_1}^{x_2} \cancelto{0}{\left[ \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} \eta \right]_{t_1}^{t_2}}dx - \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2} \partial_{t} \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} \eta. dx dt \nonumber \\
+           \Rightarrow \int\limits_{t_1}^{t_2}\int\limits_{x_1}^{x_2} \left[\frac{\partial \L}{\partial \phi'}_{|\phi} - \partial_{t} \frac{\partial \L}{\partial (\partial_{t} \phi')}_{|\phi} - \partial_{x} \frac{\partial \L}{\partial (\partial_{x} \phi')}_{|\phi} \right] \eta .dx dt = 0 \nonumber \\
+           \Rightarrow \textcolor{red}{\frac{\partial \L}{\partial \phi} - \partial_{t} \frac{\partial \L}{\partial (\partial_{t} \phi)} - \partial_{x} \frac{\partial \L}{\partial (\partial_{x} \phi)} = 0}
+        \eeq
+        Ce résultat, facilement généralisable à 3 dimensions d'espace, est l'équation d'Euler Lagrange en théorie des champs.
+        
+    \subsection{Retrouver le lagrangien d'un champ scalaire massif à partir de l'équation de Klein-Gordon}\label{sec::KG_lag}
+        Il s'agit de comparer l'équation 
+        \beq
+            (P_{\mu}P^{\mu}-m^2)\phi=0 \nonumber \\
+            -\partial_{\mu}\partial^{\mu}\phi - m^2\phi = 0
+        \eeq
+        à l'équation d'Euler-Lagrange \eqref{eq::EL_field}
+        \be
+            \frac{\partial \L}{\partial \phi} - \partial_{\mu} \frac{\partial \L}{\partial (\partial_{\mu} \phi)} = 0
+        \ee
+        Il suffit d'identifier \bs \partial_{\mu}\partial^{\mu}\phi \es à \bs \partial_{\mu} \frac{\partial \L}{\partial (\partial_{\mu} \phi)} \es et \bs -m^2\phi \es à \bs \frac{\partial \L}{\partial \phi} \es. En intégrant selon $\partial_{\mu}\phi$ et $\phi$ respectivement, on se retrouve avec une densité lagrangienne de la forme : 
+        \be 
+            \L=const_1 \left(\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2\right) + const_2
+        \ee
+        Où $const_1$ et $const_2$ peuvent être choisies respectivement à 1 et 0 sans changer les équations d'Euler-Lagrange, et donc la physique. Le terme \bs \partial_{\mu}\phi\partial^{\mu}\phi \es est identifiable au terme de propagation d'un champ mécanique classique, et l'on voit apparaître en plus un terme de masse de la forme \bs m^2\phi^2\es. 
+        
+
+    \subsection{Formule relative à la relation de dispersion dans un champ classique}\label{sec::demo_dispersion}
+        Nous partons de l'équation du mouvement pour une masse $m$ dans un réseau  de ressorts à 1 dimension :
+        \be 
+            \ddot{\phi}_i-\frac{k}{m}(\phi_{i+1}-2\phi_i+\phi_{i-1})=0
+        \ee
+        Et cherchons des solutions de la forme :
+        \be 
+            \phi_i=A.cos(kx_i-\omega t)
+        \ee
+        Ceci nous donne l'équation suivante :
+        \be 
+            A\omega^2 cos(kx_n-\omega t)+\frac{k}{m}A\big( cos(kx_{n+1}-\omega t)-2cos(kx_n-\omega t) + cos(kx_{n-1}-\omega t) \big)=0
+        \ee 
+        Commençons par utiliser $cos(a+b)=cos(a)cos(b)-sin(a)sin(b)$ pour séparer les $kx$ des $\omega t$ :
+        \beq
+            cos(kx_{n+1}-\omega t)-2cos(kx_n-\omega t) + cos(kx_{n-1}-\omega t)  \nonumber \\
+            = cos(\omega t)\big(-2cos(kx_n)+cos(kx_{n+1})+cos(kx_{n-1})\big) \nonumber \\
+            + sin(\omega t)\big(-2sin(kx_n)+sin(kx_{n+1})+sin(kx_{n-1})\big)
+        \eeq
+        Faisons de même pour séparer les $x_n$ et les $a$ dans $x_{n\pm 1}=x_n \pm a$  :
+        \beq
+            = cos(\omega t)\big(-2cos(kx_n)+cos(kx_n)cos(ka)+cos(kx_n)cos(ka) -sin(kx_n)cos(ka)+sin(kx_n)cos(ka) \big) \nonumber \\
+            + sin(\omega t)\big(-2sin(kx_n)+sin(kx_n)cos(ka)+sin(kx_n)cos(ka) -sin(ka)cos(kx_n)+sin(ka)cos(kx_n) \big) \nonumber \\
+        \eeq    
+        \beq    
+            =cos(\omega t)\big(cos(kx_n)(2cos(ka)-2)\big)\nonumber \\
+            +sin(\omega t)\big(sin(kx_n)(2cos(ka)-2)\big)
+        \eeq
+        \be   
+            =\big(2(cos(ka)-2)cos(kx_n-\omega t)\big)
+        \ee
+        et donc nous avons
+        \be 
+            A\omega^2 cos(kx_n-\omega t)+\frac{2k}{m}A\big((cos(ka)-1)cos(kx_n-\omega t)\big)=0
+        \ee
+        Il existe donc des solutions en onde si
+        \be 
+            \omega^2=\frac{2k}{m}\big(1-(cos(ka)\big)
+        \ee

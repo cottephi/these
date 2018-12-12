@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper,oldfontcommands,twoside,openright]{memoir}
+\input{packages}
+\input{colors}
+\input{hansen}
+\input{style}
+\input{length}
+\input{commands}
+\DeclareLanguageMapping{frenchb}{english}
+\bibliography{bibli.bib}
+\graphicspath{{Front-back_covers/images/}}
+\usetikzlibrary{calc}
+\input{acronymes.tex}
+\makeglossaries
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\begin{document} 
+%\layout
+\input{Front-back_covers/Front-back_covers}
+%\newgeometry{twoside}
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay] 
+\end{tikzpicture}
+\newpage
+
+\pagestyle{myheadings}
+\markright{} 
+
+%\setcounter{chapter}{0}             % to start with the chapter no 1 
+%\setcounter{page}{1}                % to start with the page number 
+%\setcounter{figure}{0}              % to start the numbering of figures 
+
+\input{introduction/introduction}
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay] 
+\end{tikzpicture}
+\newpage
+\input{acknowledgment/acknowledgment}
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay] 
+\end{tikzpicture}
+\newpage
+
+
+\tableofcontents*
+\printglossaries
+\listoffigures*
+\listoftables*
+\mainmatter
+\normalsize 
+
+
+\newpage
+\thispagestyle{empty}
+\pagestyle{myheadings} % All pages have headers and footers
+\input{Chapitre_1/Chapitre_1.tex}
+\newpage
+\input{Chapitre_2/Chapitre_2.tex}
+\newpage
+\input{Chapitre_3/Chapitre_3.tex}
+\newpage
+\input{Chapitre_4/Chapitre_4.tex}
+\newpage
+\backmatter
+\input{conclusion/conclusion.tex}
+
+\end{document}

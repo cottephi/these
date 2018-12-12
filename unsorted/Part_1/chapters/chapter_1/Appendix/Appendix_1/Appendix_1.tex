@@ -1,0 +1,36 @@
+\section{Lagrangien de champ}\label{sec::field_basis}
+    Il est important de noter qu'une particule quantique n'est plus décrite par une position à un temps donnée, mais par une amplitude de probabilité qui est présente partout dans l'espace temps et qui se propage comme une onde. Une onde étant décrite par un champ, il est important de parler de théorie classique des champs, afin d'avoir une idée de la forme de notre possible lagrangien. 
+                
+                Un champ -- à une dimension pour commencer -- peut être modélisé par $n$ masses $m$ identiques reliés entre elle sur une ligne par des ressorts de raideur $k$ espacé par une distance $a$. L'énergie potentielle entre la masse $i$ et la masse $i+1$ est classiquement \bs V_i=\frac{1}{2}k(\phi_{i+1}-\phi_i)^2\es, et l'énergie cinétique de la masse $i$ est \bs T_i=\frac{1}{2}m \partial_t \phi_i^2 \es, où $\phi_i$ est le déplacement de la masse $i$ par rapport à sa position d'équilibre $x_i$. Le lagrangien total s'écrit alors 
+                \be 
+                    L=\sum\limits_{i=1}^n \left( \frac{1}{2}m \partial_t \phi_i^2\right) - \sum\limits_{i=0}^n \left( \frac{1}{2}k(\phi_{i+1}-\phi_i)^2 \right)
+                \ee
+                Commençons par montrer que $\phi$ décrit une onde. Pour ce faire, utilisons l'équation d'Euler-Lagrange \eqref{eq::EL} : 
+                \beq 
+                    \frac{\partial L}{\partial \phi_i} - \frac{d}{dt}\frac{\partial L}{\partial \partial_t \phi_i}=0 \nonumber \\
+                    \Rightarrow \ddot{\phi}_i-\frac{k}{m}(\phi_{i+1}-2\phi_i+\phi_{i-1})=0
+                \eeq
+                %Il est possible de montrer (Annexe \ref{sec::demo_dispersion}) que, si $\omega^2=\frac{2k}{m}(1-cos(ka))$, des solution en ondes sont autorisées, de la forme :
+                %\be 
+                 %   \phi_i=A.cos(kx_i-\omega t)
+                %\ee
+                
+                
+                %Nous savons maintenant que l'amplitude $\phi$ peut être une onde. 
+                Le prochain travail est d'étudier le lagrangien précédent dans la limite du continue. Faisons d'abord apparaître le module d'Young\footnote{Comme nous travaillons à une dimension, il n'y a pas de \textit{section} à proprement parler et le module d'Young s'écrit alors $Y=LF/dL$ où $L$ est la longueur à vide (ici $a$), $F$ est la force (ici $k(\phi_{i+1}-\phi_i)$) et $dL$ est l'allongement (ici $\phi_{i+1}-\phi_i$). Il se réduit donc à $ka$.} $ka$ ainsi que la densité massique $m/a$ :
+                \be 
+                    L=\sum\limits_{i=1}^n \left( \frac{1}{2}a\rho (\partial_t \phi_i)^2\right) - \sum\limits_{i=0}^n aY  \frac{1}{2}\left(\frac{\phi_{i+1}-\phi_i}{a}\right)^2
+                \ee
+                Nous pouvons à présent faire tendre $a$ vers $0$ et $n$ vers l'infini pour passer au continue. Nous considérons maintenant une distribution uniforme de masse, et nos positions discrètes $\phi_i$ deviennent une variable continue de la position $\phi(x)$. De plus, le terme en $\frac{\phi_{i+1}-\phi_i}{a}$ devient $\partial_x \phi$. Nous factorisons par $\rho$ en définissant le terme $c=\sqrt{\frac{Y}{\rho}}$, le lagrangien devient donc : 
+                \beq \label{eq::lagrangien_fields}
+                    L=\frac{1}{2}\int\limits_{0}^l\left( \rho (\partial_t \phi)^2 - Y (\partial_x \phi)^2 \right)dx \nonumber \\
+                    =\frac{\rho}{2}\int\limits_{0}^l\left( (\partial_t \phi)^2 - c^2 (\partial_x \phi)^2 \right)dx 
+                    %=\frac{\rho}{2}\int\limits_{0}^l \partial_{\mu}\phi \partial^{\mu} \phi. dx
+                \eeq
+                L'Annexe \ref{sec::EL_field} montre comment dériver les équations d'Euler-Lagrange pour un champ dont le lagrangien dépend de $\phi$, $\partial_{x}\phi$ et $\partial_{t}\phi$. Nous pouvons utiliser ces équations pour retrouver l'équation du mouvement de $\phi$ qui est :
+                \beq
+                    \partial^2_x \phi - c^2\partial^2_t \phi = 0
+                \eeq
+                Qui est l'équation de mouvement d'une onde se propageant à la vitesse $c$. Je tiens à souligner ici que l'analogie avec la propagation d'amplitude de probabilité ne doit pas être poussé trop loin. La vitesse $c$ peut avoir un sens mais la grandeur $\rho$, qui est la densité massique du milieu où se propage l'onde, n'en a pas : une amplitude de probabilité se propage dans le vide!
+                
+\printbibliography

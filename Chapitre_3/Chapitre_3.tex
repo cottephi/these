@@ -145,8 +145,8 @@
                 Les potentiels électriques utilisés pour cette simulation sont : 
                 \begin{itemize}
                     \item $\SI{-1000}{\volt}$ entre l'anode et le haut du \gls{lem}, correspondant à un champ d'induction de $\SI{-5}{\kilo\volt}$
-                    \item $\SI{-3500}{\volt}$ à travers le \gls{lem}, correspondant à un champ d'amplification de $\SI{-30}{\kilo\volt}$
-                    \item $\SI{-2500}{\volt}$ entre le bas du \gls{lem} et la grille d'extraction, correspondant à un champ d'extraction de $\SI{-2}{\kilo\volt}$
+                    \item $\SI{-3500}{\volt}$ à travers le \gls{lem}, correspondant à un champ d'amplification de $\SI{-35}{\kilo\volt}$
+                    \item $\SI{-2500}{\volt}$ entre le bas du \gls{lem} et la grille d'extraction, correspondant à un champ d'extraction de $\SI{-2.5}{\kilo\volt}$
                 \end{itemize}
                 
             \subsubsection{Transport des charges avec GarField}
@@ -168,14 +168,14 @@
         
             Cette étude a été faite avec le logiciel QScan \cite{qscan}. La carte d'efficacité du \gls{lem} y a été implémentée, et plusieurs types de particules à plusieurs impulsions initiales ont été simulées dans le démonstrateur de 666\footnote{Ce travail a été fait en début de thèse. Nous ignorions à l'époque que le modèle des \glspl{lem} changerait pour le démonstrateur 666.}.
             
-            Je n'ai regardé que l'effet sur la charge totale arrivant à l'anode, avant reconstruction. Les effets de diffusion longitudinale et verticale sont simulés par des répartitions gaussienne en temps et en espace de la charge (voir \cite{diffusion}).
+            J'ai regardé l'effet sur la charge totale arrivant à l'anode, avant reconstruction. Les effets de diffusion longitudinale et verticale sont simulés par des répartitions gaussiennes en temps et en espace de la charge (voir \cite{diffusion}).
             %cité dans Charge Collection
             
         
         \subsection{Limites de cette simulation}
             charging-up due à l'accumulation d'électron sur le \gls{fr4}\\
             d'autres configuration de champs\\
-            Ne prend pas en compte la reconstruction en elle meme (qui va de toute maniere dependre du logiciel)\\
+            Ne prend pas en compte la reconstruction en elle meme (qui va de toute manière dépendre du logiciel)\\
             nouvelle géométrie
         
     \section{Préparation, caractérisation et test à l'IRFU}
@@ -198,20 +198,20 @@
         
             \subsubsection{Motivation : impact sur le gain}
             
-                Nous rappelons ici la formule du gain à travers un dispositif amplificateur (voir \autoref{sec::townsend_avalanche} pour plus de détails) :
+                La formule du gain à travers un dispositif amplificateur est rappelée ici (voir \autoref{sec::townsend_avalanche} pour plus de détails) :
                 \begin{equation}\label{eq::townsend_avalanche_2}
                     G = e^{A\rho d e^{-B\rho d/E}}
                 \end{equation}
-                Avec $\rho$ la densité de l'argon gazeux, $E$ le champ électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre rentre en compte deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$.
+                Avec $\rho$ la densité de l'argon gazeux, $E$ le champ électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre apparaît deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$. Les résultats ainsi obtenus sont comparés aux résultats obtenus par ELTOS dans le \autoref{tab::comparaison_eltos}, ces dernières n'étant faites qu'aux bords des \gls{lem} et près des trous des vis.
                 
             \subsubsection{Méthode expérimentale}
                 %documentation dans hardware/lem_plaques/marbre_472
                 \paragraph{Le marbre et le crayon optique}
                 
-                    La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet à mesurer. Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
+                    La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet.% Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
                     %plusieurs photo du dispositif
                     
-                    Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$.
+                    Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$ (voir \autoref{fig::hauteur_marbre}).
                     
                     La source polychromatique utilisée est un crayon optique munie d'une LED blanche donc l'intensité est ajustable manuellement. Ce crayon optique est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près.
                     
@@ -234,17 +234,17 @@
                     
                     %La plaque et le \glspl{lem} sont positionnés sur le marbre à l'aide une équerre vissée au marbre (voir \autoref{fig::equerre}.)
                     
-                    Il a été observé que malgré la plaque, la distance indiquée par le crayon optique pouvait diminuer quand une plus grande pression était exercée sur le \gls{lem} proche de la mesure. Nous avons donc rajouté quatre briques en plomb de $\SI{11}{\kilo\gram}$ disposées le long du chemin emprunté par le crayon optique (voir \autoref{fig::plate_and_bricks}. %Trois pièces d'aluminium pouvant être vissées au marbre ont été également rajoutées, permettant d'exercer une pression encore plus grande sur les bords bas, droit et gauche de la plaques.
+                    Il a été observé que malgré la plaque, la distance indiquée par le \gls{cci} pouvait présenter des variations allant jusqu'à \SI{20}{\micro\meter} quand une plus grande pression était exercée sur le \gls{lem} proche de la mesure. Nous avons donc rajouté des briques en plomb de \SI{11}{\kilo\gram} disposées le long du chemin emprunté par le crayon optique (voir \autoref{fig::plate_and_bricks}). %Trois pièces d'aluminium pouvant être vissées au marbre ont été également rajoutées, permettant d'exercer une pression encore plus grande sur les bords bas, droit et gauche de la plaques.
                     
-                    Malgré cela, le trou de mesure situé le plus au centre du \gls{lem} présentaient encore des variations de $10$ à $\SI{15}{\micro\meter}$ quand on appuyait sur les briques. Il a donc était décidé d'ignorer ce trou de mesure.
+                    Malgré cela, le trou de mesure situé le plus au centre du \gls{lem} présentaient encore des variations de $10$ à $\SI{15}{\micro\meter}$. Il a donc était décidé d'ignorer ce trou de mesure.
                     
                 \paragraph{Calibrations et mesures}
                 
                     Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre_droite}).
                     
-                    La mesure de la hauteur du marbre servait de zéro pour les mesures des hauteur du \gls{lem} lui même.
+                    La moyenne de la distribution des hauteurs du marbre corrigée pour la pente servait de zéro pour les mesures des épaisseurs du \gls{lem} lui même.
                     
-                    La réponse du dispositif optique à la hauteur à mesurée a été vérifiée avec des cales d'épaisseur allant de $\SI{900}{\micro\meter}$ à $\SI{1300}{\micro\meter}$, en fittant une droite d'équation $z_{mesure} = \alpha \cdot z_{cale} + \beta$ à la hauteur $z_{mesure}$ mesurée contre la hauteur $z_{cale}$ indiquée sur la cale. Le coefficient $\alpha$ est de $1.00$ et le coefficient $\beta$ de $\SI{0.72}{\micro\meter}$ (voir \autoref{fig::optic_response}).
+                    La réponse du dispositif optique à la hauteur à mesurer a été vérifiée avec des cales d'épaisseur allant de $\SI{900}{\micro\meter}$ à $\SI{1300}{\micro\meter}$, en ajustant une droite d'équation $z_{mesure} = \alpha \cdot z_{cale} + \beta$ à la hauteur $z_{mesure}$ mesurée contre la hauteur $z_{cale}$ indiquée sur la cale. Le coefficient $\alpha$ est de $1.00$ et le coefficient $\beta$ de $\SI{0.72}{\micro\meter}$ (voir \autoref{fig::optic_response}).
                     
                     %Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient en ligne par groupe de cinq trous. D'abord, le marbre était mesuré à droite et à gauche du \gls{lem}, à une intensité de 100\%. Ensuite, la rangée de cinq trous était mesurée à une intensité de 30\%. La poutre sur laquelle repose le crayon optique était alors déplacée à la rangée suivante et la même opération était répétée. Les mesures du marbres à droite et à gauche servaient à déterminer la pente du marbre le long de l'axe $x$ ainsi que la distance à la lentille du bas du \gls{lem}, nécessaire pour calculer l'épaisseur de ce dernier.
                     
@@ -252,19 +252,19 @@
                     
             \subsubsection{Résultats et comparaison aux mesures du fabricant}
                 
-                Les distributions des hauteurs dans les 25 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre, et fitté par une double gaussienne afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre et l'épaisseur $E_F$ du \gls{fr4}. En supposant que l'épaisseur du cuivre est la même sur chaque face, nous avons la relation $E_T = E_F + 2E_C$. $E_T$ est accessible directement. $E_C$ correspond à la différence entre les moyennes des deux gaussiennes. $E_F$ est alors facile à déterminer. La \autoref{fig::distri_1_trou_lem} montre cette distribution pour un trou de mesure, la \autoref{fig::distri_25_trous_lem} montre le résultat pour tous les trous de mesure d'un \gls{lem}.
+                Les distributions des hauteurs dans les 25 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. Une double gaussienne y est ajustée afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre et l'épaisseur $E_F$ du \gls{fr4}. En supposant que l'épaisseur du cuivre est la même sur chaque face, nous avons la relation $E_T = E_F + 2E_C$. $E_T$ est accessible directement. $E_C$ correspond à la différence entre les moyennes des deux gaussiennes. $E_F$ est alors facile à déterminer. La \autoref{fig::distri_1_trou_lem} montre cette distribution pour un trou de mesure. 
                 
-                A noter que les mesures ne permettait pas toujours de fitter deux gaussienne. Dans certains cas, seul l'épaisseur totale était accessible.
+                A noter que les mesures ne permettait pas toujours de d'ajuster deux gaussienne. Dans certains cas, seul l'épaisseur totale était accessible.
                 
-                Étaient ensuite tracées les distribution de l'épaisseur total et de l'épaisseur de cuivre, montrée à la \autoref{fig::distri_epaisseur_1_lem}.
+                la \autoref{fig::distri_epaisseur_1_lem} montre les distributions de l'épaisseur total et de l'épaisseur de cuivre pour un \gls{lem}.
                 
-                Enfin, une fois les 72 \glspl{lem} mesurées, les distributions des épaisseurs des $72\times 24$ trous étaient tracées (voir \autoref{fig::epaisseur_tous_lem}).
+                La \autoref{fig::epaisseur_tous_lem} montre la somme des distributions des épaisseurs totales et des épaisseurs de cuivre pour tous les \glspl{lem} mesurés.
                 
                 %Comparaison à Eltos
         
         \subsection{Tests haute tension et mesures de gain}\label{sec::test_HT}
             
-            Une enceinte haute pression a été construite afin d'y recréer les conditions de pression et température des \gls{tpc} de \gls{wa105}\footnote{A noter que dans les \gls{tpc}, un gradient de température est présent, qui ne l'est pas dans l'enceinte haute pression.}. Tous les \glspl{lem} du démonstrateur 666 y ont été soumis à de hautes tension afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans de l'argon. A également été mesuré le gain de ces \glspl{lem} grâce à une source d'américium placée dans l'enceinte.
+            Une enceinte haute pression a été construite afin d'y recréer les conditions de pression et température des \gls{tpc} de \gls{wa105}\footnote{A noter que dans les \gls{tpc}, un gradient de température est présent, qui ne l'est pas dans l'enceinte haute pression.}. Tous les \glspl{lem} du démonstrateur 666 y ont été soumis à de hautes tensions afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans de l'argon. A également été mesuré le gain de ces \glspl{lem} grâce à une source d'américium placée dans l'enceinte.
             
             Pour les tests haute tension, six \glspl{lem} pouvaient être testés en même temps. La \autoref{fig::6lems_gamelle} montre  ce dispositif. Pour les mesures de gains, un seul \gls{lem} était placé, ainsi qu'une anode de lecture et la source. L'espacement entre l'anode et le \gls{lem} est le même que sur le \gls{crp}, $\SI{2}{\milli\meter}$. La cathode avec la source est située $\SI{5}{\centi\meter}$ au dessus du \gls{lem}. La \autoref{fig::gamelle_source} montre ce dispositif.
         
@@ -288,13 +288,13 @@
         
             Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre, comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction).\\
             
-            À noter que j'emploierai le terme \textit{champ d'extraction} pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
+            Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
             
             Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \autoref{annexe::garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.\\
             
             Il y a alors deux possibilités pour définir les probabilités de collection. La première consiste à trouver les limites effectives de la zone d'amplification, qui est donnée par la simulation comme la région dans laquelle, à l'intérieur des \glspl{lem}, des électrons apparaissent. La probabilité de collection d'extraction est alors définie comme le complémentaire du rapport du nombre d'électrons qui meurent avant la zone d'amplification sur le nombre d'électrons générés au départ. La probabilité de collection d'induction quant à elle est définie comme le complémentaire du rapport du nombre d'électrons qui meurent entre le début de la zone d'amplification et l'anode sur le nombre d'électrons qui sont entrés ou ont été générés dans la zone d'amplification. Cette définition peut correspondre à des probabilités de collection avant que le \gls{lem} ne se charge, donc en début d'exploitation d'un détecteur. Mais une fois chargé, on s'attend à ce que moins de charge meurent dans les trous du \gls{lem}.\\
             
-            Une autre manière de définir les probabilités de collection est de considérer qu'une électron est effectivement extrait dès qu'il passe le cuivre bas, et qu'il a effectivement quitté le \gls{lem} si il meure après le cuivre haut. Ici aussi, le résultat peut être différent après charge du \gls{lem}. Un approfondissement de ces simulations serait de prendre cette charge en compte, en réalisant plusieurs itérations de la méthode décrite plus haut en mettant à jours la carte de champ entre chaque itération pour prendre en compte les électrons à présent accrochés au \gls{lem}.\\
+            Une autre manière de définir les probabilités de collection est de considérer qu'un électron est effectivement extrait dès qu'il passe le cuivre bas, et qu'il a effectivement quitté le \gls{lem} si il meure après le cuivre haut. Ici aussi, le résultat peut être différent après charge du \gls{lem}. Un approfondissement de ces simulations serait de prendre cette charge en compte, en réalisant plusieurs itérations de la méthode décrite plus haut en mettant à jours la carte de champ entre chaque itération pour prendre en compte les électrons à présent accrochés au \gls{lem}.\\
             
             
             

@@ -211,20 +211,20 @@
                     La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet.% Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
                     %plusieurs photo du dispositif
                     
-                    Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$ (voir \autoref{fig::hauteur_marbre}).
+                    Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$ (\autoref{fig::marbre}).
                     
                     La source polychromatique utilisée est un crayon optique munie d'une LED blanche donc l'intensité est ajustable manuellement. Ce crayon optique est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près.
                     
                     Le mouvement selon l'axe $y$ ne peut se faire qu'en déplaçant manuellement la poutre, aussi les mesures ont été prises ligne par ligne.
                     
-                    Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \gls{lem} est visible sur la \autoref{fig::SoftMesureLem}, issue de ce logiciel. 
+                    Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \gls{lem} est visible sur la \autoref{fig::soft_measure_LEM}, issue de ce logiciel. 
                     
                     A noter que due à l'absence de motorisation du chariot sur coussin d'air, ce dernier était poussé à la main, ce qui ne garantissait pas une vitesse constante.
                     
                 \paragraph{Aplanir le LEM}
                     
                     %simplifier
-                    Afin de mesurer l'épaisseur d'un \gls{lem} avec la technique CCI, il faut préalablement aplatir ce dernier. Ceci a été réalisée par une plaque en acier inox percée de 25 trous à travers lesquels les mesures étaient effectuée (\autoref{fig::steel_plate}). 
+                    Afin de mesurer l'épaisseur d'un \gls{lem} avec la technique CCI, il faut préalablement aplatir ce dernier. Ceci a été réalisée par une plaque en acier inox percée de 25 trous à travers lesquels les mesures étaient effectuée. 
                     
                     %La plaque en acier mesure $50\times50\times\SI{0.8}{\centi\meter}$ et est percée de 25 trous de $\SI{2}{\centi\meter}$ de diamètre à travers lesquels le crayons optique prend les mesures. Une épaisseur de PVC de $\SI{2.5}{mm}$ est ajoutée sous la plaque, pour une masse total de 16Kg.
                     %50*50*0.8 - (2*pi*0.8*25) * 8 /1000 = 15Kg d'acier
@@ -240,7 +240,7 @@
                     
                 \paragraph{Calibrations et mesures}
                 
-                    Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre_droite}).
+                    Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre}).
                     
                     La moyenne de la distribution des hauteurs du marbre corrigée pour la pente servait de zéro pour les mesures des épaisseurs du \gls{lem} lui même.
                     
@@ -256,7 +256,7 @@
                 
                 A noter que les mesures ne permettait pas toujours de d'ajuster deux gaussienne. Dans certains cas, seul l'épaisseur totale était accessible.
                 
-                la \autoref{fig::distri_epaisseur_1_lem} montre les distributions de l'épaisseur total et de l'épaisseur de cuivre pour un \gls{lem}.
+                la \autoref{fig::distri_epaisseur_1_lem} montre les distributions de l'épaisseur total et de l'épaisseur de cuivre pour les 24 trous de mesure d'un \gls{lem}.
                 
                 La \autoref{fig::epaisseur_tous_lem} montre la somme des distributions des épaisseurs totales et des épaisseurs de cuivre pour tous les \glspl{lem} mesurés.
                 
@@ -286,7 +286,7 @@
         
         \subsection{Méthodes de simulation}
         
-            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre, comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction).\\
+            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction).\\
             
             Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
             

@@ -13,6 +13,24 @@
         Dans cette section sont présentées les différentes parties du \gls{crp}. La première sous-section sert d'introduction générale, puis une sous-section est dédié chaque élément important du \gls{crp}.
         
         \subsection{Rôle du CRP}\label{sec::crp_intro}
+            \begin{figure}[htbp]
+                \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/crp_fields.png}\end{center}
+                \caption[Champs électriques d'un  \gls{crp}.]{Illustration des 3 principales zones d'un \gls{crp} de \gls{dlartpc}. Les champs et potentiels électriques indiqués correspondent à l'exploitation réussie d'une \gls{dlartpc} ayant atteind des gains effectifs de l'ordre de 20 \cite{311paper2018,cantini3L}.}
+                \label{fig::crp_fields}
+            \end{figure}
+            \begin{figure}[htbp]
+                \begin{subfigure}[b]{\textwidth}
+                    \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/crp_311.png}\end{center}
+                    \caption[\gls{crp} du prototype 311]{Schéma explosé du \gls{crp} du prototype 311. Les flèches rouges représentent les câbles de suspensions \cite{311paper2018}.}
+                    \label{fig::crp_311}
+                \end{subfigure}
+                \begin{subfigure}[b]{\textwidth}
+                    \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/crp_666.png}\end{center}
+                    \caption[\glspl{crp} du démonstrateur 666]{Schéma des \glspl{crp} du démonstrateur 666. L'un d'eux est représenté plus bas pour illustrer le fait qu'il y a 4 \glspl{crp}. Chacun mesure $3\times\SI{3}{\meter\squared}$. Les trais gris verticaux représentent les câbles de suspensions. \cite{talk_crp_lapp}}
+                    \label{fig::crp_666}
+                \end{subfigure}
+                \caption{Schéma des \gls{crp} de \gls{wa105}}
+            \end{figure}
         
             Le \gls{crp} a pour rôle:
             \begin{enumerate}
@@ -51,7 +69,7 @@
             
             Afin de satisfaire ces contraintes, la structure principale des \glspl{crp} du démonstrateur 666 est faite en Invar, un alliage de fer et de nickel dont le coefficient de dilatation thermique est particulièrement faible (\SI{1.5e-6}{\per\kelvin} entre \SI{22}{\celsius} et \SI{-186}{\celsius}). La structure du \gls{crp} du prototype 311 est elle faite en acier inoxydable.
             
-            Les \glspl{lem} et anodes sont montés sur des cadres en G10 (neuf dans le 666 et trois dans le 311), de la fibre de verre feuilletée solide et électriquement isolante(TODO trouver des chiffres). Des mesures de contraction thermique réalisées en 2015 ont donné pour le G10 utilisé dans \gls{wa105} des coefficients de l'ordre de \SI{e-5}{\per\kelvin}, proches du ceux des \glspl{las}. Le G10 et les \glspl{las} réagissent donc de la même manière aux différents changements de température. Sur les six mètres du \gls{crp} du démonstrateur 666, la contraction maximum mesurée est d'environ \SI{6}{\milli\meter}. L'Invar se contractant beaucoup moins, les cadres en G10 sont fixés sur la structure en Invar avec des éléments permettant au G10 de se contracter librement.
+            Les \glspl{lem} et anodes sont montés sur des cadres en G10 (neuf dans le 666 et trois dans le 311), de la fibre de verre feuilletée solide et électriquement isolante(TODO trouver des chiffres). Des mesures de contraction thermique réalisées en 2015 ont donné pour le G10 utilisé dans \gls{wa105} des coefficients de l'ordre de \SI{e-5}{\per\kelvin}, proches du ceux des \glspl{las}. Le G10 et les \glspl{las} réagissent donc de la même manière aux différents changements de température. Sur les trois mètres du \gls{crp} du démonstrateur 666, la contraction maximum mesurée est d'environ \SI{6}{\milli\meter}. L'Invar se contractant beaucoup moins, les cadres en G10 sont fixés sur la structure en Invar avec des éléments permettant au G10 de se contracter librement.
             
             Le positionnement vertical et horizontal des \glspl{crp} se fait grâce à un système de suspension. Un \gls{crp} (dans le 666 comme dans le 311) est suspendu par trois câbles motorisés, passant par des conduites isolantes traversant le couvercle du détecteur pour atteindre le \gls{crp}. Ils permettent une amplitude verticale de \SI{98}{\milli\meter} dans le démonstrateur 666 (\SI{40}{\milli\meter} dans le prototype 311) avec une précision de \SI{100}{\micro\meter} et une amplitude horizontale de \SI{26}{\milli\meter} dans le démonstrateur 666. Le 311 n'est pas pourvu d'un système de positionnement horizontal.
             
@@ -63,10 +81,21 @@
             
             L'alimentation haute tension passe elle aussi par des conduites isolante, et est distribuée aux \gls{lem}, aux anodes et à la grille d'extraction par des câbles coaxiaux courant le long de la structure du \gls{crp}. Dans le prototype 311, chaque face de chaque \gls{lem} ainsi que chaque anode a sa propre alimentation. Dans le démonstrateur 666, les faces hautes des \gls{lem} sont alimentées par groupe de six.
             
-            Les anodes sont reliées entre elles via des nappes et des connecteurs KEL formant des canaux de six mètres de long dans le 666 et trois ou un mètre dans le 311.
+            Les anodes sont reliées entre elles via des nappes et des connecteurs KEL formant des canaux de trois mètres de long dans le 666 et trois ou un mètre dans le 311.
             
         \subsection{Les anodes}\label{sec::anode}
         
+            \begin{figure}[htbp]
+                \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/anode.png}\end{center}
+                \caption[Agrandissement d'une anode de lecture.]{Agrandissement d'une anode de lecture. L'orthogonalité des pistes des vues $x$ et $y$ facilite la reconstruction des événements, la dispositions en plusieurs couches assure une capacitance de $\SI{160}{\pico\farad\per\meter}$ \cite{cantini3L}.}
+                \label{fig::anode}
+            \end{figure}
+            \begin{figure}[htbp]
+                \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/connecteurs2.JPG}\end{center}
+                \caption[Vue du dessus d'un \gls{crp} du démonstrateur 666.]{Vue du dessus d'un \gls{crp} du démonstrateur 666. On peut y voir les câbles d'alimentation haute tension des \glspl{lem} le long de la structure en Invar ainsi que les nappes reliant les connecteurs KEL entre les anodes, formant des canaux de \SI{3}{\meter}.}
+                \label{fig::connecteurs}
+            \end{figure}
+            
             Le modèle des anodes, fabriquées par la compagnie ELTOS\footnote{\url{http://www.eltos.com/en/}} en Italie, est le résultat de tests réalisés au CERN par l'\gls{ethz} dans un prototype de \gls{dlartpc} de $\SI{3}{\liter}$ \cite{cantini_anode} en vue de réduire au maximum la capacitance, et donc le bruit, tout en ayant un partage égale de charge entre deux vues perpendiculaires, facilitant la reconstruction des événements et leur analyse.
             
             Chaque anode est un PCB de quatre couches, avec une surface de  $50\times\SI{50}{\centi\meter\squared}$ et comporte deux jeux de canaux perpendiculaires, \numprint{160} pour la vue $x$ et \numprint{160} pour la vue $y$. La \autoref{fig::anode} montre un agrandissement de la surface active d'une anode. La largeur d'un canal est de $\SI{3.125}{\milli\meter}$ et correspond à deux lignes inter-connectées, de cuivre recouvertes d'or. Les canaux sont ramenés par groupes de 32 vers l'autre surface de l'anode jusqu'à des connecteurs KEL de 68 pins, dont les 36 pins restant sont mis à la masse. Dans le prototype 311 comme dans le démonstrateur 666, ces connecteurs sont reliés entre eux d'une anode à l'autre afin de former des canaux continus de $\SI{1}{\meter}$, $\SI{3}{\meter}$ ou $\SI{6}{\meter}$ (voir  \autoref{fig::connecteurs}). La capacitance linéique est alors de $\SI{160}{\pico\farad\per\meter}$, correspondant à un bruit de fond équivalent à 1400 électrons \cite{311paper2018} pour les longs canaux de $\SI{3}{\meter}$ du prototype 311.

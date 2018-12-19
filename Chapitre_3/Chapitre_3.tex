@@ -103,7 +103,25 @@
             Les anodes ont été inspectées visuellement par le fabricant avant envoie, et la continuité de leurs canaux a été testée par Saclay (plus de détails en \autoref{sec::test_anode}).
         
         \subsection{Les Large Electron Multipliers (LEM)}\label{sec::LEM}
-        
+            
+            \begin{figure}[htbp]
+                \begin{subfigure}[b]{0.5\textwidth}
+                    \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/LEM.JPG}\end{center}
+                    \caption[Photo d'un \gls{lem} de présérie du modèle CFR-34.]{Photo d'un \gls{lem} de présérie du modèle CFR-34.}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.5\textwidth}
+                    \begin{subfigure}[b]{\textwidth}
+                        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/LEM_honeycomb1.JPG}\end{center}
+                        \caption[Photo de la disposition en nid d'abeille des trous d'un \gls{lem}.]{Photo de la disposition en nid d'abeille des trous d'un \gls{lem}.}
+                    \end{subfigure}
+                    \begin{subfigure}[b]{\textwidth}
+                        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/LEM_honeycomb2_annotations.png}\end{center}
+                        \caption[Agrandissement de la disposition en nid d'abeille des trous d'un \gls{lem}.]{Agrandissement de la disposition en nid d'abeille des trous d'un \gls{lem}.}
+                    \end{subfigure}
+                \end{subfigure}
+                \caption{Photos d'un \gls{lem}.}
+                \label{fig::LEM}
+            \end{figure}
             Les \glspl{lem} sont l'élément central d'une \gls{tpc} à double phase d'argon. Ce sont eux qui vont permettre l'amplification du signal dans la phase gazeuse. Produit de plusieurs dizaines d'années de recherche et développement, ils ont prouvé être mieux adaptés aux amplifications dans les gaz nobles que les techniques utilisant des chambres à fils (\cite{GEM,THGEM}). Ce sont des \glspl{pcb} constitués d'une plaque de résine résine époxy PANASONIC R-1566W (\gls{fr4}) recouverte de chaque côté par une fine couche de cuivre. Des trous sont percés à travers cette plaque, au travers desquelles les électrons primaires, issues de l'interaction d'une particule avec l'argon liquide plus bas, sont accélérés par une forte différence de potentielle appliquée entre les deux couches de cuivre, créant un champ électrique de l'ordre de $\SI{35}{\kilo\volt\per\centi\meter}$. Ceci permet alors de déclencher une avalanche de Townsend (voir \autoref{sec::townsend_avalanche}) dont le résultat est un gain de plusieurs dizaines (\cite{3L}), et un très bon rapport signal sur bruit.
             
             Un effet à prendre en compte dans les détecteurs utilisant des amplificateurs comme les \gls{lem} est le chargement de ces derniers. En effet, les lignes de champs à travers les \gls{lem} sont tels que des électrons vont pouvoir terminer leur course sur le \gls{fr4} au lieu de traverser le dispositif. Une accumulation de ces électrons diminuera alors le champ d'amplification, entraînant une baisse de gain. Ce phénomène, étudié dans cet article \cite{3L}, peut être décrit par une décroissance exponentielle du gain à laquelle est associée un temps caractéristique (que l'on appellera temps de charge) qu'il convient de mesurer. Comme une exploitation des résultats n'a vraiment de sens qu'à gain constant, il est préférable de diminuer ce temps de charge afin d'atteindre au plus vite un régime permanent.

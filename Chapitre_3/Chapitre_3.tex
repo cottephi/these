@@ -130,13 +130,13 @@
             
             Un autre problème potentielle est que des tensions trop importantes peuvent entraîner des décharges soudaines, entre la grille de un ou plusieurs \gls{lem}, au travers d'un ou plusieurs \gls{lem} ou entre un ou plusieurs \gls{lem} et les anodes. Ces décharges ont, par exemple, grandement limité la prise de données avec le prototype 311 qui n'a pas réussi à atteindre les tensions souhaitées en \autoref{sec::crp_intro}.
             
-            Les \glspl{lem} de \gls{wa105} ont une surface de $50\times\SI{50}{\centi\meter\squared}$ permettant de couvrir les $\SI{36}{\meter\squared}$ du démonstrateur 666 avec 144 \glspl{lem}, et une épaisseur de $\SI{1}{\milli\meter}$. Ils sont percés de \numprint{400000} trous de $\SI{500}{\micro\meter}$ de diamètre, répartis selon un motif hexagonale sur la surface du \gls{lem} (voir \autoref{fig::LEM}). Chaque trou est entouré d'un anneau dépourvu de cuivre d'une épaisseur de $\SI{40}{\micro\meter}$ appelé rim, servant à assurer la stabilité en tension du \gls{lem} \cite{thgem}. L'épaisseur de cuivre est de $\SI{40}{\micro\meter}$. Ils sont également percés de \numprint{29} trous de fixation au travers desquelles passent les entretoise et deux trous pour passer les connecteurs haute tension. Les spécifications précises sont décrites dans le \autoref{tab::lem-commun}.
+            Les \glspl{lem} de \gls{wa105} ont une surface de $50\times\SI{50}{\centi\meter\squared}$ permettant de couvrir les $\SI{36}{\meter\squared}$ du démonstrateur 666 avec 144 \glspl{lem}, et une épaisseur de $\SI{1}{\milli\meter}$. Ils sont percés de \numprint{400000} trous de $\SI{500}{\micro\meter}$ de diamètre, répartis selon un motif hexagonale sur la surface du \gls{lem} (voir \autoref{fig::LEM}). Chaque trou est entouré d'un anneau dépourvu de cuivre d'une épaisseur de $\SI{40}{\micro\meter}$ appelé rim, servant à assurer la stabilité en tension du \gls{lem} \cite{thgem}. L'épaisseur de cuivre est de $\SI{40}{\micro\meter}$. Ils sont également percés de \numprint{29} trous de fixation au travers desquelles passent les entretoise et deux trous pour passer les connecteurs haute tension. Les spécifications précises sont décrites dans le \autoref{tab::lem_commun}.
             
-            Les \glspl{lem} utilisés dans le prototype 311 ont un bord dépourvu de cuivre de $\SI{2}{\milli\meter}$, suivi d'un bord de $\SI{2}{\milli\meter}$ de cuivre dépourvu de trou. Des zones similaires sont présentes également autour des trous de fixation et des connecteurs haute tension. Les effets de ces zones sur la collection de charge et la résolution en énergie est présentée en \autoref{sec::zones_mortes}. Des tests de tenue en haute tension effectués à Saclay (voir \autoref{sec::test_HT}) sur les \glspl{lem} destinés au démonstrateur 666 ont permis de montrer que ce modèle (appelé CFR-34) ne permettait pas d'atteindre les tensions voulues, et un nouveau modèle (appelé CFR-35) a été proposé. Les bords ont été élargis, et sont constitués d'une zone de $\SI{1}{cm}$ dépourvue de cuivre suivi d'une zone de $\SI{5}{mm}$ de cuivre sans trous (voir \autoref{fig::cfrs}). C'est ce modèle qui a été gardé pour le démonstrateur 666. Les spécifications précises des deux modèles sont décrites dans le \autoref{tab::lem-diff}.
+            Les \glspl{lem} utilisés dans le prototype 311 ont un bord dépourvu de cuivre de $\SI{2}{\milli\meter}$, suivi d'un bord de $\SI{2}{\milli\meter}$ de cuivre dépourvu de trou. Des zones similaires sont présentes également autour des trous de fixation et des connecteurs haute tension. Les effets de ces zones sur la collection de charge et la résolution en énergie est présentée en \autoref{sec::zones_mortes}. Des tests de tenue en haute tension effectués à Saclay (voir \autoref{sec::test_HT}) sur les \glspl{lem} destinés au démonstrateur 666 ont permis de montrer que ce modèle (appelé CFR-34) ne permettait pas d'atteindre les tensions voulues, et un nouveau modèle (appelé CFR-35) a été proposé. Les bords ont été élargis, et sont constitués d'une zone de $\SI{1}{cm}$ dépourvue de cuivre suivi d'une zone de $\SI{5}{mm}$ de cuivre sans trous (voir \autoref{fig::cfrs}). C'est ce modèle qui a été gardé pour le démonstrateur 666. Les spécifications précises des deux modèles sont décrites dans le \autoref{tab::lem_diff}.
             
             Les choix des valeurs des différents paramètres communs aux deux modèles sont motivés par une étude réalisé par \gls{ethz} en 2014 \cite{cantini3L}. Il y est montré qu'une épaisseur plus grande de \gls{fr4} correspond, comme attendu, à un gain plus grand, mais également à un temps de charge plus grand. Une largeur du rim plus grande correspond à un temps de charge plus grand, mais permet d'atteindre des gain plus grand \cite{thgem}. Une disposition hexagonale des trous permet d'atteindre des gains plus grand qu'une disposition en carrés. Un diamètre des trous plus grand permet une meilleure stabilité en tension du \gls{lem} durant une exploitation de plusieurs jours, mais implique une baisse plus importante du gain après chargement du \gls{lem}.
             
-            \begin{table}\label{tab::lem-commun}
+            \begin{table}\label{tab::lem_commun}
                 \centering
                 \begin{tabular}{|l|c|c|}
                     \hline
@@ -157,7 +157,7 @@
                 \caption{Caractéristiques des LEM communes aux deux modèles utilisés dans \gls{wa105}.}
             \end{table}
             
-            \begin{table}\label{tab::lem-diff}
+            \begin{table}\label{tab::lem_diff}
                 \centering
                 \begin{tabular}{|l|c|c|}
                     \hline
@@ -532,18 +532,18 @@
             La continuité des canaux de lecture des anodes, ainsi que leur isolation les unes par rapport aux autres, ont été testé grâce à des \gls{pcb} créé à cet effet (voir \autoref{fig::Anode_Card_left}. Deux jeux de deux cartes de test ont été produits et ont permit de vérifier les 72 anodes du démonstrateur 666 et 6 anodes de rab.
             
             Ces cartes sont munies des mêmes connecteurs que les anodes. Elles sont faites de manière à ce qu'en branchant une carte de chaque côté de l'anode, les 160 canaux d'une vue de l'anode forment un circuit continue. Des zones de cuivres sont prévus entre chaque groupe de 32 canaux d'y mesurer la résistance du groupe. La \autoref{fig::test_anode} montre le dispositif de mesure.
-            
+
+            \begin{wrapfigure}{r}{0.4\textwidth}
+                \includegraphics[width=0.4\textwidth,keepaspectratio]{anode_problem_zoom.png}
+                \caption[Photo de canaux défaillant sur le bord d'une anode.]{Photo de canaux défaillant sur le bord d'une anode.}
+                \label{fig::anode_test_probleme}
+            \end{wrapfigure}
             Entre chaque canal est insérée une résistance de $\SI{100}{\ohm}$. Ainsi, une résistance de l'ordre de $\SI{3200}{\ohm}$ est attendue pour un groupe de 32 canaux. Une résistance significativement plus faible indiquera alors que deux ou plus canaux communiquent entre eux. Une résistance infinie indique un canal coupé. Dans les deux cas il s'agit alors de mesurer la résistance entre chaque canal du groupe posant problème afin d'identifier où se situe le problème, puis d'inspecter à l'oeil les pistes incriminées. La \autoref{fig::anode_test_probleme} montre de telles pistes.
 
             Au final, sur les 78 anodes ainsi testées, 10 ont posé problème. Parmi ces 10 anodes, 6 avaient des problèmes sur des canaux au bord de l'anode, où l'on ne s'attend de toute manière pas à collecter de charge à cause des zones mortes des \glspl{lem} (voir \autoref{sec::zones_mortes}).
                         
     \section{Efficacité d'extraction, probabilités de collection de charge}
-
-        \begin{wrapfigure}{r}{0.4\textwidth}
-            \includegraphics[width=0.4\textwidth,keepaspectratio]{anode_problem_zoomed.png}
-            \caption[Photo de canaux défaillant sur le bord d'une anode.]{Photo de canaux défaillant sur le bord d'une anode.}
-            \label{fig::anode_test_probleme}
-        \end{wrapfigure}
+    
         La probabilité qu'a un électron d'être extrait de la phase liquide à la phase gazeuse a été étudiée dans les articles de E.M. Guschin et.al. (\cite{Guschin}) et A.Bondar et.al. (\cite{Bondar}). Il a été montré que l'extraction se fait selon deux régimes : un rapide, de l'ordre de la nano-seconde, qui se traduit par une largeur de signal correspondant au temps caractéristique de l'électronique de lecture, et un lent (supérieur à la micro-seconde), qui se traduit par une largeur de signal supérieure au temps caractéristique de l'électronique de lecture. En pratique, les deux régimes sont présents et le signal est une composition des deux. Un champ d'extraction plus grand favorise la composante rapide, mais l'article \cite{Bondar} indique que dans l'argon pur, la composante lente reste dominante même à des champs d'extraction de $\SI{2}{\kilo\volt\per\centi\meter}$. Dans les détecteurs de \gls{wa105}, un événement est défini sur une plage temporelle de quelques centaines de micro-secondes, correspondant au temps nécessaires aux électrons de dérives pour parcourir toute la hauteur de la phase liquide. Un délai dans l'extraction de ces électrons de l'ordre de la dizaine de microsecondes peut avoir un impact significatif sur la forme du signal (voir \autoref{fig::extr_eff_on_waveform}), voir entraîner une perte significative de charge si le signal est mal reconstruit.
         
         Il existe également la possibilité qu'un électron, une fois extrait dans la phase gazeuse, n'atteignent pas la zone d'amplification des \glspl{lem}. En effet, des lignes de champ peuvent finir sur le \gls{fr4}, et ce des deux côtés du \gls{lem}. Cet effet, qui sera nommé \textit{probabilité de collection} dans le reste du texte, a été simulé en fonction du champ d'amplification et du champ d'extraction afin d'être également pris en compte dans l'estimation du gain. Le même phénomène peut également arriver après l'amplification : tous les électrons peuvent ne pas arriver à l'anode.
@@ -556,10 +556,26 @@
                 \end{subfigure}
                 \hfill
                 \begin{subfigure}[t]{0.48\textwidth}
-                    \includegraphics[width=\textwidth,keepaspectratio]{ansys_geom.png}
+                    \includegraphics[width=\textwidth,keepaspectratio]{ansys_geom_unzoomed.png}
                 \end{subfigure}
                 \caption{Maille élémentaire de la disposition en nid d'abeille des trous d'amplification d'un \gls{lem} modélisé avec \gls{ansys}. Les conditions de symétrie aux bords assurent la continuité de la géométrie.}
                 \label{fig::ansys_geom}
+            \end{figure}
+            
+            \begin{figure}[htpb]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{champ_dans_lem_extr.png}
+                    \caption{Champ électrique le long de l'axe central d'un trou d'amplification de \gls{lem} pour un champ d'amplification de \SI{32}{\kilo\volt\per\centi\meter} et plusieurs champs d'extraction.}
+                    \label{fig::champ_dans_lem_extr}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{champ_dans_lem_ind.png}
+                    \caption{Champ électrique le long de l'axe central d'un trou d'amplification de \gls{lem} pour un champ d'amplification de \SI{32}{\kilo\volt\per\centi\meter} et plusieurs champs d'induction.}
+                    \label{fig::champ_dans_lem_ind}
+                \end{subfigure}
+                \caption[Influence des variations des champs d'extraction et d'induction sur le champ électrique aux limites du \gls{lem}.]{Influence des variations des champs d'extraction et d'induction sur le champ électrique aux limites du \gls{lem}. Les zones délimitées par les rectangles jaunes et oranges représentent respectivement le \gls{fr4} et les deux épaisseurs de cuivre.}
+                \label{fig::champ_dans_lem}
             \end{figure}
         
             Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction) contre le champ d'amplification.\\
@@ -567,6 +583,8 @@
             Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
             
             Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \autoref{annexe::garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.\\
+            
+            %TODO refaire les histo qui sont moches (drift_histograms) et les efficacités
             
             Il y a alors deux possibilités pour définir les probabilités de collection. La première consiste à trouver les limites effectives de la zone d'amplification, qui est donnée par la simulation comme la région dans laquelle, à l'intérieur des \glspl{lem}, des électrons apparaissent. La probabilité de collection d'extraction est alors définie comme le complémentaire du rapport du nombre d'électrons qui meurent avant la zone d'amplification sur le nombre d'électrons générés au départ. La probabilité de collection d'induction quant à elle est définie comme le complémentaire du rapport du nombre d'électrons qui meurent entre le début de la zone d'amplification et l'anode sur le nombre d'électrons qui sont entrés ou ont été générés dans la zone d'amplification. Cette définition peut correspondre à des probabilités de collection avant que le \gls{lem} ne se charge, donc en début d'exploitation d'un détecteur. Mais une fois chargé, on s'attend à ce que moins de charge meurent dans les trous du \gls{lem}.\\
             

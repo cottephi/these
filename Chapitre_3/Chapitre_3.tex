@@ -25,8 +25,8 @@
                     \label{fig::crp_311}
                 \end{subfigure}
                 \begin{subfigure}[b]{\textwidth}
-                    \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/crp_666.png}\end{center}
-                    \caption[\glspl{crp} du démonstrateur 666]{Schéma des \glspl{crp} du démonstrateur 666. L'un d'eux est représenté plus bas pour illustrer le fait qu'il y a 4 \glspl{crp}. Chacun mesure $3\times\SI{3}{\meter\squared}$. Les trais gris verticaux représentent les câbles de suspensions. \cite{talk_crp_lapp}}
+                    \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/crp_666_complete.png}\end{center}
+                    \caption[\glspl{crp} du démonstrateur 666]{Schéma des \glspl{crp} du démonstrateur 666. L'un d'eux est représenté plus bas pour illustrer le fait qu'il y a 4 \glspl{crp}. Chacun mesure $3\times\SI{3}{\meter\squared}$. Les trais gris verticaux représentent les câbles de suspensions. La grille d'extraction n'est pas représentée sur ce schéma. \cite{talk_crp_lapp}}
                     \label{fig::crp_666}
                 \end{subfigure}
                 \caption{Schéma des \gls{crp} de \gls{wa105}}
@@ -109,6 +109,21 @@
                 \caption[Photo d'un \gls{lem}.]{Photo d'un \gls{lem} avec agrandissement de la disposition en nid d'abeille des trous d'amplification.}
                 \label{fig::LEM}
             \end{figure}
+            \begin{figure}[htbp]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/CFR-34.png}
+                    \caption[Modèle de \gls{lem} CFR-34.]{Modèle de \gls{lem} CFR-34 utilisé dans le prototype 311. Les zones dépourvues de trous d'amplifications aux bords et autour des trous des vis et des connecteurs hautes tension sont plus petites que celles du modèle CFR-35.}
+                    \label{fig::cfr34}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{Chapitre_3/pictures/CFR-35.png}
+                    \caption[Modèle de \gls{lem} CFR-35.]{Modèle de \gls{lem} CFR-35 utilisé dans le démonstrateur 666. Les zones dépourvues de trous d'amplifications ont été agrandies par rapport au modèle CFR-34 qui montrait des difficultés à tenir des tensions de l'ordre de \SI{3}{\kilo\volt}.}
+                    \label{fig::cfr35}
+                \end{subfigure}
+                \caption{Fichier Gerber des modèles de \gls{lem} CFR-34 et CFR-35.}
+                \label{fig::cfrs}
+            \end{figure}
             Les \glspl{lem} sont l'élément central d'une \gls{tpc} à double phase d'argon. Ce sont eux qui vont permettre l'amplification du signal dans la phase gazeuse. Produit de plusieurs dizaines d'années de recherche et développement, ils ont prouvé être mieux adaptés aux amplifications dans les gaz nobles que les techniques utilisant des chambres à fils (\cite{GEM,THGEM}). Ce sont des \glspl{pcb} constitués d'une plaque de résine résine époxy PANASONIC R-1566W (\gls{fr4}) recouverte de chaque côté par une fine couche de cuivre. Des trous sont percés à travers cette plaque, au travers desquelles les électrons primaires, issues de l'interaction d'une particule avec l'argon liquide plus bas, sont accélérés par une forte différence de potentielle appliquée entre les deux couches de cuivre, créant un champ électrique de l'ordre de $\SI{35}{\kilo\volt\per\centi\meter}$. Ceci permet alors de déclencher une avalanche de Townsend (voir \autoref{sec::townsend_avalanche}) dont le résultat est un gain de plusieurs dizaines (\cite{3L}), et un très bon rapport signal sur bruit.
             
             Un effet à prendre en compte dans les détecteurs utilisant des amplificateurs comme les \gls{lem} est le chargement de ces derniers. En effet, les lignes de champs à travers les \gls{lem} sont tels que des électrons vont pouvoir terminer leur course sur le \gls{fr4} au lieu de traverser le dispositif. Une accumulation de ces électrons diminuera alors le champ d'amplification, entraînant une baisse de gain. Ce phénomène, étudié dans cet article \cite{3L}, peut être décrit par une décroissance exponentielle du gain à laquelle est associée un temps caractéristique (que l'on appellera temps de charge) qu'il convient de mesurer. Comme une exploitation des résultats n'a vraiment de sens qu'à gain constant, il est préférable de diminuer ce temps de charge afin d'atteindre au plus vite un régime permanent.
@@ -150,13 +165,13 @@
                     \hline
                     Bord -- zone sans cuivre & \SI{2}{\milli\meter} & \SI{10}{\milli\meter}\\
                     Bord -- zone avec cuivre sans trous & \SI{2}{\milli\meter} & \SI{5}{\milli\meter}\\
-                    Trous de vis -- diamètre sans cuivre & \SI{2.2}{\milli\meter} & \SI{10}{\milli\meter} \\
+                    Trous de vis -- diamètre sans cuivre & \SI{4.2}{\milli\meter} & \SI{10}{\milli\meter} \\
                     Trous de vis -- anneau sans trous &  \SI{1.1}{\milli\meter} & \SI{5}{\milli\meter} \\
-                    Trous de connecteur -- diamètre sans cuivre & \SI{1.2}{\milli\meter} & \SI{1.2}{\milli\meter} \\
+                    Trous de connecteur -- diamètre sans cuivre & \SI{1}{\centi\meter} & \SI{1}{\centi\meter} \\
                     Trous de connecteur -- anneau sans trous & \SI{1}{\milli\meter} & \SI{5}{\milli\meter} \\
                     \hline
                 \end{tabular}
-                \caption{Caractéristiques spécifiques à chaque modèle de \gls{lem} utilisé dans \gls{wa105}.}
+                \caption{Caractéristiques spécifiques aux modèles de \gls{lem} utilisés dans \gls{wa105}.}
             \end{table}
             
         
@@ -167,6 +182,33 @@
         \subsection{Méthode de simulation}
         
             \subsubsection{Carte de champ avec ANSYS}
+                
+                \begin{figure}[htbp]
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{lem_border_annotations.png}
+                        \caption[Bord d'un \gls{lem} modélisé avec \gls{ansys}.]{Bord d'un \gls{lem} modélisé avec \gls{ansys}.}
+                        \label{fig::lem_border}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{corner_annotations.png}
+                        \caption[Coin d'un \gls{lem} modélisé avec \gls{ansys}.]{Coin d'un \gls{lem} modélisé avec \gls{ansys}.}
+                        \label{fig::corner}
+                    \end{subfigure}\\
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{screw_annotations.png}
+                        \caption[Zone autour d'un trou de vis d'un \gls{lem} modélisé avec \gls{ansys}.]{Zone autour d'un trou de vis d'un \gls{lem} modélisé avec \gls{ansys}.}
+                        \label{fig::screw}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{HT_annotations.png}
+                        \caption[Zone autour d'un connecteur haute tension d'un \gls{lem} modélisé avec \gls{ansys}.]{Zone autour d'un connecteur haute tension d'un \gls{lem} modélisé avec \gls{ansys}.}
+                        \label{fig::HT}
+                    \end{subfigure}
+                    \caption[Zones mortes d'un \gls{lem} modélisé avec \gls{ansys}.]{Zones mortes d'un \gls{lem} du modèle CFR-34 utilisé dans le prototype 311, modélisées avec \gls{ansys}. Les conditions de symétrie aux limites permettent de ne simuler qu'une "maille élémentaire" de chaque géométrie.}
+                    \label{fig::zones_mortes}
+                \end{figure}
             
                 Le logiciel \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer la carte du champ électrique à travers le \gls{crp} pour différentes zones : 
                 \begin{itemize}

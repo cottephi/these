@@ -50,7 +50,7 @@
             
             Les anodes, décrites en \autoref{sec::anode}, sont situées $\SI{2}{\milli\meter}$ au dessus des \glspl{lem}. Une tension de $\SI{1}{\kilo\volt}$ entre les anodes et le haut des \glspl{lem} créé un champ d'induction de $\SI{5}{\kilo\volt\per\centi\meter}$, qui doit alors correspondre à un probabilité de collection de charge optimale (voir \autoref{sec::effcacites}).
             
-            Les \glspl{lem} et anodes sont fixés sous des supports en fibre de verre G10, eux même fixés sous un squelette en inox pour le prototype 311 ou en Invar pour le démonstrateur 666 (voir \autoref{sec::crp_structure}). La grille d'extraction est constituée de fils d'acier inoxydable, chacun tendu à $\SI{1.5}{\newton}$ à température ambiante sur des \glspl{pcb}, eux même fixés sur les bords des supports en G10. Le \gls{crp} est désolidarisé du reste du cryostat, il est donc possible de l'assembler et de le tester à part. Un système de câbles et poulies permet d'ajuster la position du \gls{crp} au dessus du liquide. La \autoref{fig::crp_311} et la \autoref{fig::crp_666} montrent respectivement le \gls{crp} du prototype 311 et un \gls{crp} du démonstrateur 666. Le prototype 311 n'a qu'un \gls{crp} recouvrant toute sa surface, mais le démonstrateur 666 a quatre \gls{crp} de $3\times\SI{3}{\meter\squared}$, indépendants entre eux. Due à des retards de production, seuls deux de ces \gls{crp} sont instrumentés. Sur les deux autres, les \glspl{lem} et anodes ont été remplacés par des \gls{pcb} mis à la masse.
+            Les \glspl{lem} et anodes sont fixés sous des supports en fibre de verre G10, eux même fixés sous un squelette en acier inoxydable pour le prototype 311 ou en Invar pour le démonstrateur 666 (voir \autoref{sec::crp_structure}). La grille d'extraction est constituée de fils d'acier inoxydable, chacun tendu à $\SI{1.5}{\newton}$ à température ambiante sur des \glspl{pcb}, eux même fixés sur les bords des supports en G10. Le \gls{crp} est désolidarisé du reste du cryostat, il est donc possible de l'assembler et de le tester à part. Un système de câbles et poulies permet d'ajuster la position du \gls{crp} au dessus du liquide. La \autoref{fig::crp_311} et la \autoref{fig::crp_666} montrent respectivement le \gls{crp} du prototype 311 et un \gls{crp} du démonstrateur 666. Le prototype 311 n'a qu'un \gls{crp} recouvrant toute sa surface, mais le démonstrateur 666 a quatre \gls{crp} de $3\times\SI{3}{\meter\squared}$, indépendants entre eux. Due à des retards de production, seuls deux de ces \gls{crp} sont instrumentés. Sur les deux autres, les \glspl{lem} et anodes ont été remplacés par des \gls{pcb} mis à la masse.
             
             Le \gls{crp} est munie de plusieurs capteurs de pression, de température ainsi que de niveau d'argon liquide afin de suivre en direct les conditions à l'intérieur du détecteur et de pouvoir ajuster le niveau du \gls{crp} par rapport au liquide.
         
@@ -361,25 +361,51 @@
                     
                     %La plaque et le \glspl{lem} sont positionnés sur le marbre à l'aide une équerre vissée au marbre (voir \autoref{fig::equerre}.)
                     
-                    \begin{wrapfigure}{r}{0.4\textwidth}
-                        \includegraphics[width=0.4\textwidth,keepaspectratio]{plate_and_bricks.JPG}
-                        \caption[Système servant à applanir le \gls{lem} sur le marbre.]{Système servant à applanir le \gls{lem} sur le marbre.}
-                        \label{fig::plate_and_bricks}
-                    \end{wrapfigure}
+                    \begin{figure}[htpb]
+                        \begin{subfigure}[t]{0.5\textwidth}
+                            \includegraphics[width=\textwidth,keepaspectratio]{plate_and_bricks.png}
+                            \caption[Système servant à aplanir le \gls{lem} sur le marbre.]{Système servant à aplanir le \gls{lem} sur le marbre. Le \gls{lem} est sous une plaque d'acier sur laquelle sont posées des briques de plomb le l'axe de mesure.}
+                            \label{fig::plate_and_bricks}
+                        \end{subfigure}
+                        \hfill
+                        \begin{subfigure}[t]{0.395\textwidth}
+                            \includegraphics[width=\textwidth,keepaspectratio]{LEM_through_plate.png}
+                            \caption[Vue du \gls{lem} mesuré à travers un trou de la plaque en acier.]{Vue du \gls{lem} mesuré à travers un trou de la plaque en acier. Le point vert correspond à la lumière du crayon optique.}
+                            \label{fig::LEM_through_plate}
+                        \end{subfigure}
+                        \caption{Photographies du dispositif expérimental utilisé pour les mesures d'épaisseur.}
+                        \label{fig::dispositif_experimental}
+                    \end{figure}
                     Il a été observé que malgré la plaque, la distance indiquée par le \gls{cci} pouvait présenter des variations allant jusqu'à \SI{20}{\micro\meter} quand une plus grande pression était exercée sur le \gls{lem} proche de la mesure. Nous avons donc rajouté des briques en plomb de \SI{11}{\kilo\gram} disposées le long du chemin emprunté par le crayon optique (voir \autoref{fig::plate_and_bricks}). %Trois pièces d'aluminium pouvant être vissées au marbre ont été également rajoutées, permettant d'exercer une pression encore plus grande sur les bords bas, droit et gauche de la plaques.
                     
                     Malgré cela, le trou de mesure situé le plus au centre du \gls{lem} présentaient encore des variations de $10$ à $\SI{15}{\micro\meter}$. Il a donc était décidé d'ignorer ce trou de mesure.
                     
-                \paragraph{Calibrations et mesures}
-                    
-                    \begin{wrapfigure}{r}{0.4\textwidth}
-                        \includegraphics[width=0.4\textwidth,keepaspectratio]{marbre.png}
-                        \caption[Calibration du marbre.]{Calibration du marbre. Le graph du haut montre la pente du marbre le long de l'axe de mesure $x$, le graph du bas montre la dispersion de l'épaisseur du marbre après correction de la pente autour de $x=0$.}
-                        \label{fig::marbre}
-                    \end{wrapfigure}
+                    \begin{figure}[htpb]
+                        \begin{minipage}{0.56\textwidth}
+                           \begin{subfigure}[t]{\textwidth} \includegraphics[width=\textwidth,keepaspectratio]{marbre.png}
+                            \caption[Calibration du marbre.]{Calibration du marbre. Le graph du haut montre la pente du marbre le long de l'axe de mesure $x$, le graph du bas montre la dispersion de l'épaisseur du marbre après correction de la pente autour de $x=0$.}
+                            \label{fig::marbre}
+                            \end{subfigure}
+                        \end{minipage}
+                        \hfill
+                        \begin{minipage}{0.38\textwidth}
+                            \begin{subfigure}[t]{\textwidth}
+                                \includegraphics[width=\textwidth,keepaspectratio]{optic_response.png}
+                                \caption[Calibration de la réponse du crayon optique.]{Calibration de la réponse du crayon optique avec six cales de différentes épaisseurs.}
+                                \label{fig::optic_response}
+                            \end{subfigure}
+                            \begin{subfigure}[t]{\textwidth}
+                                \includegraphics[width=\textwidth,keepaspectratio]{calle.png}
+                                \caption[Dispersion de l'épaisseur mesurée d'une calle de \SI{0.99}{\milli\meter}.]{Dispersion de l'épaisseur mesurée d'une calle de \SI{0.99}{\milli\meter}.}
+                                \label{fig::calle}
+                            \end{subfigure}
+                        \end{minipage}
+                        \caption[Calibration du système de mesure \gls{cci}.]{Calibration du système de mesure \gls{cci}.}
+                        \label{fig::calibration}
+                    \end{figure}
                     Le mouvement selon l'axe $y$ ne peut se faire qu'en déplaçant manuellement la poutre, aussi les mesures ont été prises ligne par ligne.
                     
-                    Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre}).
+                    Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente autour de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre}).
                     
                     La moyenne de la distribution des hauteurs du marbre corrigée pour la pente servait de zéro pour les mesures des épaisseurs du \gls{lem} lui même.
                     
@@ -390,7 +416,66 @@
                     %Pour les deux rangées du haut, loin des pièces d'aluminium permettant un meilleur aplanissement, les briques en plomb était disposée le plus proche possible du trou de mesure, et nous vérifions à chaque fois que le niveau indiqué par l'appareil de mesure de bougeait pas de plus de $\SI{1}{\micro\meter}$ quand l'on exerçait un pression sur la plaque. Pour les trois autres rangées, les pièces d'aluminium étaient vissée soit du côté droit, soit du côté gauche, soit en bas suivant le trou mesuré. En effet, en serrant à droite, le côté gauche de la plaque d'acier pouvait se retrouver un peu soulevé, et inversement. Pour les trous centraux des troisième et quatrième rangées, les pièces en aluminium n'étaient pas serrées. Les briques en plomb étaient ajustées au mieux. Sur la plupart des \glspl{lem}, le trou central de la troisième rangée présenté une variation de plus de $\SI{10}{\micro\meter}$ quand une pression supplémentaire était exercée, aussi il a été décidé d'ignorer ce trou systématiquement.
                     
             \subsubsection{Résultats et comparaison aux mesures du fabricant}
+                    
+                \begin{figure}[htpb]
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{2D_LEM_thickness_distri.png}
+                        \caption{Visualisation de l'épaisseur totale moyenne d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_24_trou_lem_2D}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{2D_copper_thickness_distri.png}
+                        \caption{Visualisation de l'épaisseur de cuivre moyenne d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_24_trou_cuivre_2D}
+                    \end{subfigure}\\
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{LEM.png}
+                        \caption{Distribution de l'épaisseur totale moyenne d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_24_trou_lem_1D}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{Copper.png}
+                        \caption{Distribution de l'épaisseur de cuivre moyenne d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_24_trou_cuivre_1D}
+                    \end{subfigure}
+                    \caption[Résultats des mesures d'épaisseur pour un \gls{lem}.]{Résultats des mesures d'épaisseur pour un \gls{lem}.}
+                    \label{fig::distri_epaisseur_1_lem}
+                \end{figure}
                 
+                \begin{figure}[htpb]
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_sum_all_histo_saclay.png}
+                        \caption{Distribution de l'épaisseur totale moyenne de tous les \glspl{lem} de la production de Saclay mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_lem_saclay}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_sum_all_histo_saclay.png}
+                        \caption{Distribution de l'épaisseur de cuivre moyenne de tous les \glspl{lem} de la production de Saclay mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_cuivre_saclay}
+                    \end{subfigure}\\
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_sum_all_histo_cern.png}
+                        \caption{Distribution de l'épaisseur totale moyenne de tous les \glspl{lem} de la production du \gls{cern} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_lem_cern}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_sum_all_histo_cern.png}
+                        \caption{Distribution de l'épaisseur de cuivre moyenne de tous les \glspl{lem} de la production du \gls{cern} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \label{fig::distri_cuivre_cern}
+                    \end{subfigure}
+                    \caption[Résultats des mesures d'épaisseur pour tous les \glspl{lem}.]{Résultats des mesures d'épaisseur pour tous les \glspl{lem}. La première ligne correspond aux \glspl{lem} issues de la production de Saclay, principalement destinés au premier \gls{crp} du démontrateur 666, la seconde ligne correspond aux \glspl{lem} issues de la production du \gls{cern}, principalement destinés au second \gls{crp}.}
+                    \label{fig::epaisseur_tous_lem}
+                \end{figure}
+                
+                \begin{wrapfigure}{r}{0.4\textwidth}
+                    \includegraphics[width=0.4\textwidth,keepaspectratio]{distri_1_trou_lem.png}
+                    \caption[Distribution de l'épaisseur d'un \gls{lem} mesurée à travers u trou de la plaque en acier.]{Distribution de l'épaisseur d'un \gls{lem} mesurée à travers u trou de la plaque en acier. L'ajustement gaussien de gauche correspond au \gls{fr4}, celui de droite au cuivre.}
+                    \label{fig::distri_1_trou_lem}
+                \end{wrapfigure}
                 Les distributions des hauteurs dans les 25 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. Une double gaussienne y est ajustée afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre et l'épaisseur $E_F$ du \gls{fr4}. En supposant que l'épaisseur du cuivre est la même sur chaque face, nous avons la relation $E_T = E_F + 2E_C$. $E_T$ est accessible directement. $E_C$ correspond à la différence entre les moyennes des deux gaussiennes. $E_F$ est alors facile à déterminer. La \autoref{fig::distri_1_trou_lem} montre cette distribution pour un trou de mesure. 
                 
                 A noter que les mesures ne permettait pas toujours de d'ajuster deux gaussienne. Dans certains cas, seul l'épaisseur totale était accessible.
@@ -399,17 +484,52 @@
                 
                 La \autoref{fig::epaisseur_tous_lem} montre la somme des distributions des épaisseurs totales et des épaisseurs de cuivre pour tous les \glspl{lem} mesurés.
                 
-                %Comparaison à Eltos
+                %TODO Comparaison à Eltos et discussion
         
         \subsection{Tests haute tension et mesures de gain}\label{sec::test_HT}
-            
+        
+            \begin{figure}[htpb]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{6lems_gamelle.jpg}
+                    \caption{Chambre haute pression avec six \glspl{lem} en train d'être préparés pour un test de tenue en tesion.}
+                    \label{fig:6lems_gamelle}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{gamelle_source.jpg}
+                    \caption{Chambre haute pression avec une source d'américium, un \gls{lem} et une anode en train d'être préparés pour une mesure de gain.}
+                    \label{fig:gamelle_source}
+                \end{subfigure}
+                \caption[Chambre haute pression]{Chambre haute pression utilisée à Saclay pour les tests de tenue en tension et les mesures de gain des \glspl{lem} destinés au démonstrateur 666.}
+                \label{fig::gamelle}
+            \end{figure}
             Une enceinte haute pression a été construite afin d'y recréer les conditions de pression et température des \gls{tpc} de \gls{wa105}\footnote{A noter que dans les \gls{tpc}, un gradient de température est présent, qui ne l'est pas dans l'enceinte haute pression.}. Tous les \glspl{lem} du démonstrateur 666 y ont été soumis à de hautes tensions afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans de l'argon. A également été mesuré le gain de ces \glspl{lem} grâce à une source d'américium placée dans l'enceinte.
             
             Pour les tests haute tension, six \glspl{lem} pouvaient être testés en même temps. La \autoref{fig::6lems_gamelle} montre  ce dispositif. Pour les mesures de gains, un seul \gls{lem} était placé, ainsi qu'une anode de lecture et la source. L'espacement entre l'anode et le \gls{lem} est le même que sur le \gls{crp}, $\SI{2}{\milli\meter}$. La cathode avec la source est située $\SI{5}{\centi\meter}$ au dessus du \gls{lem}. La \autoref{fig::gamelle_source} montre ce dispositif.
         
         \subsection{Test de continuité des pistes des anodes}\label{sec::test_anode}
-        
-            La continuité des canaux de lecture des anodes, ainsi que leur isolation les unes par rapport aux autres, ont été testé grâce à des \gls{pcb} créé à cet effet. Deux jeux de deux cartes de test ont été produits et ont permit de vérifier les 72 anodes du démonstrateur 666 et 6 anodes de rab.
+
+            \begin{wrapfigure}{r}{0.1\textwidth}
+                \includegraphics[width=0.1\textwidth,keepaspectratio]{Anode_Card_left.png}
+                \caption{Schéma d'une carte de mesure utilisée pour les tests de continuité des anodes.}
+                \label{fig::Anode_Card_left}
+            \end{wrapfigure}\hfill
+            \begin{figure}
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{anode_card_zoom.JPG}
+                    \caption{Agrandissement d'une carte de mesure. On y voit les résistances de \SI{100}{\ohm} placées entre les canaux de l'anode.}
+                    \label{fig:anode_card_zoom}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{anode_card.JPG}
+                    \caption{Photo du dispositif de mesure. Les cartes de chaque côtés permettent aux \numprint{160} canaux de l'anode de n'en former plus qu'un, si aucun n'est cassé. Les cartes au dessus et au dessous servent à vérifier qu'il n'y a pas de court circuit entre les deux vues de l'anode.}
+                    \label{fig:anode_card}
+                \end{subfigure}
+                \caption[Dispositif de mesure de la continuité des canaux des lecture des anodes.]{Dispositif de mesure de la continuité des canaux des lecture des anodes.}
+                \label{fig::test_anode}
+            \end{figure}
+            La continuité des canaux de lecture des anodes, ainsi que leur isolation les unes par rapport aux autres, ont été testé grâce à des \gls{pcb} créé à cet effet (voir \autoref{fig::Anode_Card_left}. Deux jeux de deux cartes de test ont été produits et ont permit de vérifier les 72 anodes du démonstrateur 666 et 6 anodes de rab.
             
             Ces cartes sont munies des mêmes connecteurs que les anodes. Elles sont faites de manière à ce qu'en branchant une carte de chaque côté de l'anode, les 160 canaux d'une vue de l'anode forment un circuit continue. Des zones de cuivres sont prévus entre chaque groupe de 32 canaux d'y mesurer la résistance du groupe. La \autoref{fig::test_anode} montre le dispositif de mesure.
             

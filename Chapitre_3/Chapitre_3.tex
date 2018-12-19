@@ -335,18 +335,15 @@
                     
                     La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet.% Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
                     %plusieurs photo du dispositif
-                    
-                    \begin{wrapfigure}{r}{0.4\textwidth}
-                        \includegraphics[width=0.4\textwidth,keepaspectratio]{marbre.png}
-                        \caption[Calibration du marbre.]{Calibration du marbre.}
-                        \label{fig::marbre}
-                    \end{wrapfigure}
                     Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$ (\autoref{fig::marbre}).
                     
                     La source polychromatique utilisée est un crayon optique munie d'une LED blanche donc l'intensité est ajustable manuellement. Ce crayon optique est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près.
                     
-                    Le mouvement selon l'axe $y$ ne peut se faire qu'en déplaçant manuellement la poutre, aussi les mesures ont été prises ligne par ligne.
-                    
+                    \begin{wrapfigure}{r}{0.4\textwidth}
+                        \includegraphics[width=0.4\textwidth,keepaspectratio]{soft_measure_LEM.JPG}
+                        \caption[Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}.]{Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}. Les grands pics sont coupés à l'analyse.}
+                        \label{fig::soft_measure_LEM}
+                    \end{wrapfigure}
                     Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \gls{lem} est visible sur la \autoref{fig::soft_measure_LEM}, issue de ce logiciel. 
                     
                     A noter que due à l'absence de motorisation du chariot sur coussin d'air, ce dernier était poussé à la main, ce qui ne garantissait pas une vitesse constante.
@@ -364,12 +361,24 @@
                     
                     %La plaque et le \glspl{lem} sont positionnés sur le marbre à l'aide une équerre vissée au marbre (voir \autoref{fig::equerre}.)
                     
+                    \begin{wrapfigure}{r}{0.4\textwidth}
+                        \includegraphics[width=0.4\textwidth,keepaspectratio]{plate_and_bricks.JPG}
+                        \caption[Système servant à applanir le \gls{lem} sur le marbre.]{Système servant à applanir le \gls{lem} sur le marbre.}
+                        \label{fig::plate_and_bricks}
+                    \end{wrapfigure}
                     Il a été observé que malgré la plaque, la distance indiquée par le \gls{cci} pouvait présenter des variations allant jusqu'à \SI{20}{\micro\meter} quand une plus grande pression était exercée sur le \gls{lem} proche de la mesure. Nous avons donc rajouté des briques en plomb de \SI{11}{\kilo\gram} disposées le long du chemin emprunté par le crayon optique (voir \autoref{fig::plate_and_bricks}). %Trois pièces d'aluminium pouvant être vissées au marbre ont été également rajoutées, permettant d'exercer une pression encore plus grande sur les bords bas, droit et gauche de la plaques.
                     
                     Malgré cela, le trou de mesure situé le plus au centre du \gls{lem} présentaient encore des variations de $10$ à $\SI{15}{\micro\meter}$. Il a donc était décidé d'ignorer ce trou de mesure.
                     
                 \paragraph{Calibrations et mesures}
-                
+                    
+                    \begin{wrapfigure}{r}{0.4\textwidth}
+                        \includegraphics[width=0.4\textwidth,keepaspectratio]{marbre.png}
+                        \caption[Calibration du marbre.]{Calibration du marbre. Le graph du haut montre la pente du marbre le long de l'axe de mesure $x$, le graph du bas montre la dispersion de l'épaisseur du marbre après correction de la pente autour de $x=0$.}
+                        \label{fig::marbre}
+                    \end{wrapfigure}
+                    Le mouvement selon l'axe $y$ ne peut se faire qu'en déplaçant manuellement la poutre, aussi les mesures ont été prises ligne par ligne.
+                    
                     Due à la non mobilité en $y$ du dispositif de mesure, les mesures s'effectuaient ligne par ligne. Les mesures sont corrigées pour l'inclinaison du marbre, mesurée à chaque ligne. Celui-ci présentait une pente de $\SI{10}{\micro\meter\per\meter}$ (\autoref{fig::marbre}).
                     
                     La moyenne de la distribution des hauteurs du marbre corrigée pour la pente servait de zéro pour les mesures des épaisseurs du \gls{lem} lui même.

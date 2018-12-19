@@ -184,18 +184,18 @@
             \subsubsection{Carte de champ avec ANSYS}
                 
                 \begin{figure}[htbp]
-                    \begin{subfigure}[t]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{border_annotations.svg.png}
+                    \begin{subfigure}[t]{0.61\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{border_annotations.eps}
                         \caption[Bord d'un \gls{lem} modélisé avec \gls{ansys}.]{Bord d'un \gls{lem} modélisé avec \gls{ansys}.}
                         \label{fig::lem_border}
                     \end{subfigure}
                     \hfill
-                    \begin{subfigure}[t]{0.48\textwidth}
+                    \begin{subfigure}[t]{0.31\textwidth}
                         \includegraphics[width=\textwidth,keepaspectratio]{corner_annotations.png}
                         \caption[Coin d'un \gls{lem} modélisé avec \gls{ansys}.]{Coin d'un \gls{lem} modélisé avec \gls{ansys}.}
                         \label{fig::corner}
                     \end{subfigure}\\
-                    \begin{subfigure}[b]{0.48\textwidth}
+                    \begin{subfigure}[b]{0.42\textwidth}
                         \includegraphics[width=\textwidth,keepaspectratio]{screw_annotations.png}
                         \caption[Zone autour d'un trou de vis d'un \gls{lem} modélisé avec \gls{ansys}.]{Zone autour d'un trou de vis d'un \gls{lem} modélisé avec \gls{ansys}.}
                         \label{fig::screw}
@@ -226,13 +226,33 @@
                 \end{itemize}
                 
             \subsubsection{Transport des charges avec GarField}
+            
+                \begin{wrapfigure}[21]{r}{0.4\textwidth}
+                    \includegraphics[width=0.4\textwidth,keepaspectratio]{drift_example.png}
+                    \caption[Dérive de 10 électrons dans la carte de champ du bord d'un \gls{lem} avec Garfield.]{Dérive de 10 électrons dans un example 2D de carte de champ du bord d'un \gls{lem} créée avec \gls{ansys} par le logiciel Garfield. Le cercle rouge indique les électrons finissant leur dérive sur la zone morte, les cercles verts indiquent les électrons finissant leur dérive sur la zone d'amplification. La simulation d'avalanche n'est pas activée afin d'accélérer le calcul.}
+                    \label{fig::drift_example}
+                \end{wrapfigure}
                 
                 Afin d'estimer l'impact sur la dérive des électrons des zones décrites précédemment, le logiciel GarField \cite{garfield} a été utilisé pour simuler le parcours de \numprint{10000} électrons, générés selon une distribution plate, entre la zone de transition liquide--gaz et le \gls{lem}. Les électrons n'étaient pas générés dans le liquide afin de s'affranchir de l'efficacité d'extraction liquide--gaz décrite en \autoref{sec::efficacités}, mais un demi-millimètre au dessus, avec une énergie initiale nulle. La \autoref{fig::drift_example} %talk CERN
                 montre le résultat pour une simulation de 10 électrons (l'avalanche est désactivée dans cette étude) : 5  atteignent la zone d'amplification tandis que 5 autres sont déviés sur le bords du \gls{lem}.
                 
         \subsection{Résultat : carte d'efficacité}
-            
+        
             Un électron est considéré comme "bon" si il atteint la zone d'amplification, qu'il passe ensuite à travers un trou ou non. La \autoref{fig::drift_example} montre la limite de cette zone. Pour chaque électron, la position initiale est enregistrée, ainsi que le fait qu'il ait atteint ou non la zone d'amplification. Sont alors calculées la distribution de toutes les positions initiales des électrons et la distribution des positions initiales des électrons atteignant la zone d'amplification. Le ratio de la seconds distribution sur la première défini l'efficacité de transmission en fonction de la position. Le résultat pour les quatre zones mortes est montré en \autoref{fig::histo_eff}.
+            
+            \begin{figure}[htbp]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{histo_bar.png}
+                    \caption{Probabilité de transmission d'un électron en fonction de sa position initiale sous le bord d'un \gls{lem}. Les lignes pointillées indiquent les positions des deux premiers canaux de lecture de l'anode au dessus du bord.}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{histo_corner_screw_hv.png}
+                    \caption{Probabilité de transmission d'un électron en fonction de sa position initiale sous le coin, un trou de vis et un connecteur haute tension d'un \gls{lem}.}
+                \end{subfigure}
+                \caption[Probabilité de transmission des zones mortes d'un \gls{lem}.]{Probabilité de transmission d'un électron en fonction de sa position initiale après extraction sous les différentes zone mortes d'un \gls{lem} du modèle CFR-34.}
+                \label{fig::histo_eff}
+            \end{figure}
             
             En redéfinissant la taille des bins des histogrammes ainsi obtenus à la largeur des canaux de lecture des anode (\SI{0.3125}{\centi\meter}), il est possible de créer la carte d'efficacité complète montrée en \autoref{fig::eff_map}. Il apparaît alors que les pertes principales auront lieu sur les bords des anodes, où les premiers canaux ne devraient voir aucune charge tandis que les seconds canaux devraient voir moins de la moitié de la charge.
             
@@ -241,18 +261,27 @@
                 %à faire
             
         \subsection{Résultat : impact sur la résolution}
+            
+            \begin{wrapfigure}{r}{0.4\textwidth}
+                \includegraphics[width=0.4\textwidth,keepaspectratio]{eff_map.png}
+                \caption[Carte d'efficacité d'un \gls{lem} du modèle CFR-34.]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34. Les axes $x$ et $y$ représentent les \numprint{160} canaux des vues de l'anode se situant au dessus du \gls{lem}. La bar de couleur indique la fraction de charge qui atteindra chaque pixel ainsi formé.}
+                \label{fig::eff_map}
+            \end{wrapfigure}
         
             Cette étude a été faite avec le logiciel QScan \cite{qscan}. La carte d'efficacité du \gls{lem} y a été implémentée, et plusieurs types de particules à plusieurs impulsions initiales ont été simulées dans le démonstrateur de 666\footnote{Ce travail a été fait en début de thèse. Nous ignorions à l'époque que le modèle des \glspl{lem} changerait pour le démonstrateur 666.}.
             
             J'ai regardé l'effet sur la charge totale arrivant à l'anode, avant reconstruction. Les effets de diffusion longitudinale et verticale sont simulés par des répartitions gaussiennes en temps et en espace de la charge (voir \cite{diffusion}).
             %cité dans Charge Collection
+            %TODO ajouter plots
             
         
         \subsection{Limites de cette simulation}
-            charging-up due à l'accumulation d'électron sur le \gls{fr4}\\
-            d'autres configuration de champs\\
-            Ne prend pas en compte la reconstruction en elle meme (qui va de toute manière dépendre du logiciel)\\
-            nouvelle géométrie
+        
+            Cette simulation n'a été faite que pour une configurations du champ électrique à travers le \gls{crp}. Or des variations du champ d'extraction et/ou du champ d'amplification vont modifier les lignes de champs proches du \gls{lem}, il est donc probable que les probabilités de transmission en soient impactées. La méthode de simulation décrite plus haut peut tout à fait être répétée dans une étude future pour d'autre configurations du champ à travers le \gls{crp}.
+            
+            De plus, cette étude n'a été faite que pour le modèle CFR-34, qui n'est finalement pas utilisé dans le démonstrateur 666 et ne le sera pas non plus dans \gls{dune}.
+            
+            Le phénomène de charge du \gls{lem} au cours d'une opération longue d'une \gls{dlartpc} aura également un impact sur le champ électrique proche des zones mortes, où un grand nombre d'électrons est supposé s'accumuler. Cet effet n'est pas pris en compte par la méthode de simulation décrite ici.
         
     \section{Préparation, caractérisation et test à l'IRFU}
     
@@ -273,6 +302,20 @@
         \subsection{Les mesures d’épaisseur des LEM}\label{sec::epaisseur}
         
             \subsubsection{Motivation : impact sur le gain}
+            
+                \begin{figure}[htbp]
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{thickness_influence_on_gain.png}
+                        \caption{Influence de l'épaisseur d'un \gls{lem} sur le gain.}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[t]{0.48\textwidth}
+                        \includegraphics[width=\textwidth,keepaspectratio]{thickness_influence_on_gain_zoom_3.5k.eps}
+                        \caption{Influence de l'épaisseur d'un \gls{lem} sur le gain, agrandissement autour de \SI{35}{\kilo\volt\per\centi\meter}.}
+                    \end{subfigure}
+                    \caption[Influence de l'épaisseur d'un \gls{lem} sur le gain.]{Influence attendue de l'épaisseur d'un \gls{lem} sur le gain, d'après le formule \eqref{eq::townsend_avalanche_2}. La référence d'épaisseur pour calculer les pourcentages est \SI{1}{\milli\meter}.}
+                    \label{fig::thickness_influence_on_gain}
+                \end{figure}
             
                 La formule du gain à travers un dispositif amplificateur est rappelée ici (voir \autoref{sec::townsend_avalanche} pour plus de détails) :
                 \begin{equation}\label{eq::townsend_avalanche_2}
@@ -358,11 +401,11 @@
     
         La probabilité qu'a un électron d'être extrait de la phase liquide à la phase gazeuse a été étudiée dans les articles de E.M. Guschin et.al. (\cite{Guschin}) et A.Bondar et.al. (\cite{Bondar}). Il a été montré que l'extraction se fait selon deux régimes : un rapide, de l'ordre de la nano-seconde, qui se traduit par une largeur de signal correspondant au temps caractéristique de l'électronique de lecture, et un lent (supérieur à la micro-seconde), qui se traduit par une largeur de signal supérieure au temps caractéristique de l'électronique de lecture. En pratique, les deux régimes sont présents et le signal est une composition des deux. Un champ d'extraction plus grand favorise la composante rapide, mais l'article \cite{Bondar} indique que dans l'argon pur, la composante lente reste dominante même à des champs d'extraction de $\SI{2}{\kilo\volt\per\centi\meter}$. Dans les détecteurs de \gls{wa105}, un événement est défini sur une plage temporelle de quelques centaines de micro-secondes, correspondant au temps nécessaires aux électrons de dérives pour parcourir toute la hauteur de la phase liquide. Un délai dans l'extraction de ces électrons de l'ordre de la dizaine de microsecondes peut avoir un impact significatif sur la forme du signal (voir \autoref{fig::extr_eff_on_waveform}), voir entraîner une perte significative de charge si le signal est mal reconstruit.
         
-        Il existe également la possibilité qu'un électron, une fois extrait dans la phase gazeuse, n'atteignent pas la zone d'amplification des \glspl{lem}. En effet, des lignes de champ peuvent finir sur le \gls{fr4}, et ce des deux côtés du \gls{lem}. Cet effet, que nommé \textit{probabilité de collection} dans le reste du texte, a été simulé en fonction du champ d'amplification et du champ d'extraction afin d'être également pris en compte dans l'estimation du gain. Le même phénomène peut arriver après l'amplification : tous les électrons peuvent ne pas arriver à l'anode.
+        Il existe également la possibilité qu'un électron, une fois extrait dans la phase gazeuse, n'atteignent pas la zone d'amplification des \glspl{lem}. En effet, des lignes de champ peuvent finir sur le \gls{fr4}, et ce des deux côtés du \gls{lem}. Cet effet, qui sera nommé \textit{probabilité de collection} dans le reste du texte, a été simulé en fonction du champ d'amplification et du champ d'extraction afin d'être également pris en compte dans l'estimation du gain. Le même phénomène peut également arriver après l'amplification : tous les électrons peuvent ne pas arriver à l'anode.
         
         \subsection{Méthodes de simulation}
         
-            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction).\\
+            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction) contre le champ d'amplification.\\
             
             Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
             

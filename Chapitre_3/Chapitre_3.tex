@@ -134,7 +134,7 @@
             
             Les \glspl{lem} utilisés dans le prototype 311 ont un bord dépourvu de cuivre de $\SI{2}{\milli\meter}$, suivi d'un bord de $\SI{2}{\milli\meter}$ de cuivre dépourvu de trou. Des zones similaires sont présentes également autour des trous de fixation et des connecteurs haute tension. Les effets de ces zones sur la collection de charge et la résolution en énergie est présentée en \autoref{sec::zones_mortes}. Des tests de tenue en haute tension effectués à Saclay (voir \autoref{sec::test_HT}) sur les \glspl{lem} destinés au démonstrateur 666 ont permis de montrer que ce modèle (appelé CFR-34) ne permettait pas d'atteindre les tensions voulues, et un nouveau modèle (appelé CFR-35) a été proposé. Les bords ont été élargis, et sont constitués d'une zone de $\SI{1}{cm}$ dépourvue de cuivre suivi d'une zone de $\SI{5}{mm}$ de cuivre sans trous (voir \autoref{fig::cfrs}). C'est ce modèle qui a été gardé pour le démonstrateur 666. Les spécifications précises des deux modèles sont décrites dans le \autoref{tab::lem-diff}.
             
-            Les choix des valeurs des différents paramètres communs aux deux modèles sont motivés par une étude réalisé par \gls{ethz} en 2014 \cite{3L}. Il y est montré qu'une épaisseur plus grande de \gls{fr4} correspond, comme attendu, à un gain plus grand, mais également à un temps de charge plus grand. Une largeur du rim plus grande correspond à un temps de charge plus grand, mais permet d'atteindre des tension plus grande \cite{thgem}. Une disposition hexagonale des trous permet d'atteindre des gains plus grand qu'une disposition en carrés. Un diamètre des trous plus grand permet une meilleure stabilité en tension du \gls{lem} durant une exploitation de plusieurs jours, mais implique une baisse plus importante du gain après chargement du \gls{lem}.
+            Les choix des valeurs des différents paramètres communs aux deux modèles sont motivés par une étude réalisé par \gls{ethz} en 2014 \cite{cantini3L}. Il y est montré qu'une épaisseur plus grande de \gls{fr4} correspond, comme attendu, à un gain plus grand, mais également à un temps de charge plus grand. Une largeur du rim plus grande correspond à un temps de charge plus grand, mais permet d'atteindre des gain plus grand \cite{thgem}. Une disposition hexagonale des trous permet d'atteindre des gains plus grand qu'une disposition en carrés. Un diamètre des trous plus grand permet une meilleure stabilité en tension du \gls{lem} durant une exploitation de plusieurs jours, mais implique une baisse plus importante du gain après chargement du \gls{lem}.
             
             \begin{table}\label{tab::lem-commun}
                 \centering
@@ -310,10 +310,10 @@
                     \end{subfigure}
                     \hfill
                     \begin{subfigure}[t]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{thickness_influence_on_gain_zoom_3.5k.pdf}
+                        \includegraphics[width=\textwidth,keepaspectratio]{thicknes_influence_on_gain_zoom_35kV.png}
                         \caption{Influence de l'épaisseur d'un \gls{lem} sur le gain, agrandissement autour de \SI{35}{\kilo\volt\per\centi\meter}.}
                     \end{subfigure}
-                    \caption[Influence de l'épaisseur d'un \gls{lem} sur le gain.]{Influence attendue de l'épaisseur d'un \gls{lem} sur le gain, d'après le formule \eqref{eq::townsend_avalanche_2} ajustée aux données de la chambre haute pression de Saclay. La référence d'épaisseur pour calculer les pourcentages est \SI{1}{\milli\meter}.}
+                    \caption[Influence de l'épaisseur d'un \gls{lem} sur le gain.]{Influence attendue de l'épaisseur d'un \gls{lem} sur le gain, d'après le formule \eqref{eq::townsend_avalanche_2} ajustée aux données de présentées dans \cite{cantini3L}. La référence d'épaisseur pour calculer les pourcentages est \SI{1}{\milli\meter}.}
                     \label{fig::thickness_influence_on_gain}
                 \end{figure}
             
@@ -327,6 +327,12 @@
                 %documentation dans hardware/lem_plaques/marbre_472
                 \paragraph{Le marbre et le crayon optique}
                 
+                    \begin{wrapfigure}{r}{0.4\textwidth}
+                        \includegraphics[width=0.4\textwidth,keepaspectratio]{CCI.png}
+                        \caption[Schéma de la méthode de mesure \gls{cci}.]{Schéma de la méthode de mesure \gls{cci} servant à mesurer l'épaisseur des \gls{lem}. Les blocs oranges et jaunes représentent une vue en coupe, à l'échelle, d'un \gls{lem} posé sur le marbre avec ses trous d'amplification.}
+                        \label{fig::CCI}
+                    \end{wrapfigure}
+                    
                     La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet.% Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
                     %plusieurs photo du dispositif
                     

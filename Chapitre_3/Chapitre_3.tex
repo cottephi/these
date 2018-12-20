@@ -148,13 +148,13 @@
                     Épaisseur totale & \SI{1.065}{\milli\meter} &  $-60/+\SI{20}{\micro\meter}$ \\
                     \begin{tabular}{@{}l@{}}Uniformité de \\ l'épaisseur\end{tabular} & $\pm \SI{40}{\micro\meter}$ & \\
                     Largeur du rim & \SI{40}{\micro\meter} & $\pm\SI{4}{\micro\meter}$ \\
-                    Surface totale &  $499.5\times\SI{499.5}{\milli\meter}$ & $+0/-\SI{0.2}{\milli\meter}$ \\
+                    Surface totale &  $499.5\times\SI{499.5}{\milli\meter\squared}$ & $+0/-\SI{0.2}{\milli\meter}$ \\
                     Nombre de trous & $\sim400000$ & \\
                     Diamètre des trous & $\SI{0.5}{\milli\meter}$ & $-0/+\SI{10}{\micro\meter}$ \\
                     \begin{tabular}{@{}l@{}}Distance centre à \\ centre entre \\ deux trous\end{tabular}  & $\SI{0.8}{\milli\meter}$ & \\
                     \hline
                 \end{tabular}
-                \caption{Caractéristiques des LEM communes aux deux modèles utilisés dans \gls{wa105}.\label{tab::lem_commun}}
+                \caption{Caractéristiques des \gls{lem} communes aux deux modèles utilisés dans \gls{wa105}.\label{tab::lem_commun}}
             \end{table}
             
             \begin{table}
@@ -446,25 +446,25 @@
                 
                 \begin{figure}[htpb]
                     \begin{subfigure}[t]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_sum_all_histo_saclay.png}
-                        \caption{Distribution de l'épaisseur totale moyenne de tous les \glspl{lem} de la production de Saclay mesurée à travers les 24 trous de la plaque d'acier.}
+                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_means_sum_all_histo_saclay.png}
+                        \caption{Distribution de l'épaisseur de totale moyenne d'un \gls{lem} pour tous les \glspl{lem} de la production de \gls{cea}.}
                         \label{fig::distri_lem_saclay}
                     \end{subfigure}
                     \hfill
                     \begin{subfigure}[t]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_sum_all_histo_saclay.png}
-                        \caption{Distribution de l'épaisseur de cuivre moyenne de tous les \glspl{lem} de la production de Saclay mesurée à travers les 24 trous de la plaque d'acier.}
+                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_means_sum_all_histo_saclay.png}
+                        \caption{Distribution de l'épaisseur de cuivre moyenne d'un \gls{lem} pour tous les \glspl{lem} de la production de \gls{cea}.}
                         \label{fig::distri_cuivre_saclay}
                     \end{subfigure}\\
                     \begin{subfigure}[b]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_sum_all_histo_cern.png}
-                        \caption{Distribution de l'épaisseur totale moyenne de tous les \glspl{lem} de la production du \gls{cern} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \includegraphics[width=\textwidth,keepaspectratio]{LEM_means_sum_all_histo_cern.png}
+                        \caption{Distribution de l'épaisseur de totale moyenne d'un \gls{lem} pour tous les \glspl{lem} de la production du \gls{cern}.}
                         \label{fig::distri_lem_cern}
                     \end{subfigure}
                     \hfill
                     \begin{subfigure}[b]{0.48\textwidth}
-                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_sum_all_histo_cern.png}
-                        \caption{Distribution de l'épaisseur de cuivre moyenne de tous les \glspl{lem} de la production du \gls{cern} mesurée à travers les 24 trous de la plaque d'acier.}
+                        \includegraphics[width=\textwidth,keepaspectratio]{Copper_means_sum_all_histo_cern.png}
+                        \caption{Distribution de l'épaisseur de cuivre moyenne d'un \gls{lem} pour tous les \glspl{lem} de la production de \gls{cern}.}
                         \label{fig::distri_cuivre_cern}
                     \end{subfigure}
                     \caption[Résultats des mesures d'épaisseur pour tous les \glspl{lem}.]{Résultats des mesures d'épaisseur pour tous les \glspl{lem}. La première ligne correspond aux \glspl{lem} issues de la production de Saclay, principalement destinés au premier \gls{crp} du démontrateur 666, la seconde ligne correspond aux \glspl{lem} issues de la production du \gls{cern}, principalement destinés au second \gls{crp}.}
@@ -486,17 +486,46 @@
                 
             \subsubsection{Comparaison aux mesures faites par ELTOS}\label{sec::thickness_comparison_eltos}
             
-                \begin{wrapfigure}{r}{0.4\textwidth}
-                    \includegraphics[width=0.4\textwidth]{eltos_measurement.png}
-                    \caption{Gerber d'un \gls{lem} avec indiquées en rouges les zones où le fabricant a effectué les mesures pour vérifier la concordance au cahier des charges présenté en \autoref{sec::LEM}}
+                \begin{figure}[htpb]
+                    \includegraphics[width=0.8\textwidth]{eltos_measurement.png}
+                    \caption[zones de mesure des caractéristiques géométriques d'un \gls{lem}]{Gerber d'un \gls{lem} avec indiquées en rouges les zones de mesure des caractéristiques géométriques pour vérification de la concordance au cahier des charges présenté en \autoref{sec::LEM}}
                     \label{fig::mesures_eltos}
                 \end{figure}
             
                 La \autoref{fig::mesures_eltos} montre les zones du \gls{lem} où ELTOS a mesuré les différents paramètres importants : la taille totale, l'épaisseur totale, l'épaisseur de cuivre, l'épaisseur de \gls{fr4}, l'épaisseur des rims et la taille des trous. Le \autoref{tab::mesures_eltos} résume les résultats obtenus et le \autoref{tab::thickness_comparison_eltos} compare les résultats des épaisseurs totale et de cuivre à ceux obtenus à Saclay.
                 
+                \begin{table}
+                \centering
+                \begin{tabular}{|l|c|c||c|c|}
+                    \hline
+                    \gls{cea} & Moyenne & Écart type & Moyenne \gls{cci} & Écart type \gls{cci}\\
+                    \hline
+                    Épaisseur d'époxy & \SI{0.97}{\milli\meter} & \SI{0.01}{\milli\meter} & &\\
+                    Épaisseur de cuivre & \SI{97}{\micro\meter} & \SI{1.88}{\micro\meter} & \SI{64}{\micro\meter} & \SI{5}{\micro\meter}\\
+                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{0.005}{\milli\meter} & \SI{1.11}{\milli\meter} &  \SI{0.007}{\milli\meter}\\
+                    Largeur du rim (haut)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
+                    Largeur du rim (bas)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
+                    Surface totale &  $499.43\times\SI{499.43}{\milli\meter\squared}$ & \SI{0.03}{\milli\meter} & &\\
+                    Diamètre des trous & $\SI{0.500}{\milli\meter}$ & \SI{1}{\micro\meter} & &\\
+                     \hline
+                \end{tabular}\\
+                \begin{tabular}{|l|c|c||c|c|}
+                    \hline
+                    \gls{cern} & Moyenne & Écart type & Moyenne \gls{cci} & Écart type \gls{cci}\\
+                    \hline
+                    Épaisseur d'époxy & \SI{0.97}{\milli\meter} & \SI{0.01}{\milli\meter} & &\\
+                    Épaisseur de cuivre & \SI{97}{\micro\meter} & \SI{1.88}{\micro\meter} & \SI{62}{\micro\meter} & \SI{4}{\micro\meter} \\
+                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{0.005}{\milli\meter} & \SI{1.11}{\milli\meter} & \SI{0.006}{\milli\meter}\\
+                    Largeur du rim (haut)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
+                    Largeur du rim (bas)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
+                    Surface totale &  $499.43\times\SI{499.43}{\milli\meter\squared}$ & \SI{0.03}{\milli\meter} & &\\
+                    Diamètre des trous & $\SI{0.500}{\milli\meter}$ & \SI{1}{\micro\meter} & &\\
+                     \hline
+                \end{tabular}
+                \caption[Mesures des différentes caractéristiques géométriques des \gls{lem}]{Mesures des différentes caractéristiques géométriques des \gls{lem} faites par ELTOS sur les deux séries de \gls{lem} des productions \gls{cern} et \gls{cea}, et comparaison aux mesures faites à Saclay avec la technique \gls{cci}.\label{tab::mesures_eltos}}
+            \end{table}
                 
-                
-                %TODO Comparaison à Eltos et discussion
+                %TODO Comparaison à Eltos et discussion.
         
         \subsection{Tests haute tension et mesures de gain}\label{sec::test_HT}
         

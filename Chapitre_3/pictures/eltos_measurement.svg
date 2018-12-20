@@ -16,7 +16,10 @@
    width="1238.5627"
    height="805.06238"
    viewBox="0 0 1238.5627 805.06238"
-   sodipodi:docname="eltos_measurement.svg">
+   sodipodi:docname="eltos_measurement.svg"
+   inkscape:export-filename="/local/home/pcotte/Documents/these/Chapitre_3/pictures/eltos_measurement.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -25,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -139,9 +142,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.56632115"
-     inkscape:cx="618.87253"
-     inkscape:cy="416.53925"
+     inkscape:zoom="0.51931207"
+     inkscape:cx="592.93453"
+     inkscape:cy="399.65228"
      inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -245,7 +248,7 @@
        id="tspan6599-1"
        x="721.31323"
        y="30.390625"
-       style="text-align:center;text-anchor:middle">Copper thickness </tspan><tspan
+       style="text-align:center;text-anchor:middle">Copper and FR-4 thickness </tspan><tspan
        sodipodi:role="line"
        x="714.94604"
        y="80.390625"

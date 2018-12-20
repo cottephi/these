@@ -18,7 +18,7 @@
 \usepackage{fancyhdr} % Headers and footers
 \usepackage[bibencoding=inputenc,hyperref=auto,style=numeric,sorting=none,refsection=chapter]{biblatex}
 \usepackage[breaklinks=true,colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,bookmarks=true,bookmarksopenlevel=2]{hyperref}
-\usepackage{geometry}
+\usepackage[headheight=26pt]{geometry}
 \usepackage{calc, blindtext}
 \usepackage{tikz}
 \usepackage{kpfonts}
@@ -29,5 +29,8 @@
 \usepackage{pbox}
 \usepackage{cancel}
 \usepackage{siunitx}
+\usepackage{silence}
+\WarningFilter{glossaries}{Overriding \printglossary}
+\WarningFilter{glossaries}{Overriding `theglossary'}
 \usepackage[xindy, acronym]{glossaries}
 \usepackage{subcaption}

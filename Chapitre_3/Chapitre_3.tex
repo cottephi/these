@@ -48,7 +48,7 @@
             
             Le dispositif d'amplification est un ensemble de plusieurs \glspl{lem}, décrits en détails en \autoref{sec::LEM}, d'une épaisseur de $\SI{1}{\milli\meter}$ à travers laquelle est appliquée une tension de $\SI{3.5}{\kilo\volt}$, correspondant à un champ électrique d'environ $\SI{35}{\kilo\volt\per\centi\meter}$. De précédentes expériences \cite{Badertscher2011,Cantini2014} ont montré qu'un gain de l'ordre de 20 est atteignable à cette tension.
             
-            Les anodes, décrites en \autoref{sec::anode}, sont situées $\SI{2}{\milli\meter}$ au dessus des \glspl{lem}. Une tension de $\SI{1}{\kilo\volt}$ entre les anodes et le haut des \glspl{lem} créé un champ d'induction de $\SI{5}{\kilo\volt\per\centi\meter}$, qui doit alors correspondre à un probabilité de collection de charge optimale (voir \autoref{sec::effcacites}).
+            Les anodes, décrites en \autoref{sec::anode}, sont situées $\SI{2}{\milli\meter}$ au dessus des \glspl{lem}. Une tension de $\SI{1}{\kilo\volt}$ entre les anodes et le haut des \glspl{lem} créé un champ d'induction de $\SI{5}{\kilo\volt\per\centi\meter}$, qui doit alors correspondre à un probabilité de collection de charge optimale (voir \autoref{sec::efficacites}).
             
             Les \glspl{lem} et anodes sont fixés sous des supports en fibre de verre G10, eux même fixés sous un squelette en acier inoxydable pour le prototype 311 ou en Invar pour le démonstrateur 666 (voir \autoref{sec::crp_structure}). La grille d'extraction est constituée de fils d'acier inoxydable, chacun tendu à $\SI{1.5}{\newton}$ à température ambiante sur des \glspl{pcb}, eux même fixés sur les bords des supports en G10. Le \gls{crp} est désolidarisé du reste du cryostat, il est donc possible de l'assembler et de le tester à part. Un système de câbles et poulies permet d'ajuster la position du \gls{crp} au dessus du liquide. La \autoref{fig::crp_311} et la \autoref{fig::crp_666} montrent respectivement le \gls{crp} du prototype 311 et un \gls{crp} du démonstrateur 666. Le prototype 311 n'a qu'un \gls{crp} recouvrant toute sa surface, mais le démonstrateur 666 a quatre \gls{crp} de $3\times\SI{3}{\meter\squared}$, indépendants entre eux. Due à des retards de production, seuls deux de ces \gls{crp} sont instrumentés. Sur les deux autres, les \glspl{lem} et anodes ont été remplacés par des \gls{pcb} mis à la masse.
             
@@ -136,7 +136,7 @@
             
             Les choix des valeurs des différents paramètres communs aux deux modèles sont motivés par une étude réalisé par \gls{ethz} en 2014 \cite{Cantini2014}. Il y est montré qu'une épaisseur plus grande de \gls{fr4} correspond, comme attendu, à un gain plus grand, mais également à un temps de charge plus grand. Une largeur du rim plus grande correspond à un temps de charge plus grand, mais permet d'atteindre des gain plus grand \cite{Breskin2008}. Une disposition hexagonale des trous permet d'atteindre des gains plus grand qu'une disposition en carrés. Un diamètre des trous plus grand permet une meilleure stabilité en tension du \gls{lem} durant une exploitation de plusieurs jours, mais implique une baisse plus importante du gain après chargement du \gls{lem}.
             
-            \begin{table}\label{tab::lem_commun}
+            \begin{table}
                 \centering
                 \begin{tabular}{|l|c|c|}
                     \hline
@@ -154,10 +154,10 @@
                     \begin{tabular}{@{}l@{}}Distance centre à \\ centre entre \\ deux trous\end{tabular}  & $\SI{0.8}{\milli\meter}$ & \\
                     \hline
                 \end{tabular}
-                \caption{Caractéristiques des LEM communes aux deux modèles utilisés dans \gls{wa105}.}
+                \caption{Caractéristiques des LEM communes aux deux modèles utilisés dans \gls{wa105}.\label{tab::lem_commun}}
             \end{table}
             
-            \begin{table}\label{tab::lem_diff}
+            \begin{table}
                 \centering
                 \begin{tabular}{|l|c|c|}
                     \hline
@@ -167,11 +167,11 @@
                     Bord -- zone avec cuivre sans trous & \SI{2}{\milli\meter} & \SI{5}{\milli\meter}\\
                     Trous de vis -- diamètre sans cuivre & \SI{4.2}{\milli\meter} & \SI{10}{\milli\meter} \\
                     Trous de vis -- anneau sans trous &  \SI{1.1}{\milli\meter} & \SI{5}{\milli\meter} \\
-                    Trous de connecteur -- diamètre sans cuivre & \SI{1}{\centi\meter} & \SI{1}{\centi\meter} \\
+                    Trous de connecteur -- diamètre sans cuivre & \SI{10}{\milli\meter} & \SI{10}{\milli\meter} \\
                     Trous de connecteur -- anneau sans trous & \SI{1}{\milli\meter} & \SI{5}{\milli\meter} \\
                     \hline
                 \end{tabular}
-                \caption{Caractéristiques spécifiques aux modèles de \gls{lem} utilisés dans \gls{wa105}.}
+                \caption{Caractéristiques spécifiques aux modèles de \gls{lem} utilisés dans \gls{wa105}.\label{tab::lem_diff}}
             \end{table}
             
         
@@ -227,13 +227,13 @@
                 
             \subsubsection{Transport des charges avec GarField}
             
-                \begin{wrapfigure}[21]{r}{0.4\textwidth}
+                \begin{wrapfigure}[22]{r}{0.4\textwidth}
                     \includegraphics[width=0.4\textwidth,keepaspectratio]{drift_example.png}
                     \caption[Dérive de 10 électrons dans la carte de champ du bord d'un \gls{lem} avec Garfield.]{Dérive de 10 électrons dans un example 2D de carte de champ du bord d'un \gls{lem} créée avec \gls{ansys} par le logiciel Garfield. Le cercle rouge indique les électrons finissant leur dérive sur la zone morte, les cercles verts indiquent les électrons finissant leur dérive sur la zone d'amplification. La simulation d'avalanche n'est pas activée afin d'accélérer le calcul.}
                     \label{fig::drift_example}
                 \end{wrapfigure}
                 
-                Afin d'estimer l'impact sur la dérive des électrons des zones décrites précédemment, le logiciel GarField \cite{garfield} a été utilisé pour simuler le parcours de \numprint{10000} électrons, générés selon une distribution plate, entre la zone de transition liquide--gaz et le \gls{lem}. Les électrons n'étaient pas générés dans le liquide afin de s'affranchir de l'efficacité d'extraction liquide--gaz décrite en \autoref{sec::efficacités}, mais un demi-millimètre au dessus, avec une énergie initiale nulle. La \autoref{fig::drift_example} %talk CERN
+                Afin d'estimer l'impact sur la dérive des électrons des zones décrites précédemment, le logiciel GarField \cite{garfield} a été utilisé pour simuler le parcours de \numprint{10000} électrons, générés selon une distribution plate, entre la zone de transition liquide--gaz et le \gls{lem}. Les électrons n'étaient pas générés dans le liquide afin de s'affranchir de l'efficacité d'extraction liquide--gaz décrite en \autoref{sec::efficacites}, mais un demi-millimètre au dessus, avec une énergie initiale nulle. La \autoref{fig::drift_example} %talk CERN
                 montre le résultat pour une simulation de 10 électrons (l'avalanche est désactivée dans cette étude) : 5  atteignent la zone d'amplification tandis que 5 autres sont déviés sur le bords du \gls{lem}.
                 
         \subsection{Résultat : carte d'efficacité}
@@ -285,13 +285,13 @@
         
     \section{Préparation, caractérisation et test à l'IRFU}
     
-        Le \gls{cea} Saclay était en charge de la production de la moitié des \glspl{lem} et anodes du démonstrateur 666, l'autre moitié étant à la charge du \gls{cern}. Il était également en charge des tests haute tension et des contrôles métrologiques de tous les \glspl{lem} du démonstrateur 666. Un appel d'offre pour les modèle a été lancé en février 2017 et l'entreprise ELTOS a été retenue. Il a été demandé à l'entreprise d'effectuer plusieurs mesures sur les \glspl{lem} produits, notamment de l'épaisseur de la plaque d'époxy, des couches de cuivre, de la tailles des rims, ainsi que des caractéristiques diélectriques. Le \gls{cea} a par la suite effectué des mesures complémentaires de l'épaisseur d'époxy et de cuivre, ces deux paramètres ayant un impact particulièrement important sur le gain (voir \autoref{sec::townsend_avalanche}). Des tests de tenu en haute tension ainsi que des mesures de gain avec une source radioactive dans des conditions de pression de température équivalente à celle de la phase gazeuse d'une \gls{tpc} ont été réalisés dans une enceinte haute pression créée dans ce but. Enfin, des tests de continuité des pistes des anodes ont également été réalisés.
+        Le \gls{cea} Saclay était en charge de la production de la moitié des \glspl{lem} et anodes du démonstrateur 666, l'autre moitié étant à la charge du \gls{cern}. Il était également en charge des tests haute tension et des contrôles métrologiques de tous les \glspl{lem} du démonstrateur 666. Un appel d'offre pour les modèle a été lancé en février 2017 et l'entreprise ELTOS a été retenue. Il a été demandé à l'entreprise d'effectuer plusieurs mesures sur les \glspl{lem} produits : l'épaisseur de la plaque d'époxy et des couches de cuivre, l'épaisseur des rims, la taille des trous d'amplification ainsi que les caractéristiques diélectriques. Le \gls{cea} a par la suite effectué des mesures complémentaires de l'épaisseur totale, ce paramètre ayant un impact particulièrement important sur le gain (voir \autoref{sec::townsend_avalanche}). Des tests de tenu en haute tension ainsi que des mesures de gain avec une source radioactive dans des conditions de pression de température équivalente à celle de la phase gazeuse d'une \gls{tpc} ont été réalisés dans une enceinte haute pression créée dans ce but. Enfin, des tests de continuité des pistes des anodes ont également été réalisés.
         
         \subsection{Production et préparation des LEM}
         
             La réalisation d'un \gls{lem} par ELTOS se fait de la manière suivante : perçage des plaques d'époxy déjà couvertes de cuivre avec changement fréquent des foret, nettoyage des résidus d'époxy et de métal dans les trous, polissage pour arrondir les bords des trous, gravure chimique des rims, traitement de surface nickel/or, détourage du \gls{lem} à ses dimensions finales et enfin nettoyage rinçage et étuvage.
                 
-            Sont ensuite effectuées des mesures pour s'assurer de la conformité au cahier des charges. Des mesures optiques sont faites pour l'épaisseur du \gls{fr4} et du cuivre, ainsi que des contrôles d'isolement et de continuité électrique. Ces mesures sont présentées à la fin de la \autoref{sec::epaisseur}.
+            Sont ensuite effectuées des mesures décrites en \autoref{sec::thickness_comparison_eltos} pour s'assurer de la conformité au cahier des charges.
             
             Entre juillet 2017 et septembre 2018, le \gls{cea} a reçu et testé les 78 \glspl{lem} destinés au démonstrateur 666. Une fois les \glspl{lem} arrivés à l'\gls{irfu}, ils sont inspectés visuellement et les imperfections sont relevées. Ils sont ensuite envoyés à la métrologie afin que leurs épaisseurs soient mesurées (voir \autoref{sec::epaisseur}).
             
@@ -319,9 +319,9 @@
             
                 La formule du gain à travers un dispositif amplificateur est rappelée ici (voir \autoref{sec::townsend_avalanche} pour plus de détails) :
                 \begin{equation}\label{eq::townsend_avalanche_2}
-                    G = e^{A\rho d e^{-B\rho d/E}}
+                    G = e^{A\rho d e^{-B\rho d/V}}
                 \end{equation}
-                Avec $\rho$ la densité de l'argon gazeux, $E$ le champ électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre apparaît deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il est nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$. Les résultats ainsi obtenus sont comparés aux résultats obtenus par ELTOS dans le \autoref{tab::comparaison_eltos}, ces dernières n'étant faites qu'aux bords des \gls{lem} et près des trous des vis.
+                Avec $\rho$ la densité de l'argon gazeux, $V$ le potentiel électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre apparaît deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il est nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$. Les résultats ainsi obtenus sont comparés aux résultats obtenus par ELTOS dans le \autoref{tab::comparaison_eltos}, ces dernières n'étant faites qu'aux bords des \gls{lem} et près des trous des vis.
                 
             \subsubsection{Méthode expérimentale}
                 %documentation dans hardware/lem_plaques/marbre_472
@@ -396,7 +396,7 @@
                             \end{subfigure}
                             \begin{subfigure}[t]{\textwidth}
                                 \includegraphics[width=\textwidth,keepaspectratio]{calle.png}
-                                \caption[Dispersion de l'épaisseur mesurée d'une calle de \SI{0.99}{\milli\meter}.]{Dispersion de l'épaisseur mesurée d'une calle de \SI{0.99}{\milli\meter}.}
+                                \caption[Dispersion de l'épaisseur mesurée d'une cale de \SI{0.99}{\milli\meter}.]{Dispersion de l'épaisseur mesurée d'une cale de \SI{0.99}{\milli\meter}.}
                                 \label{fig::calle}
                             \end{subfigure}
                         \end{minipage}
@@ -415,7 +415,7 @@
                     
                     %Pour les deux rangées du haut, loin des pièces d'aluminium permettant un meilleur aplanissement, les briques en plomb était disposée le plus proche possible du trou de mesure, et nous vérifions à chaque fois que le niveau indiqué par l'appareil de mesure de bougeait pas de plus de $\SI{1}{\micro\meter}$ quand l'on exerçait un pression sur la plaque. Pour les trois autres rangées, les pièces d'aluminium étaient vissée soit du côté droit, soit du côté gauche, soit en bas suivant le trou mesuré. En effet, en serrant à droite, le côté gauche de la plaque d'acier pouvait se retrouver un peu soulevé, et inversement. Pour les trous centraux des troisième et quatrième rangées, les pièces en aluminium n'étaient pas serrées. Les briques en plomb étaient ajustées au mieux. Sur la plupart des \glspl{lem}, le trou central de la troisième rangée présenté une variation de plus de $\SI{10}{\micro\meter}$ quand une pression supplémentaire était exercée, aussi il a été décidé d'ignorer ce trou systématiquement.
                     
-            \subsubsection{Résultats et comparaison aux mesures du fabricant}
+            \subsubsection{Résultats}
                     
                 \begin{figure}[htpb]
                     \begin{subfigure}[t]{0.48\textwidth}
@@ -476,13 +476,25 @@
                     \caption[Distribution de l'épaisseur d'un \gls{lem} mesurée à travers u trou de la plaque en acier.]{Distribution de l'épaisseur d'un \gls{lem} mesurée à travers u trou de la plaque en acier. L'ajustement gaussien de gauche correspond au \gls{fr4}, celui de droite au cuivre.}
                     \label{fig::distri_1_trou_lem}
                 \end{wrapfigure}
-                Les distributions des hauteurs dans les 25 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. Une double gaussienne y est ajustée afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre et l'épaisseur $E_F$ du \gls{fr4}. En supposant que l'épaisseur du cuivre est la même sur chaque face, nous avons la relation $E_T = E_F + 2E_C$. $E_T$ est accessible directement. $E_C$ correspond à la différence entre les moyennes des deux gaussiennes. $E_F$ est alors facile à déterminer. La \autoref{fig::distri_1_trou_lem} montre cette distribution pour un trou de mesure. 
+                Les distributions des hauteurs dans les 25 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. La \autoref{fig::distri_1_trou_lem} montre une telle distribution pour un trou de mesure. Une double gaussienne y est ajustée afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre. Le pic le plus à droite sur la \autoref{fig::distri_1_trou_lem} correspond à l'épaisseur totale $E_T$ du \gls{lem}, tandis que le pic le plus à gauche correspond à $E_T - E_C$, en supposant que l'épaisseur du cuivre est la même sur chaque face. $E_C$ est alors calculable facilement, de même que l'épaisseur de \gls{fr4} $E_F$ car nous avons la relation $E_T = E_F + 2E_C$.
                 
-                A noter que les mesures ne permettait pas toujours de d'ajuster deux gaussienne. Dans certains cas, seul l'épaisseur totale était accessible.
+                A noter que les mesures ne permettaient pas toujours de d'ajuster deux gaussiennes. Dans certains cas, seul l'épaisseur totale était accessible.
                 
                 la \autoref{fig::distri_epaisseur_1_lem} montre les distributions de l'épaisseur total et de l'épaisseur de cuivre pour les 24 trous de mesure d'un \gls{lem}.
                 
-                La \autoref{fig::epaisseur_tous_lem} montre la somme des distributions des épaisseurs totales et des épaisseurs de cuivre pour tous les \glspl{lem} mesurés.
+                La \autoref{fig::epaisseur_tous_lem} montre la distributions des épaisseurs totales et des épaisseurs de cuivre pour tous les \glspl{lem} mesurés.
+                
+            \subsubsection{Comparaison aux mesures faites par ELTOS}\label{sec::thickness_comparison_eltos}
+            
+                \begin{wrapfigure}{r}{0.4\textwidth}
+                    \includegraphics[width=0.4\textwidth]{eltos_measurement.png}
+                    \caption{Gerber d'un \gls{lem} avec indiquées en rouges les zones où le fabricant a effectué les mesures pour vérifier la concordance au cahier des charges présenté en \autoref{sec::LEM}}
+                    \label{fig::mesures_eltos}
+                \end{figure}
+            
+                La \autoref{fig::mesures_eltos} montre les zones du \gls{lem} où ELTOS a mesuré les différents paramètres importants : la taille totale, l'épaisseur totale, l'épaisseur de cuivre, l'épaisseur de \gls{fr4}, l'épaisseur des rims et la taille des trous. Le \autoref{tab::mesures_eltos} résume les résultats obtenus et le \autoref{tab::thickness_comparison_eltos} compare les résultats des épaisseurs totale et de cuivre à ceux obtenus à Saclay.
+                
+                
                 
                 %TODO Comparaison à Eltos et discussion
         
@@ -492,13 +504,13 @@
                 \begin{subfigure}[t]{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{6lems_gamelle.jpg}
                     \caption{Chambre haute pression avec six \glspl{lem} en train d'être préparés pour un test de tenue en tesion.}
-                    \label{fig:6lems_gamelle}
+                    \label{fig::6lems_gamelle}
                 \end{subfigure}
                 \hfill
                 \begin{subfigure}[t]{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{gamelle_source.jpg}
                     \caption{Chambre haute pression avec une source d'américium, un \gls{lem} et une anode en train d'être préparés pour une mesure de gain.}
-                    \label{fig:gamelle_source}
+                    \label{fig::gamelle_source}
                 \end{subfigure}
                 \caption[Chambre haute pression]{Chambre haute pression utilisée à Saclay pour les tests de tenue en tension et les mesures de gain des \glspl{lem} destinés au démonstrateur 666.}
                 \label{fig::gamelle}
@@ -518,13 +530,13 @@
                 \begin{subfigure}[t]{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{anode_card_zoom.JPG}
                     \caption{Agrandissement d'une carte de mesure. On y voit les résistances de \SI{100}{\ohm} placées entre les canaux de l'anode.}
-                    \label{fig:anode_card_zoom}
+                    \label{fig::anode_card_zoom}
                 \end{subfigure}
                 \hfill
                 \begin{subfigure}[t]{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{anode_carde.png}
                     \caption{Photo du dispositif de mesure. Les cartes de chaque côtés permettent aux \numprint{160} canaux de l'anode de n'en former plus qu'un, si aucun n'est cassé. Les cartes au dessus et au dessous servent à vérifier qu'il n'y a pas de court circuit entre les deux vues de l'anode.}
-                    \label{fig:anode_card}
+                    \label{fig::anode_card}
                 \end{subfigure}
                 \caption[Dispositif de mesure de la continuité des canaux des lecture des anodes.]{Dispositif de mesure de la continuité des canaux des lecture des anodes.}
                 \label{fig::test_anode}
@@ -542,7 +554,7 @@
 
             Au final, sur les 78 anodes ainsi testées, 10 ont posé problème. Parmi ces 10 anodes, 6 avaient des problèmes sur des canaux au bord de l'anode, où l'on ne s'attend de toute manière pas à collecter de charge à cause des zones mortes des \glspl{lem} (voir \autoref{sec::zones_mortes}).
                         
-    \section{Efficacité d'extraction, probabilités de collection de charge}
+    \section{Efficacité d'extraction, probabilités de collection de charge}\label{sec::efficacites}
     
         La probabilité qu'a un électron d'être extrait de la phase liquide à la phase gazeuse a été étudiée dans les articles de E.M. Guschin et.al. (\cite{guschin}) et A.Bondar et.al. (\cite{Bondar2009}). Il a été montré que l'extraction se fait selon deux régimes : un rapide, de l'ordre de la nano-seconde, qui se traduit par une largeur de signal correspondant au temps caractéristique de l'électronique de lecture, et un lent (supérieur à la micro-seconde), qui se traduit par une largeur de signal supérieure au temps caractéristique de l'électronique de lecture. En pratique, les deux régimes sont présents et le signal est une composition des deux. Un champ d'extraction plus grand favorise la composante rapide, mais l'article \cite{Bondar2009} indique que dans l'argon pur, la composante lente reste dominante même à des champs d'extraction de $\SI{2}{\kilo\volt\per\centi\meter}$. Dans les détecteurs de \gls{wa105}, un événement est défini sur une plage temporelle de quelques centaines de micro-secondes, correspondant au temps nécessaires aux électrons de dérives pour parcourir toute la hauteur de la phase liquide. Un délai dans l'extraction de ces électrons de l'ordre de la dizaine de microsecondes peut avoir un impact significatif sur la forme du signal (voir \autoref{fig::extr_eff_on_waveform}), voir entraîner une perte significative de charge si le signal est mal reconstruit.
         
@@ -582,7 +594,7 @@
             
             Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
             
-            Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \autoref{annexe::garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.\\
+            Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \cite{garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.\\
             
             %TODO refaire les histo qui sont moches (drift_histograms) et les efficacités
             
@@ -592,6 +604,6 @@
             
             
             
-        \subsection{Mesures à Saclay avec des LEM et anodes de $10\times\SI{10}{\cm\squared}$ }
+        \subsection{Mesures à Saclay avec des LEM et anodes de \texorpdfstring{$10\times\SI{10}{\cm\squared}$}{10x10cm2} }
         
         \subsection{Résultats et comparaison aux expériences passées}

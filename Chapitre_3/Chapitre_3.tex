@@ -59,7 +59,7 @@
             Le \gls{crp} doit respecter plusieurs contraintes techniques \cite{CRPdesign} pour permettre une lecture efficace et fidèle de la charge:
             
             \begin{itemize}
-                \item Il doit être le plus plat possible, afin que l'interface liquide-gaz si situe bien au milieu de la distance grille--\gls{lem} pour tout le \gls{crp}. La tolérance fixée pour le démonstrateur 666 est de \SI{0.5}{\milli\meter}(TODO: 311?)
+                \item Il doit être le plus plat possible, afin que l'interface liquide-gaz si situe bien au milieu de la distance grille--\gls{lem} pour tout le \gls{crp}. La tolérance fixée pour le démonstrateur 666 est de \SI{0.5}{\milli\meter}, celle atteinte dans le prototype 311 est de \SI{1}{\milli\meter} \cite{Aimard2018}.
                 \item Il doit supporter des variations de température importante sans se déformer de manière significative : le \gls{crp} est assemblé à température ambiante et descend ensuite à mois de \SI{90}{\kelvin}
                 \item Il doit être possible d'ajuster la position du \gls{crp} par rapport au niveau d'argon liquide à \SI{0.05}{\milli\meter} près.
                 \item Le démonstrateur 666 est constitué de 4 \gls{crp}. La distance entre eux doit être de \SI{10}{\milli\meter} maximum
@@ -69,7 +69,7 @@
             
             Afin de satisfaire ces contraintes, la structure principale des \glspl{crp} du démonstrateur 666 est faite en Invar, un alliage de fer et de nickel dont le coefficient de dilatation thermique est particulièrement faible (\SI{1.5e-6}{\per\kelvin} entre \SI{22}{\celsius} et \SI{-186}{\celsius}). La structure du \gls{crp} du prototype 311 est elle faite en acier inoxydable.
             
-            Les \glspl{lem} et anodes sont montés sur des cadres en G10 (neuf dans le 666 et trois dans le 311), de la fibre de verre feuilletée solide et électriquement isolante(TODO trouver des chiffres). Des mesures de contraction thermique réalisées en 2015 ont donné pour le G10 utilisé dans \gls{wa105} des coefficients de l'ordre de \SI{e-5}{\per\kelvin}, proches du ceux des \glspl{las}. Le G10 et les \glspl{las} réagissent donc de la même manière aux différents changements de température. Sur les trois mètres du \gls{crp} du démonstrateur 666, la contraction maximum mesurée est d'environ \SI{6}{\milli\meter}. L'Invar se contractant beaucoup moins, les cadres en G10 sont fixés sur la structure en Invar avec des éléments permettant au G10 de se contracter librement.
+            Les \glspl{lem} et anodes sont montés sur des cadres en G10 (neuf dans le 666 et trois dans le 311), de la fibre de verre feuilletée solide et électriquement isolante. Des mesures de contraction thermique réalisées en 2015 ont donné pour le G10 utilisé dans \gls{wa105} des coefficients de l'ordre de \SI{e-5}{\per\kelvin}, proches du ceux des \glspl{las}. Le G10 et les \glspl{las} réagissent donc de la même manière aux différents changements de température. Sur les trois mètres du \gls{crp} du démonstrateur 666, la contraction maximum mesurée est d'environ \SI{6}{\milli\meter}. L'Invar se contractant beaucoup moins, les cadres en G10 sont fixés sur la structure en Invar avec des éléments permettant au G10 de se contracter librement.
             
             Le positionnement vertical et horizontal des \glspl{crp} se fait grâce à un système de suspension. Un \gls{crp} (dans le 666 comme dans le 311) est suspendu par trois câbles motorisés, passant par des conduites isolantes traversant le couvercle du détecteur pour atteindre le \gls{crp}. Ils permettent une amplitude verticale de \SI{98}{\milli\meter} dans le démonstrateur 666 (\SI{40}{\milli\meter} dans le prototype 311) avec une précision de \SI{100}{\micro\meter} et une amplitude horizontale de \SI{26}{\milli\meter} dans le démonstrateur 666. Le 311 n'est pas pourvu d'un système de positionnement horizontal.
             
@@ -518,7 +518,7 @@
                     \label{fig::exp_gain_range}
                 \end{figure}
                 
-                Les distributions des hauteurs dans les 24 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. La \autoref{fig::distri_1_trou_lem} montre une telle distribution pour un trou de mesure. Les pics sur les côtés des trous d'amplification étaient attendus, et sont dues une limitation de la technique \gls{cci} : certains rayons lumineux du crayon optique, qui ne sont pas focalisé sur la surface du \gls{fr4} et qui donc ne devraient pas être détectés, sont tout de même réfléchit par la parois en cuivre et sont quand même détectés par le dispositif, faussant ainsi la distance mesurée. Ces pics sont coupés à l'analyse et n'affecte pas la mesure de l'épaisseur totale, mais il est possible que les quelques points utilisés pour estimer la hauteur du \gls{fr4} soit affecté. Les comparaisons aux mesures d'ELTOS semblent confirmer cette hypothèse.
+                Les distributions des hauteurs dans les 24 trous de mesure du \gls{lem} sont tracées avec correction pour la pente du marbre. La \autoref{fig::distri_1_trou_lem} montre une telle distribution pour un trou de mesure. Les pics sur les côtés des trous d'amplification étaient attendus, et sont dues une limitation de la technique \gls{cci} : certains rayons lumineux du crayon optique, qui ne sont pas focalisé sur la surface du \gls{fr4} et qui donc ne devraient pas être détectés, sont tout de même réfléchit par la parois en cuivre et sont quand même détectés par le dispositif, faussant ainsi la distance mesurée. Ces pics, coupés à l'analyse, n'affectent pas la mesure de l'épaisseur totale, mais il est possible que les quelques points utilisés pour estimer la hauteur du \gls{fr4} soit affectés. Les comparaisons aux mesures d'ELTOS semblent confirmer cette hypothèse.
                 
                 Une double gaussienne est ajustée sur la distribution montrée en \autoref{fig::distri_1_trou_lem} afin de déterminer l'épaisseur totale $E_T$ du \gls{lem} ainsi que l'épaisseur $E_C$ du cuivre. La moyenne de la gaussienne la plus à droite sur la \autoref{fig::distri_1_trou_lem} correspond à l'épaisseur totale $E_T$ du \gls{lem}, tandis que la moyenne de la gaussienne la plus à gauche correspond à $E_T - E_C$, en supposant que l'épaisseur du cuivre est la même sur chaque face. $E_C$ est alors calculable facilement, de même que l'épaisseur de \gls{fr4} $E_F$ car nous avons la relation $E_T = E_F + 2E_C$.
                 
@@ -537,17 +537,19 @@
                         \includegraphics[width=\textwidth]{eltos_measurement.png}
                         \caption{Gerber d'un \gls{lem} avec indiquées en rouges les zones de mesure des caractéristiques géométriques pour vérification de la concordance au cahier des charges présenté en \autoref{sec::LEM}. Deux échantillons de surface de \gls{lem} étaient prévues dans le gerber pour y effectuer des mesures d'épaisseur.}
                     \end{subfigure}
+                    \hfill
                     \begin{subfigure}[t]{0.3\textwidth}
                         \includegraphics[width=\textwidth]{microsection_thickness.png}
                         \caption{Vue d'un échantillon de surface au microscope où l'on peut voir les mesures d'épaisseur de \gls{fr4} et de cuivre.}
+                        \label{fig::microsection}
                     \end{subfigure}
                     \caption[zones de mesure des caractéristiques géométriques d'un \gls{lem}]{zones de mesure des caractéristiques géométriques d'un \gls{lem}}
                     \label{fig::mesures_eltos}
                 \end{figure}
             
-                La \autoref{fig::mesures_eltos} montre les zones du \gls{lem} où ELTOS a mesuré les différentes caractéristiques géométriques : la taille totale, l'épaisseur totale, l'épaisseur de cuivre, l'épaisseur de \gls{fr4}, l'épaisseur des rims et le diamètre des trous. Les épaisseurs de cuivre et de \gls{fr4} été mesurées sur un des deux échantillons de surface de \gls{lem} prévus dans le gerber à cet effet, donnant une statistique de $36$ pour les moyennes et écarts type de chaque \gls{crp} du démonstrateur 666. L'épaisseur totale était mesurée aux quatre coins, donnant une statistique de 144 pour chaque \gls{crp}. L'épaisseur du rim et le diamètre des trous était mesurés en treize points, donnant une statistique de 468 chacun pour chaque \gls{crp}.
+                La \autoref{fig::mesures_eltos} montre les zones du \gls{lem} où ELTOS a mesuré les différentes caractéristiques géométriques : la taille totale, l'épaisseur totale, l'épaisseur de cuivre, l'épaisseur de \gls{fr4}, l'épaisseur des rims et le diamètre des trous. Les épaisseurs de cuivre et de \gls{fr4} été mesurées au microscope sur un des deux échantillons de surface de \gls{lem} prévus dans le gerber à cet effet, donnant une statistique de $36$ pour les moyennes et écarts type de chaque \gls{crp} du démonstrateur 666. L'épaisseur totale était mesurée à 10 microns près avec un micromètre digital, aux quatre coins, donnant une statistique de 144 pour chaque \gls{crp}. L'épaisseur du rim et le diamètre des trous était mesurés en treize points, donnant une statistique de 468 chacun pour chaque \gls{crp}.
                 
-                Due à la faible statistique des épaisseur de cuivre et des épaisseur totales, la comparaison aux mesures faites à Saclay est faite avec les distributions des moyennes sur tout le \gls{lem} des mêmes épaisseurs. Le \autoref{tab::mesures_eltos} résume ces résultats et indique ceux obtenus à Saclay.
+                Due à la faible statistique des épaisseurs de cuivre et des épaisseurs totales, la comparaison aux mesures faites à Saclay est faite avec les distributions des moyennes sur tout le \gls{lem} des mêmes épaisseurs. Le \autoref{tab::mesures_eltos} résume ces résultats et indique ceux obtenus à Saclay.
                 
                 \begin{table}
                 \centering
@@ -557,7 +559,7 @@
                     \hline
                     Épaisseur d'époxy & \SI{0.97}{\milli\meter} & \SI{0.01}{\milli\meter} & &\\
                     Épaisseur de cuivre & \SI{45.4}{\micro\meter} & \SI{4.3}{\micro\meter} & \SI{64}{\micro\meter} & \SI{5}{\micro\meter}\\
-                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{0.005}{\milli\meter} & \SI{1.11}{\milli\meter} &  \SI{0.007}{\milli\meter}\\
+                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{5}{\micro\meter} & \SI{1.11}{\milli\meter} &  \SI{7}{\micro\meter}\\
                     Largeur du rim (haut)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
                     Largeur du rim (bas)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
                     Surface totale &  $499.43\times\SI{499.43}{\milli\meter\squared}$ & \SI{0.03}{\milli\meter} & &\\
@@ -570,7 +572,7 @@
                     \hline
                     Épaisseur d'époxy & \SI{0.97}{\milli\meter} & \SI{0.01}{\milli\meter} & &\\
                     Épaisseur de cuivre & \SI{46.5}{\micro\meter} & \SI{4.9}{\micro\meter} & \SI{62}{\micro\meter} & \SI{4}{\micro\meter} \\
-                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{0.005}{\milli\meter} & \SI{1.11}{\milli\meter} & \SI{0.006}{\milli\meter}\\
+                    Épaisseur totale & \SI{1.12}{\milli\meter} &  \SI{5}{\micro\meter} & \SI{1.11}{\milli\meter} & \SI{6}{\micro\meter}\\
                     Largeur du rim (haut)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
                     Largeur du rim (bas)& \SI{41}{\micro\meter} & \SI{1.6}{\micro\meter} & &\\
                     Surface totale &  $499.43\times\SI{499.43}{\milli\meter\squared}$ & \SI{0.03}{\milli\meter} & &\\
@@ -580,7 +582,9 @@
                 \caption[Mesures des différentes caractéristiques géométriques des \gls{lem}]{Mesures des différentes caractéristiques géométriques des \gls{lem} faites par ELTOS les deux \gls{crp} du démonstrateur 666, et comparaison aux mesures faites à Saclay avec la technique \gls{cci}.\label{tab::mesures_eltos}}
             \end{table}
             
-            Les mesures réalisées par ELTOS et les mesures réalisées par le \gls{cea} sont compatibles pour les épaisseurs totales, mais il y a une différence notable concernant les mesures des moyennes des épaisseurs de cuivre et de \gls{fr4}. Une explication a été avancée en \autoref{sec::thickness_result}.
+            Les mesures réalisées par ELTOS et les mesures réalisées par le \gls{cea} sont compatibles pour les épaisseurs totales, mais il y a une différence notable concernant les mesures des moyennes des épaisseurs de cuivre et de \gls{fr4}, bien que les écarts type soient compatibles. En regardant attentivement la \autoref{fig::microsection}, on se rend compte que la mesure du cuivre faite par ELTOS est sous-estimé d'environ $10-$\SI{12}{\micro\meter}. La même observation a été faite sur d'autres échantillons, ce qui ramène les valeurs d'épaisseur de cuivre d'ELTOS indiquées dans le \autoref{tab::mesures_eltos} à des valeurs entre \SI{55}{\micro\meter} et \SI{57}{\micro\meter}. La différence restante avec les mesures faites avec la technique \gls{cci} peut être due à la limitation expliquée en \autoref{sec::thickness_result}.
+            
+            La technique \gls{cci} se montre efficace pour mesurer l'épaisseur totale des \glspl{lem}. Bien que le dispositif utilisé ici soit lent (minimum trente minutes pour mesurer un \gls{lem}), il pourra être motorisé et automatisé pour une future production à l'échelle de \gls{dune}. Avec une motorisation et une vitesse de déplacement du crayon optique constante et très lente, il pourrait être possible de chercher à mesurer les rims et les diamètres des trous et d'évaluer précisément la limitation décrite en \autoref{sec::thickness_result} de la technique \gls{cci}.
         
         \subsection{Tests haute tension et mesures de gain}\label{sec::test_HT}
         
@@ -691,3 +695,7 @@
         \subsection{Mesures à Saclay avec des LEM et anodes de \texorpdfstring{$10\times\SI{10}{\cm\squared}$}{10x10cm2} }
         
         \subsection{Résultats et comparaison aux expériences passées}
+        
+    \section{Test des \glspl{crp} du démonstrateur 666 dans une boite cryogénique}
+        
+        %TODO

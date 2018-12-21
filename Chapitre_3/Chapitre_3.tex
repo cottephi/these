@@ -262,18 +262,54 @@
             
         \subsection{Résultat : impact sur la résolution}
             
-            \begin{wrapfigure}{r}{0.4\textwidth}
-                \includegraphics[width=0.4\textwidth,keepaspectratio]{eff_map.png}
-                \caption[Carte d'efficacité d'un \gls{lem} du modèle CFR-34.]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34. Les axes $x$ et $y$ représentent les \numprint{160} canaux des vues de l'anode se situant au dessus du \gls{lem}. La bar de couleur indique la fraction de charge qui atteindra chaque pixel ainsi formé.}
-                \label{fig::eff_map}
-            \end{wrapfigure}
+            \begin{figure}[htpb]
+                \begin{subfigure}{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{eff_map.png}
+                    \caption{Carte d'efficacité d'un \gls{lem} du modèle CFR-34. Les axes $x$ et $y$ représentent les \numprint{160} canaux des vues de l'anode se situant au dessus du \gls{lem}. La bar de couleur indique la fraction de charge qui atteindra chaque pixel ainsi formé.}
+                    \label{fig::eff_map}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.48\textwidth}
+                    \includegraphics[width=\textwidth]{electron.png}
+                    \label{electron}
+                    \caption[Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt}]{Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt} traversant le démonstrateur 666. En noir est la charge simulée sans carte d'efficacité, en prenant en compte les dispersions et les pertes dues à la recombinaison et aux impureté, en rouge et la même charge mais en prenant en compte la carte d'efficacité.}
+                \end{subfigure}
+                \caption[Carte d'efficacité d'un \gls{lem} du modèle CFR-34 et impact sur la collection de charge.]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34 simulée avec \gls{ansys} et Garfield et simulation de son impact sur la collection de charge avec QScan.}
+            \end{figure}
         
-            Cette étude a été faite avec le logiciel QScan, décrit en \autoref{sec::qscan}. La carte d'efficacité du \gls{lem} y a été implémentée, et plusieurs types de particules à plusieurs impulsions initiales ont été simulées dans le démonstrateur de 666\footnote{Ce travail a été fait en début de thèse. Nous ignorions à l'époque que le modèle des \glspl{lem} changerait pour le démonstrateur 666.}.
+            Cette étude a été faite avec le logiciel QScan, décrit en \autoref{sec::qscan}. La carte d'efficacité du \gls{lem} y a été implémentée, et plusieurs types de particules à plusieurs impulsions initiales ont été générées au milieu du démonstrateur 666\footnote{Ce travail a été fait en début de thèse. Nous ignorions à l'époque que le modèle des \glspl{lem} changerait pour le démonstrateur 666.} à des angles tirés aléatoirement.
             
-            J'ai regardé l'effet sur la charge totale arrivant à l'anode, avant reconstruction. Les effets de diffusion longitudinale et verticale sont simulés par des répartitions gaussiennes en temps et en espace de la charge (voir \cite{Agostino2014}).
-            %cité dans Charge Collection
-            %TODO ajouter plots
+            La charge totale arrivant à l'anode, avant reconstruction est enregistré avec et sans la carte d'efficacité. Les effets de diffusion longitudinale et verticale sont simulés par des répartitions gaussiennes en temps et en espace de la charge (voir \cite{Agostino2014}). Les \glspl{lem} sont simulés, en plus de la carte d'efficacité, par un facteur d'amplification, fixé à 1 ici. La \autoref{fig::electron} montre les distributions, avec et sans carte d'efficacité, de la charge totale arrivant à l'anode pour des électrons traversant le milieu d'argon liquide à une impulsion initiale de \SI{0.2}{\giga\electronvolt}. On peut y voir que la charge récoltée est plus basse avec la carte d'efficacité, comme attendue, mais également que sa distribution est plus large. La \autoref{fig::electron_mean_charge} montre les différences de la moyenne de charge récoltée avec et sans carte d'efficacité pour plusieurs impulsion initiale.  La \autoref{fig::electron_dispersion_charge} montre les différences de dispersion de la charge récoltée avec et sans carte d'efficacité pour plusieurs impulsion initiale. L'effet sur la charge moyenne reste autour de $7\%$, mais l'effet sur la résolution est de l'ordre de $200\%$. En comparaison (\autoref{fig::muon_mean_charge} et \autoref{fig::muon_dispersion_charge}), l'effet sur la résolution de la charge d'un muon ne dépasse pas $30\%$, tandis que l'effet sur la moyenne est similaire.
             
+            \begin{figure}[htbp]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{electrons_mean_charge.png}
+                    \caption{Simulation de l'impact de la carte d'efficacité sur la moyenne de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un électron traversant le démonstrateur 666.}
+                    \label{fig::electron_mean_charge}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{electrons_relative_dispersion.png}
+                    \caption{Simulation de l'impact de la carte d'efficacité sur la dispersion de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un électron traversant le démonstrateur 666.}
+                    \label{fig::electron_dispersion_charge}
+                \end{subfigure}
+                \caption[Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'électrons de plusieurs impulsions.]{Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'électrons de plusieurs impulsions traversant le démonstrateur 666. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'efficacité.}
+            \end{figure}
+            
+            \begin{figure}[htbp]
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{muon_mean_charge.png}
+                    \caption{Simulation de l'impact de la carte d'efficacité sur la moyenne de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un muon traversant le démonstrateur 666.}
+                    \label{fig::muon_mean_charge}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[t]{0.48\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{muon_dispersion.png}
+                    \caption{Simulation de l'impact de la carte d'efficacité sur la dispersion de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un muon traversant le démonstrateur 666.}
+                    \label{fig::muon_dispersion_charge}
+                \end{subfigure}
+                \caption[Simulation de l'impact de la carte d'efficacité sur la charge totale collectée de muons de plusieurs impulsions.]{Simulation de l'impact de la carte d'efficacité sur la charge totale collectée de muons de plusieurs impulsions traversant le démonstrateur 666. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'éfficacité.}
+            \end{figure}
         
         \subsection{Limites de cette simulation}
         
@@ -678,17 +714,17 @@
                 \label{fig::champ_dans_lem}
             \end{figure}
         
-            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction) contre le champ d'amplification.\\
+            Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que le la probabilité de collection d'extraction n'aura aucune influence sur la probabilité de collection d'induction. En revanche, le champ d'amplification peut avoir une influence sur l'une comme sur l'autre. En effet, la valeur du champ électrique à l'entrée ou à la sortie du \gls{lem} va être influencée par la valeur du voltage à travers le \gls{lem} comme le montre les profiles du champ électrique dans le \gls{lem} pour différents champs d'amplification (voir \autoref{fig::champ_dans_lem}). Il a donc été décidé de simuler la probabilité de collection d'extraction(d'induction) contre le champ d'amplification et le champ d'extraction(d'induction) contre le champ d'amplification.
             
-            Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.\\
+            Le terme \textit{champ d'extraction} sera employé pour désigner la quantité correspondant à la différence de potentielle entre la grille et le bas du \gls{lem} divisée par la distance entre les deux. Cette zone étant l'interface liquide/gaz, la valeur en question ne correspond ni au champ dans le liquide ni au champ dans le gaz, mais elle est plus pratique à utiliser que la différence de potentielle. Par exemple, un \textit{champ d'extraction} de $\SI{2.5}{\kilo\volt\per\centi\meter}$ correspond à environ $\SI{2}{\kilo\volt\per\centi\meter}$ dans le gaz et $\SI{3}{\kilo\volt\per\centi\meter}$ dans le liquide. Cette ambiguïté n'existe pas pour le champ d'induction, qui n'est que dans le gaz avec une constante diélectrique très proche de l'unité.
             
-            Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \cite{garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.\\
+            Le logiciel GarField a été ensuite utilisé pour simuler la dérive d'électrons dans la phase gazeuse. Un grand nombre d'électrons\footnote{De l'ordre de \numprint{10000}} est généré selon une distribution uniforme juste au dessus de la phase gazeuse, avec une énergie initiale nulle, afin de s'affranchir de l'efficacité d'extraction, impossible à simuler avec GarField. Le logiciel effectue alors le transport de ces électrons dans la carte de champ (voir \cite{garfield}) ainsi que l'amplification dans les trous du \gls{lem}. Les positions de début et de fin de parcours de chaque électrons sont enregistrées. La \autoref{fig::drift_histograms} montre la distribution de ces positions.
             
-            %TODO refaire les histo qui sont moches (drift_histograms) et les efficacités
+            \textcolor{red}{TODO} refaire les histo qui sont moches (drift histograms) et les efficacités
             
-            Il y a alors deux possibilités pour définir les probabilités de collection. La première consiste à trouver les limites effectives de la zone d'amplification, qui est donnée par la simulation comme la région dans laquelle, à l'intérieur des \glspl{lem}, des électrons apparaissent. La probabilité de collection d'extraction est alors définie comme le complémentaire du rapport du nombre d'électrons qui meurent avant la zone d'amplification sur le nombre d'électrons générés au départ. La probabilité de collection d'induction quant à elle est définie comme le complémentaire du rapport du nombre d'électrons qui meurent entre le début de la zone d'amplification et l'anode sur le nombre d'électrons qui sont entrés ou ont été générés dans la zone d'amplification. Cette définition peut correspondre à des probabilités de collection avant que le \gls{lem} ne se charge, donc en début d'exploitation d'un détecteur. Mais une fois chargé, on s'attend à ce que moins de charge meurent dans les trous du \gls{lem}.\\
+            Il y a alors deux possibilités pour définir les probabilités de collection. La première consiste à trouver les limites effectives de la zone d'amplification, qui est donnée par la simulation comme la région dans laquelle, à l'intérieur des \glspl{lem}, des électrons apparaissent. La probabilité de collection d'extraction est alors définie comme le complémentaire du rapport du nombre d'électrons qui meurent avant la zone d'amplification sur le nombre d'électrons générés au départ. La probabilité de collection d'induction quant à elle est définie comme le complémentaire du rapport du nombre d'électrons qui meurent entre le début de la zone d'amplification et l'anode sur le nombre d'électrons qui sont entrés ou ont été générés dans la zone d'amplification. Cette définition peut correspondre à des probabilités de collection avant que le \gls{lem} ne se charge, donc en début d'exploitation d'un détecteur. Mais une fois chargé, on s'attend à ce que moins de charge meurent dans les trous du \gls{lem}.
             
-            Une autre manière de définir les probabilités de collection est de considérer qu'un électron est effectivement extrait dès qu'il passe le cuivre bas, et qu'il a effectivement quitté le \gls{lem} si il meure après le cuivre haut. Ici aussi, le résultat peut être différent après charge du \gls{lem}. Un approfondissement de ces simulations serait de prendre cette charge en compte, en réalisant plusieurs itérations de la méthode décrite plus haut en mettant à jours la carte de champ entre chaque itération pour prendre en compte les électrons à présent accrochés au \gls{lem}.\\
+            Une autre manière de définir les probabilités de collection est de considérer qu'un électron est effectivement extrait dès qu'il passe le cuivre bas, et qu'il a effectivement quitté le \gls{lem} si il meure après le cuivre haut. Ici aussi, le résultat peut être différent après charge du \gls{lem}. Un approfondissement de ces simulations serait de prendre cette charge en compte, en réalisant plusieurs itérations de la méthode décrite plus haut en mettant à jours la carte de champ entre chaque itération pour prendre en compte les électrons à présent accrochés au \gls{lem}.
             
             
             
@@ -696,6 +732,6 @@
         
         \subsection{Résultats et comparaison aux expériences passées}
         
-    \section{Test des \glspl{crp} du démonstrateur 666 dans une boite cryogénique}
+    \section{Test des CRP du démonstrateur 666 dans une boite cryogénique}
         
-        %TODO
+        \textcolor{red}{TODO}

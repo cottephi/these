@@ -79,7 +79,7 @@
             
             Les signaux sont apportés vers l'extérieur par des conduites similaires à celles des câbles de suspension, remplies d'azote \cite{Acciarri2016a} traversant le couvercle du détecteur. Elles sont faites de manière à ce que l'électronique Frontend soit accessible pour d'éventuelles réparations sans contaminer l'argon. Les cartes Frontend (des circuits CMOS ASIC) sont située en bas des conduites et refroidie à \SI{110}{\kelvin}. L'électronique numérique et le \gls{daq} sont situés en dehors du cryostat.
             
-            L'alimentation haute tension passe elle aussi par des conduites isolante, et est distribuée aux \gls{lem}, aux anodes et à la grille d'extraction par des câbles coaxiaux courant le long de la structure du \gls{crp}. Dans le prototype 311, chaque face de chaque \gls{lem} ainsi que chaque anode a sa propre alimentation. Dans le démonstrateur 666, les faces hautes des \gls{lem} sont alimentées par groupe de six.
+            L'alimentation haute tension passe elle aussi par des conduites isolante, et est distribuée aux \gls{lem}, aux anodes et à la grille d'extraction par des câbles coaxiaux courant le long de la structure du \gls{crp}. Dans le prototype 311, chaque face de chaque \gls{lem} ainsi que chaque anode a sa propre alimentation. Dans le démonstrateur 666, les faces hautes des \gls{lem} sont alimentées par groupe de neuf.
             
             Les anodes sont reliées entre elles via des nappes et des connecteurs KEL formant des canaux de trois mètres de long dans le 666 et trois ou un mètre dans le 311.
             
@@ -227,7 +227,7 @@
                 
             \subsubsection{Transport des charges avec GarField}
             
-                \begin{wrapfigure}[22]{r}{0.4\textwidth}
+                \begin{wrapfigure}[22]{R}{0.4\textwidth}
                     \includegraphics[width=0.4\textwidth,keepaspectratio]{drift_example.png}
                     \caption[Dérive de 10 électrons dans la carte de champ du bord d'un \gls{lem} avec Garfield.]{Dérive de 10 électrons dans un example 2D de carte de champ du bord d'un \gls{lem} créée avec \gls{ansys} par le logiciel Garfield. Le cercle rouge indique les électrons finissant leur dérive sur la zone morte, les cercles verts indiquent les électrons finissant leur dérive sur la zone d'amplification. La simulation d'avalanche n'est pas activée afin d'accélérer le calcul.}
                     \label{fig::drift_example}
@@ -265,14 +265,14 @@
             \begin{figure}[htpb]
                 \begin{subfigure}{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{eff_map.png}
-                    \caption{Carte d'efficacité d'un \gls{lem} du modèle CFR-34. Les axes $x$ et $y$ représentent les \numprint{160} canaux des vues de l'anode se situant au dessus du \gls{lem}. La bar de couleur indique la fraction de charge qui atteindra chaque pixel ainsi formé.}
-                    \label{fig::eff_map}
+                    \caption{Carte d'efficacité d'un \gls{lem} du modèle CFR-34. Les axes $x$ et $y$ représentent les \numprint{160} canaux des vues de l'anode se situant au dessus du \gls{lem}. La bar de couleur indique la fraction de charge qui atteindra chaque pixel ainsi formé.
+                    \label{fig::eff_map}}
                 \end{subfigure}
                 \hfill
                 \begin{subfigure}{0.48\textwidth}
                     \includegraphics[width=\textwidth]{electron.png}
-                    \label{electron}
-                    \caption[Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt}]{Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt} traversant le démonstrateur 666. En noir est la charge simulée sans carte d'efficacité, en prenant en compte les dispersions et les pertes dues à la recombinaison et aux impureté, en rouge et la même charge mais en prenant en compte la carte d'efficacité.}
+                    \caption[Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt}]{Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'un électron de \SI{0.2}{\giga\electronvolt} traversant le démonstrateur 666. En noir est la charge simulée sans carte d'efficacité, en prenant en compte les dispersions et les pertes dues à la recombinaison et aux impureté, en rouge et la même charge mais en prenant en compte la carte d'efficacité.
+                    \label{fig::electron}}
                 \end{subfigure}
                 \caption[Carte d'efficacité d'un \gls{lem} du modèle CFR-34 et impact sur la collection de charge.]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34 simulée avec \gls{ansys} et Garfield et simulation de son impact sur la collection de charge avec QScan.}
             \end{figure}
@@ -333,7 +333,7 @@
             
             L'étape suivante est alors la soudure de connecteurs haute tension et le collage des entretoises en Macor, qui permettront d'assurer une distance entre le \gls{lem} et l'anode de \SI{2}{\milli\meter}.
             
-            \SI{24}{\hour} après le collage, les \glspl{lem} sont nettoyés pendant \numprint{3} minutes dans un bain ultrason d'eau désionisée et de lessive, à \SI{65}{\celsius} puis rincés d'abord à l'eau claire puis au Karcher avec de l'eau désionisée. Ils sont ensuite séchés une première fois avec à l'azote sous pression avant d'être séchés une seconde fois au four à \SI{80}{\celsius} pendant \numprint{3} heures. Ils sont ensuite polymérisés au four à \SI{160}{\celsius} pendant \numprint{3} heures.
+            \SI{24}{\hour} après le collage, les \glspl{lem} sont nettoyés pendant \numprint{3} minutes dans un bain ultrason d'eau désionisée et de lessive, à \SI{65}{\celsius} puis rincés d'abord à l'eau claire puis au Karcher avec de l'eau désionisée. Ils sont ensuite séchés une première fois avec de l'azote sous pression avant d'être séchés une seconde fois au four à \SI{80}{\celsius} pendant \numprint{3} heures. Ils sont ensuite polymérisés au four à \SI{160}{\celsius} pendant \numprint{3} heures.
         
         \subsection{Les mesures d’épaisseur des LEM}\label{sec::epaisseur}
         
@@ -357,29 +357,32 @@
                 \begin{equation}\label{eq::townsend_avalanche_2}
                     G = e^{A\rho d e^{-B\rho d/V}}
                 \end{equation}
-                Avec $\rho$ la densité de l'argon gazeux, $V$ le potentiel électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre apparaît deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il est nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$. Les résultats ainsi obtenus sont comparés aux résultats obtenus par ELTOS dans le \autoref{tab::comparaison_eltos}, ces dernières n'étant faites qu'aux bords des \gls{lem} et près des trous des vis.
+                Avec $\rho$ la densité de l'argon gazeux, $V$ le potentiel électrique entre les deux faces du \gls{lem}, $A$ et $B$ des constantes et $d$ la longueur de la zone d'amplification. Cette longueur $d$ correspond dans le cas d'un \gls{lem} à son épaisseur. Ce paramètre apparaît deux fois, dans la première et dans la seconde exponentielle, ses variations ont donc un impact significatif sur le gain (voir \autoref{fig::thickness_influence_on_gain}). Il est nécessaire de pouvoir quantifier ses variations pour les \glspl{lem} utilisés, nous avons donc mis en place un dispositif permettant de mesurer l'épaisseur des \glspl{lem} produits pour les deux \gls{crp} du $6\times6\times6$. Les résultats ainsi obtenus sont comparés aux résultats obtenus par ELTOS dans le \autoref{tab::mesures_eltos}.
                 
             \subsubsection{Méthode expérimentale}
                 %documentation dans hardware/lem_plaques/marbre_472
                 \paragraph{Le marbre et le crayon optique}
-                
-                    \begin{wrapfigure}{r}{0.4\textwidth}
-                        \includegraphics[width=0.4\textwidth,keepaspectratio]{CCI.png}
-                        \caption[Schéma de la méthode de mesure \gls{cci}.]{Schéma de la méthode de mesure \gls{cci} servant à mesurer l'épaisseur des \gls{lem}. Les blocs oranges et jaunes représentent une vue en coupe, à l'échelle, d'un \gls{lem} posé sur le marbre avec ses trous d'amplification.}
-                        \label{fig::CCI}
-                    \end{wrapfigure}
+                    
+                    \begin{figure}[htpb]
+                        \begin{subfigure}{0.48\textwidth}
+                            \includegraphics[width=\textwidth,keepaspectratio]{CCI.png}
+                            \caption[Schéma de la méthode de mesure \gls{cci}.]{Schéma de la méthode de mesure \gls{cci} servant à mesurer l'épaisseur des \gls{lem}. Les blocs oranges et jaunes représentent une vue en coupe, à l'échelle, d'un \gls{lem} posé sur le marbre avec ses trous d'amplification.}
+                            \label{fig::CCI}
+                        \end{subfigure}
+                        \hfill
+                        \begin{subfigure}{0.48\textwidth}
+                            \includegraphics[width=\textwidth,keepaspectratio]{soft_measure_LEM.JPG}
+                            \caption[Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}.]{Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}. Les grands pics sont coupés à l'analyse.}
+                            \label{fig::soft_measure_LEM}
+                        \end{subfigure}
+                        \caption[Schéma de principe et exemple de mesure de la technique \gls{cci}.]{Schéma de principe et exemple de mesure de la technique \gls{cci}.}
+                    \end{figure}
                     
                     La technique d'\gls{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. les rayons réfléchit en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. Comme deux longueurs d'onde ne seront pas focalisées à la même distance de la lentille, seule un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet.% Le \autoref{tab::CCI} résume les caractéristiques du dispositif utilisé.
                     %plusieurs photo du dispositif
                     Pour que cette technique soit efficace, il faut disposer d'une surface plate la plus uniforme possible sur laquelle poser l'objet à mesurer. Dans notre cas, il s'agit d'un marbre micrométrique dont les variations de hauteur ont été mesurées autour de $\SI{5}{\micro\meter}$ (\autoref{fig::marbre}).
                     
                     La source polychromatique utilisée est un crayon optique munie d'une LED blanche donc l'intensité est ajustable manuellement. Ce crayon optique est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près.
-                    
-                    \begin{wrapfigure}{r}{0.4\textwidth}
-                        \includegraphics[width=0.4\textwidth,keepaspectratio]{soft_measure_LEM.JPG}
-                        \caption[Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}.]{Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}. Les grands pics sont coupés à l'analyse.}
-                        \label{fig::soft_measure_LEM}
-                    \end{wrapfigure}
                     Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \gls{lem} est visible sur la \autoref{fig::soft_measure_LEM}, issue de ce logiciel. 
                     
                     A noter que due à l'absence de motorisation du chariot sur coussin d'air, ce dernier était poussé à la main, ce qui ne garantissait pas une vitesse constante.
@@ -627,7 +630,7 @@
             \begin{figure}[htpb]
                 \begin{subfigure}[t]{0.48\textwidth}
                     \includegraphics[width=\textwidth,keepaspectratio]{6lems_gamelle.jpg}
-                    \caption{Chambre haute pression avec six \glspl{lem} en train d'être préparés pour un test de tenue en tesion.}
+                    \caption{Chambre haute pression avec neuf \glspl{lem} en train d'être préparés pour un test de tenue en tesion.}
                     \label{fig::6lems_gamelle}
                 \end{subfigure}
                 \hfill
@@ -640,14 +643,28 @@
                 \label{fig::gamelle}
             \end{figure}
 
-            \begin{wrapfigure}{r}{0.3\textwidth}
-                \includegraphics[width=0.05\textwidth,keepaspectratio]{Anode_Card_left.png}
-                \caption[Schéma d'une carte de mesure utilisée pour les tests de continuité des anodes.]{Schéma d'une carte de mesure utilisée pour les tests de continuité des anodes.}
-                \label{fig::Anode_Card_left}
-            \end{wrapfigure}
+            \begin{figure}
+                \begin{minipage}{0.4\textwidth}
+                    \begin{subfigure}{0.1\textwidth}
+                        \includegraphics[width=\textwidth, keepaspectratio]{Anode_Card_left.png}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}{0.1\textwidth}
+                        \includegraphics[width=\textwidth, keepaspectratio]{Anode_Card_right.png}
+                    \end{subfigure}
+                    \caption[Schéma d'un jeu de cartes de mesure utilisé pour les tests de continuité des anodes.]{Schéma d'un jeu de cartes de mesure utilisé pour les tests de continuité des anodes.}
+                    \label{fig::anode_card_both}
+                \end{minipage}
+                    \hfill
+                \begin{minipage}{0.4\textwidth}
+                    \includegraphics[width=\textwidth,keepaspectratio]{anode_problem_zoom.png}
+                    \caption[Photo de canaux défaillant sur le bord d'une anode.]{Photo de canaux défaillant sur le bord d'une anode.}
+                    \label{fig::anode_test_probleme}
+                \end{minipage}
+            \end{figure}
             Une enceinte haute pression a été construite afin d'y recréer les conditions de pression et température des \gls{tpc} de \gls{wa105}\footnote{A noter que dans les \gls{tpc}, un gradient de température est présent, qui ne l'est pas dans l'enceinte haute pression.}. Tous les \glspl{lem} du démonstrateur 666 y ont été soumis à de hautes tensions afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans de l'argon. A également été mesuré le gain de ces \glspl{lem} grâce à une source d'américium placée dans l'enceinte.
             
-            Pour les tests haute tension, six \glspl{lem} pouvaient être testés en même temps. La \autoref{fig::6lems_gamelle} montre  ce dispositif. Pour les mesures de gains, un seul \gls{lem} était placé, ainsi qu'une anode de lecture et la source. L'espacement entre l'anode et le \gls{lem} est le même que sur le \gls{crp}, $\SI{2}{\milli\meter}$. La cathode avec la source est située $\SI{5}{\centi\meter}$ au dessus du \gls{lem}. La \autoref{fig::gamelle_source} montre ce dispositif.
+            Pour les tests haute tension, neuf \glspl{lem} pouvaient être testés en même temps. La \autoref{fig::6lems_gamelle} montre  ce dispositif. Pour les mesures de gains, un seul \gls{lem} était placé, ainsi qu'une anode de lecture et la source. L'espacement entre l'anode et le \gls{lem} est le même que sur le \gls{crp}, $\SI{2}{\milli\meter}$. La cathode avec la source est située $\SI{5}{\centi\meter}$ au dessus du \gls{lem}. La \autoref{fig::gamelle_source} montre ce dispositif.
         
         \subsection{Test de continuité des pistes des anodes}\label{sec::test_anode}
             \begin{figure}
@@ -665,16 +682,11 @@
                 \caption[Dispositif de mesure de la continuité des canaux des lecture des anodes.]{Dispositif de mesure de la continuité des canaux des lecture des anodes.}
                 \label{fig::test_anode}
             \end{figure}
-            La continuité des canaux de lecture des anodes, ainsi que leur isolation les unes par rapport aux autres, ont été testé grâce à des \gls{pcb} créé à cet effet (voir \autoref{fig::Anode_Card_left}. Deux jeux de deux cartes de test ont été produits et ont permit de vérifier les 72 anodes du démonstrateur 666 et 6 anodes de rab.
+            La continuité des canaux de lecture des anodes, ainsi que leur isolation les unes par rapport aux autres, ont été testé grâce à des \gls{pcb} créé à cet effet (voir \autoref{fig::anode_card_both}). Deux jeux de deux cartes de test ont été produits et ont permit de vérifier les 72 anodes du démonstrateur 666 et 6 anodes de rab.
             
             Ces cartes sont munies des mêmes connecteurs que les anodes. Elles sont faites de manière à ce qu'en branchant une carte de chaque côté de l'anode, les 160 canaux d'une vue de l'anode forment un circuit continue. Des zones de cuivres sont prévus entre chaque groupe de 32 canaux d'y mesurer la résistance du groupe. La \autoref{fig::test_anode} montre le dispositif de mesure.
 
-            \begin{wrapfigure}{r}{0.4\textwidth}
-                \includegraphics[width=0.4\textwidth,keepaspectratio]{anode_problem_zoom.png}
-                \caption[Photo de canaux défaillant sur le bord d'une anode.]{Photo de canaux défaillant sur le bord d'une anode.}
-                \label{fig::anode_test_probleme}
-            \end{wrapfigure}
-            Entre chaque canal est insérée une résistance de $\SI{100}{\ohm}$. Ainsi, une résistance de l'ordre de $\SI{3200}{\ohm}$ est attendue pour un groupe de 32 canaux. Une résistance significativement plus faible indiquera alors que deux ou plus canaux communiquent entre eux. Une résistance infinie indique un canal coupé. Dans les deux cas il s'agit alors de mesurer la résistance entre chaque canal du groupe posant problème afin d'identifier où se situe le problème, puis d'inspecter à l'oeil les pistes incriminées. La \autoref{fig::anode_test_probleme} montre de telles pistes.
+            Entre chaque canal est insérée une résistance de $\SI{100}{\ohm}$. Ainsi, une résistance de l'ordre de $\SI{3200}{\ohm}$ est attendue pour un groupe de 32 canaux. Une résistance significativement plus faible indiquera alors que deux canaux ou plus communiquent entre eux. Une résistance infinie indique un canal coupé. En plaçant un jeux de carte sur chaque vue, il est possible de vérifier que les deux vues ne communiquent pas entre elles. Dans les trois cas il s'agit alors de mesurer la résistance entre chaque canal du groupe posant problème afin d'identifier sur quel canal se situe le problème, puis d'inspecter à l'oeil les pistes incriminées. La \autoref{fig::anode_test_probleme} montre de telles pistes.
 
             Au final, sur les 78 anodes ainsi testées, 10 ont posé problème. Parmi ces 10 anodes, 6 avaient des problèmes sur des canaux au bord de l'anode, où l'on ne s'attend de toute manière pas à collecter de charge à cause des zones mortes des \glspl{lem} (voir \autoref{sec::zones_mortes}).
                         
@@ -734,4 +746,8 @@
         
     \section{Test des CRP du démonstrateur 666 dans une boite cryogénique}
         
-        \textcolor{red}{TODO}
+        Entre Juin et Décembre 2018, les deux \glspl{crp} instrumentés du démonstrateur 666 ont été testés dans des conditions de pressions et température équivalente à celles qui seront dans le démonstrateur, grâce à une boite cryogénique construite à cet effet au \gls{cern}. Cette enceinte ne testait que les tenues en tension et \glspl{lem} et de la grille, et ne permettait pas de mesurer un gain ou une charge. Cette boite (voir \autoref{fig::coldbox}) peut contenir un \gls{crp} complet, et est équipé de capteurs permettant d'enregistrer en temps réel la pressions et la température à plusieurs endroits ainsi que le niveau d'argon liquide, qui est ajustable. L'alimentation se fait comme dans le démonstrateur : les face basses des \glspl{lem} chacune sont alimentées par des canaux dédiés, les faces hautes sont groupées par 6. La grille est également alimentée par un canal dédié. Un programme python permet de suivre en direct l'évolution des différents courants et tensions. La \autoref{fig::coldbox_graph} montre un test de plusieurs heures. On peut y voir plusieurs décharges, indiquant des instabilités. Quand plusieurs décharges arrivent sur un laps de temps relativement cours (une décharge par minute environ), l'opération est arrêtée pour éviter d'abîmer les \glspl{lem}, le but étant de tenir plusieurs heures à une même tension, avec des décharges peu nombreuses et très espacées en temps.
+        
+        Les deux \glspl{crp} ont montré un comportement similaire à haute tension : une tension de ??? a pu être atteinte et tenue pendant plusieurs heures avant que de nombreuses décharges surviennent en l'espace d'une heure. Après ouverture et inspection, il a été remarqué que plusieurs \glspl{lem} présentaient des traces de brûlure dans des coins (voir \autoref{fig::brulure_coin}). Après nettoyage, une observation a révéler que les rims étaient légèrement décentrés dans ces régions. Ces \glspl{lem} ont été nettoyés et re-testé dans l'enceinte haute pression du \gls{cea}, ils ne présentaient pas de performances diminuées.
+        
+        \textcolor{red}{tensions nominales?}

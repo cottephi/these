@@ -427,7 +427,7 @@ s_{12}s_{23}-c_{12}s_{13}c_{23}e^{i\delta_{CP}} & -c_{12}s_{23}-s_{12}s_{13}c_{2
                 N_e^{res}=\frac{\Delta m^2\cos(2\theta_0)}{2\sqrt{2}G_F E}.%=\numprint{6.56e6}\frac{\Delta m^2(\si{\electronvolt\squared})}{E(\si{\mega\electronvolt})}\cos(2\theta_0)N_A\si{\centi\meter^{-3}}
             \end{equation}
             %où $N_A$ est le nombre d'Avogadro.
-            Cet effet, appelé effet \gls{msw}, doit être pris en compte dans la majorité des expériences d'oscillation des neutrinos.
+            Cet effet, appelé effet \gls{msw}, doit être pris en compte dans les expériences de neutrinos solaires, où la densité décroît depuis le centre du soleil jusqu'à sa surface, dans le cas des neutrinos atmosphériques traversant la Terre, dont le profile de densité peut être vu comme une succession de différentes densités constantes, et dans les expériences à longue ligne de base de réacteur et d'accélérateur, où les électrons traversent la croûte terrestre, dont la densité est en bonne approximation constante.
             
             %Dans le cas des expériences à longue ligne de base de type réacteur ou accélérateur, la densité de matière correspond à celle de la croûte terrestre qui est globalement constante. En revanche, le spectre en énergie des neutrinos incidents peut être large, ce sera le cas notamment pour \gls{dune}. Il est donc plus pratique d'exprimer la condition \eqref{eq::MSW_condition} de la manière suivante : 
             %\begin{equation}
@@ -436,43 +436,41 @@ s_{12}s_{23}-c_{12}s_{13}c_{23}e^{i\delta_{CP}} & -c_{12}s_{23}-s_{12}s_{13}c_{2
             
             Deux choses sont à noter : 
             \begin{itemize}
-                \item Il y a une condition à pour que cette résonance soit possible : il faut que $\frac{\Delta m^2}{2E}\cos(2\theta_0) > 0$ dans le cas des neutrinos et $\frac{\Delta m^2}{2E}\cos(2\theta_0) < 0$ dans le cas des antineutrinos, puisqu'une densité ne peut être négative. Il ne peut donc pas y avoir de résonance à la fois pour les neutrinos \textit{et} pour les antineutrinos. Cet effet induit donc une violation CP macroscopique dans l'observation des oscillations dans la matière, qui n'a rien à voir avec la phase de violation CP de la matrice PMNS, et qu'il convient de modéliser précisément pour toute tentative de mesure de $\delta_{CP}$.
+                \item Il y a une condition à remplir pour que cette résonance soit possible : il faut que $\frac{\Delta m^2}{2E}\cos(2\theta_0) > 0$ dans le cas des neutrinos et $\frac{\Delta m^2}{2E}\cos(2\theta_0) < 0$ dans le cas des antineutrinos, puisqu'une densité ne peut être négative. Il ne peut donc pas y avoir de résonance à la fois pour les neutrinos \textit{et} pour les antineutrinos. Cet effet induit donc une violation CP macroscopique dans l'observation des oscillations dans la matière, qui n'a rien à voir avec la phase de violation CP de la matrice PMNS, et qu'il convient de modéliser précisément pour toute tentative de mesure de $\delta_{CP}$.
                 \item Si l'angle de mélange dans le vide est strictement nul, il ne peut pas y avoir de résonance. En effet dans ce cas l'équation \eqref{eq::tan2theta} donne $\tan(2\theta)=0$ et donc $\theta=\frac{\pi}{2}$, rendant les états propres de saveurs orthogonaux et donc non-mélangeables.
                 \item Si $N_e$ est variable le long du parcours des neutrinos, ce qui est le cas des neutrinos solaires ou des neutrinos passant par le centre de la Terre, la résonance arrivera si au moins une région à un $N_e$ satisfaisant \eqref{eq::MSW_condition}. Ces cas ne correspondant pas aux expériences de neutrinos d'accélérateurs à longue ligne de base, qui sont le propos de cette thèse, nous ne les détaillons pas. Un traitement de ces cas peut être trouvé ici \cite{Akhmedov2000}.
                 \item Si les neutrinos ont un spectre en énergie relativement large, la résonance peut n'arriver que pour une certaine partie du spectre seulement.
+                \item En pratique, pour une source de neutrino donnée, l'effet \gls{msw} se manifestera pour deux régions d'énergie, correspondant à la condition \eqref{eq::MSW_condition} satisfaite avec $\Delta m^2_{21}$ ou $\Delta m^2_{31}\simeq\Delta m^2_{32}$.
             \end{itemize}
                 
             
         \subsection{Le cas à trois saveurs}
             Le calcul des effets de matière à trois saveurs suit la même logique que le cas à deux saveurs : il faut définir un nouvel Hamiltonien comme dans l'équation \cite{eq::hamiltonian_matter_2flavor} et le diagonaliser pour trouver les nouveaux vecteurs et valeurs propres et la matrice de mélange dans la matière. Les calculs sont effectués en détails ici \cite{Freund2001}, aussi ne sont-ils pas refait ici. Un point important est à souligner : le calcul des vecteurs et valeurs propres s'effectue par développement en série, autour de $\alpha=\Delta m^2_{21}/\Delta m^2_{31}$. Il en ressort deux résultats possibles, suivant que le paramètre $\hat{A}=\frac{2V_{CC}E}{\Delta m^2_{31}}$ soit petit ou non, qui correspondent aux deux résonances \gls{msw} possibles, à savoir la résonance solaire quand $\hat{A}=\alpha\simeq 10^{-2}$ et la résonance atmosphérique quand $\hat{A}=\cos(2\theta_{13})\simeq 1$. Le cas qui nous intéresse est $|\hat{A}|>\alpha$c, qui est approprié pour des énergies de neutrino de l'ordre du \si{\giga\electronvolt} et des densités de matière proche de celle de la croûte terrestre.
             
+            TODO : enlever la partie en dessous\\
+            %Dans le cas à trois saveurs, l'équation \eqref{eq::evolution_matter_2flavor} devient, en prenant en compte le potentiel $V_{CC}$ :
+            %\begin{equation}\label{eq::evolution_matter_3flavor}
+             %   i\frac{d}{dt}\left(\begin{matrix}\nu_e \\ \nu_{\mu} \\ \nu_{\tau}\end{matrix}\right) = \left [ \frac{1}{2E}U\underbrace{\left(\begin{matrix} m_1^2 & 0 & 0 \\ 0 & m_2^2 & 0 \\
+              %  0 & 0 & m_3^2\end{matrix}\right)}_{M^2}U^{\dagger} + \left(\begin{matrix}V_{CC} & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{matrix}\right)\right]\left(\begin{matrix}\nu_e \\ \nu_{\mu} \\ \nu_{\tau}\end{matrix}\right)
+            %\end{equation}
             
-            Dans le cas à trois saveurs, l'équation \eqref{eq::evolution_matter_2flavor} devient, en prenant en compte le potentiel $V_{CC}$ :
-            \begin{equation}\label{eq::evolution_matter_3flavor}
-                i\frac{d}{dt}\left(\begin{matrix}\nu_e \\ \nu_{\mu} \\ \nu_{\tau}\end{matrix}\right) = \left [ \frac{1}{2E}U\underbrace{\left(\begin{matrix} m_1^2 & 0 & 0 \\ 0 & m_2^2 & 0 \\
-                0 & 0 & m_3^2\end{matrix}\right)}_{M^2}U^{\dagger} + \left(\begin{matrix}V_{CC} & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{matrix}\right)\right]\left(\begin{matrix}\nu_e \\ \nu_{\mu} \\ \nu_{\tau}\end{matrix}\right)
-            \end{equation}
-            
-            
-            
-            
-            \subsubsection{Justification de l'approximation à deux saveurs}
-            Si l'approximation \eqref{eq::approx_21_0} est valide, il est utile d'effectuer la transformation 
-            \begin{equation}
-                M^2\to \widetilde{M}^2 = M^2-m_1^2\mathbb{I}=\left(\begin{matrix} 0 & 0 & 0 \\ 0  & \Delta m^2_{21} & 0 \\ 0 & 0 & \Delta m^2_{31}\end{matrix}\right) \simeq \left(\begin{matrix} 0 & 0 & 0 \\ 0  & 0 & 0 \\ 0 & 0 & \Delta m^2_{31}\end{matrix}\right)
-            \end{equation}
-            où le terme $m_1^2\mathbb{I}$ peut être absorbé par rephasage dans l'équation \eqref{eq::evolution_matter_3flavor}. Cette matrice commute avec $u_{12}$. En notant $V=\text{diag}(V_{CC},0,0)$, qui commute avec $u_{23}$, et $ \widetilde{\nu} = u_{23}\left(\nu_e, \nu_{\mu}, \nu_{\tau}\right)^T$, on obtient donc
-            \begin{eqnarray}
-                & i\frac{d}{dt}\widetilde{\nu} = \left(\frac{1}{2E}u_{13}\widetilde{M}^2u^{\dagger}_{13} + V\right)\widetilde{\nu} \\ 
-                \Rightarrow & i\frac{d}{dt}\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b} \\ \widetilde{\nu_c}\end{matrix}\right) = \left(\begin{matrix}  \frac{\Delta m^2_{31}}{2E}s^2_{13}+V_{CC} & 0 & \frac{\Delta m^2_{31}}{2E}s_{13}c_{13} \\ 0  & 0 & 0 \\ \frac{\Delta m^2_{31}}{2E}s_{13}c_{13} & 0 & \frac{\Delta m^2_{31}}{2E}c^2_{13} \end{matrix}\right)\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b} \\ \widetilde{\nu_b}\end{matrix}\right)
-            \end{eqnarray}
-            où $\widetilde{\nu_a} = \nu_e$ et $\widetilde{\nu_c} = s_{23}\nu_{\mu} + c_{23}\nu_{\tau}$.
-            Le problème se réduit donc à un problème d'oscillation à deux saveurs entre $\widetilde{\nu_a}$ et $\widetilde{\nu_b}$ où, après un dernier rephasage, on peut écrire
-            \begin{equation}
-                i\frac{d}{dt}\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b}\end{matrix}\right) = \left(\begin{matrix} -\frac{\Delta m^2_{31}}{4E}\cos(2\theta_{13}) + \frac{V_{CC}}{2} & \frac{\Delta m^2_{31}}{4E}\sin(2\theta_{13}) \\ 
-                \frac{\Delta m^2_{31}}{4E}\sin(2\theta_{13}) & \frac{\Delta m^2_{31}}{4E}\cos(2\theta_{13}) - \frac{V_{CC}}{2}\end{matrix}\right)\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b}\end{matrix}\right).
-            \end{equation}
-            \subsubsection{Approximation pour les expériences de neutrinos d'accélérateurs à longue ligne de base}
+            %\subsubsection{Justification de l'approximation à deux saveurs}
+            %Si l'approximation \eqref{eq::approx_21_0} est valide, il est utile d'effectuer la transformation 
+            %\begin{equation}
+             %   M^2\to \widetilde{M}^2 = M^2-m_1^2\mathbb{I}=\left(\begin{matrix} 0 & 0 & 0 \\ 0  & \Delta m^2_{21} & 0 \\ 0 & 0 & \Delta m^2_{31}\end{matrix}\right) \simeq \left(\begin{matrix} 0 & 0 & 0 \\ 0  & 0 & 0 \\ 0 & 0 & \Delta m^2_{31}\end{matrix}\right)
+            %\end{equation}
+            %où le terme $m_1^2\mathbb{I}$ peut être absorbé par rephasage dans l'équation \eqref{eq::evolution_matter_3flavor}. Cette matrice commute avec $u_{12}$. En notant $V=\text{diag}(V_{CC},0,0)$, qui commute avec $u_{23}$, et $ \widetilde{\nu} = u_{23}\left(\nu_e, \nu_{\mu}, \nu_{\tau}\right)^T$, on obtient donc
+            %\begin{eqnarray}
+             %   & i\frac{d}{dt}\widetilde{\nu} = \left(\frac{1}{2E}u_{13}\widetilde{M}^2u^{\dagger}_{13} + V\right)\widetilde{\nu} \\ 
+              %  \Rightarrow & i\frac{d}{dt}\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b} \\ \widetilde{\nu_c}\end{matrix}\right) = \left(\begin{matrix}  \frac{\Delta m^2_{31}}{2E}s^2_{13}+V_{CC} & 0 & \frac{\Delta m^2_{31}}{2E}s_{13}c_{13} \\ 0  & 0 & 0 \\ \frac{\Delta m^2_{31}}{2E}s_{13}c_{13} & 0 & \frac{\Delta m^2_{31}}{2E}c^2_{13} \end{matrix}\right)\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b} \\ \widetilde{\nu_b}\end{matrix}\right)
+            %\end{eqnarray}
+            %où $\widetilde{\nu_a} = \nu_e$ et $\widetilde{\nu_c} = s_{23}\nu_{\mu} + c_{23}\nu_{\tau}$.
+            %Le problème se réduit donc à un problème d'oscillation à deux saveurs entre $\widetilde{\nu_a}$ et $\widetilde{\nu_b}$ où, après un dernier rephasage, on peut écrire
+            %\begin{equation}
+            %    i\frac{d}{dt}\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b}\end{matrix}\right) = \left(\begin{matrix} -\frac{\Delta m^2_{31}}{4E}\cos(2\theta_{13}) + \frac{V_{CC}}{2} & \frac{\Delta m^2_{31}}{4E}\sin(2\theta_{13}) \\ 
+           %     \frac{\Delta m^2_{31}}{4E}\sin(2\theta_{13}) & \frac{\Delta m^2_{31}}{4E}\cos(2\theta_{13}) - \frac{V_{CC}}{2}\end{matrix}\right)\left(\begin{matrix}\widetilde{\nu_a} \\ \widetilde{\nu_b}\end{matrix}\right).
+           % \end{equation}
+            %\subsubsection{Approximation pour les expériences de neutrinos d'accélérateurs à longue ligne de base}
             
     \section{Les choses que nous devons encore découvrir}
             

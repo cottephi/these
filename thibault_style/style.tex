@@ -1,0 +1,49 @@
+\chapterstyle{customChapterStyle}
+
+\setsecheadstyle{\color{pheniics}\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\color{pheniics}\large\bfseries\sffamily\raggedright}
+\setsubsubsecheadstyle{\color{pheniics}\bfseries\sffamily\raggedright}
+
+\maxsecnumdepth{subsection} % chapters, sections, and subsections are numbered
+\maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
+
+%\makeatletter
+%%\patchcmd{\@fancyhead}{\rlap}{\color{pheniics_purple}\rlap}{}{}
+%\patchcmd{\headrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
+%\patchcmd{\@fancyfoot}{\rlap}{\color{pheniics_purple}\rlap}{}{}
+%\patchcmd{\footrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
+%\makeatother
+
+%%%%% From memoir guide section 7.3
+\makepagestyle{ruled}
+\makeevenfoot {ruled}{\thepage}{}{} % page numbers at the outside
+\makeoddfoot  {ruled}{}{}{\thepage}
+\makeheadrule {ruled}{\textwidth}{\normalrulethickness}
+\makeevenhead {ruled}{\scshape\leftmark}{}{} % small caps
+\makeoddhead  {ruled}{}{}{\rightmark}
+
+\makepsmarks{ruled}{%
+	\nouppercaseheads
+%	\createmark{chapter}{left}{shownumber}{}{. \space} % j'aime pas a priori
+%	\createmark{section}{right}{nonumber}{}{} % j'aime pas a priori
+	\createplainmark{toc}{both}{\contentsname}
+	\createplainmark{lof}{both}{\listfigurename}
+	\createplainmark{lot}{both}{\listtablename}
+	\createplainmark{bib}{both}{\bibname}
+	\createplainmark{index}{both}{\indexname}
+	\createplainmark{glossary}{both}{\glossaryname}
+}
+
+% Add references and appendices to table of contents
+\defbibheading{bibliography}[\bibname]{%
+	\newpage
+	\section*{Références}%
+	\addcontentsline{toc}{section}{Références}
+}
+
+\AtBeginEnvironment{subappendices}{%
+	\chapter*{Annexe}
+	\addcontentsline{toc}{chapter}{Annexe}
+	\counterwithin{figure}{section}
+	\counterwithin{table}{section}
+}

@@ -1172,9 +1172,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.83242345"
-     inkscape:cx="558.81249"
-     inkscape:cy="211.50024"
+     inkscape:zoom="1.0795057"
+     inkscape:cx="498.90025"
+     inkscape:cy="379.88618"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1190,9 +1190,10 @@
      inkscape:bbox-paths="true"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
-     inkscape:window-x="1985"
+     inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -1325,7 +1326,7 @@
        inkscape:connector-curvature="0" />
     <g
        id="g9435"
-       transform="translate(-45.672375,0)">
+       transform="translate(-9.4834103,0)">
       <text
          sodipodi:linespacing="125%"
          id="text9406"
@@ -1350,18 +1351,11 @@
          x="629.68085"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
+           id="tspan9410-0"
            style="font-size:30px"
            y="706.46185"
            x="629.68085"
-           id="tspan9408-6"
-           sodipodi:role="line">If parity is <tspan
-   id="tspan9433"
-   style="font-weight:bold">not</tspan> conserved </tspan><tspan
-           id="tspan9410-0"
-           style="font-size:30px"
-           y="743.96185"
-           x="629.68085"
-           sodipodi:role="line">in weak interactions</tspan></text>
+           sodipodi:role="line">Experimental results</tspan></text>
     </g>
     <g
        id="g4574-8"
@@ -1826,18 +1820,6 @@
        d="m 727.26664,979.40806 -4.63501,48.49324"
        id="path12346-2"
        inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="682.38824"
-       y="702.56885"
-       id="text20421"
-       sodipodi:linespacing="125%"
-       transform="matrix(0.99357994,0.11313223,-0.11313223,0.99357994,0,0)"><tspan
-         sodipodi:role="line"
-         id="tspan20423"
-         x="682.38824"
-         y="702.56885">Experimental result</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffa100;stroke-width:2.21058464;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14940-53)"
        d="M 777.61124,860.16053 766.64076,813.03897"

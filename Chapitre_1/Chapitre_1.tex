@@ -106,6 +106,18 @@
         \subsection{La masse du neutrino : Dirac ou Majorana}\label{sec::dirac_majorana}
         
 	        ***encadré sur les termes possibles d'un lagrangien : invariants de Lorentz, hermitien, etc...***
+	        \begin{wrapfigure}{R}{0.5\textwidth}
+		        \begin{tcolorbox}[title=Comment construire un terme de masse dans un lagrangien?]
+		        	Le lagrangien du modèle standard est construit en utilisant le rasoir d'Ockham : on choisi en priorité les termes les plus simples qui respectent les lois de la physique. Un terme de masse doit donc respecter les critères suivants :
+		        	\begin{itemize}
+						\item[$\bullet$] Être invariant de Lorentz (i.e respecter la relativité restreinte).
+						\item[$\bullet$] Avoir la dimension d'une énergie (le lagrangien est une énergie).
+						\item[$\bullet$] Il doit faire intervenir la particule dont il est la masse.
+						\item[$\bullet$] Il doit être réel, donc faire intervenir le champ et son conjugué complexe.
+		        	\end{itemize}
+		        	Le terme le plus simple respectant tout ça est, pour un fermion décrit par un champ $\psi$, de la forme $-m\bar{\psi}\psi$.
+	        	\end{tcolorbox}
+	        \end{wrapfigure}
 	        
 	        Nous avons dit dans la section précédente qu'un neutrino sans masse peut être décrit par un spineur de Weyl. Depuis la mise en évidence de la masse des neutrinos par le phénomène d'oscillation, il est clair que cette description est insuffisante, un spineur de Weyl ne pouvant pas avoir de terme de masse dans un lagrangien de Dirac. L'extension la plus rapide consiste à considérer le neutrino comme un spineur de Dirac et de lui adjoindre le terme de masse \eqref{eq::dirac_mass}. Dans ce cas, le neutrino aura une composante de chiralité droite non nulle, qui n'interagit avec aucune interaction du modèle standard. Il peut interagir par gravitation, mais cette dernière n'est pas décrite par la théorie quantique des champs. 
 	        
@@ -143,15 +155,16 @@
             \begin{figure}[htbp]
                 \begin{subfigure}[t]{0.56\textwidth}
                     \includegraphics[width=\textwidth]{Chapitre_1/pictures/SNO_plot.png}
-                    \caption{Mesure des composantes $\nu_{\mu}$ et $\nu_{\tau}$ du flux de neutrino solaire contre la composante $\nu_e$\cite{Aharmim2013}. Le flux total mesuré ($\phi_{NC}^{SNO}$) est consistant avec le flux total prédit ($\phi_{SSM}$). La composante électronique du flux ($\phi_{CC}^{SNO}$), qui devrait constituer $100\%$ du flux sans oscillations, n'en représente que $35\%$, ce qui indique un changement de saveur.}
+                    \caption{Mesure des composantes $\nu_{\mu}$ et $\nu_{\tau}$ du flux de neutrino solaire contre la composante $\nu_e$\cite{Aharmim2013}. Le flux total mesuré ($\phi_{NC}^{SNO}$) est en accord avec le flux total prédit ($\phi_{SSM}$). La composante électronique du flux ($\phi_{CC}^{SNO}$), qui devrait constituer $100\%$ du flux sans oscillations, n'en représente que $35\%$, ce qui indique un changement de saveur.}
                     \label{fig::SNO_plot}
                 \end{subfigure}
                 \hfill 
                 \begin{subfigure}[t]{0.4\textwidth}
                     \includegraphics[width=\textwidth]{Chapitre_1/pictures/superK_plot.png}
-                    \caption{Nombre de neutrinos muoniques mesurés par Super-Kamiokande (traits pleins) et prédit par le Monte Carlo (traits pointillés) pour un an et demi de prise de donnée contre l'angle zénithal avec lequel le neutrino arrivait\cite{Fukuda1998}. Un cosinus négative correspond à un neutrino ayant traversé la Terre. La différence entre observation et prédiction à grand angle indique une disparition des neutrinos muonique.}
+                    \caption{Nombre de neutrinos muoniques mesurés par Super-Kamiokande (traits pleins) et prédit par le Monte Carlo (traits pointillés) pour un an et demi de prise de donnée contre l'angle zénithal avec lequel le neutrino arrivait\cite{Fukuda1998}. Un cosinus négative correspond à un neutrino ayant traversé la Terre. La différence entre observation et prédiction à grand angle indique une disparition des neutrinos muonique à grande ligne de base.}
                     \label{fig::superK_plot}
                 \end{subfigure}
+                \caption[Les preuves que les neutrinos changent de saveur, par SNO et Super-Kamiokande.]{Les deux graphiques ayant prouvé les changement de saveur des neutrinos : le flux total de neutrinos provenant du soleil est conservé mais sa composition de saveur change, par SNO (gauche). Le nombre de neutrinos muoniques atmosphériques détectés dépend de la ligne de base, par Super-Kamiokander (droite).}
             \end{figure}
             
             SNO détectait les neutrinos solaires, par interaction par courant chargé (CC) et par courant neutre (CN), permettant d'avoir accès à la fois au flux de neutrinos électroniques (CN et CC) et au flux de neutrios muoniques et tauiques (CN). Comme le montre la \autoref{fig::SNO_plot}, la somme des trois flux correspond bien au flux total prédit par le modèle solaire standard alors que le flux de neutrinos électronique est inférieur aux prédiction, montrant qu'une partie du flux change de saveur mais que le flux total est conservé.
@@ -646,7 +659,7 @@ s_{12}s_{23}-c_{12}s_{13}c_{23}e^{i\delta_{CP}} & -c_{12}s_{23}-s_{12}s_{13}c_{2
 		    		\hline
 		    		\hline
 		    		$\Delta m^2_{21}~[\SI{e-5}{\electronvolt\squared}]$ & \numprint{7.37}   & \numprint{6.93}--\numprint{7.96}\\
-		    		$|\Delta m^2_{31}|~[\SI{e-5}{\electronvolt\squared}]$ & \numprint{2.56}   & \numprint{2.45}--\numprint{2.69} \\
+		    		$|\Delta m^2_{31}|~[\SI{e-3}{\electronvolt\squared}]$ & \numprint{2.56}   & \numprint{2.45}--\numprint{2.69} \\
 		    		$\sin^2\theta_{12}$ & \numprint{0.297}   & \numprint{0.250}--\numprint{0.354}\\
 		    		$\sin^2\theta_{23}$, $\Delta m^2_{31(23)}>0$ & \numprint{0.425}   & \numprint{0.381}--\numprint{0.615}\\
 		    		$\sin^2\theta_{23}$, $\Delta m^2_{31(23)}<0$ & \numprint{0.589}   & \numprint{0.384}--\numprint{0.636}\\

@@ -67,9 +67,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1772246"
-     inkscape:cx="374.70423"
-     inkscape:cy="313.85936"
+     inkscape:zoom="1.0795058"
+     inkscape:cx="363.29129"
+     inkscape:cy="267.55553"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +79,7 @@
      fit-margin-bottom="0"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
-     inkscape:window-x="65"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
@@ -1145,16 +1145,24 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="351.98193"
-       y="582.44116"
+       x="320.48605"
+       y="562.98779"
        id="text42228"
        sodipodi:linespacing="125%"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan42230"
-         x="351.98193"
-         y="582.44116">35kV/cm</tspan></text>
+         x="320.48605"
+         y="562.98779"
+         style="font-size:27.5px">LEM of 10x10cm<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan4333">2</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="320.48605"
+         y="597.36279"
+         id="tspan4331"
+         style="font-size:27.5px">35kV/cm</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:14.58710194px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

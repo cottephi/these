@@ -40,12 +40,15 @@
   \addtocounter{footnote}{-1}%
   \endgroup
 }
+
+\setbeamertemplate{itemize/enumerate body begin}{\scriptsize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
 %-------------------------------------------------------
 % INFORMATIONS SUR LA PAGE DE TITRE
 %-------------------------------------------------------
 
 
-\title[Characterization of large volume Double Phase Liquid Argon Time Projection chambers in the WA105/ProtoDUNE project]{
+\title[Characterization of large volume Double Phase Liquid Argon Time Projection chambers in the WA105/ProtoDUNE-DP project]{
 \vspace{3cm}
       \textbf{Characterization of large volume Double Phase Liquid Argon Time Projection chambers in the WA105/ProtoDUNE project} \\
 }
@@ -120,32 +123,34 @@
 %	\end{scriptsize}
 %	    
 %    \end{frame}
-    
     \begin{frame}{Context}{DU$\nu$E : a longue baseline neutrino oscillation experiment}
     	\begin{scriptsize}
     	\begin{minipage}{0.58\textwidth}
+    		\centering
     		The Deep Underground Neutrino Experiment:\\
     		\includegraphics[width=\textwidth]{figures/contexte/dune.jpg}\\
-    		
-    		1 of the 4 far detector modules:\\
+    		\vspace{0.5cm}
+    		\centering
+    		1 of the 4 far detector modules: Dual phase LArTPC\\
     		\includegraphics[width=\textwidth]{figures/contexte/dune_module.png}\\
     	\end{minipage}
     	\hfill
     	\begin{minipage}{0.38\textwidth}
     		\begin{itemize}
     			\item[$\bullet$] Neutrino experiment in USA scheduled for 2026.
-    			\item[$\bullet$] Will detect $\nu$/$\overline{\nu}$ from Femilab in South Dakota.
-    			\item[$\bullet$] Will use \textbf{Liquid Argon Time Projection Chamber}.
+    			\item[$\bullet$] Will detect $\nu$/$\overline{\nu}$ from Fermilab in South Dakota.
+    			\item[$\bullet$] \textbf{Goal: }Measure CP violation phase and neutrino mass hierarchy.
+    			\item[$\bullet$] Far detector: 4 \textbf{Liquid Argon Time Projection Chamber} of \SI{10}{\kilo\tonne} each.
     		\end{itemize}
     		\vspace{.3cm}
-    		$\Rightarrow$ \textbf{ProtoDU$\nu$E} tests \textbf{two versions} of LArTPC technology at \textbf{tonne scale} at CERN's neutrino platform\\
+    		$\Rightarrow$ \textbf{ProtoDU$\nu$E} tests \textbf{two versions} of LArTPC technology at \SI{300}{\tonne} at CERN's neutrino platform\\
     		
     		$\Rightarrow$ \textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} tests the \textcolor{red}{\textbf{Double Phase}} version of LArTPC 
 	    \end{minipage}
 	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{Context}{DU$\nu$E's detector technology 1 : \textbf{Liquid Argon Time Projection Chamber}}
+    \begin{frame}{Context: Before \texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}}{DU$\nu$E's detector technology 1 : \textbf{Liquid Argon Time Projection Chamber}}
     	\begin{scriptsize}
     		\begin{minipage}{0.48\textwidth}
     			\includegraphics[width=\textwidth]{figures/contexte/lartpc.png}\\
@@ -159,7 +164,7 @@
     				\item[$\bullet$] Calorimetry.
     				\item[$\bullet$] Particle Identification.
     			\end{itemize}    			
-    			Largest LArTPC that detected neutrinos: ICARUS (\SI{600}{\tonne})\\
+    			Largest LArTPC that detected neutrinos before ProtoDU$\nu$E: ICARUS (\SI{600}{\tonne})\\
     			
     			Why Liquid argon?
     			\begin{itemize}
@@ -173,7 +178,7 @@
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{Context}{DU$\nu$E's detector technology 2 : \textbf{Double Phase LArTPC}}
+    \begin{frame}{Context: Before \texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}}{DU$\nu$E's detector technology 2 : \textbf{Double Phase LArTPC}}
     	\begin{scriptsize}
     		\begin{minipage}{0.48\textwidth}
     			\includegraphics[width=\textwidth]{figures/contexte/dlartpc.png}\\
@@ -190,11 +195,11 @@
     		\end{minipage}
     	\end{scriptsize}
     	\centering
-    	DLArTPC is young: biggest one is \SI{250}{\liter}\\
-    	\textbf{$\Rightarrow$ needs an extra step of R\&D to reach DU$\nu$E's scale : \textcolor{red}{WA105}}
+    	DLArTPC is young: biggest one was \SI{250}{\liter}.\\
+    	\textbf{$\Rightarrow$ Needed an extra step of R\&D to reach DU$\nu$E's scale : \textcolor{red}{WA105}}
     \end{frame}
     
-    \begin{frame}{Context}{The WA105 project}
+    \begin{frame}{Context: WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP}
 		\includegraphics[width=\linewidth]{figures/contexte/wa105}\\
 		\begin{scriptsize}
 			A demonstrator for the Single Phase is also being tested at CERN's neutrino platform
@@ -202,30 +207,37 @@
 		
     \end{frame}
     
+    {
+    	\setlength\pdfpagewidth{12.8cm}%
+    	\setlength\pdfpageheight{9cm}%
+    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/contexte/nu_platform.png}}
+    	\begin{frame}[plain]
+    		
+    	\end{frame}
+    }
+    
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666}
-    		demonstrator}{Tonne-scale and \si{\meter\squared} readout planes challenges}
+    		demonstrator}{Multitonne-scale and \si{\meter\squared} readout planes challenges}
     	\begin{scriptsize}
     			\includegraphics[width=0.9\textwidth]{figures/666/666_full.png}\\
     			\vfill
+    			\textbf{Main challenges:}\\
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$] Space charge effect?
-    					\item[$\bullet$] Purity?
-    					\item[$\bullet$] Gain behavior?
+    					\item[$\bullet$] Space charge effect
+    					\item[$\bullet$] Gain behaviour
     				\end{itemize}
     			\end{minipage}\hfill
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$]CRPs planarity?
-    					\item[$\bullet$] Max voltages?
-    					\item[$\bullet$] Stability?
+    					\item[$\bullet$] Max voltages
+    					\item[$\bullet$] Stability
     				\end{itemize}
 	    		\end{minipage}\hfill
 	    		\begin{minipage}{0.32\textwidth}
 	    			\begin{itemize}
-	    				\item[$\bullet$] Track reconstruction?
-	    				\item[$\bullet$] Resolution?
-	    				\item[$\bullet$] Scalability?
+	    				\item[$\bullet$] Event reconstruction
+	    				\item[$\bullet$] Scalability
 	    			\end{itemize}
 	    		\end{minipage}
     	\end{scriptsize} 
@@ -233,29 +245,28 @@
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666}
     		demonstrator}{The LEM-Anode sandwich}
-    	\centering \textbf{Irfu's mission: }Test, characterize and produce  half the LEMs and anodes, for 2 CRPs out of 4.\\\vfill
-   		\begin{minipage}{0.48\textwidth}
-   			Townsend avalanche:\\
-   			\centering  $G = Te^{A\rho d e^{-B\rho d/V}}$\\
-   			\begin{scriptsize}
+    	\begin{scriptsize}
+		     \textbf{\textcolor{red}{Irfu's mission}: }Test, characterize and produce  LEMs and anodes, for 2 CRPs out of 4.\\\vfill
+	   		\begin{minipage}{0.48\textwidth}
+	   			Effective gain:\\
+	   			\centering  $G_{eff} = Te^{A\rho d e^{-B\rho d/V}}$\\
     			\begin{itemize}
-    				\item[$\bullet$] $T$: Electric transparency
+    				\item[$\bullet$] $T$: Electric transparency of the LEM-anode sandwich
     				\item[$\bullet$] $A,B$: coefficients, gas dependent.
     				\item[$\bullet$] $d$: amplification length (\SI{1}{\milli\meter}).
-    				\item[$\bullet$] $V$: amplification voltage (\SI{3.5}{\kilo\volt}).
-    				\item[$\bullet$] $\rho$: gas density.
+    				\item[$\bullet$] $V$: amplification voltage ($\sim$\SI{3}{\kilo\volt}).
+    				\item[$\bullet$] $\rho$: gas density ($\propto T/P$).
     			\end{itemize}
-    		\end{scriptsize} 
-   			\vfill
-			\includegraphics[width=0.9\textwidth]{figures/666/3L_gain.png}
-   		\end{minipage}\hfill
-   		\begin{minipage}{0.48\textwidth}
-   			\includegraphics[width=0.9\textwidth]{figures/666/lem_anode.png}
-   		\end{minipage}
+	   			\vfill
+				\includegraphics[width=0.9\textwidth]{figures/666/3L_gain.png}
+	   		\end{minipage}\hfill
+	   		\begin{minipage}{0.48\textwidth}
+	   			\includegraphics[width=0.9\textwidth]{figures/666/lem_anode.png}
+	   		\end{minipage}
+	   	\end{scriptsize} 
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666}
-    		 demonstrator}{Study of LEM's dead zones}
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Study of LEM's dead zones}
    		\begin{scriptsize}
     		\begin{minipage}{0.38\textwidth}
     			\includegraphics[width=0.8\textwidth]{figures/666/corner_annotations.png}
@@ -278,16 +289,25 @@
     			\vspace{0.5cm} \hspace{0.1cm}
     			\begin{minipage}{0.48\textwidth}
     				\centering
-    				LEM's efficiency map\\
+    				\textbf{LEM's efficiency map}\\
     				\includegraphics[width=\textwidth]{figures/666/eff_map.png}
     			\end{minipage}\hfill
     			\begin{minipage}{0.48\textwidth}
     				\centering
-    				Impact on reconstructed energy\\
+    				\textbf{Impact on reconstructed energy in the} $\mathbf{6 \times 6 \times} $\textbf{\SI[detect-weight]{6}{\meter\cubed}}\\
     				\includegraphics[width=\textwidth]{figures/666/electron.png}
     			\end{minipage}
     		\end{minipage}
     	\end{scriptsize} 
+    \end{frame}
+    
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEMs and anodes preparation at Saclay}
+    	\begin{scriptsize}
+    		\begin{center}
+		    	\textbf{LEMs and anodes prepared for measurement at DEDIP (bat 534)}\\
+		    	\includegraphics[width=\textwidth]{figures/666/lem_preparation.png}
+	    	\end{center}
+	    \end{scriptsize} 
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : High voltage}
@@ -297,7 +317,7 @@
 		    	\begin{column}{0.5\textwidth}
 		    		\includegraphics[height=3.7cm]{figures/666/gamelle.jpg}\\
 		    		\begin{itemize}
-		    			\item[$\bullet$] High Pressure chamber: Filled with gas argon.
+		    			\item[$\bullet$] High Pressure chamber: Filled with argon gas.
 		    			\item[$\bullet$] No cryogenic system: \textcolor{red}{room temperature}.
 		    		\end{itemize}
 		    	\end{column}\hfill
@@ -314,39 +334,64 @@
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : High voltage}
-    	\begin{scriptsize}
-    		\begin{center}\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}\end{center}
-    		\begin{columns}
-	    		\begin{column}{0.48\textwidth}
-	    			\centering CFR-34 at 33--\SI{35}{\kilo\volt\per\centi\meter}
-	    			\includegraphics[height=3.5cm]{figures/666/sparks_34.png}
-	    		\end{column}\hfill
-	    		\begin{column}{0.48\textwidth}
-	    			\centering CFR-35 at \SI{35}{\kilo\volt\per\centi\meter}
-	    			\centering \includegraphics[height=3.5cm]{figures/666/sparks_35.png}
-	    		\end{column}
-	    	\end{columns}\vfill
-	    	\begin{columns}
-	    		\begin{column}{0.48\textwidth}
+    	\begin{center}
+	    	\begin{scriptsize}
+	    		\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}
+	    	\end{scriptsize} 
+	    \end{center}
+	    \vspace{-0.5cm}
+   		\begin{columns}
+    		\begin{column}{0.5\textwidth}
+    			\begin{center}
+	    			\begin{scriptsize}
+		    			CFR-34 at 33--\SI{35}{\kilo\volt\per\centi\meter}\\
+		    		\end{scriptsize}
+	    			\begin{tiny}
+		    			(Designed by ETHZ, used in the $3 \times 1 \times \SI{1}{\meter\cubed}$)
+		    		\end{tiny}\\
+	    			\includegraphics[height=3.2cm]{figures/666/sparks_34.png}
+    			\end{center}
+    		\end{column}\hfill
+    		\begin{column}{0.5\textwidth}
+    			\begin{center}
+	    			\begin{scriptsize}
+		    			CFR-35 at \SI{35}{\kilo\volt\per\centi\meter} \\
+		    		\end{scriptsize}
+	    			\begin{tiny}
+	    				(Designed by CEA, used in the $6 \times 6 \times \SI{6}{\meter\cubed}$)
+	   				\end{tiny}\\
+	    			\includegraphics[height=3.2cm]{figures/666/sparks_35.png}
+	    		\end{center}
+    		\end{column}
+    	\end{columns}\vfill
+    	\begin{columns}
+    		\begin{column}{0.5\textwidth}
+    			\begin{scriptsize}
 	    			\begin{itemize}
-	    				\item[$\bullet$] Initial design (left) could not hold more than \SI{32}{\kilo\volt\per\centi\meter}.
+	    				\item[$\bullet$] CFR-34 could not hold more than \SI{32}{\kilo\volt\per\centi\meter}.
 	    				\item[$\bullet$] Sparks mostly on border and corner.
 	    			\end{itemize}
-	    			$\Rightarrow$ Create new design (right) with larger borders.\\
-	    			$\Rightarrow$ \# of sparks reduced by one order of magnitude.
-	    		\end{column}\hfill
-	    		\begin{column}{0.48\textwidth}
-	    			\begin{minipage}{0.48\textwidth}
-	    				\centering CFR-34
-	    				\includegraphics[width=\textwidth]{figures/666/CFR-34.png}
-	    			\end{minipage}\hfill
-	    			\begin{minipage}{0.48\textwidth}
-	    				\centering CFR-35
-	    				\includegraphics[width=\textwidth]{figures/666/CFR-35.png}
-	    			\end{minipage}
-	    		\end{column}
-	    	\end{columns}
-    	\end{scriptsize} 
+	    			$\Rightarrow$ New design (CFR-35) with larger borders.\\
+	    			$\Rightarrow$ \# of sparks one order of magnitude lower.
+	    		\end{scriptsize}
+    		\end{column}\hfill
+    		\begin{column}{0.5\textwidth}
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\begin{scriptsize}
+	    				CFR-34
+	    			\end{scriptsize}
+    				\includegraphics[width=.9\textwidth]{figures/666/CFR-34.png}
+    			\end{minipage}\hfill
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\begin{scriptsize}
+	    				CFR-35
+    				\end{scriptsize}
+    				\includegraphics[width=.9\textwidth]{figures/666/CFR-35.png}
+    			\end{minipage}
+    		\end{column}
+    	\end{columns}
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : gain measurements}
@@ -369,14 +414,14 @@
     			\end{column}\hfill
     			\begin{column}{0.58\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$] At same voltage, all designs have $\sim$ same gain.
+    					\item[$\bullet$] Gain in LEMs of $10\times$\SI{10}{\centi\meter\squared} and $50\times$\SI{50}{\centi\meter\squared} from two different constructors behave the same.
     					\item[$\bullet$] \textcolor{red}{Performance resides in maximum high voltage.}
     				\end{itemize}
     			\end{column}
     		\end{columns}
     		\vfill
     		\textbf{$\Rightarrow$ Use CFR-35 for $\mathbf{6 \boldsymbol{\times} 6 \boldsymbol{\times} \SI[detect-weight]{6}{\meter\cubed}}$}.\\
-    		\textbf{Note:} Not sure about absolute gain value. Based on 3L measurements, CFR-35 should reach gain of $\sim$200.
+    		%\textbf{Note:} Not sure about absolute gain value. Based on 3L measurements, CFR-35 should reach gain of $\sim$200.
     	\end{scriptsize}
     \end{frame}
     
@@ -384,9 +429,9 @@
     	\begin{scriptsize}
     		\begin{columns}
     			\begin{column}{0.48\textwidth}
-    				Townsend avalanche:\\
+    				Effective gain:\\
     				\begin{center}
-	    				$G = e^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
+	    				$G _{eff}= Te^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
     				\end{center}
     				$\textcolor{red}{d}$: amplification length, i.e \textcolor{red}{LEM thickness}.\\
     				$\Rightarrow$ Exponential impact on gain.\\
@@ -432,7 +477,7 @@
     				\centering
     				Expected gain at $d=1107\pm\SI{13}{\micro\meter}$\\
     				\textcolor{red}{$\sim 20\%$ variations at \SI{3.5}{\kilo\volt}}\\
-    				\includegraphics[width=0.6\textwidth]{figures/666/measured_gain_fluctuations.png}
+    				\includegraphics[width=0.7\textwidth]{figures/666/measured_gain_fluctuations.png}
     			\end{column}
     		\end{columns}
     	\end{scriptsize}
@@ -444,64 +489,76 @@
 %    		\includegraphics[width=\textwidth]{figures/666/crp_top_bottom.png}
 %    \end{frame}
 {
-	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/666/crp_top_bottom.png}}
+	\setlength\pdfpagewidth{12.8cm}%
+	\setlength\pdfpageheight{9cm}%
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/666/CRP_bottom.png}}
 	\begin{frame}[plain]
 		
 	\end{frame}
 }
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Full CRP high voltage  tests in cold box}
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Full CRP tests in cold box}
+    	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
    		\begin{columns}
-   			\begin{column}{0.35\textwidth}
+   			\begin{column}{0.4\textwidth}
    				\includegraphics[width=\textwidth]{figures/666/crp_inserting_coldbox.png}\\
-   				\begin{scriptsize}
-   					\begin{itemize}
-   						\item[$\bullet$] Maximum High voltage? (LEM and extraction grid)
-   						\item[$\bullet$] Stability? (sparks per hour)
-   						\item[$\bullet$] Planarity?
-   					\end{itemize}
-   				\end{scriptsize}
+   				\includegraphics[width=\textwidth]{figures/666/in_coldbox.png}
     		\end{column}
-    		\begin{column}{0.65\textwidth}
+    		\begin{column}{0.6\textwidth}
     			\begin{scriptsize}
-	    			\textbf{Test the CRPs in real dual-phase conditions in a cold box}
+	    			\textbf{Test the CRPs in real dual-phase conditions in a cold box}\\
+	    			
+	    			\begin{itemize}
+	    				\item[$\bullet$] \textbf{Maximum High voltage}
+	    				\begin{itemize}
+	    					\item Grid held \textcolor{red}{nominal value of \SI{7.5}{\kilo\volt\per\centi\meter}} for several hours.
+	    					\item LEMs held \textcolor{red}{30--\SI{31}{\kilo\volt\per\centi\meter}} for several hours with few discharges.
+	    					\item Estimated \textcolor{red}{effective gain $\geq20$}.
+	    				\end{itemize}
+	    				\item[$\bullet$] \textbf{Stability (sparks per hour)}
+	    				\begin{itemize}
+	    					\item Stable for several days.
+	    					\item \textcolor{red}{1 spark per hour} per CRP (1 spark in 36 hours per LEM): \textcolor{red}{ok for DUN$\nu$E}.
+	    					\item \textcolor{red}{1 spark per hour}{Dead time $\sim$1.3\%}.
+	    				\end{itemize}
+	    				\item[$\bullet$] \textbf{Planarity}
+	    				\begin{itemize}
+	    					\item Within \textcolor{red}{\SI{1.2}{\milli\meter}} over all CRP: ok.
+	    					\item Entire grid is in the liquid and all LEMs are in the gas.
+	    				\end{itemize}
+	    			\end{itemize}
 	    		\end{scriptsize}
-    			\begin{tiny}
-    				\begin{table}[]
-    					\begin{scriptsize}
-    						\centering CRP 1
-    					\end{scriptsize}
-    					\begin{tabular}{|l|l|l|l|l|l|l|}
-    						\hline
-    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
-    						0.25 & 3.35 & 31.0 & 12 & 1.3 & 968--972 & \textcolor{green}{20} \\
-    						0.50 & 3.55-3.60 & 30.5-31.0 & 13 & 1.3 & 962-966 & \textcolor{green}{24-31} \\
-    						0.75 & 3.70 & 29.5 & 42 & 0.6 & 943-953 & \textcolor{green}{20} \\
-    						1.00 & 3.80 & 28.0 & 18 & 2 trips & 970-976 & 9 \\
-    						1.00 & 3.85 & 28.5 & 12 & 3 trips & 936-947 & 15 \\ \hline
-    					\end{tabular}
-    				\end{table}
-    				\begin{table}[]
-    					\begin{scriptsize}
-    						\centering CRP 1
-    					\end{scriptsize}
-    					\begin{tabular}{|l|l|l|l|l|l|l|}
-    						\hline
-    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
-    						0.10 & 3.15-3.20 & 30.5-31.0 & 17 & 0.8 & 969--973 & 9-11 \\
-    						0.25 & 3.34 & 30.9 & 16 & 1.3 & 968-970 & 19 \\
-    						0.50 & 3.55 & 30.5 & 11 & 0.9 & 957-965 & \textcolor{green}{24} \\
-    						0.50 & 3.555 & 30.55 & 42 & 0.5 & 962-964 & \textcolor{green}{25} \\ \hline
-    					\end{tabular}
-    				\end{table}
-    			\end{tiny}
+%    			\begin{tiny}
+%    				\begin{table}[]
+%    					\begin{scriptsize}
+%    						\centering CRP 1
+%    					\end{scriptsize}
+%    					\begin{tabular}{|l|l|l|l|l|l|l|}
+%    						\hline
+%    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
+%    						0.25 & 3.35 & 31.0 & 12 & 1.3 & 968--972 & \textcolor{green}{20} \\
+%    						0.50 & 3.55-3.60 & 30.5-31.0 & 13 & 1.3 & 962-966 & \textcolor{green}{24-31} \\
+%    						0.75 & 3.70 & 29.5 & 42 & 0.6 & 943-953 & \textcolor{green}{20} \\
+%    						1.00 & 3.80 & 28.0 & 18 & 2 trips & 970-976 & 9 \\
+%    						1.00 & 3.85 & 28.5 & 12 & 3 trips & 936-947 & 15 \\ \hline
+%    					\end{tabular}
+%    				\end{table}
+%    				\begin{table}[]
+%    					\begin{scriptsize}
+%    						\centering CRP 1
+%    					\end{scriptsize}
+%    					\begin{tabular}{|l|l|l|l|l|l|l|}
+%    						\hline
+%    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
+%    						0.10 & 3.15-3.20 & 30.5-31.0 & 17 & 0.8 & 969--973 & 9-11 \\
+%    						0.25 & 3.34 & 30.9 & 16 & 1.3 & 968-970 & 19 \\
+%    						0.50 & 3.55 & 30.5 & 11 & 0.9 & 957-965 & \textcolor{green}{24} \\
+%    						0.50 & 3.555 & 30.55 & 42 & 0.5 & 962-964 & \textcolor{green}{25} \\ \hline
+%    					\end{tabular}
+%    				\end{table}
+%    			\end{tiny}
     		\end{column}
     	\end{columns}
-    	\vfill
-    	\begin{scriptsize}
-	    	$\Rightarrow$ Estimated stable gain: $\sim20$.\\
-	    	$\Rightarrow$ 1 spark per hour per CRP: ok for DU$\nu$E.
-	    \end{scriptsize}
 	    \end{frame}
        
        \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{After cold box tests: carbonisation of corners}
@@ -511,8 +568,10 @@
 	       				\includegraphics[width=\textwidth]{figures/666/carbonisation.png}\\
 	       				\vfill
 	       				\begin{itemize}
-	       					\item[$\bullet$] Corner of some LEMs got carbonised due to too many sparks\\
-	       					(can be cleaned with permanganate)
+	       					\item[$\bullet$] No effective slow control software : some LEMs discharged repeatedly over long unmonitored periods (at night).
+	       					\item[$\bullet$] Corner of some LEMs got carbonised: weaker spot.
+	       					\item[$\bullet$] Can be cleaned with potassium permanganate: operational again.
+	       					\item[$\bullet$] $6 \times 6 \times \SI{6}{\meter\cubed}$ will have a slow control software to prevent that.
 	       				\end{itemize}
 	       			\end{column}
 	       			\hfill
@@ -524,12 +583,14 @@
 	       					\item[$\bullet$] Most likely a problem with chemical etching
 	       					\item[$\bullet$] New technique developed at CERN by Rui De Oliveira
 	       				\end{itemize}
-	       				$\Rightarrow$ Under measurement
+	       				$\Rightarrow$ Under construction, will not be in the $6 \times 6 \times \SI{6}{\meter\cubed}$.
 	       			\end{column}
 	       		\end{columns}
 	       	\end{scriptsize}
        \end{frame}
        {
+       	\setlength\pdfpagewidth{12.8cm}%
+       	\setlength\pdfpageheight{11.8cm}%
        	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/666/fisheye.png}}
        \begin{frame}[plain]
        	
@@ -538,93 +599,75 @@
 	    
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Goals}
     	\begin{scriptsize}
-    		\includegraphics[width=0.48\textwidth]{figures/311/311_2.png}\hfill
-    		\includegraphics[width=0.45\textwidth]{figures/311/run840.png}\\
     		\vfill
     		\begin{columns}
     			\begin{column}{0.48\textwidth}
-    				\textbf{Goal:} Demonstrate the ability of DLArTPC to operate at large volumes and readout surfaces
-    				\begin{itemize}
-    					\item[$\bullet$] Gain vs Amplification
-    					\item[$\bullet$] Charging up
-    					\item[$\bullet$] Purity
-    					\item[$\bullet$] Reconstruction abilities
-    					\item[$\bullet$] Limitations?
-    				\end{itemize}
+    				\centering
+    				\includegraphics[width=0.8\textwidth]{figures/311/311_2.png}\\
+    				\includegraphics[width=\textwidth]{figures/311/run840.png}
     			\end{column}\hfill
     			\begin{column}{0.48\textwidth}
+    				Constructed in 2016--2017, operated between June and December 2017.\\
+    				\vspace{0.3cm}
+    				\textbf{Goal:} Test the technological choices made for the $6 \times 6 \times \SI{6}{\meter\cubed}$.\\
+    				\vspace{0.3cm}
     				\textbf{Difficulties:} 
     				\begin{itemize}
     					\item[$\bullet$] Loose grid wire provoked discharges: could not operate on long periods
-    					\item[$\bullet$] Grid wires not tight enough\\$\Rightarrow$ Vertical displacement\\$\Rightarrow$ Limitation on grid voltage\\$\Rightarrow$ Limitation on LEM voltages
+    					\item[$\bullet$] Grid wires not tight enough\\$\Rightarrow$ Vertical displacement\\$\Rightarrow$ Limitation on grid voltage (max \SI{5}{\kilo\volt} while nominal is \SI{7.5}{\kilo\volt})\\$\Rightarrow$ Limitation on electric fields trough CRP.
     					\item[$\bullet$] LEM could not hold more than 31kV/cm (CFR-34)
     				\end{itemize}
-    				\textcolor{red}{$\Rightarrow$ Solved in the $6 \times 6 \times \SI{6}{\meter\cubed}$}
+    				\textbf{$\Rightarrow$ Solved in the $\mathbf{6 \times 6 \times} \SI[detect-weight
+    					]{6}{\meter\cubed}$}\\
+    				\vspace{0.3cm}
+    				\textcolor{red}{$\Rightarrow$ Showed that the principle of a DLArTPC at \si{\meter\squared} readout surfaces and \SI{1}{\meter} drift lengths works.}
     			\end{column}
     		\end{columns}
 	    \end{scriptsize}
     \end{frame}
     
-    
-    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Charging up}
-    	\begin{scriptsize}
-    		\begin{columns}
-    			\begin{column}{0.45\textwidth}
-    				\includegraphics[width=\textwidth]{figures/311/3L_charging_up.png}\\
-    				\vfill
-    				\begin{itemize}
-    					\item[$\bullet$] \textbf{From 3L}: Higher field $\Rightarrow$ quicker charging up.
-    					\item[$\bullet$] \textbf{We expect}:
-    					\begin{itemize}
-    						\begin{scriptsize}
-    							\item bigger drift lengths $\Rightarrow$ quicker charging up.
-    							\item Bigger surface $\Rightarrow$ no impact
-    						\end{scriptsize}
-    					\end{itemize}
-    					\item[$\bullet$] 3L: 50\% decrease in \SI{6}{\hour}. 
-    					\item[$\bullet$] Extrapolating to \SI{28}{\kilo\volt\per\centi\meter}: \textcolor{red}{$\sim$20\% decrease}.
-    					\item[$\bullet$]  $3 \times 1 \times \SI{1}{\meter\cubed}$: $\sim$\textcolor{red}{4\% decrease}.
-    				\end{itemize}
-    			\end{column}\hfill
-    			\begin{column}{0.55\textwidth}
-    				\centering \includegraphics[width=\textwidth]{figures/311/311_charging_up.png}\\
-    				\vfill
-    			\end{column}
-    		\end{columns}
-    		$\Rightarrow$ Charging up in $3 \times 1 \times \SI{1}{\meter\cubed}$ is slower than in 3L, while it is expected to be quicker.\\    		
-    		\textbf{Possible explanation}: Charging up is not "cleaned up" when high voltage is shut down between runs.
-    	\end{scriptsize}
-    \end{frame}
-    
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Study of extraction and induction fields effect on collected charge}
     	\begin{scriptsize}
-    		\begin{minipage}{0.58\textwidth}
-    			\textbf{Losses due to collection probabilities:}
-    			\begin{itemize}
-    				\item[$\bullet$] Field lines can send \textcolor{red}{electrons on copper or epoxy}
-    				\item[$\bullet$] Two regions where it can happen : \textcolor{red}{before the LEM} and \textcolor{red}{after the LEM}
-    				\item[$\bullet$] Depend on induction and extraction fields
-    			\end{itemize}
-    			\textbf{Difficulites:} Could not operate at fixed extraction and induction\\$\Rightarrow$ Need to know \textcolor{red}{induction and extraction impact on charge collection} in order to study Gain vs Amplification
-    			\begin{itemize}
-    				\item[$\bullet$] Use \textbf{ANSYS} to simulate field map through the CRP.
-    				\item[$\bullet$] Use GarField to simulate drift of electrons in the map .
-    				\item[$\bullet$] Do that for all field ranges susceptible do be used in  the $6 \times 6 \times \SI{6}{\meter\cubed}$
-    			\end{itemize}
-    		\end{minipage}
-    		\begin{minipage}{0.38\textwidth}
-    			\centering
-    			\includegraphics[width=\textwidth]{figures/311/coll_proba.png}\\
-    		\end{minipage}\\
-    		\vspace{0.2cm}
-    		$\textcolor{red}{\text{LEM coll. Proba}}=\text{(Entering hole)}/\text{(initially generated)} \Rightarrow$ Influenced by \textbf{extraction} and \textbf{amplification} fields. \\
-    		$\textcolor{blue}{\text{Anode coll. Proba}}=\text{(Reaching anode)}/\text{(Entering hole + amplified - lost in LEM)}\Rightarrow$ Influenced by \textbf{induction} and \textbf{amplification} fields.
+    		\begin{columns}
+    			\hspace{-1.5cm}
+	    		\begin{column}{0.45\textwidth}
+	    			\textbf{Difficulties in the $\mathbf{3 \times 1 \times} \SI[detect-weight]{1}{\meter\cubed}$:} Grid voltage limited at \SI{5}{\kilo\volt}:\\
+	    			$\Rightarrow$ Could not fix extraction and induction.\\
+	    			$\Rightarrow$ Need to know \textcolor{red}{induction and extraction impact on charge collection}.\\
+	    			\vspace{0.3cm}
+	    			\textbf{Losses due to extraction efficiency:}
+	    			\begin{itemize}
+	    				\item[$\bullet$] Electrons can be stuck at liquid-gas interface.
+	    				\item[$\bullet$] Studied in the 80's (no LEM)
+	    			\end{itemize}
+	    			\textbf{Losses due to collection probabilities:}
+	    			\begin{itemize}
+	    				\item[$\bullet$] Field lines can cross copper and epoxy: \textcolor{red}{electrons can be lost}: 
+	    				\begin{itemize}
+	    					\item \textcolor{red}{before the LEM}: depends on extraction and amplification.
+	    					\item \textcolor{blue}{after the LEM}: depends on induction and amplification.
+	    				\end{itemize} 
+	    			\end{itemize}
+	    			\begin{itemize}
+	    				\item[$\bullet$] Simulate drift of electrons through CRP.
+	    				\item[$\bullet$] \textcolor{red}{\text{LEM coll. Proba}}: probability to enter hole after extraction.
+	    				\item[$\bullet$] \textcolor{blue}{\text{Anode coll. Proba}}: probability to reach anode after leaving amplification zone.
+	    			\end{itemize}
+	    		\end{column}\hspace{-1.9cm}
+	    		\begin{column}{0.55\textwidth}
+%	    			\flushright
+	    			\includegraphics[height=5.5cm]{figures/311/coll_proba_2.png}\\
+	    		\end{column}
+	    	\end{columns}
     	\end{scriptsize} 
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Study of extraction and induction fields effect on collected charge}
     	\begin{scriptsize}
     		\centering \includegraphics[width=\textwidth]{figures/311/effs.png}\\
+    		\begin{center}
+    			$\mathbf{G_{eff}=\boldsymbol{\epsilon}_{extraction} \boldsymbol{\times} \boldsymbol{\epsilon}_{LEM} \boldsymbol{\times} \boldsymbol{\epsilon}_{anode} \boldsymbol{\times} G_{LEM}}$: $G_{LEM}$ can be calculated from measured $G_{eff}$.
+    		\end{center}
     	\end{scriptsize} 
     \end{frame}
     
@@ -649,7 +692,6 @@
     	\begin{scriptsize}
 	    	\begin{columns}
 	    		\begin{column}{0.5\textwidth}
-	    			\centering
 	    			\includegraphics[width=\textwidth]{figures/311/dQds_gain.png}\\
 	    			\vfill
 	    			\begin{itemize}
@@ -657,6 +699,8 @@
 	    				\item[$\bullet$] Use simulated collection probabilities to compute equivalent gain at 3L fields (Induction of \SI{5}{\kilo\volt\per\centi\meter} and Extraction of \SI{2}{\kilo\volt\per\centi\meter} in liquid).
 	    				\item[$\bullet$] Use the ratio $G_{3L}/G_{311}$ to study gain vs data taking time.
 	    			\end{itemize}
+	    			$\mathbf{\Rightarrow G_{311} \boldsymbol{\simeq} G_{3L}/1.5}$. No clear explanation.\\
+	    			$\Rightarrow$ Indication for persistent charging up (see next slide).\\
 	    		\end{column}
 	    		\hfill
 	    		\begin{column}{0.5\textwidth}
@@ -665,15 +709,52 @@
 	    			\includegraphics[width=.95\textwidth]{figures/311/ratio_vs_time.png}\\
 	    		\end{column}
 	    	\end{columns}
-	    	$\Rightarrow G_{311} \simeq G_{3L}/1.5$. No clear explanation.\\
-	    	$\Rightarrow$ Indication for persistent charging up.\\
+    	\end{scriptsize}
+    \end{frame}
+    
+    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Charging up}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.45\textwidth}
+    				\includegraphics[width=\textwidth]{figures/311/3L_charging_up.png}\\
+    				\vfill
+    				\begin{itemize}
+    					\item[$\bullet$] Field lines in LEM hole can cross epoxy:\\
+    					 $\Rightarrow$ accumulation of electrons on hole borders and RIMs\\
+    					 $\Rightarrow$ Decrease of amplification field\\
+    					 $\Rightarrow$ Initial gain $G_0$ decreases to reach a plateau $G_{\infty}$
+    					 \item[$\bullet$] Decrease time is voltage-dependent.
+    					 \item[$\bullet$] Ratio $G_0/G_{\infty}$ is design-dependent.
+	    			\end{itemize}
+	    			$\Rightarrow$ Charging up is observed in $3 \times 1 \times \SI{1}{\meter\cubed}$ but is very slow. No easy comparison with 3L since we do not know $t_0$ (High voltage switched on and off, various amplification fields...)
+%    					\item[$\bullet$] \textbf{From 3L}: Higher field $\Rightarrow$ quicker charging up.
+%    					\item[$\bullet$] \textbf{We expect}:
+%    					\begin{itemize}
+%    						\begin{scriptsize}
+%    							\item bigger drift lengths $\Rightarrow$ quicker charging up.
+%    							\item Bigger surface $\Rightarrow$ no impact
+%    						\end{scriptsize}
+%    					\end{itemize}
+%    					\item[$\bullet$] 3L: 50\% decrease in \SI{6}{\hour}. 
+%    					\item[$\bullet$] Extrapolating to \SI{28}{\kilo\volt\per\centi\meter}: \textcolor{red}{$\sim$20\% decrease}.
+%    					\item[$\bullet$]  $3 \times 1 \times \SI{1}{\meter\cubed}$: $\sim$\textcolor{red}{4\% decrease}.
+%    				\end{itemize}
+    			\end{column}\hfill
+    			\begin{column}{0.55\textwidth}
+    				\centering \includegraphics[width=\textwidth]{figures/311/311_charging_up.png}\\
+    				\vfill
+    			\end{column}
+    		\end{columns}
+%    		$\Rightarrow$ Charging up in $3 \times 1 \times \SI{1}{\meter\cubed}$ is slower than in 3L, while it is expected to be quicker.\\    		
+%    		\textbf{Possible explanation}: Charging up is not "cleaned up" when high voltage is shut down between runs.
     	\end{scriptsize}
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification : Higher Amplification fields}
     	\begin{scriptsize}
     		\centering
-    		\includegraphics[width=0.9\textwidth]{figures/311/bad_track.png}\\
+    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_track.png}\\
+    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_dQds.png}\\
     		\vfill
     		\begin{columns}
     			\begin{column}{0.5\textwidth}
@@ -703,7 +784,7 @@
     		\begin{columns}
     			\begin{column}{0.5\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$] MPV(view 0)$\sim5\times$MPV(view 1).
+    					\item[$\bullet$] MPV(view 0)$\sim$MPV(view 1).
     					\item[$\bullet$] But MPV(view 0) a bit lower.
     				\end{itemize}
     			\end{column}
@@ -719,11 +800,14 @@
     \end{frame}
     
     \begin{frame}{Conclusion}
-    	\begin{itemize}
-    		\item[$\bullet$] $3 \times 1 \times \SI{1}{\meter\cubed}$ proved DLArTPC technology with large readout area and \si{\meter\cubed} volume.
-    		\item[$\bullet$] It pointed out problems that are being solved in the $6 \times 6 \times \SI{6}{\meter\cubed}$.
-    		\item[$\bullet$] Data taking with the $6 \times 6 \times \SI{6}{\meter\cubed}$ should begin this summer.
-    	\end{itemize}
+    	\begin{normalsize}
+	    	\begin{itemize}
+	    		\item[$\bullet$] $3 \times 1 \times \SI{1}{\meter\cubed}$ proved DLArTPC technology with large readout area and \si{\meter\cubed} volume.
+	    		\item[$\bullet$] It pointed out problems that are being solved in the $6 \times 6 \times \SI{6}{\meter\cubed}$.
+	    		\item[$\bullet$] Data taking with the $6 \times 6 \times \SI{6}{\meter\cubed}$ should begin this summer.
+	    		\item[$\bullet$] Still some work to do on the $3 \times 1 \times \SI{1}{\meter\cubed}$ analysis.
+	    	\end{itemize}
+    	\end{normalsize}
     \end{frame}
     
 \end{document}

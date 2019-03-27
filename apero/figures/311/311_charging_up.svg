@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -47,10 +47,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.69351416"
-     inkscape:cx="446.88544"
-     inkscape:cy="276.85949"
-     inkscape:window-x="65"
+     inkscape:zoom="1.2718941"
+     inkscape:cx="341.749"
+     inkscape:cy="274.55046"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
@@ -16648,14 +16648,22 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:32.00000381px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="51.074131"
-     y="142.81093"
+     x="50.844547"
+     y="126.4082"
      id="text42228-3"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan42230-7"
-       x="51.074131"
-       y="142.81093">28kV/cm</tspan></text>
+       x="50.844547"
+       y="126.4082"
+       style="font-size:22.00000381px">LEMs of 50x50cm<tspan
+   style="font-size:52.00000992%;baseline-shift:super"
+   id="tspan7442">2</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="50.844547"
+       y="153.9082"
+       id="tspan7440"
+       style="font-size:22.00000381px">28kV/cm</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:32.00000381px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

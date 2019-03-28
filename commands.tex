@@ -31,6 +31,12 @@
 \def\bs{ \boldmath$}
 \def\es{$ \unboldmath}
 
+\newtcolorbox[auto counter,number within=chapter]{activitybox}[2][]{%
+	fonttitle=\scshape,
+	title={Encadré \thetcbcounter -- #2},
+	#1
+}
+
 \newcommand*\parttitle{}
 \let\origpart\part
 \renewcommand*{\part}[2][]{%

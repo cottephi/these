@@ -227,7 +227,7 @@
             
             Avant de détailler cette matrice $U$, intéressons-nous à la probabilité de changement de saveur.
              
-            \subsubsection{Quelle est la probabilité de passer d'une saveur $\beta$ vers une saveur $\alpha$?}
+            \subsubsection{Quelle est la probabilité de passer d'une saveur $\beta$ vers une saveur $\alpha$?}\label{sec::proba_oscillations}
             En notant $\ket{\nu(t)}$ l'état de masse dans lequel se trouve un neutrino à un instant $t$ , cette probabilité est donnée par la projection de l'état de saveur $\beta$ sur cet état :
             \begin{equation}
                 P(\nu_{\alpha}\to\nu_{\beta})=\bigg|\braket{\nu_{\beta}}{\nu(t)}\bigg|^2.
@@ -576,7 +576,7 @@ s_{12}s_{23}-c_{12}s_{13}c_{23}e^{i\delta_{CP}} & -c_{12}s_{23}-s_{12}s_{13}c_{2
             \end{itemize}
                 
             
-        \subsection{Le cas à trois saveurs}
+        \subsection{Le cas à trois saveurs}\label{sec::3flavor_matter}
             Le calcul des effets de matière à trois saveurs suit la même logique que le cas à deux saveurs : il faut définir un nouvel Hamiltonien comme dans l'équation \eqref{eq::hamiltonian_matter_2flavor} et le diagonaliser pour trouver les nouveaux vecteurs et valeurs propres et la matrice de mélange dans la matière. Les calculs sont effectués en détails par Freund \cite{Freund2001}, aussi ne sont-ils pas refaits ici. Un point est à souligner : le calcul des vecteurs et valeurs propres s'effectue par développement en série, autour de $\alpha=\Delta m^2_{21}/\Delta m^2_{31}$. Il en ressort deux résultats possibles, suivant que le paramètre $\hat{A}=\frac{2V_{CC}E}{\Delta m^2_{31}}$ est petit ou non, qui correspondent aux deux résonances \gls{msw} possibles, à savoir la résonance solaire quand $\hat{A}=\alpha\simeq\numprint{0.03}$ et la résonance atmosphérique quand $\hat{A}=\cos(2\theta_{13})\simeq \numprint{0.95}$. Le cas qui nous intéresse est $|\hat{A}|>\alpha$c, qui est approprié pour des énergies de neutrinos de l'ordre du \si{\giga\electronvolt} et des densités de matière proche de celle de la croûte terrestre.
             
             En prenant en compte les effets de matière, la probabilité $P(\nu_{\mu}\to\nu_e)$ développée dans l'équation \eqref{eq::dvpt_3flavor_accelerator}, qui est d'intérêt pour les expériences de neutrinos d'accélérateurs, devient alors\cite{Giganti2017}
@@ -657,7 +657,7 @@ s_{12}s_{23}-c_{12}s_{13}c_{23}e^{i\delta_{CP}} & -c_{12}s_{23}-s_{12}s_{13}c_{2
 		    	\item[$\bullet$] Les neutrinos de réacteurs, issus des réactions de fissions au cœur des réacteurs nucléaires, sont des $\overline{\nu}_e$, avec un spectre en énergie allant de 1 à \SI{10}{\mega\electronvolt}.
 		    	% montré en figure \autoref{fig::reactor_flux}. 
 		    	L'avantage de ces expériences est qu'il est possible, dans une certaine limite, de choisir la ligne de base afin d'optimiser une oscillation autour d'un $\Delta m^2$ en fixant une valeur de $1.27\Delta m^2\frac{L}{E}$ proche de $\pi/2+n\pi$ afin de maximiser le terme en $\sin^2(1.27\Delta m^2\frac{L}{E})$.
-		    	\item[$\bullet$] Les neutrinos d'accélérateurs, issus de faisceau produit par l'homme, sont des $\nu_{\mu}$ (voir \autoref{sec::faisceau}). L'énergie est ajustable et le spectre peut être choisi de manière à être très piqué autour d'une valeur, comme dans l'expérience T2K, en plaçant la détecteur légèrement hors de l'axe du faisceau\cite{McDonald2001}, ou large, afin de couvrir plusieurs pics de $1.27\Delta m^2\frac{L}{E}=\pi/2+n\pi$. Ce sera le cas pour la future expérience \gls{dune}. De plus, la ligne de base est également ajustable.
+		    	\item[$\bullet$] Les neutrinos d'accélérateurs, issus de faisceaux produit par l'homme, sont des $\nu_{\mu}$ (voir \autoref{sec::faisceau}). L'énergie est ajustable et le spectre peut être choisi de manière à être très piqué autour d'une valeur, comme dans l'expérience T2K, en plaçant la détecteur légèrement hors de l'axe du faisceau\cite{McDonald2001}, ou large, afin de couvrir plusieurs pics de $1.27\Delta m^2\frac{L}{E}=\pi/2+n\pi$. Ce sera le cas pour la future expérience \gls{dune}. De plus, la ligne de base est également ajustable.
 		    \end{itemize}
 		    Dans les deux cas de sources artificielles, si la ligne de base est grande, les neutrinos traverseront nécessairement la croûte terrestre et des effets de matière entreront alors en jeu.
 		    

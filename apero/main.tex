@@ -16,6 +16,7 @@
 \usepackage{siunitx}
 \usepackage{pifont}
 \usepackage{tikz}
+\usepackage{transparent}
 
 \definecolor{cec1d24}{RGB}{236,29,36}
 \definecolor{cffffff}{RGB}{255,255,255}
@@ -36,9 +37,9 @@
 \setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
 
 
-\title[Double Phase Liquid Argon Time Projection chambers in the WA105/ProtoDUNE-DP project]{
+\title[Double Phase Liquid Argon Time Projection chambers for WA105/ProtoDUNE-DP at CERN]{
 \vspace{3cm}
-      \textbf{Characterization of large volume Double Phase Liquid Argon Time Projection chambers in the WA105/ProtoDUNE project} \\
+      \textbf{Double Phase Liquid Argon Time Projection chambers for WA105/ProtoDUNE-DP at CERN} \\
 }
 \author[Philippe COTTE]
 {
@@ -103,6 +104,7 @@
 %	\end{scriptsize}
 %	    
 %    \end{frame}
+
     \begin{frame}{Context}{DU$\nu$E : a longue baseline neutrino oscillation experiment}
     	\begin{scriptsize}
     	\begin{minipage}{0.58\textwidth}
@@ -121,10 +123,10 @@
     			\item[$\bullet$] Will detect $\nu$/$\overline{\nu}$ from Fermilab in South Dakota at \SI{1300}{\kilo\meter}.
     			\item[$\bullet$] \textbf{Main goals: }
 	    			\begin{itemize}
-	    				\item CP violation;
-	    				\item Mass hierarchy;
-	    				\item Proton lifetime;
-	    				\item Supernovae neutrinos.
+	    				\item[$\bullet$] CP violation;
+	    				\item[$\bullet$] Mass hierarchy;
+	    				\item[$\bullet$] Proton lifetime;
+	    				\item[$\bullet$] Supernovae neutrinos.
 	    			\end{itemize}
     			\item[$\bullet$] Far detector: 4 \textbf{Liquid Argon Time Projection Chambers} (> \SI{10}{\kilo\tonne}).
     		\end{itemize}
@@ -136,29 +138,68 @@
 	\end{scriptsize}
     \end{frame}
     
-    {
-    	\setlength\pdfpagewidth{12.8cm}%
-    	\setlength\pdfpageheight{9cm}%
-    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/contexte/nu_platform.png}}
-    	\begin{frame}[plain]
-    		
-    	\end{frame}
-    }
+    \begin{frame}{Context}{DU$\nu$E : a longue baseline neutrino oscillation experiment}
+    	\begin{columns}
+    		\begin{column}{0.6\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{figures/contexte/oscillation_CP.png}\\\vspace{0.2cm}
+    			 \includegraphics[width=0.95\textwidth]{figures/contexte/sensitivities.png}
+    		\end{column}
+    		\begin{column}{0.4\textwidth}
+    			\begin{itemize}
+	    			\item[$\bullet$]$\delta_{CP}\ne0$ and $\pi$ could explain matter-antimatter asymmetry in the universe\\
+	    			\item[$\bullet$] Many theories depend on neutrinos mass hierarchy
+	    			\item[$\bullet$] Both have influence on flavor change probability
+	    		\end{itemize}
+    			\begin{scriptsize}
+	    			$\Rightarrow$ Measure $P(\nu_{\mu}\to\nu_e)$ vs $E$: \\
+	    			Need precise reconstruction of neutrino interactions to reach $5\sigma$ for $\delta_{CP}$.
+    			\end{scriptsize}
+    			\begin{itemize}
+    				\item[$\bullet$] 3D track reconstruction
+    				\item[$\bullet$] Calorimetry
+    				\item[$\bullet$] Precise PID
+    				\item[$\bullet$] Energy resolution $\leq$3\%
+    			\end{itemize}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
     
-    \begin{frame}{Context: Before \texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}}{DU$\nu$E's detector technology: \textbf{Liquid Argon Time Projection Chamber}}
+    \begin{frame}{Context}{Liquid argon as detection medium}
+    	\begin{columns}
+    		\begin{column}{0.6\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{figures/contexte/SP_evt.png}
+    		\end{column}
+    		\begin{column}{0.4\textwidth}
+    			\begin{scriptsize}
+    				\textbf{Why liquid argon?}
+    			\end{scriptsize}
+    			\begin{itemize}
+    				\item[$\bullet$] Dense (\SI{1.4}{\gram\per\centi\meter^3}).
+    				\item[$\bullet$] Cheap and abundant.
+    				\item[$\bullet$] MIP $\rightarrow$ $\sim\SI{60000}{e^-\per\centi\meter}$.
+    				\item[$\bullet$] Does not attach electrons.
+    			\end{itemize}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
+    
+    \begin{frame}{Context}{Liquid Argon Time Projection Chamber}
     	\begin{scriptsize}
-    			\includegraphics[width=0.95\textwidth]{figures/contexte/lar-dlartpc.png}\\\vfill
+    			\includegraphics[width=0.9\textwidth]{figures/contexte/tpcs.png}\\\vfill
     			\begin{columns}
-    				\begin{column}{0.48\textwidth}
-    					\textbf{Advantages of Double Phase}:
+    				\begin{column}{0.5\textwidth}
     					\begin{itemize}
-    						\item Charge amplification $\Rightarrow$ Better signal/noise ratio
+    						\item[$\bullet$] Everything contained in liquid argon.
+    						\item[$\bullet$] Direct measurement of energy.
     					\end{itemize}
     				\end{column}\hfill
-    				\begin{column}{0.48\textwidth}
+    				\begin{column}{0.5\textwidth}
     					\begin{itemize}
-    						\item Bigger drift lengths
-    						\item Cheaper electronics
+    						\item[$\bullet$] Charge amplification in gas\\$\Rightarrow$ Better signal/noise ratio.
+    						\item[$\bullet$] Bigger drift lengths, fewer readout channels, better spatial resolution.
+    						\item[$\bullet$] Cheaper electronics.
     					\end{itemize}
     				\end{column}
     			\end{columns}
@@ -182,6 +223,15 @@
     	\end{scriptsize}
     \end{frame}
     
+    {
+    	\setlength\pdfpagewidth{12.8cm}%
+    	\setlength\pdfpageheight{9.15cm}%
+    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/contexte/nu_platform.png}}
+    	\begin{frame}[plain]
+    		
+    	\end{frame}
+    }
+    
 %    \begin{frame}{Context: Before \texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}}{DU$\nu$E's detector technology 2 : \textbf{Double Phase LArTPC}}
 %    	\begin{scriptsize}
 %    		\begin{minipage}{0.48\textwidth}
@@ -203,8 +253,9 @@
 %    	\textbf{$\Rightarrow$ Needed an extra step of R\&D to reach DU$\nu$E's scale : \textcolor{red}{WA105}}
 %    \end{frame}
     
-    \begin{frame}{Context: WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP}
-		\includegraphics[width=\linewidth]{figures/contexte/wa105}\\
+    \begin{frame}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP}
+		\includegraphics[width=1.05\linewidth]{figures/contexte/wa105_scale.png}
+		
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666}
@@ -215,8 +266,8 @@
     			\textbf{New technology: main challenges:}\\
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$] Goal: Gain $\geq$ 20
-    					\item[$\bullet$] Long term stability (DU$\nu$E $\sim$ 20 years)
+    					\item[$\bullet$] \textcolor{red}{Goal: Gain $\geq$ 20}
+    					\item[$\bullet$] \textcolor{red}{Long term stability (DU$\nu$E $\sim$ 20 years)}
     				\end{itemize}
     			\end{minipage}\hfill
     			\begin{minipage}{0.32\textwidth}
@@ -228,7 +279,7 @@
 	    		\end{minipage}\hfill
 	    		\begin{minipage}{0.32\textwidth}
 	    			\begin{itemize}
-	    				\item[$\bullet$] Long drift lengths (Cathode at \SI{600}{\kilo\volt})
+	    				\item[$\bullet$] Long drift lengths (Cathode at \SI{300}{\kilo\volt})
 	    				\item[$\bullet$] Scalability
 	    			\end{itemize}
 	    		\end{minipage}
@@ -262,55 +313,89 @@
 	   		\end{minipage}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Study of LEM's dead zones}
-   		\begin{scriptsize}
-    		\begin{minipage}{0.38\textwidth}
-    			\begin{center}
-    				\includegraphics[width=0.8\textwidth]{figures/666/corner_annotations.png}\\
-    				CFR-34 design\\
-    			\end{center} 
-   				Dead zones = zones without holes:
-   				\begin{itemize}
-   					\item[$\bullet$] LEM's borders.
-   					\item[$\bullet$] screw holes.
-   					\item[$\bullet$] High voltages connectors.
-   				\end{itemize}
-   				$\Rightarrow$ Impact on collected charge?\\
-   				$\Rightarrow$ Impact on charge resolution?\\
-   				
-   				Use \textbf{ANSYS} to simulate field map through the CRP.\\
-   				Simulate drift of electrons in the map with \textbf{GarField}.\\
-    		\end{minipage}
-    		\begin{minipage}{0.58\textwidth}
-    			\centering
-    			\includegraphics[width=0.6\textwidth]{figures/666/drift_example.png}\\
-    			\vspace{0.5cm} \hspace{0.1cm}
-    			\begin{minipage}{0.48\textwidth}
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.5\textwidth}
+    				\begin{center}
+    					$G _{eff}= \mathcal{T}e^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
+    				\end{center}
+    				$\textcolor{red}{d}$: amplification length, i.e \textcolor{red}{LEM thickness}.\\
+    				$\Rightarrow$ Exponential impact on gain.\\
+    				$\Rightarrow$ Need to know thickness fluctuation in our LEMs to \textcolor{red}{check gain uniformity}.\\
+    				\vfill
+    				\centering \includegraphics[height=0.5\textheight]{figures/666/CCI.png}\\\vfill
+    			\end{column}
+    			\hfill
+    			\begin{column}{0.5\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] Use Confocal Chromatic Imaging.
+    					\item[$\bullet$] Measure thickness of the 72 LEMs of the $6 \times 6 \times \SI{6}{\meter\cubed}$.
+    					\item[$\bullet$] Created a Python script to analyze the results.
+    				\end{itemize}
+    				\centering \includegraphics[height=0.5\textheight]{figures/666/plate_and_bricks.png}
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+    
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.48\textwidth}
     				\centering
-    				\textbf{LEM's efficiency map seen by the anode}\\
-    				\includegraphics[width=\textwidth]{figures/666/eff_map.png}
-    			\end{minipage}\hfill
-    			\begin{minipage}{0.48\textwidth}
+    				Thickness distribution in one \\measurement hole\\\vspace{0.1cm}
+    				
+    				\includegraphics[width=0.6\textwidth]{figures/666/distri_1_trou_lem.png}\\
+    				\vspace{0.3cm}
     				\centering
-    				\textbf{Impact on reconstructed energy in the} $\mathbf{6 \times 6 \times} $\textbf{\SI[detect-weight]{6}{\meter\cubed}}\\
-    				\includegraphics[width=\textwidth]{figures/666/electron.png}
-    			\end{minipage}
-    		\end{minipage}
-    	\end{scriptsize} 
+    				Mean thickness in all measurement holes \\(36 LEMs)\\\vspace{0.1cm}
+    				
+    				\includegraphics[width=0.6\textwidth]{figures/666/LEM_sum_all_histo_CERN.png}
+    			\end{column}
+    			\hfill
+    			\begin{column}{0.48\textwidth}
+    				\centering
+    				Thickness uniformity in 1 LEM\\\vspace{0.1cm}
+    				
+    				\includegraphics[width=0.6\textwidth]{figures/666/2D_LEM_thickness_distri.png}\\\vspace{0.1cm}
+    				\vspace{0.3cm}
+    				\centering
+    				\includegraphics[width=0.8\textwidth]{figures/666/measured_gain_fluctuations.png}
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEMs and anodes preparation at Saclay}
     	\begin{scriptsize}
     		\begin{center}
-		    	\textbf{LEMs and anodes prepared for measurement at DEDIP (bat 534)}\\
-		    	\includegraphics[width=\textwidth]{figures/666/lem_preparation.png}
+		    	\includegraphics[width=\textwidth]{figures/666/pretest.png}
 	    	\end{center}
+	    	\begin{columns}
+	    		\begin{column}{0.5\textwidth}
+	    			\begin{itemize}
+	    				\item[$\bullet$] LEM manufactured by ELTOS (Italy).
+	    				\item[$\bullet$] ELTOS tests that specifications are met: thickness, RIM, hole, size.
+	    			\end{itemize}
+	    		\end{column}\hfill
+	    		\begin{column}{0.5\textwidth}
+	    			\begin{itemize}
+	    				\item[$\bullet$] At \textbf{DEDIP}: LEM thickness survey.
+	    				\item[$\bullet$] Soldering HV pins, glueing MACORS insulations.
+	    				\item[$\bullet$] Cleaning, drying, polymerisation.
+	    			\end{itemize}
+	    		\end{column}
+	    	\end{columns}
 	    \end{scriptsize} 
     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : High voltage}
     	\begin{scriptsize}
-    		\begin{center}\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}\end{center}
+    		\begin{center}
+    			\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}\\
+    			$G _{eff}= \mathcal{T}e^{A\textcolor{red}{\rho} d e^{-B\textcolor{red}{\rho}d/\textcolor{red}{V}}}$
+    		\end{center} 
     		\begin{columns}
 		    	\begin{column}{0.5\textwidth}
 		    		\includegraphics[height=3.7cm]{figures/666/gamelle.jpg}\\
@@ -347,9 +432,9 @@
 		    			\textcolor{red}{$\sim$ 20 sparks per hour}\\
 		    		\end{scriptsize}
 	    			\begin{tiny}
-		    			(Designed by ETHZ, used in the $3 \times 1 \times \SI{1}{\meter\cubed}$)
+		    			(Designed by \textbf{ETHZ}, used in the $3 \times 1 \times \SI{1}{\meter\cubed}$)
 		    		\end{tiny}\\
-	    			\includegraphics[height=3.2cm]{figures/666/sparks_34.png}
+	    			\includegraphics[height=3.1cm]{figures/666/sparks_34.png}
     			\end{center}
     		\end{column}\hfill
     		\begin{column}{0.5\textwidth}
@@ -359,12 +444,12 @@
 		    			\textcolor{red}{$\sim$ 3 sparks per hour}\\
 		    		\end{scriptsize}
 	    			\begin{tiny}
-	    				(Designed by CEA, used in the $6 \times 6 \times \SI{6}{\meter\cubed}$)
+	    				(Designed by \textbf{CEA}, used in the $6 \times 6 \times \SI{6}{\meter\cubed}$)
 	   				\end{tiny}\\
-	    			\includegraphics[height=3.2cm]{figures/666/sparks_35.png}
+	    			\includegraphics[height=3.1cm]{figures/666/sparks_35.png}
 	    		\end{center}
     		\end{column}
-    	\end{columns}\vfill
+    	\end{columns}\vspace{0.1cm}
     	\begin{columns}
     		\begin{column}{0.5\textwidth}
     			\begin{scriptsize}
@@ -426,69 +511,43 @@
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
+    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Study of LEM's dead zones}
     	\begin{scriptsize}
-    		\begin{columns}
-    			\begin{column}{0.48\textwidth}
-    				Effective gain:\\
-    				\begin{center}
-	    				$G _{eff}= \mathcal{T}e^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
-    				\end{center}
-    				$\textcolor{red}{d}$: amplification length, i.e \textcolor{red}{LEM thickness}.\\
-    				$\Rightarrow$ Exponential impact on gain.\\
-    				$\Rightarrow$ Need to know thickness fluctuation in our LEMs to \textcolor{red}{check gain uniformity}.\\
-    				\vfill
-    				\centering \includegraphics[height=0.5\textheight]{figures/666/CCI.png}\\\vfill
-	    		\end{column}
-	    		\hfill
-	    		\begin{column}{0.48\textwidth}
-	    			\begin{itemize}
-	    				\item[$\bullet$] Use Confocal Chromatic Imaging.
-	    				\item[$\bullet$] Measure thickness of the 72 LEMs of the $6 \times 6 \times \SI{6}{\meter\cubed}$.
-	    				\item[$\bullet$] Created a Python script to analyze the results.
-	    				\item[$\bullet$] Predict gain fluctuations at different amplification voltages.
-	    			\end{itemize}
-	    			\centering \includegraphics[height=0.5\textheight]{figures/666/plate_and_bricks.png}
-	    		\end{column}
-	   		\end{columns}
-    	\end{scriptsize}
+    		\begin{minipage}{0.38\textwidth}
+    			\begin{center}
+    				\includegraphics[width=0.8\textwidth]{figures/666/corner_annotations.png}\\
+    				CFR-34 design\\
+    			\end{center} 
+    			Dead zones = zones without holes:
+    			\begin{itemize}
+    				\item[$\bullet$] LEM's borders.
+    				\item[$\bullet$] screw holes.
+    				\item[$\bullet$] High voltages connectors.
+    			\end{itemize}
+    			$\Rightarrow$ Impact on collected charge?\\
+    			$\Rightarrow$ Impact on charge resolution?\\
+    			
+    			Use \textbf{ANSYS} to simulate field map through the CRP.\\
+    			Simulate drift of electrons in the map with \textbf{GarField}.\\
+    		\end{minipage}
+    		\begin{minipage}{0.58\textwidth}
+    			\centering
+    			\includegraphics[width=0.6\textwidth]{figures/666/drift_example.png}\\
+    			\vspace{0.5cm} \hspace{0.1cm}
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\textbf{LEM's efficiency map seen by the anode}\\
+    				\includegraphics[width=\textwidth]{figures/666/eff_map.png}
+    			\end{minipage}\hfill
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\textbf{Impact on reconstructed energy in the} $\mathbf{6 \times 6 \times} $\textbf{\SI[detect-weight]{6}{\meter\cubed}}\\
+    				\includegraphics[width=\textwidth]{figures/666/electron.png}
+    			\end{minipage}
+    		\end{minipage}
+    	\end{scriptsize} 
     \end{frame}
-    
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
-    	\begin{scriptsize}
-    		\begin{columns}
-    			\begin{column}{0.48\textwidth}
-    				\centering
-    				Thickness distribution in one measurement hole\\
-    				
-    				 \includegraphics[width=0.6\textwidth]{figures/666/distri_1_trou_lem.png}\\
-    				\vfill
-    				\centering
-    				Mean thickness in all measurement holes \\(36 LEMs)\\
-    				
-    				\includegraphics[width=0.6\textwidth]{figures/666/LEM_sum_all_histo_CERN.png}
-    			\end{column}
-    			\hfill
-    			\begin{column}{0.48\textwidth}
-    				\centering
-    				Mean thickness in 24 measurement holes\\(1 LEM)\\
-    				
-    				\includegraphics[width=0.6\textwidth]{figures/666/2D_LEM_thickness_distri.png}\\
-    				\vfill
-    				\centering
-    				Expected gain at $d=1107\pm\SI{13}{\micro\meter}$\\
-    				\textcolor{red}{$\sim 20\%$ variations at \SI{3.5}{\kilo\volt}}\\
-    				\includegraphics[width=0.7\textwidth]{figures/666/measured_gain_fluctuations.png}
-    			\end{column}
-    		\end{columns}
-    	\end{scriptsize}
-    \end{frame}
-    
-%    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Mounting the CRPs at CERN}
-%    	\centering One CRP fully assembled at CERN\\
-%    	\vfill
-%    		\includegraphics[width=\textwidth]{figures/666/crp_top_bottom.png}
-%    \end{frame}
+
 {
 	\setlength\pdfpagewidth{12.8cm}%
 	\setlength\pdfpageheight{9cm}%
@@ -598,30 +657,45 @@
        \end{frame}
 	    }
 	    
+	\begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Overview}
+		\begin{columns}
+			\begin{column}{0.48\textwidth}
+				\centering
+				\includegraphics[width=0.8\textwidth]{figures/311/311_2.png}
+			\end{column}\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{scriptsize}
+					\textcolor{red}{Miletone in DLArTPC technology:} Showed that the principle of a DLArTPC at \si{\meter\squared} readout surfaces and \SI{1}{\meter} drift lengths works.\\
+					Signal/noise $\sim$ 10 for a MIP at amplification of \SI{2.8}{\kilo\volt}.
+				\end{scriptsize}
+			\end{column}\hfill
+		\end{columns}
+		\centering
+		\includegraphics[width=0.77\textwidth]{figures/311/events.png}\\
+	\end{frame}
+	    
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Overview}
     	\begin{scriptsize}
     		\vfill
     		\begin{columns}
-    			\begin{column}{0.48\textwidth}
-    				\centering
-    				\includegraphics[width=0.8\textwidth]{figures/311/311_2.png}\\
-    				\vspace{0.3cm}
-    				\includegraphics[width=\textwidth]{figures/311/events.png}\\
-    			\end{column}\hfill
-    			\begin{column}{0.48\textwidth}
+    			\begin{column}{0.4\textwidth}
     				Constructed in 2016--2017, operated between June and December 2017.\\
     				\vspace{0.3cm}
     				\textbf{Goal:} Test the technological choices made for the $6 \times 6 \times \SI{6}{\meter\cubed}$.\\
-    				\includegraphics[width=\textwidth]{figures/311/run840.png}
-    				\textcolor{red}{$\Rightarrow$ Showed that the principle of a DLArTPC at \si{\meter\squared} readout surfaces and \SI{1}{\meter} drift lengths works.}
+    				\vspace{0.3cm}
     				\textbf{Difficulties:} 
     				\begin{itemize}
     					\item[$\bullet$] Limit on grid maximum voltage.
     					\item[$\bullet$] LEM high voltage not stable.
     				\end{itemize}
-    				\textbf{$\Rightarrow$ Solved in the $\mathbf{6 \times 6 \times} \SI[detect-weight
-    					]{6}{\meter\cubed}$}\\
+    				\textbf{$\Rightarrow$ Solved in the $\mathbf{6 \times 6 \times \SI[detect-weight
+    						]{6}{\meter\cubed}}$}\\
     				\vspace{0.3cm}
+    				\textbf{Main analysis:} Gain vs amplification.\\
+    				$\Rightarrow$ Use cosmic muons (MIP).
+    			\end{column}\hfill
+    			\begin{column}{0.6\textwidth}
+    				\includegraphics[width=\textwidth]{figures/311/run840.png}\\
     			\end{column}
     		\end{columns}
 	    \end{scriptsize}
@@ -632,7 +706,7 @@
     		\begin{columns}
     			\hspace{-1.5cm}
 	    		\begin{column}{0.35\textwidth}
-	    			\textbf{Difficulties in the $\mathbf{3 \times 1 \times} \SI[detect-weight]{1}{\meter\cubed}$:} Grid voltage limited at \SI{5}{\kilo\volt}:\\
+	    			\textbf{Difficulties in the $\mathbf{3 \times 1 \times \SI[detect-weight]{1}{\meter\cubed}}$:} Grid voltage limited at \SI{5}{\kilo\volt}:\\
 	    			\vspace{0.3cm}
 	    			$\Rightarrow$ Could not operate at fixed extraction and induction.\\
 	    			$\Rightarrow$ Need to know \textcolor{red}{induction and extraction impact on charge collection}.\\
@@ -667,12 +741,25 @@
     
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Study of extraction and induction fields effect on collected charge}
     	\begin{scriptsize}
-    		\begin{center}
-    			$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extraction} \boldsymbol{\times} \textcolor{red}{P_{LEM}} \boldsymbol{\times} \textcolor{blue}{P_{anode}} }$
-    		\end{center}
-    		\centering \includegraphics[width=.95\textwidth]{figures/311/effs.png}\\
+    			\hbox{
+	    			\hbox{\transparent{0.4}$\mathbf{G_{eff}=}$}
+	    			\hbox{\transparent{0.4}$\mathbf{G_{LEM}\boldsymbol{\times}}$}
+	    			$\mathbf{\boldsymbol{\epsilon}_{extraction} \boldsymbol{\times} \textcolor{red}{P_{LEM}}}$\hbox{\transparent{0.4}$\mathbf{\boldsymbol{\times} \textcolor{blue}{P_{anode}} }$}
+	    		}
+    		\centering \includegraphics[width=.95\textwidth]{figures/311/effs_extr.png}\\
     	\end{scriptsize} 
     \end{frame}
+    
+     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Study of extraction and induction fields effect on collected charge}
+     	\begin{scriptsize}
+     			\hbox{\centering
+	     			\hbox{\transparent{0.4}$\mathbf{G_{eff}=}$}
+	     			\hbox{\transparent{0.4}$\mathbf{G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extraction} \boldsymbol{\times} \textcolor{red}{P_{LEM}}\boldsymbol{\times}}$}
+	     			$\mathbf{\textcolor{blue}{P_{anode}} }$
+     			}\vspace{1cm}
+     		\centering \includegraphics[width=.7\textwidth]{figures/311/effs_ind.png}\\
+     	\end{scriptsize} 
+     \end{frame}
     
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Charging up}
     	\begin{scriptsize}
@@ -684,7 +771,7 @@
     					\item[$\bullet$] Charging up = decrease of initial gain $G_0$ with time to a plateau $G_{\infty}$
     					\item[$\bullet$] Charging up time depends on LEM voltage and charge rate
     				\end{itemize}
-    				$\Rightarrow$ Charging up is observed in $3 \times 1 \times \SI{1}{\meter\cubed}$ but is very slow. No easy comparison with 3L since we do not know $t_0$ (High voltage switched on and off, various amplification fields...)
+    				$\Rightarrow$ Slow charging up is observed in $3 \times 1 \times \SI{1}{\meter\cubed}$ 
     				%    					\item[$\bullet$] \textbf{From 3L}: Higher field $\Rightarrow$ quicker charging up.
     				%    					\item[$\bullet$] \textbf{We expect}:
     				%    					\begin{itemize}
@@ -737,7 +824,7 @@
 	    				\item[$\bullet$] Use the ratio $G_{3L}/G_{311}$.
 	    			\end{itemize}
 	    			$\mathbf{\Rightarrow G_{311} \boldsymbol{\simeq} G_{3L}/1.5}$.\\
-	    			$\Rightarrow$ Charging up effect? (see next slide).\\
+	    			$\Rightarrow$ Charging up effect?\\
 	    		\end{column}
 	    		\hfill
 	    		\begin{column}{0.5\textwidth}

@@ -77,10 +77,10 @@
      inkscape:window-height="1056"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.8126087"
-     inkscape:cx="1003.8904"
-     inkscape:cy="306.34765"
-     inkscape:window-x="65"
+     inkscape:zoom="0.74515583"
+     inkscape:cx="657.24427"
+     inkscape:cy="481.29432"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -148,4 +148,16 @@
      id="path4144-5"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.69603"
+     y="43.775276"
+     id="text4138-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="11.69603"
+       y="43.775276"
+       style="font-weight:bold;fill:#f80000;fill-opacity:1"
+       id="tspan4159-5">CERN's neutrino platform</tspan></text>
 </svg>

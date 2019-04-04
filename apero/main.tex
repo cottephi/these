@@ -37,9 +37,9 @@
 \setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
 
 
-\title[Double Phase Liquid Argon Time Projection chambers for WA105/ProtoDUNE-DP at CERN]{
+\title[Double Phase Liquid Argon Time Projection chambers for WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP at CERN]{
 \vspace{3cm}
-      \textbf{Double Phase Liquid Argon Time Projection chambers for WA105/ProtoDUNE-DP at CERN} \\
+      \textbf{Double Phase Liquid Argon Time Projection chambers for WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP at CERN} \\
 }
 \author[Philippe COTTE]
 {
@@ -49,7 +49,7 @@
 
 \begin{document}
 
-{\1% % this is the name of the PDF file for the background
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{Feathergraphics/1.pdf}}
     \begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
         \titlepage % call the title page information from above
     \end{frame}}
@@ -105,7 +105,7 @@
 %	    
 %    \end{frame}
 
-    \begin{frame}{Context}{DU$\nu$E : a longue baseline neutrino oscillation experiment}
+    \begin{frame}{Context}{DU$\nu$E : a long baseline accelerator neutrinos oscillation experiment}
     	\begin{scriptsize}
     	\begin{minipage}{0.58\textwidth}
     		\centering
@@ -120,7 +120,7 @@
     	\begin{minipage}{0.38\textwidth}
     		\begin{itemize}
     			\item[$\bullet$] Long baseline accelerator neutrinos experiment in USA scheduled for 2026.
-    			\item[$\bullet$] Will detect $\nu$/$\overline{\nu}$ from Fermilab in South Dakota at \SI{1300}{\kilo\meter}.
+    			\item[$\bullet$] Will detect \textbf{in South Dakota} $\nu$/$\overline{\nu}$ \textbf{from Fermilab} at \textbf{\SI{1300}{\kilo\meter}}.
     			\item[$\bullet$] \textbf{Main goals: }
 	    			\begin{itemize}
 	    				\item[$\bullet$] CP violation;
@@ -128,7 +128,8 @@
 	    				\item[$\bullet$] Proton lifetime;
 	    				\item[$\bullet$] Supernovae neutrinos.
 	    			\end{itemize}
-    			\item[$\bullet$] Far detector: 4 \textbf{Liquid Argon Time Projection Chambers} (> \SI{10}{\kilo\tonne}).
+    			\item[$\bullet$] Far detector: 4 \textbf{Liquid Argon Time Projection Chambers} 
+    			($\geq$ \SI{10}{\kilo\tonne} each).
     		\end{itemize}
     		\vspace{.3cm}
     		$\Rightarrow$ \textbf{ProtoDU$\nu$E} tests \textbf{two versions} of LArTPC technology at \SI{300}{\tonne} at CERN's neutrino platform\\
@@ -138,21 +139,24 @@
 	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{Context}{DU$\nu$E : a longue baseline neutrino oscillation experiment}
+    \begin{frame}{Context}{DU$\nu$E : a long baseline accelerator neutrinos oscillation experiment}
     	\begin{columns}
     		\begin{column}{0.6\textwidth}
     			\centering
     			\includegraphics[width=\textwidth]{figures/contexte/oscillation_CP.png}\\\vspace{0.2cm}
-    			 \includegraphics[width=0.95\textwidth]{figures/contexte/sensitivities.png}
+    			 \includegraphics[width=0.95\textwidth]{figures/contexte/sensitivities_2.png}\\
+    			 \begin{scriptsize}
+    			 	Improved sensitivities to come in summer 2019 (FD-TDR)!
+    			 \end{scriptsize}
     		\end{column}
     		\begin{column}{0.4\textwidth}
     			\begin{itemize}
-	    			\item[$\bullet$]$\delta_{CP}\ne0$ and $\pi$ could explain matter-antimatter asymmetry in the universe\\
-	    			\item[$\bullet$] Many theories depend on neutrinos mass hierarchy
-	    			\item[$\bullet$] Both have influence on flavor change probability
+	    			\item[$\bullet$]$\delta_{CP}\ne0$ and $\pi$ could explain \textcolor{red}{matter-antimatter asymmetry} in the universe.\\
+	    			\item[$\bullet$] Many theories depend on neutrinos \textcolor{red}{mass hierarchy}.
+	    			\item[$\bullet$] Both have influence on flavor change probability.
 	    		\end{itemize}
     			\begin{scriptsize}
-	    			$\Rightarrow$ Measure $P(\nu_{\mu}\to\nu_e)$ vs $E$: \\
+	    			$\Rightarrow$ Measure \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$ vs $E$}: \\
 	    			Need precise reconstruction of neutrino interactions to reach $5\sigma$ for $\delta_{CP}$.
     			\end{scriptsize}
     			\begin{itemize}
@@ -169,58 +173,28 @@
     	\begin{columns}
     		\begin{column}{0.6\textwidth}
     			\centering
-    			\includegraphics[width=\textwidth]{figures/contexte/SP_evt.png}
+    			\includegraphics[width=\textwidth]{figures/contexte/SP_evt.png}\\
+    			\flushleft
+    			\begin{footnotesize}\textit{ProtoDU$\nu$E-Single Phase events}\end{footnotesize}
     		\end{column}
     		\begin{column}{0.4\textwidth}
-    			\begin{scriptsize}
+    			\begin{footnotesize}
     				\textbf{Why liquid argon?}
-    			\end{scriptsize}
+    			\end{footnotesize}
     			\begin{itemize}
+    				\item[$\bullet$] MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
+    				(Electronic noise $\sim \SI{1000}{e^-}$)
+    				\item[$\bullet$] Does not attach electrons.
+    				\item[$\bullet$] Fully homogeneous and excellent tracking calorimeter.
+    				\item[$\bullet$] Scintillates at ionization $\rightarrow$ trigger.
     				\item[$\bullet$] Dense (\SI{1.4}{\gram\per\centi\meter^3}).
     				\item[$\bullet$] Cheap and abundant.
-    				\item[$\bullet$] MIP $\rightarrow$ $\sim\SI{60000}{e^-\per\centi\meter}$.
-    				\item[$\bullet$] Does not attach electrons.
     			\end{itemize}
+    			\begin{footnotesize}
+	    			\textbf{$\Rightarrow$ Electronic bubble-chamber.}
+	    		\end{footnotesize}
     		\end{column}
     	\end{columns}
-    \end{frame}
-    
-    \begin{frame}{Context}{Liquid Argon Time Projection Chamber}
-    	\begin{scriptsize}
-    			\includegraphics[width=0.9\textwidth]{figures/contexte/tpcs.png}\\\vfill
-    			\begin{columns}
-    				\begin{column}{0.5\textwidth}
-    					\begin{itemize}
-    						\item[$\bullet$] Everything contained in liquid argon.
-    						\item[$\bullet$] Direct measurement of energy.
-    					\end{itemize}
-    				\end{column}\hfill
-    				\begin{column}{0.5\textwidth}
-    					\begin{itemize}
-    						\item[$\bullet$] Charge amplification in gas\\$\Rightarrow$ Better signal/noise ratio.
-    						\item[$\bullet$] Bigger drift lengths, fewer readout channels, better spatial resolution.
-    						\item[$\bullet$] Cheaper electronics.
-    					\end{itemize}
-    				\end{column}
-    			\end{columns}
-%    			Advantages of a \textbf{Time Projection Chamber}:    			
-%    			\begin{itemize}
-%    				\item[$\bullet$] 3D information.
-%    				\item[$\bullet$] Big volumes.
-%    				\item[$\bullet$] Calorimetry.
-%    				\item[$\bullet$] Particle Identification.
-%    			\end{itemize}    			
-%    			Largest LArTPC that detected neutrinos before ProtoDU$\nu$E: ICARUS (\SI{600}{\tonne})\\
-%    			
-%    			Why Liquid argon?
-%    			\begin{itemize}
-%    				\item[$\bullet$] Cheap and abundant.
-%    				\item[$\bullet$] Scintillates at ionization (used for trigger).
-%    				\item[$\bullet$] Is inert: does not absorb electrons.
-%    				\item[$\bullet$] Is dense: ideal for neutrino physics.
-%    				\item[$\bullet$] Lots of electrons created at ionization.
-%    			\end{itemize}
-    	\end{scriptsize}
     \end{frame}
     
     {
@@ -232,32 +206,32 @@
     	\end{frame}
     }
     
-%    \begin{frame}{Context: Before \texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}}{DU$\nu$E's detector technology 2 : \textbf{Double Phase LArTPC}}
-%    	\begin{scriptsize}
-%    		\begin{minipage}{0.48\textwidth}
-%    			\includegraphics[width=\textwidth]{figures/contexte/dlartpc.png}\\
-%    		\end{minipage}
-%    		\hfill
-%    		\begin{minipage}{0.48\textwidth}
-%    			\textbf{Double phase} version: \\\textbf{Amplification} of the signal in gas
-%    			\begin{itemize}
-%    				\item[$\bullet$] Allows lower energy threshold.
-%    				\item[$\bullet$] Allows smaller readout pitch: better 2D resolution.
-%    				\item[$\bullet$] Allows bigger drift lengths: less dead volumes.
-%    				\item[$\bullet$] High signal/noise ratio.
-%    			\end{itemize}    			
-%    		\end{minipage}
-%    	\end{scriptsize}
-%    	\centering
-%    	DLArTPC is young: biggest one was \SI{250}{\liter}.\\
-%    	\textbf{$\Rightarrow$ Needed an extra step of R\&D to reach DU$\nu$E's scale : \textcolor{red}{WA105}}
-%    \end{frame}
-    
-    \begin{frame}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP}
-		\includegraphics[width=1.05\linewidth]{figures/contexte/wa105_scale.png}
-		
+    \begin{frame}{Liquid Argon Time Projection Chamber}
+    	\begin{scriptsize}
+    			\includegraphics[width=0.9\textwidth]{figures/contexte/tpcs.png}\\\vfill
+    			\begin{columns}
+    				\begin{column}{0.5\textwidth}
+    					\begin{itemize}
+    						\item[$\bullet$] Everything contained in liquid argon.
+    						\item[$\bullet$] Direct measurement of energy.
+    						\item[$\bullet$] ProtoDU$\nu$E-SP first data end of last year.
+    					\end{itemize}
+    				\end{column}\hfill
+    				\begin{column}{0.5\textwidth}
+    					\begin{itemize}
+    						\item[$\bullet$] Charge amplification in gas\\$\Rightarrow$ Better signal/noise ratio.
+    						\item[$\bullet$] Bigger drift lengths, fewer readout channels, better spatial resolution.
+    						\item[$\bullet$] \textbf{WA0105/ProtoDU$\nu$E-DP} first data scheduled for August 2019.
+    					\end{itemize}
+    				\end{column}
+    			\end{columns}
+    	\end{scriptsize}
     \end{frame}
     
+    \begin{frame}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP at CERN}
+    	\vspace{0.5cm}\hspace{-0.7cm}\includegraphics[width=1.05\linewidth]{figures/contexte/wa105_scale.png}
+    \end{frame}
+
     \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666}
     		demonstrator}{A 300t and \SI{36}{\meter\squared} readout planes DLArTPC}
     	\begin{scriptsize}
@@ -266,7 +240,7 @@
     			\textbf{New technology: main challenges:}\\
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
-    					\item[$\bullet$] \textcolor{red}{Goal: Gain $\geq$ 20}
+    					\item[$\bullet$] \textcolor{red}{Goal: Gain $\geq 20$} \\(S/N $\geq 200$ for MIP)
     					\item[$\bullet$] \textcolor{red}{Long term stability (DU$\nu$E $\sim$ 20 years)}
     				\end{itemize}
     			\end{minipage}\hfill
@@ -313,7 +287,7 @@
 	   		\end{minipage}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
+    \begin{frame}{LEMs thickness measurements at Saclay}
     	\begin{scriptsize}
     		\begin{columns}
     			\begin{column}{0.5\textwidth}
@@ -333,13 +307,15 @@
     					\item[$\bullet$] Measure thickness of the 72 LEMs of the $6 \times 6 \times \SI{6}{\meter\cubed}$.
     					\item[$\bullet$] Created a Python script to analyze the results.
     				\end{itemize}
-    				\centering \includegraphics[height=0.5\textheight]{figures/666/plate_and_bricks.png}
+    				\centering \includegraphics[height=0.5\textheight]{figures/666/plate_and_bricks.png}\\
+    				\flushleft
+   					\textit{Done at Saclay, building 472}
     			\end{column}
     		\end{columns}
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM thickness measurements}
+    \begin{frame}{LEMs thickness measurements at Saclay}
     	\begin{scriptsize}
     		\begin{columns}
     			\begin{column}{0.48\textwidth}
@@ -367,7 +343,7 @@
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEMs and anodes preparation at Saclay}
+    \begin{frame}{LEMs and anodes preparation at Saclay}
     	\begin{scriptsize}
     		\begin{center}
 		    	\includegraphics[width=\textwidth]{figures/666/pretest.png}
@@ -380,17 +356,18 @@
 	    			\end{itemize}
 	    		\end{column}\hfill
 	    		\begin{column}{0.5\textwidth}
+	    			\textbf{At DEDIP}:
 	    			\begin{itemize}
-	    				\item[$\bullet$] At \textbf{DEDIP}: LEM thickness survey.
-	    				\item[$\bullet$] Soldering HV pins, glueing MACORS insulations.
-	    				\item[$\bullet$] Cleaning, drying, polymerisation.
+	    				\item[$\bullet$] LEM thickness survey.
+	    				\item[$\bullet$] Soldering HV pins, glueing MACOR insulations.
+	    				\item[$\bullet$] Cleaning, polymerisation, drying.
 	    			\end{itemize}
 	    		\end{column}
 	    	\end{columns}
 	    \end{scriptsize} 
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : High voltage}
+    \begin{frame}{Tests in high pressure chamber at Saclay}{High voltage}
     	\begin{scriptsize}
     		\begin{center}
     			\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}\\
@@ -417,7 +394,7 @@
 	    \end{scriptsize} 
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : High voltage}
+    \begin{frame}{Tests in high pressure chamber at Saclay}{High voltage}
     	\begin{center}
 	    	\begin{scriptsize}
 	    		\textbf{Test LEMs in DLArTPC density conditions : Maximum High Voltage}
@@ -454,7 +431,7 @@
     		\begin{column}{0.5\textwidth}
     			\begin{scriptsize}
 	    			\begin{itemize}
-	    				\item[$\bullet$] CFR-34 could not hold more than \SI{32}{\kilo\volt\per\centi\meter}.
+	    				\item[$\bullet$] CFR-34 not stable above \SI{32}{\kilo\volt\per\centi\meter}.
 	    				\item[$\bullet$] Sparks mostly on border and corner.
 	    			\end{itemize}
 	    			$\Rightarrow$ New design (CFR-35) with larger borders.\\
@@ -480,14 +457,14 @@
     	\end{columns}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{LEM tests in high pressure chamber at Saclay : gain measurements}
+    \begin{frame}{Tests in high pressure chamber at Saclay}{gain measurements}
     	\begin{scriptsize}
     		\begin{center}\textbf{Test LEMs in DLArTPC density conditions : Gain}\end{center}
     		\begin{columns}
     			\begin{column}{0.42\textwidth}
     				\centering \includegraphics[width=\textwidth]{figures/666/gamelle_source.png}
     			\end{column}\hfill
-    			\begin{column}{0.58\textwidth}
+    			\begin{column}{0.68\textwidth}
     				\centering \includegraphics[width=\textwidth]{figures/666/gain.png}
     			\end{column}
     		\end{columns}\vfill
@@ -511,7 +488,7 @@
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Study of LEM's dead zones}
+    \begin{frame}{Study of LEM's dead zones}
     	\begin{scriptsize}
     		\begin{minipage}{0.38\textwidth}
     			\begin{center}
@@ -557,22 +534,23 @@
 	\end{frame}
 }
     
-    \begin{frame}{The \texorpdfstring{$6 \times 6 \times \SI{6}{\meter\cubed}$}{666} demonstrator}{Full CRP tests in cold box}
+    \begin{frame}{Full CRP tests in cold box at CERN}
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
    		\begin{columns}
    			\begin{column}{0.4\textwidth}
    				\includegraphics[width=\textwidth]{figures/666/crp_inserting_coldbox.png}\\
-   				\includegraphics[width=\textwidth]{figures/666/in_coldbox.png}
+   				\includegraphics[width=\textwidth]{figures/666/in_coldbox.png}\\
+   				CERN, building 182
     		\end{column}
     		\begin{column}{0.6\textwidth}
     			\begin{scriptsize}
-	    			\textbf{Test the CRPs in real dual-phase conditions in a cold box before putting them in teh cryostat.}\\
+	    			\textbf{Test the CRPs in real dual-phase conditions in a cold box before putting them in the cryostat.}\\
 	    			
 	    			\begin{itemize}
 	    				\item[$\bullet$] \textbf{Maximum High voltage}
 	    				\begin{itemize}
-	    					\item Grid reached \textcolor{red}{nominal value of \SI{7.5}{\kilo\volt\per\centi\meter}}.
-	    					\item LEMs held \textcolor{red}{30--\SI{31}{\kilo\volt\per\centi\meter}}\\
+	    					\item Grid reached \textcolor{red}{nominal value of \SI{7.5}{\kilo\volt}}.
+	    					\item LEMs held \textcolor{red}{3.0--\SI{3.1}{\kilo\volt}}\\
 				    					$\Rightarrow$ Estimated \textcolor{red}{effective gain $\geq 20$}.
 	    				\end{itemize}
 	    				\item[$\bullet$] \textbf{Stability (sparks per hour)}
@@ -587,35 +565,6 @@
 	    				\end{itemize}
 	    			\end{itemize}
 	    		\end{scriptsize}
-%    			\begin{tiny}
-%    				\begin{table}[]
-%    					\begin{scriptsize}
-%    						\centering CRP 1
-%    					\end{scriptsize}
-%    					\begin{tabular}{|l|l|l|l|l|l|l|}
-%    						\hline
-%    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
-%    						0.25 & 3.35 & 31.0 & 12 & 1.3 & 968--972 & \textcolor{green}{20} \\
-%    						0.50 & 3.55-3.60 & 30.5-31.0 & 13 & 1.3 & 962-966 & \textcolor{green}{24-31} \\
-%    						0.75 & 3.70 & 29.5 & 42 & 0.6 & 943-953 & \textcolor{green}{20} \\
-%    						1.00 & 3.80 & 28.0 & 18 & 2 trips & 970-976 & 9 \\
-%    						1.00 & 3.85 & 28.5 & 12 & 3 trips & 936-947 & 15 \\ \hline
-%    					\end{tabular}
-%    				\end{table}
-%    				\begin{table}[]
-%    					\begin{scriptsize}
-%    						\centering CRP 1
-%    					\end{scriptsize}
-%    					\begin{tabular}{|l|l|l|l|l|l|l|}
-%    						\hline
-%    						\multicolumn{1}{|c|}{\textbf{$\mathbf{V_{top}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{V_{bot}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{E_{LEM}}$}} & \multicolumn{1}{c|}{\textbf{Time (h)}} & \multicolumn{1}{c|}{\textbf{Sparks/h}} & \multicolumn{1}{c|}{\textbf{$\mathbf{P_{atm}}$}} & \multicolumn{1}{c|}{\textbf{$\mathbf{G_{eff}}$}} \\ \hline
-%    						0.10 & 3.15-3.20 & 30.5-31.0 & 17 & 0.8 & 969--973 & 9-11 \\
-%    						0.25 & 3.34 & 30.9 & 16 & 1.3 & 968-970 & 19 \\
-%    						0.50 & 3.55 & 30.5 & 11 & 0.9 & 957-965 & \textcolor{green}{24} \\
-%    						0.50 & 3.555 & 30.55 & 42 & 0.5 & 962-964 & \textcolor{green}{25} \\ \hline
-%    					\end{tabular}
-%    				\end{table}
-%    			\end{tiny}
     		\end{column}
     	\end{columns}
 	    \end{frame}
@@ -650,14 +599,14 @@
 
        {
        	\setlength\pdfpagewidth{12.8cm}%
-       	\setlength\pdfpageheight{11.8cm}%
+       	\setlength\pdfpageheight{11.5cm}%
        	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/666/fisheye.png}}
        \begin{frame}[plain]
        	
        \end{frame}
 	    }
 	    
-	\begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Overview}
+	\begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype at CERN}
 		\begin{columns}
 			\begin{column}{0.48\textwidth}
 				\centering
@@ -665,8 +614,8 @@
 			\end{column}\hfill
 			\begin{column}{0.48\textwidth}
 				\begin{scriptsize}
-					\textcolor{red}{Miletone in DLArTPC technology:} Showed that the principle of a DLArTPC at \si{\meter\squared} readout surfaces and \SI{1}{\meter} drift lengths works.\\
-					Signal/noise $\sim$ 10 for a MIP at amplification of \SI{2.8}{\kilo\volt}.
+					\textcolor{red}{Milestone in DLArTPC technology:} \\Showed that the principle of a DLArTPC at \SI{4}{\tonne} scale works.\\
+					Signal/noise $\sim$ 10 for a MIP at amplification field of \SI{28}{\kilo\volt\per\centi\meter}.
 				\end{scriptsize}
 			\end{column}\hfill
 		\end{columns}
@@ -674,7 +623,7 @@
 		\includegraphics[width=0.77\textwidth]{figures/311/events.png}\\
 	\end{frame}
 	    
-    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Overview}
+    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype at CERN}
     	\begin{scriptsize}
     		\vfill
     		\begin{columns}
@@ -701,35 +650,46 @@
 	    \end{scriptsize}
     \end{frame}
     
+    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Charging up}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.45\textwidth}
+    				\includegraphics[width=\textwidth]{figures/311/3L_charging_up.png}\\
+    				\vspace{0.1cm}
+    				\includegraphics[width=0.85\textwidth]{figures/311/CU.png}\\
+    				\begin{itemize}
+    					\item[$\bullet$] Fields lines  cross epoxy\\
+    					$\Rightarrow$ Electrons accumulation deform the field.
+    					\item[$\bullet$] Charging up: $G_{eff}(t)$ decreases to a plateau.
+    					\item[$\bullet$] Charging up time depends on LEM voltage and charge deposition rate.
+    				\end{itemize}
+    				$\Rightarrow$ Slow charging up is observed in $3 \times 1 \times \SI{1}{\meter\cubed}$ 
+    			\end{column}\hfill
+    			\begin{column}{0.55\textwidth}
+    				\centering \includegraphics[width=\textwidth]{figures/311/311_charging_up.png}\\
+    				\vfill
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+    
     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Study of extraction and induction fields effect on collected charge}
     	\begin{scriptsize}
     		\begin{columns}
     			\hspace{-1.5cm}
 	    		\begin{column}{0.35\textwidth}
+	    			\vspace{-2cm}
+	    			\hbox{
+	    				$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extraction} \boldsymbol{\times}\textcolor{red}{P_{LEM}}\boldsymbol{\times} \textcolor{blue}{P_{anode}}}$
+	    			}\\
+	    			\vspace{2cm}
 	    			\textbf{Difficulties in the $\mathbf{3 \times 1 \times \SI[detect-weight]{1}{\meter\cubed}}$:} Grid voltage limited at \SI{5}{\kilo\volt}:\\
 	    			\vspace{0.3cm}
 	    			$\Rightarrow$ Could not operate at fixed extraction and induction.\\
 	    			$\Rightarrow$ Need to know \textcolor{red}{induction and extraction impact on charge collection}.\\
-	    			\vspace{0.3cm}	    			
-		    		$\mathbf{G_{eff} = G_{LEM}} $ \\\hspace{0.7cm} $\boldsymbol{\times \epsilon}_{\mathbf{extraction}}$ \\\hspace{0.7cm} \textcolor{red}{$\boldsymbol{\times} \mathbf{P_{LEM}}$}\\\hspace{0.7cm} \textcolor{blue}{$\boldsymbol{\times} \mathbf{P_{Anode}}$}
-%	    			\textbf{Losses due to extraction efficiency:}
-%	    			\begin{itemize}
-%	    				\item[$\bullet$] Electrons can be stuck at liquid-gas interface.
-%	    				\item[$\bullet$] Studied in the 80's (no LEM)
-%	    			\end{itemize}
-%	    			\textbf{Losses due to collection probabilities:}
-%	    			\begin{itemize}
-%	    				\item[$\bullet$] Field lines can cross copper and epoxy: \textcolor{red}{electrons can be lost}: 
-%	    				\begin{itemize}
-%	    					\item \textcolor{red}{before the LEM}: depends on extraction and amplification.
-%	    					\item \textcolor{blue}{after the LEM}: depends on induction and amplification.
-%	    				\end{itemize} 
-%	    			\end{itemize}
-%	    			\begin{itemize}
-%	    				\item[$\bullet$] Simulate drift of electrons through CRP.
-%	    				\item[$\bullet$] \textcolor{red}{\text{LEM coll. Proba}}: probability to enter hole after extraction.
-%	    				\item[$\bullet$] \textcolor{blue}{\text{Anode coll. Proba}}: probability to reach anode after leaving amplification zone.
-%	    			\end{itemize}
+	    			\vfill
+%	    			\vspace{0.3cm}	    			
+%		    		$\mathbf{G_{eff} = G_{LEM}} $ \\\hspace{0.7cm} $\boldsymbol{\times \epsilon}_{\mathbf{extraction}}$ \\\hspace{0.7cm} \textcolor{red}{$\boldsymbol{\times} \mathbf{P_{LEM}}$}\\\hspace{0.7cm} \textcolor{blue}{$\boldsymbol{\times} \mathbf{P_{Anode}}$}
 	    		\end{column}\hspace{-1.9cm}
 	    		\begin{column}{0.65\textwidth}
 %	    			\flushright
@@ -761,40 +721,6 @@
      	\end{scriptsize} 
      \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Charging up}
-    	\begin{scriptsize}
-    		\begin{columns}
-    			\begin{column}{0.45\textwidth}
-    				\includegraphics[width=\textwidth]{figures/311/3L_charging_up.png}\\
-    				\vfill
-    				\begin{itemize}
-    					\item[$\bullet$] Charging up = decrease of initial gain $G_0$ with time to a plateau $G_{\infty}$
-    					\item[$\bullet$] Charging up time depends on LEM voltage and charge rate
-    				\end{itemize}
-    				$\Rightarrow$ Slow charging up is observed in $3 \times 1 \times \SI{1}{\meter\cubed}$ 
-    				%    					\item[$\bullet$] \textbf{From 3L}: Higher field $\Rightarrow$ quicker charging up.
-    				%    					\item[$\bullet$] \textbf{We expect}:
-    				%    					\begin{itemize}
-    				%    						\begin{scriptsize}
-    				%    							\item bigger drift lengths $\Rightarrow$ quicker charging up.
-    				%    							\item Bigger surface $\Rightarrow$ no impact
-    				%    						\end{scriptsize}
-    				%    					\end{itemize}
-    				%    					\item[$\bullet$] 3L: 50\% decrease in \SI{6}{\hour}. 
-    				%    					\item[$\bullet$] Extrapolating to \SI{28}{\kilo\volt\per\centi\meter}: \textcolor{red}{$\sim$20\% decrease}.
-    				%    					\item[$\bullet$]  $3 \times 1 \times \SI{1}{\meter\cubed}$: $\sim$\textcolor{red}{4\% decrease}.
-    				%    				\end{itemize}
-    			\end{column}\hfill
-    			\begin{column}{0.55\textwidth}
-    				\centering \includegraphics[width=\textwidth]{figures/311/311_charging_up.png}\\
-    				\vfill
-    			\end{column}
-    		\end{columns}
-    		%    		$\Rightarrow$ Charging up in $3 \times 1 \times \SI{1}{\meter\cubed}$ is slower than in 3L, while it is expected to be quicker.\\    		
-    		%    		\textbf{Possible explanation}: Charging up is not "cleaned up" when high voltage is shut down between runs.
-    	\end{scriptsize}
-    \end{frame}
-    
 %    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311}
 %    		\begin{scriptsize}
 %    		\end{scriptsize} prototype}{Purity and electron lifetime}
@@ -819,8 +745,8 @@
 	    			\includegraphics[width=\textwidth]{figures/311/dQds_gain.png}\\
 	    			\vfill
 	    			\begin{itemize}
-	    				\item[$\bullet$] Use expected MPV of cosmic muons of \SI{7.75}{\femto\coulomb\per\centi\meter} to compute effective gain.
-	    				\item[$\bullet$] Use simulated collection probabilities to compute equivalent gain at 3L fields (Induction of \SI{5}{\kilo\volt\per\centi\meter} and Extraction of \SI{2}{\kilo\volt\per\centi\meter} in liquid).
+	    				\item[$\bullet$] Cosmic muons = MIP: know expected charge deposition. $\Rightarrow$ can compute effective gain.
+	    				\item[$\bullet$] Correct for $\mathbf{\boldsymbol{\epsilon}_{extraction}\boldsymbol{\times}\textcolor{red}{P_{LEM}}\boldsymbol{\times} \textcolor{blue}{P_{Anode}}}$ to compare to 3L prototype.
 	    				\item[$\bullet$] Use the ratio $G_{3L}/G_{311}$.
 	    			\end{itemize}
 	    			$\mathbf{\Rightarrow G_{311} \boldsymbol{\simeq} G_{3L}/1.5}$.\\
@@ -829,77 +755,124 @@
 	    		\hfill
 	    		\begin{column}{0.5\textwidth}
 	    			\centering
-	    			\includegraphics[width=\textwidth]{figures/311/gain.png}\\
-	    			\includegraphics[width=.95\textwidth]{figures/311/ratio_vs_time.png}\\
+	    			\includegraphics[width=.9\textwidth]{figures/311/gain_311.png}\\
+	    			\vspace{0.2cm}
+	    			\includegraphics[width=.9\textwidth]{figures/311/ratio_vs_time.png}\\
 	    		\end{column}
 	    	\end{columns}
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification : Higher Amplification fields}
+    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification}
     	\begin{scriptsize}
-    		\centering
-    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_track.png}\\
-    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_dQds.png}\\
-    		\vfill
     		\begin{columns}
     			\begin{column}{0.5\textwidth}
+    				\includegraphics[width=\textwidth]{figures/311/dQds_gain.png}\\
+    				\vfill
     				\begin{itemize}
-    					\item[$\bullet$] Grid voltage limited\\ $\Rightarrow$ Higer amplification means lower extraction.
-    					\item[$\bullet$] \textcolor{red}{Charge reconstruction fails : \\MPV(view 0)$\sim5\times$MPV(view 1)}\\(should be $\sim$equal).
+    					\item[$\bullet$] Cosmic muons = MIP: know expected charge deposition. $\Rightarrow$ can compute effective gain.
+    					\item[$\bullet$] Correct for $\mathbf{\boldsymbol{\epsilon}_{extraction}\boldsymbol{\times}\textcolor{red}{P_{LEM}}\boldsymbol{\times} \textcolor{blue}{P_{Anode}}}$ to compare to 3L prototype.
+    					\item[$\bullet$] Use the ratio $G_{3L}/G_{311}$.
     				\end{itemize}
+    				$\mathbf{\Rightarrow G_{311} \boldsymbol{\simeq} G_{3L}/1.5}$.\\
+    				$\Rightarrow$ Charging up effect?\\
     			\end{column}
     			\hfill
     			\begin{column}{0.5\textwidth}
-    				\begin{itemize}
-    					\item[$\bullet$] Developed a dedicated reconstruction software.
-    					\item[$\bullet$] Better noise removal for better charge reconstruction.
-    					\item[$\bullet$] Still under construction.
-    				\end{itemize}
+    				\centering
+    				\includegraphics[width=.9\textwidth]{figures/311/gain_311_circle.png}\\
+    				\vspace{0.2cm}
+    				\includegraphics[width=.9\textwidth]{figures/311/ratio_vs_time.png}\\
     			\end{column}
     		\end{columns}
     	\end{scriptsize}
     \end{frame}
     
-    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification : Higher Amplification fields}
-    	\begin{scriptsize}
-    		\centering
-    		\includegraphics[width=0.9\textwidth]{figures/311/rawdatasoft_track.png}\\
-    		\includegraphics[width=0.9\textwidth]{figures/311/rawdatasoft_dQds.png}\\
-    		\vfill
-    		\begin{columns}
-    			\begin{column}{0.5\textwidth}
-    				\begin{itemize}
-    					\item[$\bullet$] MPV(view 0)$\sim$MPV(view 1).
-    					\item[$\bullet$] But MPV(view 0) a bit lower.
-    				\end{itemize}
-    			\end{column}
-    			\hfill
-    			\begin{column}{0.5\textwidth}
-    				\begin{itemize}
-    					\item[$\bullet$] Will compare to well reconstructed tracks.
-    					\item[$\bullet$] \textbf{Shortcoming} : very slow. Will process only a few tracks per amplification field.
-    				\end{itemize}
-    			\end{column}
-    		\end{columns}
-    	\end{scriptsize}
-    \end{frame}
+     \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Higher Amplification fields}
+     	\begin{scriptsize}
+     		\begin{columns}
+     			\begin{column}{0.75\textwidth}
+     				\includegraphics[width=\textwidth]{figures/311/track.png}\\
+     			\end{column}\hfill
+     			\begin{column}{0.4\textwidth}
+     				\begin{itemize}
+     					\item[$\bullet$] Grid voltage limitations:\\
+		     			$\Rightarrow$ \textcolor{red}{Higher Amp. $\rightarrow$ Lower extr.}
+		     			$\Rightarrow$ Low S/N, hard to reconstruct charge
+     					\item[$\bullet$] Developed dedicated algo:
+     					\begin{itemize}
+     						\item Noise removal
+     						\item Hit \& track finding
+     					\end{itemize}
+     					\item[$\bullet$] Still working on it. Promising results
+     				\end{itemize}
+     			\end{column}
+     		\end{columns}
+	     \end{scriptsize}
+     \end{frame}
+    
+%    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification : Higher Amplification fields}
+%    	\begin{scriptsize}
+%    		\centering
+%    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_track.png}\\
+%    		\includegraphics[width=0.9\textwidth]{figures/311/larsoft_dQds.png}\\
+%    		\vfill
+%    		\begin{columns}
+%    			\begin{column}{0.5\textwidth}
+%    				\begin{itemize}
+%    					\item[$\bullet$] Grid voltage limited\\ $\Rightarrow$ Higer amplification means lower extraction.
+%    					\item[$\bullet$] \textcolor{red}{Charge reconstruction fails : \\MPV(view 0)$\sim5\times$MPV(view 1)}\\(should be $\sim$equal).
+%    				\end{itemize}
+%    			\end{column}
+%    			\hfill
+%    			\begin{column}{0.5\textwidth}
+%    				\begin{itemize}
+%    					\item[$\bullet$] Developed a dedicated reconstruction software.
+%    					\item[$\bullet$] Better noise removal for better charge reconstruction.
+%    					\item[$\bullet$] Still under construction.
+%    				\end{itemize}
+%    			\end{column}
+%    		\end{columns}
+%    	\end{scriptsize}
+%    \end{frame}
+%    
+%    \begin{frame}{The \texorpdfstring{$3 \times 1 \times \SI{1}{\meter\cubed}$}{311} prototype}{Gain vs amplification : Higher Amplification fields}
+%    	\begin{scriptsize}
+%    		\centering
+%    		\includegraphics[width=0.9\textwidth]{figures/311/rawdatasoft_track.png}\\
+%    		\includegraphics[width=0.9\textwidth]{figures/311/rawdatasoft_dQds.png}\\
+%    		\vfill
+%    		\begin{columns}
+%    			\begin{column}{0.5\textwidth}
+%    				\begin{itemize}
+%    					\item[$\bullet$] MPV(view 0)$\sim$MPV(view 1).
+%    					\item[$\bullet$] But MPV(view 0) a bit lower.
+%    				\end{itemize}
+%    			\end{column}
+%    			\hfill
+%    			\begin{column}{0.5\textwidth}
+%    				\begin{itemize}
+%    					\item[$\bullet$] Will compare to well reconstructed tracks.
+%    					\item[$\bullet$] \textbf{Shortcoming} : very slow. Will process only a few tracks per amplification field.
+%    				\end{itemize}
+%    			\end{column}
+%    		\end{columns}
+%    	\end{scriptsize}
+%    \end{frame}
     
     \begin{frame}{Conclusion}
-    	\begin{normalsize}
 	    	\begin{itemize}
-	    		\item[$\bullet$] $3 \times 1 \times \SI{1}{\meter\cubed}$ proved DLArTPC technology with large readout area and \si{\meter\cubed} volume.
-	    		\item[$\bullet$] It pointed out problems that have been solved in the $6 \times 6 \times \SI{6}{\meter\cubed}$.
-	    		\item[$\bullet$] Data taking with the $6 \times 6 \times \SI{6}{\meter\cubed}$ is scheduled for this summer:
+	    		\item[$\bullet$] \begin{normalsize}$3 \times 1 \times \SI{1}{\meter\cubed}$ is a milestone that successfully demonstrated DLArTPC technology works at several tonnes scale and several $m^2$ readout surfaces.\end{normalsize}
+	    		\item[$\bullet$] \begin{normalsize}Still some work to do on the analysis.\end{normalsize}
+	    		\item[$\bullet$] \begin{normalsize}Crucial to validate the technology for the $6 \times 6 \times \SI{6}{\meter\cubed}$.\end{normalsize}
+	    		\item[$\bullet$] \begin{normalsize}Data taking with the $6 \times 6 \times \SI{6}{\meter\cubed}$ is scheduled for this summer:\end{normalsize}
 	    		\begin{itemize}
-	    			\item Closing cryostat (end of April)
-	    			\item Cooling down
-	    			\item Filling
-		    		\item First cosmics!
+	    			\item \begin{footnotesize}Closing cryostat end of April\end{footnotesize}
+	    			\item \begin{footnotesize}Cooling down in June.\end{footnotesize}
+	    			\item \begin{footnotesize}Filling in July.\end{footnotesize}
+		    		\item \begin{footnotesize}First cosmics in August.\end{footnotesize}
 	    		\end{itemize}
-	    		\item[$\bullet$] Still some work to do on the $3 \times 1 \times \SI{1}{\meter\cubed}$ analysis.
 	    	\end{itemize}
-    	\end{normalsize}
     \end{frame}
     
 \end{document}

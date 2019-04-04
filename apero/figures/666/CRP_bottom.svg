@@ -137,10 +137,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.28951147"
-     inkscape:cx="2874.9957"
-     inkscape:cy="1998.6171"
-     inkscape:window-x="65"
+     inkscape:zoom="0.18772254"
+     inkscape:cx="1597.6881"
+     inkscape:cy="2003.0132"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -154,18 +154,6 @@
      y="0"
      clip-path="url(#clipPath4140)"
      transform="translate(-122.99287,0)" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="2175.9922"
-     y="118.45351"
-     id="text4135"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4137"
-       x="2175.9922"
-       y="118.45351"
-       style="font-weight:bold;font-size:90px">Assembly phase started May 2018</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -260,11 +248,37 @@
      id="path4187-8"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" />
-  <rect
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:17.22830391;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:17.22830338, 34.45660675;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect7056"
-     width="1772.2422"
-     height="141.53517"
-     x="2161.6936"
-     y="8.614152" />
+  <g
+     transform="translate(2071.4065,-11.55706)"
+     id="g4353">
+    <path
+       d="m -709.16016,51.832031 0,118.367189 2539.97466,0 0,-118.367189 -2539.97466,0 z"
+       inkscape:href="#rect4321"
+       id="path4323"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:0.04705882;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xlink:href="#rect4321"
+       inkscape:original="M -722.33203 38.660156 L -722.33203 183.37109 L 1843.9863 183.37109 L 1843.9863 38.660156 L -722.33203 38.660156 z "
+       inkscape:radius="-13.17133"
+       sodipodi:type="inkscape:offset" />
+    <rect
+       y="38.659222"
+       x="-722.33228"
+       height="144.7123"
+       width="2566.3181"
+       id="rect4321"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000bef;fill-opacity:0.58048778;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <flowRoot
+       transform="translate(17.742188,4.0934144)"
+       id="flowRoot4333"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4335"><use
+           id="use4337"
+           xlink:href="#path4323"
+           y="0"
+           x="0"
+           width="100%"
+           height="100%" /></flowRegion><flowPara
+         id="flowPara4339"
+         style="font-size:90px">CRP assembly in clean room at CERN started May 2018</flowPara></flowRoot>  </g>
 </svg>

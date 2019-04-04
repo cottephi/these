@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -47,9 +47,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="1.6495065"
-     inkscape:cx="283.88047"
-     inkscape:cy="108.63376"
+     inkscape:zoom="3.0251691"
+     inkscape:cx="196.6635"
+     inkscape:cy="116.30796"
      inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -3767,17 +3767,6 @@
          id="path744-0" />
     </clipPath>
   </defs>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="clip-rule:nonzero"
-     clip-path="url(#clip1-2)"
-     id="g970">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m 45.625,-191.89844 491.23437,0 0,667.92578 -491.23437,0 z m 0,0"
-       id="path972" />
-  </g>
   <use
      height="100%"
      width="100%"
@@ -3861,60 +3850,6 @@
        x="116.01759"
        y="141.68404"
        id="use996" />
-  </g>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="fill:#000000;fill-opacity:1"
-     id="g998">
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-9"
-       x="77.423538"
-       y="152.72723"
-       id="use1000" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-8"
-       x="82.18354"
-       y="152.72723"
-       id="use1002" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-10"
-       x="84.563538"
-       y="152.72723"
-       id="use1004" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-11"
-       x="89.856651"
-       y="152.72723"
-       id="use1006" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-12"
-       x="96.730087"
-       y="152.72723"
-       id="use1008" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-5"
-       x="99.367126"
-       y="152.72723"
-       id="use1010" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-13"
-       x="103.58448"
-       y="152.72723"
-       id="use1012" />
   </g>
   <use
      height="100%"
@@ -4195,67 +4130,6 @@
   <g
      transform="translate(-64.511719,-111.10547)"
      style="fill:#000000;fill-opacity:1"
-     id="g1094">
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-18"
-       x="76.471542"
-       y="178.62161"
-       id="use1096" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-18"
-       x="81.231537"
-       y="178.62161"
-       id="use1098" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-8"
-       x="85.991539"
-       y="178.62161"
-       id="use1100" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-10"
-       x="88.371536"
-       y="178.62161"
-       id="use1102" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-11"
-       x="93.66465"
-       y="178.62161"
-       id="use1104" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-12"
-       x="100.53809"
-       y="178.62161"
-       id="use1106" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-5"
-       x="103.17513"
-       y="178.62161"
-       id="use1108" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-13"
-       x="107.39248"
-       y="178.62161"
-       id="use1110" />
-  </g>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="fill:#000000;fill-opacity:1"
      id="g1112">
     <use
        height="100%"
@@ -4397,60 +4271,6 @@
        x="154.33557"
        y="198.4232"
        id="use1152" />
-  </g>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="fill:#000000;fill-opacity:1"
-     id="g1154">
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-18"
-       x="75.329147"
-       y="209.46638"
-       id="use1156" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-8"
-       x="80.089142"
-       y="209.46638"
-       id="use1158" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-10"
-       x="82.469139"
-       y="209.46638"
-       id="use1160" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-11"
-       x="87.762253"
-       y="209.46638"
-       id="use1162" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-12"
-       x="94.635689"
-       y="209.46638"
-       id="use1164" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-5"
-       x="97.272728"
-       y="209.46638"
-       id="use1166" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-13"
-       x="101.49008"
-       y="209.46638"
-       id="use1168" />
   </g>
   <g
      transform="translate(-64.511719,-111.10547)"
@@ -4600,60 +4420,6 @@
   <g
      transform="translate(-64.511719,-111.10547)"
      style="fill:#000000;fill-opacity:1"
-     id="g1212">
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-26"
-       x="74.567543"
-       y="258.39914"
-       id="use1214" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-8"
-       x="79.327538"
-       y="258.39914"
-       id="use1216" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-10"
-       x="81.707542"
-       y="258.39914"
-       id="use1218" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-11"
-       x="87.000656"
-       y="258.39914"
-       id="use1220" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-12"
-       x="93.874092"
-       y="258.39914"
-       id="use1222" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-5"
-       x="96.511131"
-       y="258.39914"
-       id="use1224" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-13"
-       x="100.72849"
-       y="258.39914"
-       id="use1226" />
-  </g>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="fill:#000000;fill-opacity:1"
      id="g1228">
     <use
        height="100%"
@@ -4697,74 +4463,6 @@
        x="95.149773"
        y="301.81033"
        id="use1240" />
-  </g>
-  <g
-     transform="translate(-64.511719,-111.10547)"
-     style="fill:#000000;fill-opacity:1"
-     id="g1242">
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-27"
-       x="76.661942"
-       y="312.85352"
-       id="use1244" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-28"
-       x="81.421936"
-       y="312.85352"
-       id="use1246" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-9"
-       x="83.801941"
-       y="312.85352"
-       id="use1248" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-8"
-       x="88.561935"
-       y="312.85352"
-       id="use1250" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-10"
-       x="90.941933"
-       y="312.85352"
-       id="use1252" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-11"
-       x="96.235046"
-       y="312.85352"
-       id="use1254" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-12"
-       x="103.10848"
-       y="312.85352"
-       id="use1256" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-5"
-       x="105.74552"
-       y="312.85352"
-       id="use1258" />
-    <use
-       height="100%"
-       width="100%"
-       xlink:href="#glyph0-13"
-       x="109.96288"
-       y="312.85352"
-       id="use1260" />
   </g>
   <path
      inkscape:connector-curvature="0"
@@ -6052,13 +5750,6 @@
     <use
        height="100%"
        width="100%"
-       xlink:href="#glyph5-19"
-       x="197.8028"
-       y="182.81041"
-       id="use1658" />
-    <use
-       height="100%"
-       width="100%"
        xlink:href="#glyph5-6"
        x="202.56279"
        y="182.81041"
@@ -6077,6 +5768,15 @@
        x="209.16014"
        y="182.81041"
        id="use1664" />
+    <use
+       transform="translate(6.4615754,24.313599)"
+       style="fill:#000000;fill-opacity:1"
+       height="100%"
+       width="100%"
+       xlink:href="#glyph5-14"
+       x="191.04359"
+       y="158.62962"
+       id="use1624-3" />
   </g>
   <g
      transform="translate(-64.511719,-111.10547)"
@@ -6188,17 +5888,19 @@
     <use
        height="100%"
        width="100%"
-       xlink:href="#glyph5-25"
-       x="207.36194"
-       y="273.82153"
-       id="use1698" />
-    <use
-       height="100%"
-       width="100%"
        xlink:href="#glyph5-6"
        x="212.12193"
        y="273.82153"
        id="use1700" />
+    <use
+       transform="translate(6.4814443,0)"
+       style="fill:#000000;fill-opacity:1"
+       height="100%"
+       width="100%"
+       xlink:href="#glyph5-24"
+       x="200.22194"
+       y="273.82153"
+       id="use1694-6" />
   </g>
   <g
      transform="translate(-64.511719,-111.10547)"
@@ -6219,4 +5921,64 @@
        y="284.86475"
        id="use1706" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.371265"
+     y="67.260567"
+     id="text5274"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5276"
+       x="11.371265"
+       y="67.260567"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">31 kV/cm</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="12.529944"
+     y="39.366188"
+     id="text5274-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5276-5"
+       x="12.529944"
+       y="39.366188"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">5 kV/cm</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.362266"
+     y="98.105354"
+     id="text5274-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5276-7"
+       x="11.362266"
+       y="98.105354"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">2.5 kV/cm</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.362266"
+     y="147.03812"
+     id="text5274-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5276-8"
+       x="11.362266"
+       y="147.03812"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">2 kV/cm</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.416265"
+     y="199.49249"
+     id="text5274-29"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5276-9"
+       x="11.416265"
+       y="199.49249"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">0.5 kV/cm</tspan></text>
 </svg>

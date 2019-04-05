@@ -2503,16 +2503,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.56547272"
-     inkscape:cx="738.28633"
-     inkscape:cy="606.05619"
+     inkscape:zoom="0.47549169"
+     inkscape:cx="752.20568"
+     inkscape:cy="346.03274"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g13280"
      showgrid="false"
      showguides="false"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
-     inkscape:window-x="65"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:snap-midpoints="true"
@@ -2534,7 +2534,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7738,7 +7738,7 @@
            y="483.18164"
            x="-587.42358"
            id="tspan13137-3"
-           sodipodi:role="line">Charge deposition per unit volume in each view (7 hours of data taking) </tspan><tspan
+           sodipodi:role="line">Charge deposition per unit length in each view (6 hours of data taking) </tspan><tspan
            y="533.18164"
            x="-587.42358"
            sodipodi:role="line"

@@ -16,4 +16,6 @@ clean.sh
 main.pdf
 main.acr
 main.alg
+main.glg
+main.gls
 apero/main.nav

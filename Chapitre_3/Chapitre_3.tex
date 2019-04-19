@@ -6,8 +6,9 @@
 }
 %    \subsection{Introduction}
 %      Faire le lien avec la section précédente, objectifs, localité du projet, labo impliqués
+  blabla d'intro
     
-  \section{Introduction}
+  \section{La Chambre à Projection Temporelle}
     Le principe de la \acrfull{tpc} a été proposé pour la première fois en 1974 par D.R.~Nygren\cite{Nygren1974} et est illustré en \autoref{fig::tpc}. Il s'agit d'un volume cylindrique rempli de gaz à travers lequel est appliqué un champ électrique. Une particule chargée traversant le milieu gazeux ionise le gaz, laissant des paires électron-ion dans son sillage. Le champ électrique sépare les ions, qui vont dériver vers la cathode, des électrons, qui vont dériver vers l'anode. Les électrons peuvent être amplifier dans le gaz grâce à un fort champ électrique, pouvant augmenter le signal jusqu'à un facteur 1000. La lecture des électrons peut se faire en utilisant plusieurs plans de détections. Avec au moins deux plans perpendiculaire, l'information $x$ et $y$ de la trace peut être reconstruite. L'information $z$ peut être obtenu grâce au temps de dérive et à la vitesse de dérive des électrons dans le gaz. L'énergie déposée par la particule est proportionnelle à la charge collectée, et l'information de la perte d'énergie par unité de longueur permet d'identifier les particules grâce à la formule de Bethe-Bloch (voir \autoref{sec::MPV}). Il est également possible de magnétiser la \gls{tpc} afin d'identifier le signe de la charge des particules.
 
     La \gls{tpc} a plusieurs avantages:
@@ -21,6 +22,7 @@
     La première \gls{tpc} a été utilisée dans le complexe de détecteur PEP-4 pour étudier des collisions électrons-positron. La forme cylindrique est la plus adaptée pour les expériences de collisionneur, et la plus grosse \gls{tpc} à gaz actuellement en service est celle de l'expérience ALICE sur le LHC. Pour une expérience de physique des neutrinos, la forme cylindrique n'apporte aucun avantage et le gaz n'est pas un milieu suffisamment dense pour avoir une nombre d'interactions conséquent. En 1977, C.~Rubbia propose donc la \acrfull{lartpc} \cite{Rubbia1977} spécifiquement pour l'étude des neutrinos.
     
   \section{L'argon liquide}\label{sec::lartpc}
+     %La quatrième section se concentre sur la technologie du détecteur lointain, la \gls{lartpc}. Elle a fait ses preuves dans l'expérience à longue ligne de base \gls{icarus}\cite{Antonello2014,Antonello2015,Antonello2016} au \gls{cern} entre 2004 et 2013, l'expérience à courte ligne de base du programme \gls{sbn}\cite{Acciarri2015} du Fermilab MicroBooNE\cite{Microboone2018} (la prise de donnée a commencé en 2015), ainsi que ArgoNeuT\cite{Anderson2012} qui regardait des neutrinos de basse énergie, également au Fermilab, entre 2008 et 2010. Cette section présente ensuite la variante à double phase de cette technologie, utilisant une fine couche d'argon gazeux en haut du volume de détection où la charge déposée par les particules chargées est amplifiée, permettant d'améliorer le rapport signal sur bruit tout en réduisant le coup de l'électronique de lecture. Cette technologie est en prototypage au CERN par le projet \gls{wa105}/ProtoDU$\nu$E-DP, qui est l'objet de cette thèse.
       Dense, peu cher, \\
       proto single phase = qq resultats
     

@@ -9,22 +9,107 @@
   blabla d'intro
     
   \section{La Chambre à Projection Temporelle}
-    Le principe de la \acrfull{tpc} a été proposé pour la première fois en 1974 par D.R.~Nygren\cite{Nygren1974} et est illustré en \autoref{fig::tpc}. Il s'agit d'un volume cylindrique rempli de gaz à travers lequel est appliqué un champ électrique. Une particule chargée traversant le milieu gazeux ionise le gaz, laissant des paires électron-ion dans son sillage. Le champ électrique sépare les ions, qui vont dériver vers la cathode, des électrons, qui vont dériver vers l'anode. Les électrons peuvent être amplifier dans le gaz grâce à un fort champ électrique, pouvant augmenter le signal jusqu'à un facteur 1000. La lecture des électrons peut se faire en utilisant plusieurs plans de détections. Avec au moins deux plans perpendiculaire, l'information $x$ et $y$ de la trace peut être reconstruite. L'information $z$ peut être obtenu grâce au temps de dérive et à la vitesse de dérive des électrons dans le gaz. L'énergie déposée par la particule est proportionnelle à la charge collectée, et l'information de la perte d'énergie par unité de longueur permet d'identifier les particules grâce à la formule de Bethe-Bloch (voir \autoref{sec::MPV}). Il est également possible de magnétiser la \gls{tpc} afin d'identifier le signe de la charge des particules.
+    Le principe de la \acrfull{tpc} a été proposé pour la première fois en 1974 par D.R.~Nygren\cite{Nygren1974} et est illustré en \autoref{fig::tpc}. Il s'agit d'un volume rempli de gaz ou de liquide à travers lequel est appliqué un champ électrique. Une particule chargée traversant le milieu l'ionise, laissant des paires électron-ion dans son sillage. Le champ électrique sépare les ions qui vont dériver vers la cathode des électrons qui vont dériver vers l'anode. Si el milieu est gazeux, les électrons peuvent être amplifiés grâce à un fort champ électrique, pouvant augmenter le signal jusqu'à un facteur 1000. La lecture des électrons peut se faire en utilisant plusieurs plans de détections. Avec au moins deux plans, l'information $x$ et $y$ de la trace peut être reconstruite. L'information $z$ peut être obtenu grâce au temps de dérive et à la vitesse de dérive des électrons dans le milieu. L'énergie déposée par la particule est proportionnelle à la charge collectée, et l'information de la perte d'énergie par unité de longueur permet d'identifier les particules grâce à la formule de Bethe-Bloch (voir \autoref{sec::MPV}). Il est également possible de magnétiser la \gls{tpc} afin d'identifier le signe de la charge des particules et de mesurer leur impulsion.
 
     La \gls{tpc} a plusieurs avantages:
     \begin{itemize}
       \item[$\bullet$] Toutes les interactions ont lieu dans un volume homogène et continue, sans zones mortes.
+      \item[$\bullet$] Le gaz ou le liquide remplissant ce volume est à la fois la cible et le milieu de détection.
       \item[$\bullet$] L'information 3D des traces est reconstruite sans ambiguïté.
       \item[$\bullet$] Il est possible de séparer plusieurs traces même quand la densité de trace est importante, permettant l'étude d'interactions complexes.
       \item[$\bullet$] Il est possible de reconstruire la charge déposée dans le milieu et d'utiliser le dépôt d'énergie par unité de longueur pour identifier les particules.
+      \item[$\bullet$] Une \gls{tpc} peut être magnétisée afin d'identifier le signe des particules chargées et de mesurer leur impulsion.
     \end{itemize}
     
     La première \gls{tpc} a été utilisée dans le complexe de détecteur PEP-4 pour étudier des collisions électrons-positron. La forme cylindrique est la plus adaptée pour les expériences de collisionneur, et la plus grosse \gls{tpc} à gaz actuellement en service est celle de l'expérience ALICE sur le LHC. Pour une expérience de physique des neutrinos, la forme cylindrique n'apporte aucun avantage et le gaz n'est pas un milieu suffisamment dense pour avoir une nombre d'interactions conséquent. En 1977, C.~Rubbia propose donc la \acrfull{lartpc} \cite{Rubbia1977} spécifiquement pour l'étude des neutrinos.
     
-  \section{L'argon liquide}\label{sec::lartpc}
+  \section{La TPC à argon liquide}\label{sec::lartpc}
+    
+    La \autoref{fig::lartpc} montre le principe de fonctionnement de la \gls{lartpc} de l'expérience \gls{icarus}. L'ionisation de l'argon par une particule chargée va générer, en plus des paires électron-ion, une grande quantité de photons de \SI{128}{\nano\meter}. Ces photons, détectés par des \glspl{pmt}, servent de déclencheurs pour l'enregistrement des événements. La dérive des électrons se fait ensuite horizontalement grâce à un champ électrique de \SI{500}{\volt\per\centi\meter} sur deux fois \SI{1.5}{\meter} vers le plan de lecture, situé sur chaque côté du volume de détection, la cathode étant au milieu du volume. Un seul plan de lecture est représenté sur la \autoref{fig::lartpc}. Les deux plans de lectures sont constitués de trois plans parallèles de fils verticaux. Les deux premiers lisent la charge de manière non destructive, par induction. La charge est ensuite collectée sur le troisième plan. Le principe est le même dans le démonstrateur de proto\gls{dune}-SP, l'expérience de prototypage de la variante "simple phase" de la technologie \gls{lartpc} au CERN. Dans ce prototype, qui a commencé à prendre des données en faisceau et avec des rayons cosmiques en 2018, la longueur de dérive est de deux fois \SI{3}{\meter}.
+
+    La version "double phase", prototypée par le projet \gls{wa105}/proto\gls{dune}-DP, prendra des données cosmiques à partir de l'été 2019, et pourra peut être prendre des données de faisceau après le second arrêt long du CERN qui a commencé fin 2018 et finira fin 2020. Dans cette version, schématisée par la \autoref{fig::dlartpc}, une fine couche d'argon gazeux est maintenue à la surface de l'argon liquide. La dérive se fait donc verticalement, sur \SI{6}{\meter}, avec le plan de cathodes placée en bas du volume d'argon liquide et les \gls{crp} placés dans la phase gazeuse. Ces \gls{crp} sont munis d'une grille d'extraction, d'amplificateurs d'électrons et d'anodes segmentées. La grille sert à extraire les électrons de la phase liquide à la phase gazeuse, les amplificateurs sont capables de fournir un gain pouvant aller jusqu'à 200 d'après les premiers prototypes de cette technologie\cite{Cantini2014}, et les anodes sont capables de reconstruire l'information $x/y$ des événements. Comme dans la version simple phase, l'information en $z$ est donnée par le temps de dérive et la vitesse de dérive des électrons dans l'argon liquide.
+
+    \subsection{Pourquoi l'argon liquide?}
+      L'argon liquide a de nombreux avantage à être utilisé dans une \gls{tpc}\cite{Rubbia1977} :
+      \begin{itemize}
+        \item[$\bullet$] Il ne capture pas les électrons de dérive, permettant des distances de dérive de plusieurs mètres et une grande précision sur la mesure de la charge déposée.
+        \item[$\bullet$] La mobilité des électrons est grande : un événement dont les électrons dérivent sur \SI{6}{\meter}peut être entièrement contenu dans une fenêtre de moins de \SI{10}{\milli\second}).
+        \item[$\bullet$] Il est inerte. Il n'y a donc pas de phénomène de vieillissement des éléments présents dans le liquide à cause de l'argon.
+        \item[$\bullet$] Il est dense, augmentant la probabilité d'événements rares comparé aux \gls{tpc} à gaz.
+        \item[$\bullet$] Il scintille lors de l'ionisation, et est transparent à sa propre scintillation, ce qui fournit un déclencheur idéal.
+        \item[$\bullet$] Une \gls{mip} laisse en moyenne \numprint{60000} électrons par centimètre dans l'argon liquide dans un champ électrique de \SI{500}{\volt\per\centi\meter}. Pour comparaison, dans le prototype "simple phase" de proto\gls{dune}-SP, le bruit électronique est autour de \numprint{1000} électrons.
+        \item[$\bullet$] Il est peu cher et abondant
+      \end{itemize}
+      Deux inconvénients sont à souligner : l'argon étant liquide à moins de \SI{90}{\kelvin}, il nécessite des installations cryogénique importantes. De plus, la vitesse de dérive des ions est bien plus faible que la vitesse de dérive des électrons, ce qui peut résulter en une accumulation de charge positive dans l'argon liquide, modifiant le champ de dérive et pouvant ainsi déformer les traces. Cet effet est impactant surtout pour les grandes \gls{lartpc} en surface, où le flux de rayons comique peut engendrer une grande accumulation de charge.
+    
+    \subsection{La vie mouvementée des électrons de dérive}
+        %https://lar.bnl.gov/properties/
+        Une \gls{mip}, dans l'argon liquide, dépose une énergie moyenne par unité de longueur $(dE/dx)_{MIP}$ de \SI{2.12}{\mega\electronvolt\per\centi\meter} (voir équation \eqref{eq::bethe}). L'énergie d'ionisation de l'argon $W$ étant de \SI{23.6}{\eV}, une \gls{mip} crée en moyenne \numprint{90000} paires électron-ion par centimètres.
+        La recombinaison, défini comme la fraction d'électron se recombinant à un ion, est d'environ \numprint{0.3} dans l'argon liquide avec un champ électrique de \SI{0.5}{\kilo\volt\per\centi\meter}. Il en résulte que la charge moyenne déposée par unité de longueur par une \gls{mip}, $(dQ/dx)_{MIP}$, est d'environ \SI{10}{\femto\coulomb\per\centi\meter}.  Lors de leur dérive, les électrons peuvent être absorbés par des impuretés présentes dans l'argon liquide, principalement O$_2$, H$_2$O et CO$_2$. Ces pertes suivent une loi exponentielle décroissante, caractérisée par un temps de vie effectif des électrons. \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014} en observant l'atténuation du signal avec la distance de dérive. Ce temps de vie correspond à une atténuation de \numprint{0.89}(\numprint{0.78}) pour la distance de dérive maximale de \SI{3}{\meter}(\SI{6}{\meter}) de proto\gls{dune}-SP(proto\gls{dune}-DP). Durant leur dérive, les électrons vont subir de nombreuses diffusions, qui vont étirer le signal. Ces diffusions suivent la décrites par l'équation \eqref{eq::diffusion} , dont les caractéristiques importantes sont les coefficients de diffusion. La diffusion transverse, dans le plan $xy$, est caractérisée par le coefficient de diffusion $D_T$. La diffusion longitudinale, le long de la dérive, est caractérisée par le coefficient de diffusion $D_L$. Une étude de 2015\cite{Li2015} permet d'estimer $D_T=\SI{13.1586}{\centi\meter\squared\per\second}$ et $D_L=\SI{6.8223}{\centi\meter\squared\per\second}$ pour un champ électrique de \SI{500}{\volt\per\centi\meter} et une température de l'argon de \SI{87}{\kelvin}. Ces diffusions correspondent à
+      \subsubsection{Énergie déposée dans l'argon liquide}
+        \cite{pdg2018}
+        \begin{table}[htpb]
+          \centering
+          \begin{tabular}{|cl|l|cl|}
+            \cline{1-2} \cline{4-5}
+            Symbol & Définition &  & Symbol & Définition \\ \cline{1-2} \cline{4-5} 
+            $K$ & \begin{tabular}[c]{@{}l@{}}$4\pi N_Ar_e^2m_ec^2$,\\ \SI{0.307075}{\mega\eV\centi\meter\squared\per\mole}\end{tabular} &  & $m_ec^2$ & \begin{tabular}[c]{@{}l@{}}Masse de l'électron multiplité par \\ la célérité de la lumière,\\ \SI{0.510998928(11)}{\mega\eV}\end{tabular} \\
+            $r_e$ & \begin{tabular}[c]{@{}l@{}}Rayon classique de l'électron,\\ \SI{2.8179403267(27)}{\femto\meter}\end{tabular} &  & $I$ & Énergie d'exitation moyenne, \si{\eV} \\
+            $N_A$ & \begin{tabular}[c]{@{}l@{}}Nombre d'Avogadro,\\ \SI{6.02214129(27)e23}{\per\mole}\end{tabular} &  & $T_{max}$ & \begin{tabular}[c]{@{}l@{}}Énergie maximum transférée à \\ un électron, $\frac{2m_ec^2\beta^2\gamma^2}{1+2\gamma m_e/M +(m_e/M)^2}\si{\mega\eV}$\end{tabular} \\
+            $q$ & \begin{tabular}[c]{@{}l@{}}Nombre de charge élémentaire\\ de la particule incidente\end{tabular} &  & $M$ & Masse de la particule incidente \\
+            $Z$ & Numéro atomique du milieu &  & $\delta(\beta\gamma)$ & \begin{tabular}[c]{@{}l@{}}Correction due aux effets de \\ densité\end{tabular} \\
+            $A$ & Masse atomique du milieu &  & $T_{cut}$ & \begin{tabular}[c]{@{}l@{}}Coupure sur l'énergie maximum\\ transférée à un électron, \si{mega\eV}\end{tabular} \\
+            $\beta$ & \begin{tabular}[c]{@{}l@{}}$v/c$ avec $v$ la vitesse de la \\ particule incidente\end{tabular} &  & $\rho$ & Densité du milieu, \si{\gram\per\centi\meter} \\
+            $\gamma$ & Facteur de Lorentz &  & $d$ & \begin{tabular}[c]{@{}l@{}}Distance sur laquelle la particule\\ incidente dépose de l'énergie, \si{\centi\meter}\end{tabular} \\ \cline{1-2} \cline{4-5} 
+          \end{tabular}
+          \caption{\label{tab::bethe_params}Paramètres utilisées dans les équations \eqref{eq::bethe}, \eqref{eq::bethe_tcut} et \eqref{eq::mpv}. Tableau tiré de \cite{pdg2018}.}
+        \end{table}
+        \begin{equation}
+          \frac{dE}{dx}\biggr\rvert_{moyenne} = -Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2}\right)-\beta^2-\frac{\delta(\beta\gamma)}{2} \right]\label{eq::bethe}
+        \end{equation}
+        \begin{eqnarray}
+          \frac{dE}{dx}\biggr\rvert_{T\leq T_{cut}} = & -Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{cut}}{I^2}\right)-\frac{\beta^2}{2}\left(1+\frac{T_{cut}}{T_{max}}\right)-\frac{\delta(\beta\gamma)}{2} \right]\label{eq::bethe_tcut} \\
+          \frac{dE}{dx}\biggr\rvert_{MPV} = & \xi\left[\ln\left(\frac{2mc^2\beta^2\gamma^2}{I}\right)+\ln(\xi/I)+j-\delta(\beta\gamma)\right] \label{eq::mpv} \\
+          \xi = & (K/2)(Z/A)(x/\beta^2)\nonumber\\
+          x = & \rho\times d\nonumber\\
+          j = & 0.200\nonumber
+        \end{eqnarray}
+      \subsubsection{Nombre d'électrons de dérive}
+        \cite{Amoruso2004}
+        \begin{eqnarray}
+          N_0= &\frac{dE}{dx}\times d \times R/W\label{eq::N0}\\
+         R = & \frac{A}{1+\frac{k}{E\rho}\frac{dE}{dx}}\label{eq::R}
+        \end{eqnarray}
+        $d$ est la distance sur laquelle la particule a déposé de la charge, $W$ est l'énergie d'ionisation du milieu.
+      \subsubsection{Pertes dues aux impuretés lors de la dérive}
+        \cite{Buckley1989}
+        \begin{eqnarray}
+          N(t) = & N_0\textbf{e}^{-t_d/\tau}=N_0\textbf{e}^{-d/v_d\tau}\label{eq::losses} \\
+          \tau = & \frac{300}{[O_2](\si{ppb})}\label{eq::purity}
+        \end{eqnarray}
+      \subsubsection{Vitesse de dérive}
+        \cite{Li2015}
+        \begin{eqnarray}
+          \mu = & \frac{a_0+a_1E+a_2E^{3/2}+a_3E^{5/2}}{1+(a_1/a_0)E+a_4E^2+a_5e^3}\left(\frac{T}{T_0}\right)^{-3/2}\label{eq::mobility} \\
+          v_d = & \mu\times E\label{eq::velocity}
+        \end{eqnarray}
+        \begin{table}[htpb]
+          \centering
+          \begin{tabular}{ccc}
+          $a_0$ & = & \numprint{551.6} \\
+          $a_1$ & = & \numprint{7953.7} \\
+          $a_2$ & = & \numprint{4440.43} \\
+          $a_3$ & = & \numprint{4.29} \\
+          $a_4$ & = & \numprint{43.63} \\
+          $a_5$ & = & \numprint{0.2053}
+          \end{tabular}
+          \caption{\label{tab::fit_par}Paramètres de l'équation \eqref{eq::mobility}}
+        \end{table}
+      \subsubsection{Diffusion durant la dérive}
+        \begin{equation}\label{eq::diffusion}
+          n(x,y,z,t) = \frac{n_0}{4\pi D_T t_d\sqrt{4\pi D_L t_d}}\exp\left(-\frac{(z-d)^2}{4D_L t_d}\right)\exp\left(-\frac{x^2+y^2}{4D_T t_d}\right)\exp\left(-d/v_d\tau\right)
+        \end{equation}
      %La quatrième section se concentre sur la technologie du détecteur lointain, la \gls{lartpc}. Elle a fait ses preuves dans l'expérience à longue ligne de base \gls{icarus}\cite{Antonello2014,Antonello2015,Antonello2016} au \gls{cern} entre 2004 et 2013, l'expérience à courte ligne de base du programme \gls{sbn}\cite{Acciarri2015} du Fermilab MicroBooNE\cite{Microboone2018} (la prise de donnée a commencé en 2015), ainsi que ArgoNeuT\cite{Anderson2012} qui regardait des neutrinos de basse énergie, également au Fermilab, entre 2008 et 2010. Cette section présente ensuite la variante à double phase de cette technologie, utilisant une fine couche d'argon gazeux en haut du volume de détection où la charge déposée par les particules chargées est amplifiée, permettant d'améliorer le rapport signal sur bruit tout en réduisant le coup de l'électronique de lecture. Cette technologie est en prototypage au CERN par le projet \gls{wa105}/ProtoDU$\nu$E-DP, qui est l'objet de cette thèse.
-      Dense, peu cher, \\
-      proto single phase = qq resultats
     
   \section{La technologie à double phase d'argon}
     \subsection{Principe}
@@ -40,3 +125,4 @@
         pas plus de quelques paragraphe, il sera décrit plus en détail au chapitre 4
       \subsubsection{le 666}
         un peu plus que sur le 311
+\printbibliography

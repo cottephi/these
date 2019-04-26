@@ -40,14 +40,43 @@
         \item[$\bullet$] Une \gls{mip} laisse en moyenne \numprint{60000} électrons par centimètre dans l'argon liquide dans un champ électrique de \SI{500}{\volt\per\centi\meter}. Pour comparaison, dans le prototype "simple phase" de proto\gls{dune}-SP, le bruit électronique est autour de \numprint{1000} électrons.
         \item[$\bullet$] Il est peu cher et abondant
       \end{itemize}
-      Deux inconvénients sont à souligner : l'argon étant liquide à moins de \SI{90}{\kelvin}, il nécessite des installations cryogénique importantes. De plus, la vitesse de dérive des ions est bien plus faible que la vitesse de dérive des électrons, ce qui peut résulter en une accumulation de charge positive dans l'argon liquide, modifiant le champ de dérive et pouvant ainsi déformer les traces. Cet effet est impactant surtout pour les grandes \gls{lartpc} en surface, où le flux de rayons comique peut engendrer une grande accumulation de charge.
-    
+      Deux inconvénients sont à souligner : l'argon étant liquide à moins de \SI{90}{\kelvin}, il nécessite des installations cryogéniques importantes. De plus, la vitesse de dérive des ions est bien plus faible que la vitesse de dérive des électrons, ce qui peut résulter en une accumulation de charge positive dans l'argon liquide, modifiant le champ de dérive et pouvant ainsi déformer les traces. Cet effet est impactant surtout pour les grandes \gls{lartpc} en surface, où le flux de rayons comique peut engendrer une grande accumulation de charge.
+    \begin{table}[htpb]
+      \centering
+      \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Propriété} & \textbf{Symbol, valeur et/ou unité} \\ \hline \hline
+        Numéro atomique & $Z$, 18 \\
+            \specialrule{.01em}{.0em}{.0em}
+        Masse atomique & $A$, \SI{39.948}{\gram\per\mole} \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Température d'ébulition\\ à pression atmosphérique\end{tabular} & \SI{87.303}{\kelvin} \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Température de fusion\\ à pression atmosphérique\end{tabular} & \SI{83.8}{\kelvin} \\
+            \specialrule{.01em}{.0em}{.0em}
+        Densité (liquide) & $\rho$, \SI{1.3973}{\gram\per\centi\meter\cubed} \\
+            \specialrule{.01em}{.0em}{.0em}
+        Point triple & \SI{83.8059}{\kelvin}, \SI{0.68891}{\bar} \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}constante diélectrique\\ du gaz (du liquide)\end{tabular} & $\epsilon_{g}(\epsilon_{l})$, \numprint{1.000516}(\numprint{1.504}) \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Énergie d'ionisation\\ du gaz (du liquide)\end{tabular} & $W$, \SI{26.4}{\eV} (\SI{23.6}{\eV}) \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Énergie d'excitation\\ moyenne du liquide\end{tabular} & $I$, \SI{188}{\eV} \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Longueur d'onde de \\ scintillation\end{tabular} & \SI{128}{\nano\meter}\cite{Gedanken1972} \\
+            \specialrule{.01em}{.0em}{.0em}
+        \begin{tabular}[c]{@{}l@{}}Longueur de diffusion\\ de Rayleigh (liquide, \SI{128}{\nano\meter})\end{tabular} & \SI{90}{\centi\meter} \\ \hline
+      \end{tabular}
+      \caption{\label{tab::Ar}Propriété physiques et chimiques de l'argon.}
+    \end{table}
     \subsection{La vie mouvementée des électrons de dérive}
         %https://lar.bnl.gov/properties/
         Une \gls{mip}, dans l'argon liquide, dépose une énergie moyenne par unité de longueur $(dE/dx)_{MIP}$ de \SI{2.12}{\mega\electronvolt\per\centi\meter} (voir équation \eqref{eq::bethe}). L'énergie d'ionisation de l'argon $W$ étant de \SI{23.6}{\eV}, une \gls{mip} crée en moyenne \numprint{90000} paires électron-ion par centimètres.
-        La recombinaison, défini comme la fraction d'électron se recombinant à un ion, est d'environ \numprint{0.3} dans l'argon liquide avec un champ électrique de \SI{0.5}{\kilo\volt\per\centi\meter}. Il en résulte que la charge moyenne déposée par unité de longueur par une \gls{mip}, $(dQ/dx)_{MIP}$, est d'environ \SI{10}{\femto\coulomb\per\centi\meter}.  Lors de leur dérive, les électrons peuvent être absorbés par des impuretés présentes dans l'argon liquide, principalement O$_2$, H$_2$O et CO$_2$. Ces pertes suivent une loi exponentielle décroissante, caractérisée par un temps de vie effectif des électrons. \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014} en observant l'atténuation du signal avec la distance de dérive. Ce temps de vie correspond à une atténuation de \numprint{0.89}(\numprint{0.78}) pour la distance de dérive maximale de \SI{3}{\meter}(\SI{6}{\meter}) de proto\gls{dune}-SP(proto\gls{dune}-DP). Durant leur dérive, les électrons vont subir de nombreuses diffusions, qui vont étirer le signal. Ces diffusions suivent la décrites par l'équation \eqref{eq::diffusion} , dont les caractéristiques importantes sont les coefficients de diffusion. La diffusion transverse, dans le plan $xy$, est caractérisée par le coefficient de diffusion $D_T$. La diffusion longitudinale, le long de la dérive, est caractérisée par le coefficient de diffusion $D_L$. Une étude de 2015\cite{Li2015} permet d'estimer $D_T=\SI{13.1586}{\centi\meter\squared\per\second}$ et $D_L=\SI{6.8223}{\centi\meter\squared\per\second}$ pour un champ électrique de \SI{500}{\volt\per\centi\meter} et une température de l'argon de \SI{87}{\kelvin}. Ces diffusions correspondent à
+        La recombinaison, défini comme la fraction d'électron se recombinant à un ion, est d'environ \numprint{0.3} dans l'argon liquide avec un champ électrique de \SI{0.5}{\kilo\volt\per\centi\meter}. Il en résulte que la charge moyenne déposée par unité de longueur par une \gls{mip}, $(dQ/dx)_{MIP}$, est d'environ \SI{10}{\femto\coulomb\per\centi\meter}. Cette recombinaison produit également de des photons de \SI{128}{\nano\meter}\footnote{La scintillation est également due à l'excitation d'atomes d'argon par la particule incidente sans création de paires électron-ion.}, qui résulte de la désexcitation d'atome d'argon ayant réabsorbé un électron ionisé. La scintillation dans l'argon liquide est de l'ordre de \SI{40000}{\gamma\per\mega\eV}\cite{Cennini1999}. Lors de leur dérive, les électrons peuvent être absorbés par des impuretés présentes dans l'argon liquide, principalement O$_2$, H$_2$O et CO$_2$. Ces pertes suivent une loi exponentielle décroissante, caractérisée par un temps de vie effectif des électrons. \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014} en observant l'atténuation du signal avec la distance de dérive. Ce temps de vie correspond à une atténuation de \numprint{0.89}(\numprint{0.78}) pour la distance de dérive maximale de \SI{3}{\meter}(\SI{6}{\meter}) de proto\gls{dune}-SP(proto\gls{dune}-DP). Durant leur dérive, les électrons vont subir de nombreuses diffusions, qui vont étirer le signal le long de la dérive et dans le plan perpendiculaire à la dérive. La densité d'électron suit alors une distribution normale décrites par l'équation \eqref{eq::diffusion}. La diffusion transverse, dans le plan $xy$, est caractérisée par le coefficient de diffusion $D_T$. La diffusion longitudinale, le long de la dérive, est caractérisée par le coefficient de diffusion $D_L$. Une étude de 2015\cite{Li2015} permet d'estimer $D_T=\SI{13.1586}{\centi\meter\squared\per\second}$ et $D_L=\SI{6.8223}{\centi\meter\squared\per\second}$ pour un champ électrique de \SI{500}{\volt\per\centi\meter} et une température de l'argon de \SI{87}{\kelvin}. Ces diffusions correspondent à un écart type dans le plan $xy$ de \SI{9.8}{\milli\meter}(\SI{13.8}{\milli\meter}) et à un écart type le long de la dérive de \SI{7.0}{\milli\meter}(\SI{10.0}{\milli\meter}) après une dérive de \SI{3}{\meter}(\SI{6}{\meter}). Le signal sera donc un nuage d'électron arrivant au plan de détection. La \autoref{fig::process} résume l'ensemble du processus.
+
       \subsubsection{Énergie déposée dans l'argon liquide}
-        \cite{pdg2018}
+
         \begin{table}[htpb]
           \centering
           \begin{tabular}{|cl|l|cl|}
@@ -57,30 +86,67 @@
             $r_e$ & \begin{tabular}[c]{@{}l@{}}Rayon classique de l'électron,\\ \SI{2.8179403267(27)}{\femto\meter}\end{tabular} &  & $I$ & Énergie d'exitation moyenne, \si{\eV} \\
             $N_A$ & \begin{tabular}[c]{@{}l@{}}Nombre d'Avogadro,\\ \SI{6.02214129(27)e23}{\per\mole}\end{tabular} &  & $T_{max}$ & \begin{tabular}[c]{@{}l@{}}Énergie maximum transférée à \\ un électron, $\frac{2m_ec^2\beta^2\gamma^2}{1+2\gamma m_e/M +(m_e/M)^2}\si{\mega\eV}$\end{tabular} \\
             $q$ & \begin{tabular}[c]{@{}l@{}}Nombre de charge élémentaire\\ de la particule incidente\end{tabular} &  & $M$ & Masse de la particule incidente \\
-            $Z$ & Numéro atomique du milieu &  & $\delta(\beta\gamma)$ & \begin{tabular}[c]{@{}l@{}}Correction due aux effets de \\ densité\end{tabular} \\
+            $Z$ & Numéro atomique du milieu &  & $\delta(\beta\gamma)$ & \begin{tabular}[c]{@{}l@{}}Correction due aux effets de \\ densité (voir \cite{pdg2018})\end{tabular} \\
             $A$ & Masse atomique du milieu &  & $T_{cut}$ & \begin{tabular}[c]{@{}l@{}}Coupure sur l'énergie maximum\\ transférée à un électron, \si{mega\eV}\end{tabular} \\
             $\beta$ & \begin{tabular}[c]{@{}l@{}}$v/c$ avec $v$ la vitesse de la \\ particule incidente\end{tabular} &  & $\rho$ & Densité du milieu, \si{\gram\per\centi\meter} \\
-            $\gamma$ & Facteur de Lorentz &  & $d$ & \begin{tabular}[c]{@{}l@{}}Distance sur laquelle la particule\\ incidente dépose de l'énergie, \si{\centi\meter}\end{tabular} \\ \cline{1-2} \cline{4-5} 
+            $\gamma$ & Facteur de Lorentz, $\frac{1}{\sqrt{1-\beta^2}}$ &  & $ds$ & \begin{tabular}[c]{@{}l@{}}Distance sur laquelle la particule\\ incidente dépose de l'énergie, \si{\centi\meter}\end{tabular} \\ \cline{1-2} \cline{4-5} 
           \end{tabular}
           \caption{\label{tab::bethe_params}Paramètres utilisées dans les équations \eqref{eq::bethe}, \eqref{eq::bethe_tcut} et \eqref{eq::mpv}. Tableau tiré de \cite{pdg2018}.}
         \end{table}
+
+        Une \gls{tpc} est capable de visualiser une trace en 3D et de mesurer l'énergie déposée dans le milieu. Très souvent, il est nécessaire de pouvoir comparer la mesure de l'énergie à une prédiction (calibration, estimation de gain...). Chaque canal de lecture, que ce soient des fils comme dans \gls{icarus} ou des pistes de cuivre comme dans \gls{wa105}/proto\gls{dune}-DP, pourra ainsi mesurer la charge résultant du dépôt d'énergie d'une particule le long d'une petite distance $ds$ dans le liquide, distance correspondant à la distance entre deux canaux de lecture et au angles incidents de la particule (voir \autoref{fig::ds}). Si l'énergie déposée sur cette distances est faible en comparaison de l'énergie totale de la particule incidente, alors cette dernière peut être considérée comme ayant une impulsion constante durant la traversée du milieu. Dans ce cas, la distribution de l'énergie déposée par centimètre $\frac{\Delta E}{ds}$ suivra une loi de Landau-Vavilov convoluée à une Gaussienne\cite{Bichsel2006} (c'est le cas pour un muon cosmique traversant de l'argon liquide). La \autoref{fig::landau} montre une telle distribution, avec en rouge la loi de Landau-Vavilov seule et en noir la convolution à une gaussienne. Elle est asymétrique avec une longue queue de distribution à droite, correspondant au cas rares où la particule incidente transmet une grande partie de son énergie d'un coup. Une telle distribution n'a pas de moyenne bien définie due à cette queue de distribution infinie. Une particule traversant un milieu ne peut cependant pas perdre une énergie infinie, aussi une moyenne, notée $\frac{\Delta E}{ds}\rvert_{moyenne}$, peut être calculée en tronquant la distribution.
+
+        L'énergie moyenne perdue par unité de longueur par une particule dans un milieu, $\frac{dE}{dx}\rvert_{moyenne}$, est appelée pouvoir d'arrêt. Dans les milieux de numéro atomique intermédiaire comme l'argon, et pour des particules ayant un $\beta\gamma$ compris entre \numprint{0.1} et \numprint{1000}, ce pouvoir d'arrêt est bien décrit par la loi de Bethe-Bloche\cite{pdg2018} :
         \begin{equation}
-          \frac{dE}{dx}\biggr\rvert_{moyenne} = -Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2}\right)-\beta^2-\frac{\delta(\beta\gamma)}{2} \right]\label{eq::bethe}
+          \frac{dE}{dx}\biggr\rvert_{moyenne} = -Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2}\right)-\beta^2-\frac{\delta(\beta\gamma)}{2} \right]\label{eq::bethe}.
         \end{equation}
+        Les définitions des différents paramètres de cette équations sont donnés dans le \autoref{tab::bethe_params}, les valeurs pour l'argon sont données dans le \autoref{tab::Ar}. Ce pouvoir d'arrêt dépend de l'impulsion de la particule incidente, de sa charge électrique, ainsi que du milieu traversé. Il dépend également de la masse de la particule à travers $T_{max}$, mais cette dépendance n'est visible qu'à très haute énergie\cite{pdg2018}. En pratique, cette moyenne dans un milieu donné ne dépend que de l'impulsion de la particule incidente. L'allure de cette moyenne en fonction de l'impulsion pour un muon est représentée en trait pleins bleu sur la \autoref{fig::bethe_landau}. On y voit une valeur minimum à \SI{2.12}{\mega\electronvolt\per\centi\meter}, ce qui correspond à une \gls{mip}. Les autres courbes sont expliquées plus loin.
+        
+        Dans un détecteur, si une particule incidente transfert une grande partie de son énergie à un électron, ce dernier peut ioniser le milieu à son tour et être détectable. Un tel électron est appelé $\delta-e$, et n'est pas un électron de dérive. Si il est discernable de la trace principale, son énergie, et donc l'énergie perdu par la particule incidente au moment de la création de ce $\delta-e$, ne figurera pas dans la distribution des $\frac{\Delta E}{ds}$. Dans ce cas là, la moyenne de la distribution, $\frac{\Delta E}{ds}\rvert_{moyenne}$, sera différente du pouvoir d'arrêt $\frac{dE}{dx}\rvert_{moyenne}$. Il est cependant possible de modifier l'équation \eqref{eq::bethe} en y incluant une coupure sur l'énergie maximum transférée, $T_{cut}$\cite{pdg2018}. Cette coupure doit correspondre à la limite en dessous de laquelle un $\delta-e$ n'est plus discernable de la trace principale dans le détecteur. L'équation modifiée est alors :
+        \begin{equation}\label{eq::bethe_tcut}
+          \frac{dE}{dx}\biggr\rvert_{T\leq T_{cut}} = Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{cut}}{I^2}\right)-\frac{\beta^2}{2}\left(1+\frac{T_{cut}}{T_{max}}\right)-\frac{\delta(\beta\gamma)}{2} \right]
+        \end{equation}
+        et son allure est représentée par les traits pointillés bleu sur la \autoref{fig::bethe_landau}. On voit que l'impulsion correspondant à une \gls{mip} augmente avec la coupure et que $\frac{dE}{dx}\rvert_{T\leq T_{cut}}$ atteint un plateau, contrairement à $\frac{dE}{dx}\rvert_{moyenne}$.
+        
+        Pour pouvoir comparer $\frac{dE}{dx}\rvert_{T\leq T_{cut}}$ à $\frac{\Delta E}{ds}\rvert_{moyenne}$, il est donc nécessaire d'estimer correctement $T_{cut}$. Pour s'affranchir de cette difficulté, il est possible d'utiliser la \gls{mpv} de la loi de de Landau-Vavilov présente dans la distribution des $\frac{\Delta E}{ds}$. Cependant, cette valeur notée $\frac{\Delta E}{ds}\rvert_{MPV}$ ne correspond pas au maximum de la distribution des $\frac{\Delta E}{ds}$, de par la convolution à une Gaussienne. Elle doit être extraite par un ajustement. La \gls{mpv} d'une Landau-Vavilov suit l'équation\cite{pdg2018}
         \begin{eqnarray}
-          \frac{dE}{dx}\biggr\rvert_{T\leq T_{cut}} = & -Kq^2 \frac{Z}{A\beta^2}\left[\frac{1}{2}\ln\left(\frac{2m_ec^2\beta^2\gamma^2T_{cut}}{I^2}\right)-\frac{\beta^2}{2}\left(1+\frac{T_{cut}}{T_{max}}\right)-\frac{\delta(\beta\gamma)}{2} \right]\label{eq::bethe_tcut} \\
-          \frac{dE}{dx}\biggr\rvert_{MPV} = & \xi\left[\ln\left(\frac{2mc^2\beta^2\gamma^2}{I}\right)+\ln(\xi/I)+j-\delta(\beta\gamma)\right] \label{eq::mpv} \\
-          \xi = & (K/2)(Z/A)(x/\beta^2)\nonumber\\
-          x = & \rho\times d\nonumber\\
-          j = & 0.200\nonumber
+          \frac{dE}{dx}\biggr\rvert_{MPV} = & \xi\left[\ln(ds) + \ln\left(\frac{2mc^2\beta^2\gamma^2}{I}\right)+\ln(\xi/I)+j-\beta^2 - \delta(\beta\gamma)\right] \label{eq::mpv} \\
+          \xi = & \frac{KZ\rho z^2}{2A\beta^2}\nonumber\\
+          j = & 0.200.\nonumber
         \end{eqnarray}
+        Cette \gls{mpv} ne dépend pas de la coupure $T_{max}$ et, comme l'énergie moyenne, a un minimum pour une certaine impulsion et présente un plateau à haute énergie. De plus, elle varie en $a\ln(ds)+b$. Elle est présentée en \autoref{fig::bethe_landau} en traits pointillés pour plusieurs valeurs de $ds$. En vert pour $ds=\SI{0.3125}{\centi\meter}$, qui est la plus petite valeur possible dans \gls{wa105}/proto\gls{dune}-DP et qui correspond à la taille d'une piste de lecture, en rouge pour $ds=\SI{1}{\centi\meter}$, qui est la valeur la plus souvent mesurée dans le prototype de \TOO de \gls{wa105}/proto\gls{dune}-DP, et en brun pour $ds=\SI{3}{\centi\meter}$, valeur au delà de laquelle très peu de traces sont observées dans le prototype de \TOO de \gls{wa105}/proto\gls{dune}-DP. Plus de détails sur les $ds$ mesurés dans les prototypes de \gls{wa105}/proto\gls{dune}-DP sont apportés en \autoref{sec::311_dQds}. $\frac{dE}{dx}\rvert_{MPV}$ est également montrée en fonction de $ds$ en \autoref{fig::mpv_ds}. On voit qu'elle augment d'environ 10\;\% entre \SI{0.3125}{\centi\meter} et \SI{3}{\centi\meter}.
+
+        Dans la suite de cette thèse, $\frac{dE}{dx}\rvert_{MPV}$ sera préférée à $\frac{dE}{dx}\rvert_{moyenne}$ et sera notée $\frac{dE}{dx}$.
+
       \subsubsection{Nombre d'électrons de dérive}
+
         \cite{Amoruso2004}
         \begin{eqnarray}
-          N_0= &\frac{dE}{dx}\times d \times R/W\label{eq::N0}\\
+          N_0= &\frac{dE}{dx}\times ds \times R/W\label{eq::N0}\\
          R = & \frac{A}{1+\frac{k}{E\rho}\frac{dE}{dx}}\label{eq::R}
         \end{eqnarray}
         $d$ est la distance sur laquelle la particule a déposé de la charge, $W$ est l'énergie d'ionisation du milieu.
+      \subsubsection{Nombre de photon de scintillation}
+        
+%        \begin{equation}\label{eq::Wph}
+%          W_{ph} = \frac{W}{1+N_{ex}/N_i}
+%        \end{equation}
+        Un photon par recombinaison, plus un photon émis pour chaque simple excitation\cite{Doke2002}. Chacune de ces possibilité peut résulter en deux états d'excitation différents noté $^1\Sigma_u^+$ et  $^3\Sigma_u^+$. Le premier a un temps caractéristique de $\sim\SI{7}{\nano\second}$, le second a un temps caractéristique de $\sim\SI{1600}{\nano\second}$\cite{Hitachi1983}.
+        \begin{equation} \label{eq::scintilation}
+            \begin{split}
+            \text{Excitation}\begin{cases}
+            Ar^* + Ar & \to Ar_2^* \\
+            Ar_2^* & \to 2Ar + \gamma\\
+            \end{cases} \\
+            \text{Recombinaison}\begin{cases}
+            Ar^+ + Ar & \to Ar_2^+  \\
+            Ar_2^+ + e^- & \to Ar^{**}+Ar  \\
+            Ar^{**} & \to Ar^*+\text{chaleur}  \\
+            Ar^* + Ar & \to Ar_2^*  \\
+            Ar_2^* & \to 2Ar + \gamma \\
+            \end{cases}
+            \end{split}
+        \end{equation}
       \subsubsection{Pertes dues aux impuretés lors de la dérive}
         \cite{Buckley1989}
         \begin{eqnarray}

@@ -9,7 +9,7 @@
   blabla d'intro
     
   \section{La Chambre à Projection Temporelle}
-    Le principe de la \acrfull{tpc} a été proposé pour la première fois en 1974 par D.R.~Nygren\cite{Nygren1974} et est illustré en \autoref{fig::tpc}. Il s'agit d'un volume rempli de gaz ou de liquide à travers lequel est appliqué un champ électrique. Une particule chargée traversant le milieu l'ionise, laissant des paires électron-ion dans son sillage. Le champ électrique sépare les ions qui vont dériver vers la cathode des électrons qui vont dériver vers l'anode. Si el milieu est gazeux, les électrons peuvent être amplifiés grâce à un fort champ électrique, pouvant augmenter le signal jusqu'à un facteur 1000. La lecture des électrons peut se faire en utilisant plusieurs plans de détections. Avec au moins deux plans, l'information $x$ et $y$ de la trace peut être reconstruite. L'information $z$ peut être obtenu grâce au temps de dérive et à la vitesse de dérive des électrons dans le milieu. L'énergie déposée par la particule est proportionnelle à la charge collectée, et l'information de la perte d'énergie par unité de longueur permet d'identifier les particules grâce à la formule de Bethe-Bloch (voir \autoref{sec::MPV}). Il est également possible de magnétiser la \gls{tpc} afin d'identifier le signe de la charge des particules et de mesurer leur impulsion.
+    Le principe de la \acrfull{tpc} a été proposé pour la première fois en 1974 par D.R.~Nygren\cite{Nygren1974} et est illustré en \autoref{fig::tpc}. Il s'agit d'un volume rempli de gaz ou de liquide à travers lequel est appliqué un champ électrique appelé champ de dérive. Une particule chargée traversant le milieu l'ionise, laissant des paires électron-ion dans son sillage. Le champ de dérive sépare les ions qui vont dériver vers la cathode des électrons qui vont dériver vers l'anode. Si le milieu est gazeux, les électrons peuvent être amplifiés grâce à un fort champ électrique, pouvant augmenter le signal jusqu'à un facteur 1000. La lecture des électrons peut se faire en utilisant plusieurs plans de détections. Avec au moins deux plans, l'information $x$ et $y$ de la trace peut être reconstruite. L'information $z$ peut être obtenu grâce au temps de dérive et à la vitesse de dérive des électrons dans le milieu. L'énergie déposée par la particule est proportionnelle à la charge collectée, et l'information de la perte d'énergie par unité de longueur permet d'identifier les particules grâce à la formule de Bethe-Bloch (voir \autoref{sec::MPV}). Il est également possible de magnétiser la \gls{tpc} afin d'identifier le signe de la charge des particules et de mesurer leur impulsion.
 
     La \gls{tpc} a plusieurs avantages:
     \begin{itemize}
@@ -25,7 +25,7 @@
     
   \section{La TPC à argon liquide}\label{sec::lartpc}
     
-    La \autoref{fig::lartpc} montre le principe de fonctionnement de la \gls{lartpc} de l'expérience \gls{icarus}. L'ionisation de l'argon par une particule chargée va générer, en plus des paires électron-ion, une grande quantité de photons de \SI{128}{\nano\meter}. Ces photons, détectés par des \glspl{pmt}, servent de déclencheurs pour l'enregistrement des événements. La dérive des électrons se fait ensuite horizontalement grâce à un champ électrique de \SI{500}{\volt\per\centi\meter} sur deux fois \SI{1.5}{\meter} vers le plan de lecture, situé sur chaque côté du volume de détection, la cathode étant au milieu du volume. Un seul plan de lecture est représenté sur la \autoref{fig::lartpc}. Les deux plans de lectures sont constitués de trois plans parallèles de fils verticaux. Les deux premiers lisent la charge de manière non destructive, par induction. La charge est ensuite collectée sur le troisième plan. Le principe est le même dans le démonstrateur de proto\gls{dune}-SP, l'expérience de prototypage de la variante "simple phase" de la technologie \gls{lartpc} au CERN. Dans ce prototype, qui a commencé à prendre des données en faisceau et avec des rayons cosmiques en 2018, la longueur de dérive est de deux fois \SI{3}{\meter}.
+    La \autoref{fig::lartpc} montre le principe de fonctionnement de la \gls{lartpc} de l'expérience \gls{icarus}. L'ionisation de l'argon par une particule chargée va générer, en plus des paires électron-ion, une grande quantité de photons de \SI{128}{\nano\meter}. Ces photons, détectés par des \glspl{pmt}, servent de déclencheurs pour l'enregistrement des événements. La dérive des électrons se fait ensuite horizontalement grâce à un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter} sur deux fois \SI{1.5}{\meter} vers le plan de lecture, situé sur chaque côté du volume de détection, la cathode étant au milieu du volume. Un seul plan de lecture est représenté sur la \autoref{fig::lartpc}. Les deux plans de lectures sont constitués de trois plans parallèles de fils verticaux. Les deux premiers lisent la charge de manière non destructive, par induction. La charge est ensuite collectée sur le troisième plan. Le principe est le même dans le démonstrateur de proto\gls{dune}-SP, l'expérience de prototypage de la variante "simple phase" de la technologie \gls{lartpc} au CERN. Dans ce prototype, qui a commencé à prendre des données en faisceau et avec des rayons cosmiques en 2018, la longueur de dérive est de deux fois \SI{3}{\meter}.
 
     La version "double phase", prototypée par le projet \gls{wa105}/proto\gls{dune}-DP, prendra des données cosmiques à partir de l'été 2019, et pourra peut être prendre des données de faisceau après le second arrêt long du CERN qui a commencé fin 2018 et finira fin 2020. Dans cette version, schématisée par la \autoref{fig::dlartpc}, une fine couche d'argon gazeux est maintenue à la surface de l'argon liquide. La dérive se fait donc verticalement, sur \SI{6}{\meter}, avec le plan de cathodes placée en bas du volume d'argon liquide et les \gls{crp} placés dans la phase gazeuse. Ces \gls{crp} sont munis d'une grille d'extraction, d'amplificateurs d'électrons et d'anodes segmentées. La grille sert à extraire les électrons de la phase liquide à la phase gazeuse, les amplificateurs sont capables de fournir un gain pouvant aller jusqu'à 200 d'après les premiers prototypes de cette technologie\cite{Cantini2014}, et les anodes sont capables de reconstruire l'information $x/y$ des événements. Comme dans la version simple phase, l'information en $z$ est donnée par le temps de dérive et la vitesse de dérive des électrons dans l'argon liquide.
 
@@ -37,7 +37,7 @@
         \item[$\bullet$] Il est inerte. Il n'y a donc pas de phénomène de vieillissement des éléments présents dans le liquide à cause de l'argon.
         \item[$\bullet$] Il est dense, augmentant la probabilité d'événements rares comparé aux \gls{tpc} à gaz.
         \item[$\bullet$] Il scintille lors de l'ionisation, et est transparent à sa propre scintillation, ce qui fournit un déclencheur idéal.
-        \item[$\bullet$] Une \gls{mip} laisse en moyenne \numprint{60000} électrons par centimètre dans l'argon liquide dans un champ électrique de \SI{500}{\volt\per\centi\meter}. Pour comparaison, dans le prototype "simple phase" de proto\gls{dune}-SP, le bruit électronique est autour de \numprint{1000} électrons.
+        \item[$\bullet$] Une \gls{mip} laisse en moyenne \numprint{60000} électrons par centimètre dans l'argon liquide dans un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter}. Pour comparaison, dans le prototype "simple phase" de proto\gls{dune}-SP, le bruit électronique est autour de \numprint{1000} électrons.
         \item[$\bullet$] Il est peu cher et abondant
       \end{itemize}
       Deux inconvénients sont à souligner : l'argon étant liquide à moins de \SI{90}{\kelvin}, il nécessite des installations cryogéniques importantes. De plus, la vitesse de dérive des ions est bien plus faible que la vitesse de dérive des électrons, ce qui peut résulter en une accumulation de charge positive dans l'argon liquide, modifiant le champ de dérive et pouvant ainsi déformer les traces. Cet effet est impactant surtout pour les grandes \gls{lartpc} en surface, où le flux de rayons comique peut engendrer une grande accumulation de charge.
@@ -64,16 +64,17 @@
             \specialrule{.01em}{.0em}{.0em}
         \begin{tabular}[c]{@{}l@{}}Énergie d'excitation\\ moyenne du liquide\end{tabular} & $I$, \SI{188}{\eV} \\
             \specialrule{.01em}{.0em}{.0em}
-        \begin{tabular}[c]{@{}l@{}}Longueur d'onde de \\ scintillation\end{tabular} & \SI{128}{\nano\meter}\cite{Gedanken1972} \\
-            \specialrule{.01em}{.0em}{.0em}
-        \begin{tabular}[c]{@{}l@{}}Longueur de diffusion\\ de Rayleigh (liquide, \SI{128}{\nano\meter})\end{tabular} & \SI{90}{\centi\meter} \\ \hline
+        \begin{tabular}[c]{@{}l@{}}Longueur d'onde de \\ scintillation\end{tabular} & \SI{128}{\nano\meter} \\
+%            \specialrule{.01em}{.0em}{.0em}
+%        \begin{tabular}[c]{@{}l@{}}Longueur de diffusion\\ de Rayleigh (liquide, \SI{128}{\nano\meter})\end{tabular} & \SI{90}{\centi\meter} \\ 
+        \hline
       \end{tabular}
       \caption{\label{tab::Ar}Propriété physiques et chimiques de l'argon.}
     \end{table}
     \subsection{La vie mouvementée des électrons de dérive}
         %https://lar.bnl.gov/properties/
         Une \gls{mip}, dans l'argon liquide, dépose une énergie moyenne par unité de longueur $(dE/dx)_{MIP}$ de \SI{2.12}{\mega\electronvolt\per\centi\meter} (voir équation \eqref{eq::bethe}). L'énergie d'ionisation de l'argon $W$ étant de \SI{23.6}{\eV}, une \gls{mip} crée en moyenne \numprint{90000} paires électron-ion par centimètres.
-        La recombinaison, défini comme la fraction d'électron se recombinant à un ion, est d'environ \numprint{0.3} dans l'argon liquide avec un champ électrique de \SI{0.5}{\kilo\volt\per\centi\meter}. Il en résulte que la charge moyenne déposée par unité de longueur par une \gls{mip}, $(dQ/dx)_{MIP}$, est d'environ \SI{10}{\femto\coulomb\per\centi\meter}. Cette recombinaison produit également de des photons de \SI{128}{\nano\meter}\footnote{La scintillation est également due à l'excitation d'atomes d'argon par la particule incidente sans création de paires électron-ion.}, qui résulte de la désexcitation d'atome d'argon ayant réabsorbé un électron ionisé. La scintillation dans l'argon liquide est de l'ordre de \SI{40000}{\gamma\per\mega\eV}\cite{Cennini1999}. Lors de leur dérive, les électrons peuvent être absorbés par des impuretés présentes dans l'argon liquide, principalement O$_2$, H$_2$O et CO$_2$. Ces pertes suivent une loi exponentielle décroissante, caractérisée par un temps de vie effectif des électrons. \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014} en observant l'atténuation du signal avec la distance de dérive. Ce temps de vie correspond à une atténuation de \numprint{0.89}(\numprint{0.78}) pour la distance de dérive maximale de \SI{3}{\meter}(\SI{6}{\meter}) de proto\gls{dune}-SP(proto\gls{dune}-DP). Durant leur dérive, les électrons vont subir de nombreuses diffusions, qui vont étirer le signal le long de la dérive et dans le plan perpendiculaire à la dérive. La densité d'électron suit alors une distribution normale décrites par l'équation \eqref{eq::diffusion}. La diffusion transverse, dans le plan $xy$, est caractérisée par le coefficient de diffusion $D_T$. La diffusion longitudinale, le long de la dérive, est caractérisée par le coefficient de diffusion $D_L$. Une étude de 2015\cite{Li2015} permet d'estimer $D_T=\SI{13.1586}{\centi\meter\squared\per\second}$ et $D_L=\SI{6.8223}{\centi\meter\squared\per\second}$ pour un champ électrique de \SI{500}{\volt\per\centi\meter} et une température de l'argon de \SI{87}{\kelvin}. Ces diffusions correspondent à un écart type dans le plan $xy$ de \SI{9.8}{\milli\meter}(\SI{13.8}{\milli\meter}) et à un écart type le long de la dérive de \SI{7.0}{\milli\meter}(\SI{10.0}{\milli\meter}) après une dérive de \SI{3}{\meter}(\SI{6}{\meter}). Le signal sera donc un nuage d'électron arrivant au plan de détection. La \autoref{fig::process} résume l'ensemble du processus.
+        La recombinaison, défini comme la fraction d'électron se recombinant à un ion, est d'environ \numprint{0.3} dans l'argon liquide avec un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter}. Il en résulte que la charge moyenne déposée par unité de longueur par une \gls{mip}, $(dQ/dx)_{MIP}$, est d'environ \SI{10}{\femto\coulomb\per\centi\meter}. Cette recombinaison produit également de des photons de \SI{128}{\nano\meter}\footnote{La scintillation est également due à l'excitation d'atomes d'argon par la particule incidente sans création de paires électron-ion.}, qui résulte de la désexcitation d'atome d'argon ayant réabsorbé un électron ionisé. La scintillation dans l'argon liquide est de l'ordre de \SI{40000}{\gamma\per\mega\eV}\cite{Cennini1999}. Lors de leur dérive, les électrons peuvent être absorbés par des impuretés présentes dans l'argon liquide, principalement O$_2$, H$_2$O et CO$_2$. Ces pertes suivent une loi exponentielle décroissante, caractérisée par un temps de vie effectif des électrons. \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014} en observant l'atténuation du signal avec la distance de dérive. Ce temps de vie correspond à une atténuation de \numprint{0.89}(\numprint{0.78}) pour la distance de dérive maximale de \SI{3}{\meter}(\SI{6}{\meter}) de proto\gls{dune}-SP(proto\gls{dune}-DP). Durant leur dérive, les électrons vont subir de nombreuses diffusions, qui vont étirer le signal le long de la dérive et dans le plan perpendiculaire à la dérive. La densité d'électron suit alors une distribution normale décrites par l'équation \eqref{eq::diffusion}. La diffusion transverse, dans le plan $xy$, est caractérisée par le coefficient de diffusion $D_T$. La diffusion longitudinale, le long de la dérive, est caractérisée par le coefficient de diffusion $D_L$. Une étude de 2015\cite{Li2015} permet d'estimer $D_T=\SI{13.1586}{\centi\meter\squared\per\second}$ et $D_L=\SI{6.8223}{\centi\meter\squared\per\second}$ pour un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter} et une température de l'argon de \SI{87}{\kelvin}. Ces diffusions correspondent à un écart type dans le plan $xy$ de \SI{9.8}{\milli\meter}(\SI{13.8}{\milli\meter}) et à un écart type le long de la dérive de \SI{7.0}{\milli\meter}(\SI{10.0}{\milli\meter}) après une dérive de \SI{3}{\meter}(\SI{6}{\meter}). Le signal sera donc un nuage d'électron arrivant au plan de détection. La \autoref{fig::process} résume l'ensemble du processus.
 
       \subsubsection{Énergie déposée dans l'argon liquide}
 
@@ -88,7 +89,7 @@
             $q$ & \begin{tabular}[c]{@{}l@{}}Nombre de charge élémentaire\\ de la particule incidente\end{tabular} &  & $M$ & Masse de la particule incidente \\
             $Z$ & Numéro atomique du milieu &  & $\delta(\beta\gamma)$ & \begin{tabular}[c]{@{}l@{}}Correction due aux effets de \\ densité (voir \cite{pdg2018})\end{tabular} \\
             $A$ & Masse atomique du milieu &  & $T_{cut}$ & \begin{tabular}[c]{@{}l@{}}Coupure sur l'énergie maximum\\ transférée à un électron, \si{mega\eV}\end{tabular} \\
-            $\beta$ & \begin{tabular}[c]{@{}l@{}}$v/c$ avec $v$ la vitesse de la \\ particule incidente\end{tabular} &  & $\rho$ & Densité du milieu, \si{\gram\per\centi\meter} \\
+            $\beta$ & \begin{tabular}[c]{@{}l@{}}$v/c$ avec $v$ la vitesse de la \\ particule incidente\end{tabular} &  & $\rho$ & Densité du milieu, \si{\gram\per\centi\meter\cubed} \\
             $\gamma$ & Facteur de Lorentz, $\frac{1}{\sqrt{1-\beta^2}}$ &  & $ds$ & \begin{tabular}[c]{@{}l@{}}Distance sur laquelle la particule\\ incidente dépose de l'énergie, \si{\centi\meter}\end{tabular} \\ \cline{1-2} \cline{4-5} 
           \end{tabular}
           \caption{\label{tab::bethe_params}Paramètres utilisées dans les équations \eqref{eq::bethe}, \eqref{eq::bethe_tcut} et \eqref{eq::mpv}. Tableau tiré de \cite{pdg2018}.}
@@ -116,22 +117,36 @@
         \end{eqnarray}
         Cette \gls{mpv} ne dépend pas de la coupure $T_{max}$ et, comme l'énergie moyenne, a un minimum pour une certaine impulsion et présente un plateau à haute énergie. De plus, elle varie en $a\ln(ds)+b$. Elle est présentée en \autoref{fig::bethe_landau} en traits pointillés pour plusieurs valeurs de $ds$. En vert pour $ds=\SI{0.3125}{\centi\meter}$, qui est la plus petite valeur possible dans \gls{wa105}/proto\gls{dune}-DP et qui correspond à la taille d'une piste de lecture, en rouge pour $ds=\SI{1}{\centi\meter}$, qui est la valeur la plus souvent mesurée dans le prototype de \TOO de \gls{wa105}/proto\gls{dune}-DP, et en brun pour $ds=\SI{3}{\centi\meter}$, valeur au delà de laquelle très peu de traces sont observées dans le prototype de \TOO de \gls{wa105}/proto\gls{dune}-DP. Plus de détails sur les $ds$ mesurés dans les prototypes de \gls{wa105}/proto\gls{dune}-DP sont apportés en \autoref{sec::311_dQds}. $\frac{dE}{dx}\rvert_{MPV}$ est également montrée en fonction de $ds$ en \autoref{fig::mpv_ds}. On voit qu'elle augment d'environ 10\;\% entre \SI{0.3125}{\centi\meter} et \SI{3}{\centi\meter}.
 
-        Dans la suite de cette thèse, $\frac{dE}{dx}\rvert_{MPV}$ sera préférée à $\frac{dE}{dx}\rvert_{moyenne}$ et sera notée $\frac{dE}{dx}$.
+        Dans la suite de cette thèse, $\frac{dE}{dx}\rvert_{MPV}$ sera préférée à $\frac{dE}{dx}\rvert_{moyenne}$ et sera notée simplement $\frac{dE}{dx}$.
 
       \subsubsection{Nombre d'électrons de dérive}
 
-        \cite{Amoruso2004}
+        Lors du passage d'une particule ionisante dans la matière, cette dernière va exciter et/ou ioniser les atomes du milieu en leur transférant une partie de son énergie, principalement par collision. Si l'énergie ainsi transférée lors d'une collision est supérieure à l'énergie nécessaire pour arracher un électron à l'atome, appelée énergie d'ionisation et notée $W$, un ou plusieurs électrons vont être arrachés et libérés dans le milieu. Autrement, l'atome peut se retrouver dans un état excité et devra se désexciter par rayonnement de photons. 
+
+        Après ionisation, les électrons peuvent soit dériver vers le \gls{crp} grâce au champ de dérive, soit être capté par un atome ionisé et se recombiner. Le nombre total d'électron dérivant sera donc inférieur au nombre d'électron initialement arrachés. Cette recombinaison peut être décrite par trois approches différentes, décrites dans \cite{Amoruso2004}:
+        \begin{itemize}
+          \item[$\bullet$] La théorie de Onsager considère la probabilité qu'a un électron de revenir à son ion d'origine. Il s'agit alors d'une loi en exponentielle décroissante dépendant de l'énergie de l'électron, avec un facteur prenant en compte l'effet du champ de dérive.
+          \item[$\bullet$] La théorie de la colonne suppose une distribution en colonne des charges autour de la trace de la particule incidente. Les électrons et ions s'éloignent de la colonne sous l'effet du champ de dérive et de la diffusion. Les électrons et les ions peuvent alors se recombiner suivant les distributions des charges positives et négatives autour de la trace.
+          \item[$\bullet$] Le modèle en boîte, qui reprend la théorie de la colonne mais en supposant les ions fixent et aucune diffusion.
+        \end{itemize}
+        La loi de Birk, énoncée par J.B. Birks en 1964\cite{Birk1964} est une approximation du modèle en colonne. Cette loi a été ajustée aux données de muons cosmiques dans l'argon liquide par \gls{icarus} en 2004\cite{Amoruso2004}. Cette loi introduit le facteur de recombinaison $R$, qui correspond au ratio entre le nombre d'électrons de dérive et le nombre d'électrons initialement arrachés au milieu. Ce facteur augmente avec le champ de dérive, puisque ce dernier favorise la séparation des ions et des électrons, mais diminue avec la quantité d'énergie déposée. Il s'écrit
+        \begin{equation}
+          R=\frac{A}{1+\frac{k}{E_d \rho}\frac{dE}{dx}}\label{eq::R}
+        \end{equation}
+        avec $E_d$ le champ de dérive, et $A=\numprint{0.81}(5)$ et $k=\SI{0.055\pm0.005}{\kilo\volt\gram\per\centi\meter\cubed\per\mega\eV}$ d'après les ajustements fait par \gls{icarus} dans \cite{Amoruso2004}. En prenant en compte la recombinaison, le nombre d'électron de dérive s'écrit alors
         \begin{eqnarray}
-          N_0= &\frac{dE}{dx}\times ds \times R/W\label{eq::N0}\\
-         R = & \frac{A}{1+\frac{k}{E\rho}\frac{dE}{dx}}\label{eq::R}
+          N_0= &\frac{dE}{dx}\times ds \times R/W\label{eq::N0}
         \end{eqnarray}
-        $d$ est la distance sur laquelle la particule a déposé de la charge, $W$ est l'énergie d'ionisation du milieu.
-      \subsubsection{Nombre de photon de scintillation}
+        où $ds$ et la distance sur laquelle la particule dépose de l'énergie. Dans l'argon liquide, avec un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter} et en prenant $ds=\SI{1}{\centi\meter}$, $R=\numprint{0.71}$ pour \gls{mip}. La \autoref{fig::birk} montre la variation de $R$ en fonction de l'énergie déposée par un muon dans l'argon liquide pour un champ électrique constant.
+
+      \subsubsection{Photons de scintillation}
         
-%        \begin{equation}\label{eq::Wph}
-%          W_{ph} = \frac{W}{1+N_{ex}/N_i}
-%        \end{equation}
-        Un photon par recombinaison, plus un photon émis pour chaque simple excitation\cite{Doke2002}. Chacune de ces possibilité peut résulter en deux états d'excitation différents noté $^1\Sigma_u^+$ et  $^3\Sigma_u^+$. Le premier a un temps caractéristique de $\sim\SI{7}{\nano\second}$, le second a un temps caractéristique de $\sim\SI{1600}{\nano\second}$\cite{Hitachi1983}.
+        Au moment de l'ionisation de l'argon liquide, un grand nombre de photons à \SI{128}{\nano\meter}\cite{Gedanken1972} (\SI{9.7}{\eV}) est également émis. Cette émission peut se faire de deux manières différentes :
+        \begin{itemize}
+          \item[$\bullet$] Un atome d'argon excité $Ar^*$ va se coupler à un atome d'argon $Ar$ pour former un dimère excité $Ar_2 ^*$. Ce dimère se scinde ensuite en deux atomes d'argon en émettant un photon $\gamma$.
+          \item[$\bullet$] Un ion argon $Ar^+$ va se coupler à un atome d'argon $Ar$ pour former un dimère ionisé $Ar_2 ^+$. Ce dimère se scinde en deux après recombinaison avec un électron $e^-$. Il en résulte un atome d'argon $Ar$ et un atome d'argon très excité $Ar^{**}$. Ce dernier perd une partie de son énergie sous forme de chaleur et devient un $Ar^*$, qui va alors effectuer le premier processus décrit.
+        \end{itemize} 
+        Ces deux processus, résumés dans l'équation \eqref{eq::scintillations}, peuvent donner lieu à deux états différents\footnote{Chacun des deux processus peut donner les deux états.} de $Ar^*$ notés $^1\Sigma_u^+$ et  $^3\Sigma_u^+$. Le premier a un temps caractéristique rapide, de $\sim\SI{7}{\nano\second}$, le second a un temps caractéristique plus lent, de $\sim\SI{1600}{\nano\second}$\cite{Hitachi1983}. Le spectre en temps de l'émission de $\gamma$ lors de l'ionisation qui résulte de ces phénomènes est présenté en \autoref{fig::scintillation}.
         \begin{equation} \label{eq::scintilation}
             \begin{split}
             \text{Excitation}\begin{cases}
@@ -147,48 +162,100 @@
             \end{cases}
             \end{split}
         \end{equation}
+
+        Le temps de dérive des électrons dans l'argon liquide étant de l'ordre de la milliseconde, une émission de photons quelques nanosecondes après l'ionisation peut servir à définir le temps initiale de l'événement, où $t_0$. Celui-ci servira à mesurer le temps d'arriver de chaque électron, permettant de reconstruire la trace de la particule en 3D. A ces fins, il est nécessaire de pouvoir détecter les photons émis lors de l'ionisation. Si le but est simplement de détecter l'émission des photons sans chercher à reconstruire leur origine avec précision (ce qui suffit quand on utilise les photons comme déclencheurs), les différentes diffusions de ces photons dans l'argon n'ont pas d'importance. En revanche, l'absorption des photons par l'argon ou les impuretés peut avoir un impact négatif. Baldini et.al on étudié l'absorption d'UV dans l'argon solide en 1962 \cite{Baldini1962}, et on trouvé qu'en dessous de \SI{11}{\eV}, les photons ne sont pas absorbés. L'énergies des photons produits lors de l'ionisation étant de \SI{9.7}{\eV}, l'argon est transparent à sa propre scintillation. Les impuretés en revanche peuvent être nuisibles. L'étude de R. Acciarri et.al de 2009\cite{Acciarri2009} montre que la présence de dioxygène ou de diazote peut entraîner une diminution de la quantité de photons détectés. Cette diminution reste cependant inférieure au pourcent en dessous d'une concentration de \SI{100(1000)}{ppb} de dioxygène(diazote). Les puretés mesurées par \gls{icarus}\cite{Antonello2014} et proto\gls{dune}-SP sont autour de \SI{e1}{ppb}, l'absorption de photons par les impuretés peut donc être négligées.
+
       \subsubsection{Pertes dues aux impuretés lors de la dérive}
-        \cite{Buckley1989}
+        
+        les impuretés électronégatives (O$_2$, H$_2$O, CO$_2$, N$_2$O) présentes dans l'argon peuvent capturer une partie des électrons de dérives. A chaque type d'impuretés de concentration $N_i$ peut être associé un taux d'attachement $k_{s,i}$, et le nombre d'électron en fonction du temps $N(t)$ suit alors l'équation différentielle\cite{Buckley1989}
         \begin{eqnarray}
-          N(t) = & N_0\textbf{e}^{-t_d/\tau}=N_0\textbf{e}^{-d/v_d\tau}\label{eq::losses} \\
-          \tau = & \frac{300}{[O_2](\si{ppb})}\label{eq::purity}
+          N(t) = & -\sum_{i} k_{s,i}N_i N(t)\\
+          \Rightarrow N(t) = & N_0\textbf{e}^{-t_d/\tau_e}=N_0\textbf{e}^{-d/(v_d\tau_e)}\label{eq::losses} \\
+          \text{avec } \tau_e = & 1/(\sum_{i} k_{s,i}N_i)
         \end{eqnarray}
+        où $\tau_e$ est le temps de vie de l'électron dans le milieu, qui peut être mesuré en regardant l'atténuation du signal en fonction du temps d'arrivée au \gls{crp}, $d$ est la distance parcourue dans le milieu et $v_d$ est la vitesse de dérive des électrons dans le milieu.
+
+        En supposant que les seules impuretés présentes sont les molécules de dioxygène, on peut écrire $\tau = \frac{1}{k_{s,O_2} N_{O_2}}$. L'étude de Bakale et.al de 1976\cite{Bakale1976} nous donne $k_{s,O_2}=\SI{7.43}{\liter\per\mole\per\second}$ dans un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter}. On peut alors relier la concentration de molécules de dioxygène en ppb, $\rho_{O_2}=N_{O_2}/N_{Ar}$, avec le temps de vie de l'électron ($N_{Ar}$ est le nombre de mole d'argon liquide dans un litre et est égale à $\rho/A$) : 
+        \begin{equation}
+          \tau(\si{\micro\second}) = \frac{10^6}{N_{Ar}\times \rho_{O_2}(\si{ppb}) \times k_{s,i} \times 10^{-9}} = \frac{\numprint{385}}{\rho_{O_2}(\si{ppb})}\label{eq::purity}
+        \end{equation}
+        
+%        \cite{Buckley1989} : $\tau = \frac{1}{k_s N_s}$ avec $k_s\sim \SI{e11}{\liter\per\mole\per\second}$ et $N_s=$ concentration $O_2$ équivalente $=\rho_{O_2}\times N_{Ar}$, avec $\rho_{O_2}=[O_2]$ en particule d'$O_2$ par particule d'argon et $N_{Ar}$ le nombre de mole d'argon liquide par litre.\\
+%        $N_{Ar}=\rho/A$ avec $A$ la masse atomique de l'argon liquide. $N_{Ar}=\rho/A = 1395.4/39.948 = \SI{34.9304}{\mole\per\liter}$.\\
+%        $\Rightarrow \tau(\si{\micro\second}) = \frac{10^6}{3493.04\rho_{O_2}[\si{ppb}]} = \frac{286.2835}{\rho_{O_2}[\si{ppb}]}$. En prenant une meilleure lecture du graph de \cite{Bakale1976} on trouve plutôt $k_s=\SI{7.43e10}{\liter\per\mole\per\second}$. On a alors $\tau(\si{\micro\second}) = \frac{10^6}{3493.04\rho_{O_2}[\si{ppb}]} = \frac{385.31}{\rho_{O_2}[\si{ppb}]}$
+
       \subsubsection{Vitesse de dérive}
-        \cite{Li2015}
-        \begin{eqnarray}
-          \mu = & \frac{a_0+a_1E+a_2E^{3/2}+a_3E^{5/2}}{1+(a_1/a_0)E+a_4E^2+a_5e^3}\left(\frac{T}{T_0}\right)^{-3/2}\label{eq::mobility} \\
-          v_d = & \mu\times E\label{eq::velocity}
-        \end{eqnarray}
+
+        La vitesse de dérive $v_d$ d'un électron dans l'argon liquide dépend du champ de dérive $E_d$ et de la température $T$ du milieu. Elle peut être paramétrisée par l'équation empirique suivante\cite{Gonidec1996}
+        \begin{equation}\label{eq::velocity}
+          v_d = \left(1+P_1(T-T_0)\right)\times\left(P_3E\ln\left(1+\frac{P_4}{E}\right)+P_5E^{P_6}\right) + P_2(T-T_0)
+        \end{equation}
+        Walkowiak et.al\cite{Walkowiak2000} ont mesuré cette vitesse et l'on ajusté avec la formule précédente en choisissant comme température de référence $T_0=\SI{90.371}{\kelvin}$, obtenant les coefficient présentés en \autoref{tab::fit_par}. La \autoref{fig::velocity} montre la vitesse en fonction du champ électrique à \SI{87.3}{\kelvin}. A \SI{0.5}{\kilo\volt\per\centi\meter}, elle vaut $\SI{1.63\pm0.081}{\milli\meter\per\micro\second}$.
         \begin{table}[htpb]
           \centering
           \begin{tabular}{ccc}
-          $a_0$ & = & \numprint{551.6} \\
-          $a_1$ & = & \numprint{7953.7} \\
-          $a_2$ & = & \numprint{4440.43} \\
-          $a_3$ & = & \numprint{4.29} \\
-          $a_4$ & = & \numprint{43.63} \\
-          $a_5$ & = & \numprint{0.2053}
+          $P_1$ & = & $\SI{-0.01481\pm0.00095}{\per\kelvin}$ \\
+          $P_2$ & = & $\SI{-0.0075\pm0.0028}{\per\kelvin}$ \\
+          $P_3$ & = & $\SI{0.141\pm0.023}{\centi\meter\per\kilo\volt}$ \\
+          $P_4$ & = & $\SI{12.4\pm2.7}{\kilo\volt\per\centi\meter}$ \\
+          $P_5$ & = & $\SI{1.627\pm0.078}{(\kilo\volt\per\centi\meter)^{-P_6}}$ \\
+          $P_6$ & = & $\numprint{0.317}\pm\numprint{0.021}$ \\
           \end{tabular}
-          \caption{\label{tab::fit_par}Paramètres de l'équation \eqref{eq::mobility}}
+          \caption{\label{tab::fit_par}Paramètres de l'équation \eqref{eq::velocity}, venant de l'ajustement fait dans \cite{Walkowiak2000}.}
         \end{table}
+%        
+%        La vitesse de dérive d'un électron dans un milieu soumis à un champ électrique s'écrit 
+%        \begin{equation}\label{eq::velocity}
+%          v_d = \mu \times E_d
+%        \end{equation}
+%        où $E_d$ est le champ de dérive et $\mu$ est la mobilité des électrons. Cette mobilité doit être mesurée. Un ajustement polynomiale a été fait par Li et.at en 2015\cite{Li2015}, donnant
+%        \begin{equation}
+%          \mu = \frac{a_0+a_1E_d+a_2E_d^{3/2}+a_3E_d^{5/2}}{1+(a_1/a_0)E_d+a_4E_d^2+a_5E_d^3}\left(\frac{T}{T_0}\right)^{-3/2}\label{eq::mobility}
+%        \end{equation}
+%        avec $T_0=\SI{89}{\kelvin}$. Les valeurs des coefficients sont en \autoref{tab::fit_par}.
+%        \begin{table}[htpb]
+%          \centering
+%          \begin{tabular}{ccc}
+%          $a_0$ & = & \numprint{551.6} \\
+%          $a_1$ & = & \numprint{7953.7} \\
+%          $a_2$ & = & \numprint{4440.43} \\
+%          $a_3$ & = & \numprint{4.29} \\
+%          $a_4$ & = & \numprint{43.63} \\
+%          $a_5$ & = & \numprint{0.2053}
+%          \end{tabular}
+%          \caption{\label{tab::fit_par}Paramètres de l'équation \eqref{eq::mobility}, venant de l'ajustement fait dans \cite{Li2015}.}
+%        \end{table}
       \subsubsection{Diffusion durant la dérive}
-        \begin{equation}\label{eq::diffusion}
-          n(x,y,z,t) = \frac{n_0}{4\pi D_T t_d\sqrt{4\pi D_L t_d}}\exp\left(-\frac{(z-d)^2}{4D_L t_d}\right)\exp\left(-\frac{x^2+y^2}{4D_T t_d}\right)\exp\left(-d/v_d\tau\right)
-        \end{equation}
+
+        Durant leur dérive dans l'argon liquide, les électrons vont être déviés à cause des nombreuses collisions qu'ils vont effectuer avec les atome du milieu. Cette diffusion est un phénomène aléatoire qui suit deux distributions gaussiennes : une correspondant à la diffusion dans le plan perpendiculaire à la direction de dérive, à laquelle on associe le coefficient de diffusion $D_T$, et une correspondant à la diffusion dans le sens de la dérive, à laquelle on associe le coefficient de diffusion $D_L$. En prenant en compte les pertes dues aux impuretés et en notant $n(x,y,z,t_d)$ la densité d'électron en un point à un instant donné, on peut écrire l'équation : 
+        \begin{eqnarray}
+          n(x,y,z,t_d) = & \frac{n_0}{\sqrt{4\pi D_T t_d4\pi D_L t_d}}\exp\left(-\frac{(z-d)^2}{4D_L t_d}\right)\exp\left(-\frac{x^2+y^2}{4D_T t_d}\right)\exp\left(-\frac{d}{v_d\tau}\right) \label{eq::diffusion} \\
+          \sigma_L(d) = & \sqrt{4\pi D_Ld/v} \label{eq::sigmaL}\\
+          \sigma_T(d) = & \sqrt{4\pi D_Td/v} \label{eq::sigmaT}
+        \end{eqnarray}
+        où $n_0$ est la densité initiale, $t_d$ le temps de dérive, $x$ et $y$ les coordonnées dans le plan perpendiculaire, $z$ la coordonnée dans le sens de la dérive, $v_d$ la vitesse de dérive et $d$ la coordonnées $z$ du milieu du nuage d'électrons. A noter que la distribution ci-dessus est gaussienne suivant $\sqrt{x^2+y^2}$ et suivant $z$, à un temps $t_d$ donné, mais pas suivant $t_d$ à un point donné. A un champ de dérive fixé, on peut exprimer les écarts types de ces distribution en fonction de la distance de dérive, suivant les équations \eqref{eq::sigmaL} et \eqref{eq::sigmaT}. Une étude de Li et.al de 2016\cite{Li2015} a mesuré, pour un champ de dérive de \SI{0.5}{\kilo\volt\per\centi\meter}, $D_L=\SI{7.2}{\centi\meter\squared\per\second}$, et a extrapolé à partir de données existantes la valeur de $D_T=\SI{12.0}{\centi\meter\squared\per\second}$. La \autoref{fig::diffusion} montre l'allure du nuage d'électron après une dérive de \SI{1}{\meter}, \SI{3}{\meter} et \SI{6}{\meter}. L'échelle de couleur n'est pas respectée afin de rendre visible le nuage à \SI{6}{\meter}.
+
      %La quatrième section se concentre sur la technologie du détecteur lointain, la \gls{lartpc}. Elle a fait ses preuves dans l'expérience à longue ligne de base \gls{icarus}\cite{Antonello2014,Antonello2015,Antonello2016} au \gls{cern} entre 2004 et 2013, l'expérience à courte ligne de base du programme \gls{sbn}\cite{Acciarri2015} du Fermilab MicroBooNE\cite{Microboone2018} (la prise de donnée a commencé en 2015), ainsi que ArgoNeuT\cite{Anderson2012} qui regardait des neutrinos de basse énergie, également au Fermilab, entre 2008 et 2010. Cette section présente ensuite la variante à double phase de cette technologie, utilisant une fine couche d'argon gazeux en haut du volume de détection où la charge déposée par les particules chargées est amplifiée, permettant d'améliorer le rapport signal sur bruit tout en réduisant le coup de l'électronique de lecture. Cette technologie est en prototypage au CERN par le projet \gls{wa105}/ProtoDU$\nu$E-DP, qui est l'objet de cette thèse.
     
   \section{La technologie à double phase d'argon}
+
+    La technologie à double phase, qui permet l'amplification des électrons de dérive, a été proposé par A. Rubbia\cite{Rubbia2004} en 2004. Un premier prototype de \SI{3}{\liter} avec une longueur de dérive de \SI{21}{\centi\meter} a été testé dans les années 2010, et a permis de définir les technologies d'amplification et de collection de charge\cite{Cantini2013} et d'évaluer les performances en terme de gain et de stabilité de ces technologies\cite{Cantini2014}. Le projet \gls{wa105}proto\gls{dune}-DP est la continuité du développement de cette technologie. Son premier prototype de \TOO a montré la capacité d'une \gls{dlartpc} à observer avec précision des particules chargées. Son second prototype de \SSS devra tester les capacités de la technologie à répondre aux besoin de \gls{dune}, tout en étant directement extrapolable à la taille du module de \SI{12}{\kilo\tonne} envisagé pour cette dernière.
+
     \subsection{Principe}
-    \subsection{Avalanche de Townsend}
+
+      La \autoref{fig::dlartpc} montre le principe de fonctionnement d'une \gls{dlartpc}. Contrairement à la \gls{lartpc} simple phase, les électrons dérivent vers le haut du volume d'argon liquide, où se trouve une couche d'argon gazeux. La mobilité des électrons dans l'argon gazeux étant bien plus grande que dans le liquide, une application d'un intense champ électrique leur permet d'acquérir une énergie suffisante pour créer une seconde ionisation et engendrer une avalanche de Townsend (voir \autoref{sec::townsend}), permettant d'amplifier le signal. Ceci permet alors la détection d'événement plus bas en énergie. Avec un bruit électronique de \numprint{1000} électrons (correspondant au bruit atteind par proto\gls{dune}-SP) et un gain de 20, un rapport signal sur bruit de \numprint{10} peut être achevé pour des dépôts d'énergie de quelques dizaines de \si{\kilo\eV}.
+
+
+    \subsection{Avalanche de Townsend}\label{sec::townsend}
       chambre à fils, toussa toussa.
     \subsection{Avantages et inconvénients}
     \subsection{État de l'art}
     
-  \section{\texorpdfstring{protoDU$\nu$E}{protoDUNE}}
-    \subsection{\texorpdfstring{protoDU$\nu$E}{protoDUNE}-Single Phase}
-    \subsection{WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-Double Phase}
-      \subsubsection{le 311}
+%  \section{\texorpdfstring{protoDU$\nu$E}{protoDUNE}}
+%    \subsection{\texorpdfstring{protoDU$\nu$E}{protoDUNE}-Single Phase}
+  \section{WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-Double Phase}
+    \subsection{le 311}
         pas plus de quelques paragraphe, il sera décrit plus en détail au chapitre 4
-      \subsubsection{le 666}
+    \subsection{le 666}
         un peu plus que sur le 311
 \printbibliography

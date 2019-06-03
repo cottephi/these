@@ -158,14 +158,14 @@
 
         Dans la suite de cette thèse, $\frac{dE}{dx}\rvert_{MPV}$ sera préférée à $\frac{dE}{dx}\rvert_{moyenne}$ et sera notée simplement $\frac{dE}{dx}$.
 
-      \subsubsection{Recombinaison}
+      \subsubsection{Recombinaison}\label{sec::recombinaison}
 
         Lors du passage d'une particule ionisante dans la matière, cette dernière va exciter et/ou ioniser les atomes du milieu en leur transférant une partie de son énergie, principalement par collision. Si l'énergie ainsi transférée lors d'une collision est supérieure à l'énergie nécessaire pour arracher un électron à l'atome, appelée énergie d'ionisation et notée $W$, un ou plusieurs électrons vont être arrachés et libérés dans le milieu. Autrement, l'atome peut se retrouver dans un état excité et devra se désexciter par rayonnement de photons.
 
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{R_vs_MPV.pdf}
-          \caption[Facteur de recombinaison de la loi de Birk en fonction du dépôt d'énergie par unité de longueur.]{\label{fig::birk}Facteur de recombinaison de la loi de Birk (équation \eqref{eq::R}) en fonction du dépôt d'énergie par unité de longueur. La valeur indiquée par les pointillés correspond au minimum de la \gls{mpv} de la Landau-Vavilov en fonction de l'impulsion  pour un distance de dépôt d'énergie de \SI{1}{\centi\meter} (\autoref{fig::bethe_landau}).}
+          \caption[Facteur de recombinaison de la loi de Birk en fonction du dépôt d'énergie par unité de longueur.]{\label{fig::birk}Facteur de recombinaison de la loi de Birk (équation \eqref{eq::birk}) en fonction du dépôt d'énergie par unité de longueur. La valeur indiquée par les pointillés correspond au minimum de la \gls{mpv} de la Landau-Vavilov en fonction de l'impulsion  pour un distance de dépôt d'énergie de \SI{1}{\centi\meter} (\autoref{fig::bethe_landau}).}
         \end{figure}
 
         Après ionisation, les électrons peuvent soit dériver vers le \gls{crp} grâce au champ de dérive, soit être captés par un atome ionisé et se recombiner. Le nombre total d'électrons dérivant sera donc inférieur au nombre d'électrons initialement arrachés. Cette recombinaison peut être décrite par trois approches différentes, décrites dans \cite{Amoruso2004}:
@@ -175,7 +175,7 @@
           \item[$\bullet$] Le modèle en boîte, qui reprend la théorie de la colonne mais en supposant les ions fixent et aucune diffusion.
         \end{itemize}
         La loi de Birk, énoncée par J.B. Birks en 1964\cite{Birk1964} est une approximation du modèle en colonne. Cette loi a été ajustée aux données de muons cosmiques dans l'argon liquide par \gls{icarus} en 2004\cite{Amoruso2004}. Cette loi introduit le facteur de recombinaison $R$, qui correspond au ratio entre le nombre d'électrons de dérive et le nombre d'électrons initialement arrachés au milieu. Ce facteur augmente avec le champ de dérive, puisque ce dernier favorise la séparation des ions et des électrons, mais diminue avec la quantité d'énergie déposée. Il s'écrit
-        \begin{equation}\label{eq::R}
+        \begin{equation}\label{eq::birk}
           R=\frac{A}{1+\frac{k}{E_d \rho}\frac{dE}{dx}}
         \end{equation}
         avec $E_d$ le champ de dérive, et $A=\numprint{0.81}(5)$ et $k=\SI{0.055\pm0.005}{\kilo\volt\gram\per\centi\meter\cubed\per\mega\eV}$ d'après les ajustements fait par \gls{icarus} dans \cite{Amoruso2004}. La \autoref{fig::birk} montre la variation de $R$ en fonction de l'énergie déposée par unité de longueur dans un champ électrique de \driftfield{}. Les lignes pointillées correspondent à la \gls{mpv} d'une particule au minimum d'ionisation, qui donne $R=\numprint{0.71}$.

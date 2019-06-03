@@ -45,12 +45,26 @@
       \subsubsection{Traces}
     \subsection{Un troisième logiciel d'analyse léger en python}\label{sec::rawdatasoft}
       \subsubsection{Repérage des "hits"}
-        \subsection{Transformation de hough}
+        \subsection{Transformation de Hough}
                 -> En annexe si j'ai le temps : proposition d'une variante
       \subsubsection{Traces}
     \subsection{Comparaison des trois logiciels}
         
     \section{Performances de 311}
+    \subsection{Corrections}
+      \subsubsection{Densité}
+      \subsubsection{Impuretés}
+      \subsubsection{Efficacités d'extraction et de correction}
+      \subsubsection{ds}
+        La distribution des dépôts de charge par unité de longueur ($dQ/ds$) suit une distribution de Landau-Vavilov, convoluée à une Gaussienne (voir \autoref{sec::ionisation}). La \gls{mpv} de la Landau-Vavilov est donnée par l'équation \eqref{eq::mpv}, qui croît logarithmiquement avec $ds$, la distance de dépôt. En comparant la \gls{mpv} issue d'un ajustement aux données à la \gls{mpv} attendue, il est possible de calculer le gain effectif du détecteur. La dépendance de la \gls{mpv} à $ds$, bien que logarithmique, peut quand même induire des variations de \gls{mpv} allant jusqu'à 10\,\%. Tous les coups ont été corrigés pour cet effet, en multipliant le $dQ/ds$ mesuré par le ratio $MPV_{ds=\SI{1}{\centi\meter}}/MPV_{ds}$. La valeur de $ds=\SI{1}{\centi\meter}$ a été choisie comme référence car c'est la valeur la plus souvent mesurée dans le prototype.
+      \subsubsection{Birk}
+        Les différents runs n'ont pas tous été effectués au même champ de dérive. Or un champ de dérive plus faible entraîne un plus fort taux de recombinaison (voir \autoref{sec::recombinaison}), il convient donc de corriger la charge lue à chaque run. Le facteur de recombinaison dépend aussi de la charge déposée. Dans l'idéal, la correction devrait donc être faite pour chaque coup séparément. Cependant, le gain n'étant pas connu, il n'est pas possible de connaître précisément l'énergie déposée à chaque coup. La correction a donc été effectué en supposant un dépôt d'énergie correspondant à la valeur la plus probable d'un muon au minimum d'ionisation, utilisée dans la formule de Birk (équation \eqref{eq::birk}) avec de calculer le facteur de recombinaison $R$. 
+%Un facteur correctif est ensuite appliqué à la charge mesurée afin se replacer au champ de dérive de référence de \SI{0.5}{\kilo\volt\per\centi\meter}. Le calcul de l'énergie déposée pour chaque coup se fait avec la formule \eqref{eq::dedx_for_birk_from_dqdx} :
+%        \begin{equation}\label{eq::dedx_for_birk_from_dqdx}
+%          \frac{dE}{ds} = \frac{dQ}{dx}\frac{1}{\frac{A\times \numprint{1.602e-4}}{W}-\frac{k}{E_d \rho}\frac{dQ}{dx}}
+%        \end{equation}
+%        où $dQ/ds$ est la charge par unité de longueur mesurée et corrigée pour les pertes dues aux impuretés, pour les différentes efficacités de collection de charge, ainsi que pour la densité au moment du coup. $A$ et $k$ sont les paramètres de l'équation \eqref{eq::birk}, $W$ est l'énergie d'ionisation de l'argon liquide et $E_d$ le champ de dérive. Le facteur $\numprint{1.602e-4}$ correspond à la conversion du nombre d'électron à la charge en \si{\femto\coulomb}. Cette valeur de $dE/ds$ sert alors à calculer le facteur de recombinaison $R$.
+        La charge mesurée est ensuite multipliée par un facteur correctif $R_{0.5}/R$ où $R_{0.5}$ est le facteur de recombinaison à $E_d=\SI{0.5}{\kilo\volt\per\centi\meter}$.
     \subsection{Pureté}
     \subsection{Chargement (charging up, meilleure traduction à trouver?)}
     \subsection{Gain}

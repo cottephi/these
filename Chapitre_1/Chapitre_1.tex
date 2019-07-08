@@ -11,7 +11,7 @@
     \chapterprecishere{
         ``Potentielle citation sans aucun rapport avec le sujet"\par\raggedleft--- \textup{Personne inconnue}, contexte à déterminer
     }
-   %RAJOUTER UN PETIT MOT SUR CC et NC
+
   Le projet \gls{wa105}/protoDU$\nu$E teste la technologie de détecteur basé sur la \gls{lartpc} à l'échelle du kilotonne dans le but de l'utiliser dans la future expérience de physique des neutrinos \gls{dune}. Le but de ce chapitre est de montrer en quoi la physique des neutrinos est un domaine de la physique des particules offrant des possibilités de nouvelles découvertes, et comment la future expérience \gls{dune}, sera capable de s'y attaquer. Dans un premier temps, la place du neutrino dans le modèle standard de la physique des particules est présentée par une approche historique. Dans un second temps, le phénomène de l'oscillation des neutrinos est décrit afin d'expliquer comment l'expérience \gls{dune} pourra s'attaquer à des questions comme l'asymétrie matière-antimatière dans l'univers.
     
   \section{De la nécessité théorique à la place du neutrino dans la modèle standard}
@@ -37,7 +37,7 @@
       La physique des particules, dont le modèle standard est schématisé en \autoref{fig::SM}, est une discipline née de la convergence de l'électromagnétisme, de la mécanique quantique et de la relativité restreinte. Elle a pour objectif la compréhension du comportement des objets physiques à la plus petite échelle possible.
 
       La première pierre de la mécanique quantique est la discrétisation des rayonnements d'un corps incandescent suggéré par Max Planck en 1900\cite{Planck1900}, bien que ce dernier ne la voyait alors que comme un artifice mathématique correspondant bien aux observations. Einstein, en 1905\cite{Einstein1905-quanta}, se basera sur le travail de Planck et proposera la notion de quantum de lumière appelé plus tard "photon" pour expliquer les résultats expérimentaux de l'effet photoélectrique observés en 1839 par Antoine Becquerel et Alexandre Edmond\cite{Becquerel1839}. Il publie sa théorie de la relativité restreinte\cite{Einstein1905-relat}, qui permet de se passer de la notion d'éther luminifère, ainsi que la très célèbre équation $E=mc^2$\cite{Einstein1905-emc2} la même année. La mécanique quantique continuera à s'étoffer jusqu'en 1930 avec les travaux de Bohr, de Broglie, Pauli, Schrödinger et Heisenberg pour aboutir à l'interprétation de Copenhague\cite{Heisenberg1949}, qui constitue un nouveau paradigme où la notion de probabilité n'est plus juste issue d'un manque de connaissance mais est une propriété intrinsèque des systèmes physique. C'est à cette période que Pauli propose l'existence du neutrino\cite{Pauli1930}, nouvelle particule pas encore observée à ce moment là mais dont l'existence est nécessaire au maintien du principe de conservation de l'énergie (voir \autoref{sec::neutrino_origin}).
-%RAJOUTER ENCADRE SUR U(1)? Ou faire une annexe?
+
       Viennent ensuite les théories des interactions fondamentales et des champs de particules. La nécessité d'une interaction forte, responsable de la cohérence du noyau atomique, est entrevue après les résultats de l'expérience de Rutherford, démontrant l'existence du noyau. Les bosons, particules de spin entier, sont nommés d'après Satyendranath Bose, qui proposa leur existence en 1923 afin d'expliquer les découvertes de Planck sur les quanta de lumière\cite{Bose1924}. En 1926, Oskar Klein et Walter Gordon\cite{Klein1926,Gordon1926} créent l'équation portant leurs noms, capable de décrire le comportement de particules de spin 0 (un cas particulier de bosons dont fait parti le célèbre boson de Higgs). En 1928, Dirac propose son équation d'onde relativiste décrivant les particules de spin demi-entier, appelé fermions en l'honneur d'Enrico Fermi\cite{Dirac1928}. Se faisant, il prédit au passage la possibilité de l'existence de l'antimatière, dont le premier représentant, le positron, sera découvert en 1933 par Carl D. Anderson\cite{Anderson1933}. Fermi propose sa théorie de l'interaction faible, expliquant la désintégration $\beta$ en 1934\cite{Fermi1934}, qui s'avérera être une approximation du modèle de Yukawa de 1935\cite{Yukawa1935} où les interaction se font via un échange de boson. Feynman, Schwinger et Tomonaga\cite{Tomonaga1946,Schwinger1948,Feynman1998} créent la théorie de l'électrodynamique quantique entre 1946 et 1950, ancêtre du modèle standard que nous connaissons aujourd’hui. Cette théorie promeut une propriété des équations de Maxwell au rang de principe : le fait que les équations de Maxwell soient apparemment invariantes sous certaines transformations des champs électriques et magnétiques. Cette invariance se traduit, pour la propagation d'une particule chargée dans un champ, par l'invariance de sa probabilité de présence sous un rephasage dont l'argument peut dépendre de l'espace-temps (transformation dite \textit{locale}). Imposer l'invariance sous cette transformation $U(1)$ locale à l'ensemble du lagrangien libre de cette même particule chargée aboutit à l'apparition de termes d'interaction avec un champ de boson, qui n'est autre que le photon, médiateur de l'interaction électromagnétique. Une très bonne introduction à ce concept peut se trouver dans "Geometry, particles and fields", de Bjorn Felsager \cite{felsager}.
 
       S'en suivent alors les découvertes de très nombreuses particules : de nombreux mésons, baryons et  hadrons, ainsi que le lepton $\mu$, ou muon, qui avait été découvert en 1937\cite{Street1937}. Les théories de Yang et Mills de 1954\cite{Yang1954} généralisent l'invariance de jauge $U(1)$ de l'électrodynamique quantique et seront utilisées par Gell-Mann en 1961-1964\cite{Glashow1961,Gell-Mann1964} pour créer la chromodynamique quantique, qui décrit l'interaction forte responsable de la cohésion du noyau atomique, en imposant au lagrangien une invariance par transformation $SU(3)$. La notion de quarks, composants fondamentaux du zoo de particules alors connues, est introduite par la même occasion. Glashow, Salam et Weinberg imposent une invariance $U(1)\otimes SU(2)$ en 1967\cite{Glashow1961a,Salam1964,Weinberg1967} pour unifier les interactions faible et électromagnétique, et la brisent en utilisant le mécanisme de brisure de symétrie postulée en 1964 par  Brout, Englert, Higgs, Hagen, Guralnik et Kibble\cite{Englert1964,Higgs1964,Higgs1964a,Kibble1967} prédisant l'existence du fameux boson de Higgs pour expliquer la génération des masses des particules massives alors connues (sans brisure de symétrie, toutes les particules auraient due être de masse nulle!). 
@@ -52,11 +52,6 @@
 
   \section{Le paradigme des oscillations des neutrinos}
 
-    \subsection{Courant chargé et courant neutre}\label{sec::courants}
-      
-      %TODO
-      Avant de se lancer dans l'oscillation des neutrinos à proprement parler, il est nécessaire de présenter les différents modes d'interactions des neutrinos avec la matière. \textcolor{red}{à faire}.
-
     \subsection{Genèse de la théorie}
 
       On désigne habituellement un neutrino par sa saveur : neutrinos électronique ($\nu_e$), muonique ($\nu_{\mu}$) ou tauique ($\nu_{\tau}$). Quand un lepton chargé (électron muon ou tau) interagit avec un boson $W$, il se transforme en un neutrino de saveur définie (appelons-le $\nu_{\alpha}$), correspondant à celle du lepton chargé. De la même manière, un neutrino d'une saveur donnée (appelons-le $\nu_{\beta}$) se transforme en un lepton chargé de même saveur après interaction avec un boson $W$. Or, si le neutrino a une masse non nulle, un neutrino produit par un lepton de saveur $\alpha$ peut, après propagation dans l'espace, produire un lepton de saveur $\beta\ne\alpha$. Le premier à avoir soulevé ceci est Bruno Pontecorvo, même si il ne l'a pas fait en ces termes. En effet, au moment de la publication de ses deux premiers articles\cite{Pontecorvo:1957cp,Pontecorvo:1957qd} sur le sujet à la fin des années 60, seul le neutrino électronique avait été découvert. Pontecorvo parlait de possible transition entre neutrino et antineutrino du fait que le neutrino soit neutre, inspiré par les travaux de Gell-Mann et Païs\cite{Gell-Mann1955} sur la conversion du $\overline{K^0}$ en  $K^0$. Dans son article suivant en 1968\cite{Pontecorvo1968}, tout en gardant la possibilité de conversion des neutrinos vers les antineutrinos, il introduit la possibilité d'une conversion du neutrino électronique vers le neutrino muonique, découvert en 1962\cite{Danby1962}. Il prédira également deux résultats importants :
@@ -69,6 +64,16 @@
       Le changement de saveur $\nu_e\rightleftharpoons\nu_{\mu}$ avait été envisagé également entre 1962 et 1963 par deux groupes de physiciens, Katayama, Matumoto, Tanaka et Yamada\cite{Nakagawa1963} puis par Maki,  Nakagawa et  Sakata\cite{Maki1962}. Ces quatre derniers donneront leurs noms, avec Pontecorvo, à la célèbre matrice \gls{pmns} décrite plus loin, qui gouverne les transitions de saveur des neutrinos. Leur point de départ était différent de celui de Pontecorvo, puisqu'ils visaient à créer une théorie unifiant les leptons et les hadrons. Ils sont également arrivés à la conclusion qu'un changement de saveur des neutrinos implique que ces derniers doivent avoir des masses non nulles.
 
       En 2015, Arthur~B.~McDonald et Takaaki Kajita ont reçu le prix Nobel de physique "pour la découverte des oscillations des neutrinos, qui montre que les neutrinos ont une masse". Les deux expériences ayant fait cette découverte sont \gls{sno}\cite{Aharmim2013} et Super-Kamiokande\cite{Fukuda1998}.
+
+    \begin{activitybox}[label=box::courants]{Interactions des neutrinos dans la matière}
+      Un neutrino n'interagit que via l'interaction faible, et donc via soit un boson $W^{\pm}$ soit un boson $Z^0$. 
+
+      L'interaction via un boson $W^{\pm}$ est dite par "courant chargé" et produira nécessairement un lepton de même saveur et de même nature (matière ou antimatière) que le neutrino dans l'état final.
+      
+      Dans l'interaction via boson $Z^0$, dite par "courant neutre", le neutrino est encore présent dans l'état final. Une telle interaction ne permet pas de reconstruire la saveur du neutrino.
+
+      Dans les deux cas, le neutrino interagira avec le noyau de l'atome du milieu de détection et produira dans l'état final un ou plusieurs hadrons, chargés ou neutre. Pour étudier une probabilité de changement de saveur, il faut donc reconstruire la saveur et l'énergie des neutrinos incidents, et donc mesurer l'énergie et la saveur des leptons produits dans l'état final (électrons et muons pour \gls{dune}), ainsi que l'énergie des gerbes hadroniques du même état final.
+    \end{activitybox}
 
       \gls{sno} détectait les neutrinos solaires, par interaction par courant chargé (CC) et par courant neutre (CN), permettant d'avoir accès à la fois au flux de neutrinos électroniques (CN et CC) et au flux de neutrinos muoniques et tauiques (CN). Comme le montre la \autoref{fig::SNO_plot}, la somme des trois flux correspond bien au flux total prédit par le modèle solaire standard alors que le flux de neutrinos électroniques est inférieur aux prédictions, montrant qu'une partie du flux change de saveur mais que le flux total est conservé.
 
@@ -141,8 +146,8 @@
         
         \begin{figure}[htpb]
           \centering
-          \includegraphics[width=0.7\textwidth,keepaspectratio]{numu-nue-vs-L-3flav.png}
-          \caption[$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$]{\label{fig::3flavors_oscillations}$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$ pour un neutrino de \SI{0.9}{\giga\electronvolt} et \SI{2.5}{\giga\electronvolt}. La ligne verticale représente la ligne de base de \gls{dune}. Le faisceau de neutrino envoyé aura des énergies allant de \SI{0.5}{\giga\electronvolt} et \SI{5}{\giga\electronvolt}, incluant donc les deux premiers maxima locaux de probabilité.\textcolor{red}{Je referai ce plot avec des axes plus gros}}
+          \includegraphics[width=0.9\textwidth,keepaspectratio]{numu-nue-vs-L-3flav.pdf}
+          \caption[$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$]{\label{fig::3flavors_oscillations}$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$ pour un neutrino de \SI{0.9}{\giga\electronvolt} et \SI{2.5}{\giga\electronvolt}. La ligne verticale représente la ligne de base de \gls{dune}. Le faisceau de neutrino envoyé aura des énergies allant de \SI{0.5}{\giga\electronvolt} et \SI{5}{\giga\electronvolt}, incluant donc les deux premiers maxima locaux de probabilité.}
         \end{figure}
         Dans une expérience détectant des neutrinos, la probabilité sera moyennée sur le temps $t$, inconnu. Supposons que la source des neutrinos ait deux composantes d'énergies différentes $E_1$ et $E_2$, contribuant de manière cohérente au signal observé dans le détecteur. Au bout du temps $t$, chaque composante aura pris un facteur de phase $e^{-iE_jt}$. Les interférences entre les deux composantes feront alors entrer en jeu un facteur de phase $e^{-i(E_1-E_2)t}$. Moyenné sur $t$, ce facteur disparaît, sauf si $E_1 = E_2$. Les seules composantes contribuant de manière cohérente au signal ont donc une même énergie $E$. Ce point est détaillé dans les articles de Stodolsky\cite{Stodolsky1998}, Lipkin\cite{Lipkin2005} et Kayser\cite{Kayser2005}. On se retrouve donc avec l'équation suivante : 
         \begin{equation*}
@@ -180,7 +185,7 @@
           \hfill 
           \begin{subfigure}[t]{0.4\textwidth}
             \includegraphics[width=\textwidth]{superK_plot.png}
-            \caption{\label{fig::superK_plot}Nombre de neutrinos muoniques mesurés par Super-Kamiokande (traits pleins) et prédit par le Monte Carlo en l'absence de changement de saveur (surfaces hachurées) pour un an et demi de prise de donnée, en fonction l'angle entre la verticale et la direction du neutrino\cite{Fukuda1998}. Un cosinus négatif correspond à un neutrino ayant traversé la Terre. La différence entre observation et prédiction à grand angle indique une disparition des neutrinos muonique à grande ligne de base.}
+            \caption{\label{fig::superK_plot}Nombre de neutrinos muoniques mesurés par Super-Kamiokande (traits pleins) et prédit par le Monte Carlo en l'absence de changement de saveur (surfaces hachurées) pour un an et demi de prise de donnée, en fonction l'angle entre la verticale et la direction du neutrino\cite{Fukuda1998}. Un cosinus négatif correspond à un neutrino ayant traversé la Terre. La différence entre observation et prédiction à grand angle indique une disparition des neutrinos muonique à grande ligne de base, compatible avec la théorie des oscillations des neutrinos.}
           \end{subfigure}
           \caption[Les preuves que les neutrinos changent de saveur, par \gls{sno} et Super-Kamiokande.]{Les deux graphiques ayant prouvé les changement de saveur des neutrinos : le flux total de neutrinos provenant du soleil est conservé mais sa composition de saveur change, par \gls{sno} (gauche). Le nombre de neutrinos muoniques atmosphériques détectés dépend de la ligne de base, par Super-Kamiokande (droite).}
         \end{figure}
@@ -385,7 +390,7 @@
         \begin{equation}
           P(\nu_{\mu}\to\nu_e) \simeq A^2_{atm} + A^2_{sol} + 2\cos(\theta_{13})A_{atm}A_{sol}\cos\left(\Delta m^2_{31}\frac{L}{4E} + \delta_{CP}\right)
         \end{equation}
-        où $A_{atm} = \sin(\theta_{23})\sin(2\theta_{13})\sin\left(\Delta m^2_{31}\frac{L}{4E}\right)$ et $A_{sol} =\cos(\theta_{23})\sin(2\theta_{12})\sin\left(\Delta m^2_{21}\frac{L}{4E}\right)$. Le dernier terme sera sensible à la phase de violation de CP. L'effet de ce terme sur la probabilité de transition est montré à la \autoref{fig::3flav_oscillation_cp}. \textcolor{red}{rajouter ordre de masse}
+        où $A_{atm} = \sin(\theta_{23})\sin(2\theta_{13})\sin\left(\Delta m^2_{31}\frac{L}{4E}\right)$ et $A_{sol} =\cos(\theta_{23})\sin(2\theta_{12})\sin\left(\Delta m^2_{21}\frac{L}{4E}\right)$. Le dernier terme sera sensible à la phase de violation de CP. L'effet de ce terme sur la probabilité de transition est montré à la \autoref{fig::3flav_oscillation_cp}.
         %             On peut quantifier l'impact de cette violation sur l'oscillation $\nu_{\mu}\to\nu_e$ avec la grandeur
         %            \begin{equation}\label{eq::CP_A_factor}
         %                A_{\mu e} = \frac{P(\nu_{\mu}\to\nu_e)-P(\anu_{\mu}\to\anu_e)}{P(\nu_{\mu}\to\nu_e)+P(\anu_{\mu}\to\anu_e)} \simeq -\frac{\cos(\theta_{23})\sin(2\theta_{12})}{\sin(\theta_{23})\sin(\theta_{13})}\sin\left(\Delta m^2_{21}\frac{L}{4E}\right)\sin(\delta_{CP}).
@@ -462,14 +467,12 @@
           \sin^2(2\theta) = \frac{\left(\frac{\Delta m^2}{2E}\sin(2\theta_0)\right)^2}{\left(\frac{\Delta m^2}{2E}\cos(2\theta_0) - \sqrt{2}G_F N_e\right)^2 + \left(\frac{\Delta m^2}{2E}\sin(2\theta_0)\right)^2}.
         \end{equation}
         
-        \begin{figure}[htpb][
+        \begin{figure}[htpb]
           \centering
-          \includegraphics[width=0.7\textwidth,keepaspectratio]{msw_ne.png}
+          \includegraphics[width=0.9\textwidth,keepaspectratio]{msw_ne.pdf}
           \caption[Effet de résonnance \gls{msw}]{\label{fig::amp_matter_vs_Ne}Amplitude de probabilité de changement de saveur de neutrinos se propageant dans la matière (approximation à deux saveur) en fonction de la densité d'électron $N_e$, pour différents angles de mélange dans le vide et différentes différence de masse au carré : il existe une valeur de $N_e$ où cette probabilité est de 1.}
-          %FAIRE un meilleur plot, où l'on voit les tendances à $\pm\infty$, et mettre $\theta_0$ dans le label au lieu de $\theta$.}
         \end{figure}
         Cette amplitude est représentée en fonction de la densité $N_e$ sur la \autoref{fig::amp_matter_vs_Ne}. On voit qu'elle a un maximum de 1 quand $N_e = N_e^{res}$ et qu'elle tend vers 0 à $\pm\infty$, et ce peu importe l'angle $\theta_0$. Autrement dit, même pour un très petit angle de mélange dans le vide, l'amplitude d'oscillation peut être de 1 si la densité d'électron dans le milieu traversé atteint une valeur de résonance
-%VERIFIER
 %        \begin{align}\label{eq::MSW_condition}
 %          N_e^{res}  =\frac{\Delta m^2\cos(2\theta_0)}{2\sqrt{2}G_F E}\\
 %           = \numprint{6.56e9}\frac{\Delta m^2(\si{\electronvolt\squared})}{E(\si{\giga\electronvolt})}\cos(2\theta_0)N_A\si{\centi\meter^{-3}}.
@@ -516,22 +519,27 @@
 
       \begin{figure}[htpb]
         \centering
-        \begin{subfigure}{\textwidth}
+        \begin{subfigure}[t]{0.49\textwidth}
           \centering
-          \includegraphics[width=0.6\textwidth]{3flav_oscillation.png}
-          \caption{\label{fig::3flav_oscillation_vanilla}Oscillation de la probabilité de transition à trois saveurs de $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$ sans effet de matière et avec $\delta_{CP}=0$. La courbe grise représente le terme principale prenant en compte $\Delta m^2_{31}$ dans l'équation \eqref{eq::dvpt_3flavor_accelerator}. La courbe verte représente le terme principale prenant en compte $\Delta m^2_{21}$. La courbe noire prend en compte tous les termes.}
-        \end{subfigure}\\
-        \begin{subfigure}{\textwidth}
+          \includegraphics[width=\textwidth]{numu-nue-vs-LoverE.pdf}
+          \caption{\label{fig::3flav_oscillation_vanilla}Oscillation de la probabilité de transition à trois saveurs de $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$ sans effet de matière et avec $\delta_{CP}=0$.}
+        \end{subfigure}\hfill
+        \begin{subfigure}[t]{0.49\textwidth}
           \centering
-          \includegraphics[width=0.6\textwidth]{3flav_oscillation_cp.png}
+          \includegraphics[width=\textwidth]{numu-nue-vs-LoverE-CP.pdf}
           \caption{\label{fig::3flav_oscillation_cp}Effet de la phase de violation de CP sur la probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$, sans effet de matière.}
         \end{subfigure}\\
-        \begin{subfigure}{\textwidth}
+        \begin{subfigure}[t]{0.49\textwidth}
           \centering
-          \includegraphics[width=0.6\textwidth]{3flav_oscillation_matter.png}
-          \caption{\label{fig::3flav_oscillation_matter}Effet de la matière sur la probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$. La courbe en rouge considère l'ordre de masse inversé.}
+          \includegraphics[width=\textwidth]{numu-nue-vs-LoverE-MO.pdf}
+          \caption{\label{fig::3flav_oscillation_ordering}Effet de l'ordre des masses sur la probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$.}
+        \end{subfigure}\hfill
+        \begin{subfigure}[t]{0.49\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{numu-nue-vs-LoverE-MSW.pdf}
+          \caption{\label{fig::3flav_oscillation_matter}Effet de la matière sur la probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$.}
         \end{subfigure}\\
-        \caption{\label{fig::3flav_oscillation}Probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$ à une ligne de base de \SI{3000}{\kilo\meter}. les graphs viennent de l'étude de Bass et.al présentée au chapitre suivant\cite{Bass2013}.}
+        \caption{\label{fig::3flav_oscillation}Probabilité de transition $P(\nu_{\mu}\to\nu_e)$ en fonction de $L/E$ à une ligne de base de \SI{3000}{\kilo\meter}.}
       \end{figure}
 
       %Dans le cas à trois saveurs, l'équation \eqref{eq::evolution_matter_2flavor} devient, en prenant en compte le potentiel $V_{CC}$ :
@@ -663,7 +671,7 @@
         \begin{equation}\label{eq::mass_hierarchy}
           |\Delta m^2_{21}| <<|\Delta m^2_{31}| \simeq |\Delta m^2_{32}| 
         \end{equation}
-        Ceci peut correspondre à quatre ordres différents pour les 3 masses $m_1$, $m_2$ et $m_3$. Les observations des oscillations dans le secteur solaire impliquent que $\Delta m^2_{21} > 0$\cite{pdg2018}. Il reste alors deux possibilités. La \autoref{fig::mass_hierarchy} montre ces deux possibilités ainsi que leur composantes respective en $\nu_e$, $\nu_{\mu}$ et $\nu_{\tau}$, pour des valeurs de $\delta_{CP}$ allant de 0 à $\pi$\cite{Qian2015}. La convention est d'appeler le cas $m_1 < m_2 < m_3$ ordre normal et le cas $m_3 < m_1 < m_2$ ordre inversé.
+        Ceci peut correspondre à quatre ordres différents pour les 3 masses $m_1$, $m_2$ et $m_3$. Les observations des oscillations dans le secteur solaire impliquent que $\Delta m^2_{21} > 0$\cite{pdg2018}. Il reste alors deux possibilités. La \autoref{fig::mass_hierarchy} montre ces deux possibilités ainsi que leur composantes respective en $\nu_e$, $\nu_{\mu}$ et $\nu_{\tau}$, pour des valeurs de $\delta_{CP}$ allant de 0 à $\pi$\cite{Qian2015}. La convention est d'appeler le cas $m_1 < m_2 < m_3$ ordre normal et le cas $m_3 < m_1 < m_2$ ordre inversé. La \autoref{fig::3flav_oscillation_MO} montre l'effet de l'ordre de masse, en prenant en compte les effets de matière, sur la probabilité de transition $P(\nu_{\mu}\to\nu_e)$.
         
         Les premières générations d'expériences d'oscillation de neutrinos, où les effets de matières étaient absents\footnote{Sauf dans le cas des neutrinos solaires, mais la convention avait déjà posé $\Delta m^2_{21} > 0$, qui est la seule accessible par ces expériences.}, utilisaient l'approximation à deux saveurs \eqref{eq::two_flavors}, n'étant pas assez précises pour déceler des effets à trois saveurs. Le terme d'oscillation étant en $\sin^2$, il n'est pas sensible au signe de $\Delta m^2$, aussi nous ne savons toujours pas lequel des deux ordres est le bon. Il est important de lever cette inconnue, l'ordre des masses est liée à un certain nombre de théories concernant la grande unification des forces fondamentales et l'origine de l'univers\cite{KH-website}.
         
@@ -685,7 +693,7 @@
       \subsubsection{L'octant de l'angle \texorpdfstring{$\theta_{23}$}{theta23}}
 
         %Les amplitudes de la probabilité de transition $P(\nu_{\alpha}\to\nu_{\beta})$ sont proportionnelles, dans les approximations à deux saveurs, à $\sin^2(2\theta_{ij})$ (voir équations \eqref{eq::e_approx_reacteur}, \eqref{eq::mu_approx_atmo} et \eqref{eq::solar_oscillation}). L'approximation faite pour étudier les neutrinos atmosphériques et d'accélérateur à (équation \eqref{eq::mu_approx_atmo}) a permit de mesurer $\sin^2(2\theta_{23})$.
-        Les mesures les plus récentes présentées en \autoref{sec::current_knowledge} sont compatibles avec $\theta_{23}$ autour mais différent de $\pi/4$, soit un mélange quasi-maximal. Ces mesures ne sont cependant pas suffisantes pour déterminer l'octant de $\theta_{23}$ (est-il supérieur ou inférieur à $\pi/4$?). Or ce dernier intervient dans les théories des masses des neutrinos, dans des théories de supersymétries et dans la détermination de la phase de violation CP et l'ordre des masses (voir \cite{Agarwalla2016,king2015a}). La probabilité de transition qui peut être analysée par les expériences d'accélérateur à longue ligne de base \eqref{eq::proba_matter_3flavors} a comme terme dominant un terme proportionnel à $\sin^2(\theta_{23})$, qui est donc sensible à l'octant de $\theta_{23}$.
+        Les mesures les plus récentes présentées en \autoref{sec::current_knowledge} sont compatibles avec $\theta_{23}$ autour mais différent de $\pi/4$, soit un mélange quasi-maximal. Ces mesures ne sont cependant pas suffisantes pour déterminer l'octant de $\theta_{23}$ (est-il supérieur ou inférieur à $\pi/4$?). Or ce dernier intervient dans les théories des masses des neutrinos, dans des théories de supersymétries et dans la détermination de la phase de violation CP et l'ordre des masses (voir \cite{Agarwalla2016,King2015a}). La probabilité de transition qui peut être analysée par les expériences d'accélérateur à longue ligne de base \eqref{eq::proba_matter_3flavors} a comme terme dominant un terme proportionnel à $\sin^2(\theta_{23})$, qui est donc sensible à l'octant de $\theta_{23}$.
 % La sensibilité à cet octant est présenté en \autoref{sec::dune_pheno}.
 
 \FloatBarrier

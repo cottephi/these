@@ -1,4 +1,4 @@
-\chapter{Tests et simulations des CRPs de WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}
+\chapter{Tests et simulations des CRPs de WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}\label{chap::4}
     \chapterprecishere{
         ``Potentielle citation sans aucun rapport avec le sujet"\par\raggedleft--- \textup{Personne inconnue}, contexte à déterminer
     }
@@ -446,7 +446,8 @@
 
     \subsection{Mesures de gain}\label{sec::test_gain}
 
-      \textcolor{red}{A faire}
+      %A FAIRE
+      Sur le plot, on voit les mesures faites dans le 3L avant CU. Un facteur de 2.7 est utilisé pour estimer les valeurs après CU. On voit les mesures faites à Saclay après CU avec des 50x50 et des 10x10 (comportements identiques), qui sont plus bas que les résultats attendus après CU. Différences pas encore bien comprises, une calibration précise va être faite en effectuant une mesure sans lem. On voit également les valeurs maximums de gain atteintes à différentes pressions, obtenue en fonction de la tension maximum atteinte pour ces pressions et une extrapolation des données de gain mesurée dans la gamelle à ces pressions.
         
     \subsection{Test de continuité des pistes des anodes}\label{sec::test_anode}
 
@@ -491,8 +492,9 @@
         \caption{\label{fig::anode_test_probleme}Photo de canaux défaillant sur le bord d'une anode.}
       \end{figure}
 
-    \subsection{Test des CRP du démonstrateur \SSS{} dans une boite cryogénique}
+    \subsection{Test des CRP du démonstrateur \SSS{} dans une boite cryogénique}\label{sec::cold_box}
       
+      %RAJOUTER RIM DECENtRES, DEFORMATION CRP, PLOT TENU EN TENSION SUR QQ HEURES
       \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.7\textwidth]{crp_in_coldbox.png}
@@ -506,7 +508,7 @@
 
       Les deux \gls{crp} non instrumentés ont également été testés, et les quatre \gls{crp} ont été installé dans le cryostat entre fin 2018 et début 2019. Dans la suite, nous nous intéressons aux champs électriques à travers le \gls{crp} et à l'impact de ces derniers sur la collection de charge. Dans un premier temps, les zones dépourvues de trous d'amplification sont étudiées, puis les efficacités de collection des électrons à travers les trous d'amplification pour plusieurs champs électriques.
         
-  \section{Simulation : les zones mortes des LEMs}\label{sec::zones_mortes}
+  \section{Simulation : les zones mortes des LEMs}\label{sec::dead_zones}
     
     Deux modèles de \glspl{lem} sont utilisés dans \protodp{}, chacun présentant des aires dépourvues de trous d'amplification pouvant constituer des zones mortes. Les effets de ces zones mortes sur la charge collectée et sur la résolution de la l'énergie détectée ont été simulés pour le modèle CFR-34 (utilisé dans le prototype \TOO{}). %Une première sous-section traite de la méthode de simulation, sont ensuite présentés la carte d'efficacité ainsi créée et l'impact simulé sur la résolution en énergie. Une dernière sous-section discute des limites de cette simulation.
         

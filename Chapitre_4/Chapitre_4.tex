@@ -1,11 +1,11 @@
-\chapter{Tests et simulations des CRPs de WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}\label{chap::4}
+\chapter{Tests et simulations des CRPs de \texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}\label{chap::4}
     \chapterprecishere{
         ``Potentielle citation sans aucun rapport avec le sujet"\par\raggedleft--- \textup{Personne inconnue}, contexte à déterminer
     }
     
   Dans ce chapitre sont présentés les tests des \glspl{lem} et anodes de \protodp{} réalisés au \gls{cea} et au \gls{cern} entre 2015 et 2019, ainsi que les simulations des champs électriques à travers le \gls{crp} et leur impact sur la collection de charge.
     
-  \section{Les LEMs et anodes de WA105/\texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}
+  \section{Les LEMs et anodes de \texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}
 %    \section{Introduction technique}
 %        
 %        Dans cette section sont présentées les différentes parties du \gls{crp}. La première sous-section sert d'introduction générale, puis une sous-section est dédié chaque élément important du \gls{crp}.
@@ -27,7 +27,7 @@
 %          \caption[\glspl{crp} du démonstrateur \SSS{}]{Schéma des \glspl{crp} du démonstrateur \SSS{}. L'un d'eux est représenté plus bas pour illustrer le fait qu'il y a 4 \glspl{crp}. Chacun mesure $3\times\SI{3}{\meter\squared}$. Les trais gris verticaux représentent les câbles de suspensions. La grille d'extraction n'est pas représentée sur ce schéma. \cite{CRPdesign}}
 %          \label{fig::crp_\SSS{}}
 %                \end{subfigure}
-%                \caption{Schéma des \gls{crp} de \protodp{}}
+%                \caption{Schéma des \glspl{crp} de \protodp{}}
 %            \end{figure}
 %        
 %            Le \gls{crp} a pour rôle:
@@ -48,7 +48,7 @@
             
 %            Les anodes, décrites en \autoref{sec::anode}, sont situées $\SI{2}{\milli\meter}$ au dessus des \glspl{lem}. Une tension de $\SI{1}{\kilo\volt}$ entre les anodes et le haut des \glspl{lem} créé un champ d'induction de $\SI{5}{\kilo\volt\per\centi\meter}$, qui doit alors correspondre à un probabilité de collection de charge optimale (voir \autoref{sec::efficacites}).
             
-%            Les \glspl{lem} et anodes sont fixés sous des supports en fibre de verre G10, eux même fixés sous un squelette en acier inoxydable pour le prototype \TOO{} ou en Invar pour le démonstrateur \SSS{} (voir \autoref{sec::crp_structure}). La grille d'extraction est constituée de fils d'acier inoxydable, chacun tendu à $\SI{1.5}{\newton}$ à température ambiante sur des \glspl{pcb}, eux même fixés sur les bords des supports en G10. Le \gls{crp} est désolidarisé du reste du cryostat, il est donc possible de l'assembler et de le tester à part. Un système de câbles et poulies permet d'ajuster la position du \gls{crp} au dessus du liquide. La \autoref{fig::crp_\TOO{}} et la \autoref{fig::crp_\SSS{}} montrent respectivement le \gls{crp} du prototype \TOO{} et un \gls{crp} du démonstrateur \SSS{}. Le prototype \TOO{} n'a qu'un \gls{crp} recouvrant toute sa surface, mais le démonstrateur \SSS{} a quatre \gls{crp} de $3\times\SI{3}{\meter\squared}$, indépendants entre eux. Due à des retards de production, seuls deux de ces \gls{crp} sont instrumentés. Sur les deux autres, les \glspl{lem} et anodes ont été remplacés par des \gls{pcb} mis à la masse.
+%            Les \glspl{lem} et anodes sont fixés sous des supports en fibre de verre G10, eux même fixés sous un squelette en acier inoxydable pour le prototype \TOO{} ou en Invar pour le démonstrateur \SSS{} (voir \autoref{sec::crp_structure}). La grille d'extraction est constituée de fils d'acier inoxydable, chacun tendu à $\SI{1.5}{\newton}$ à température ambiante sur des \glspl{pcb}, eux même fixés sur les bords des supports en G10. Le \gls{crp} est désolidarisé du reste du cryostat, il est donc possible de l'assembler et de le tester à part. Un système de câbles et poulies permet d'ajuster la position du \gls{crp} au dessus du liquide. La \autoref{fig::crp_\TOO{}} et la \autoref{fig::crp_\SSS{}} montrent respectivement le \gls{crp} du prototype \TOO{} et un \gls{crp} du démonstrateur \SSS{}. Le prototype \TOO{} n'a qu'un \gls{crp} recouvrant toute sa surface, mais le démonstrateur \SSS{} a quatre \gls{crp} de $3\times\SI{3}{\meter\squared}$, indépendants entre eux. Due à des retards de production, seuls deux de ces \gls{crp} sont instrumentés. Sur les deux autres, les \glspl{lem} et anodes ont été remplacés par des \glspl{pcb} mis à la masse.
 %            
 %            Le \gls{crp} est munie de plusieurs capteurs de pression, de température ainsi que de niveau d'argon liquide afin de suivre en direct les conditions à l'intérieur du détecteur et de pouvoir ajuster le niveau du \gls{crp} par rapport au liquide.
         
@@ -77,7 +77,7 @@
 %            
 %            Les signaux sont apportés vers l'extérieur par des conduites similaires à celles des câbles de suspension, remplies d'azote \cite{Acciarri2016a} traversant le couvercle du détecteur. Elles sont faites de manière à ce que l'électronique Frontend soit accessible pour d'éventuelles réparations sans contaminer l'argon. Les cartes Frontend (des circuits CMOS ASIC) sont située en bas des conduites et refroidie à \SI{110}{\kelvin}. L'électronique numérique et le \gls{daq} sont situés en dehors du cryostat.
 %            
-%            L'alimentation haute tension passe elle aussi par des conduites isolante, et est distribuée aux \gls{lem}, aux anodes et à la grille d'extraction par des câbles coaxiaux courant le long de la structure du \gls{crp}. Dans le prototype \TOO{}, chaque face de chaque \gls{lem} ainsi que chaque anode a sa propre alimentation. Dans le démonstrateur \SSS{}, les faces hautes des \gls{lem} sont alimentées par groupe de neuf.
+%            L'alimentation haute tension passe elle aussi par des conduites isolante, et est distribuée aux \gls{lem}, aux anodes et à la grille d'extraction par des câbles coaxiaux courant le long de la structure du \gls{crp}. Dans le prototype \TOO{}, chaque face de chaque \gls{lem} ainsi que chaque anode a sa propre alimentation. Dans le démonstrateur \SSS{}, les faces hautes des \glspl{lem} sont alimentées par groupe de neuf.
 %            
 %            Les anodes sont reliées entre elles via des nappes et des connecteurs KEL formant des canaux de trois mètres de long dans le \SSS{} et trois ou un mètre dans le \TOO{}.
 %            
@@ -107,7 +107,7 @@
           \centering
           \captionsetup{width=.95\linewidth}
           \includegraphics[width=0.8\textwidth,keepaspectratio]{CFR-34.png}
-          \caption{\label{fig::cfr34}Modèle de \gls{lem} CFR-34 utilisé dans le prototype de \TOO{}. Les zones dépourvues de trous d'amplifications aux bords et autour des trous des vis et des connecteurs haute tension sont plus petites que celles du modèle CFR-35, la surface active totale étant de 96\,\%.}
+          \caption{\label{fig::cfr34}Modèle de LEM CFR-34 utilisé dans le prototype de \TOO{}. Les zones dépourvues de trous d'amplifications aux bords et autour des trous des vis et des connecteurs haute tension sont plus petites que celles du modèle CFR-35, la surface active totale étant de 96\,\%.}
         \end{subfigure}
         \hfill
         \begin{subfigure}[t]{0.48\textwidth}
@@ -116,19 +116,19 @@
           \includegraphics[width=0.8\textwidth,keepaspectratio]{CFR-35.png}
           \caption{\label{fig::cfr35}Modèle de \gls{lem} CFR-35 utilisé dans le démonstrateur de \SSS{}. Les zones dépourvues de trous d'amplifications ont été agrandies par rapport au modèle CFR-34 qui montrait des difficultés à tenir des tensions de l'ordre de \SI{3}{\kilo\volt}, ce qui ne permet pas d'atteindre un gain de 20. Ce nouveau modèle est stable à \SI{3.1}{\kilo\volt}, mais sa surface active totale est réduite à 86\,\%.}
         \end{subfigure}
-        \caption[Modèle de \gls{lem} CFR-34 et CFR-35.]{Fichier Gerber des modèles de \gls{lem} CFR-34 et CFR-35.}
+        \caption[Modèle de LEM CFR-34 et CFR-35]{Fichier Gerber des modèles de \gls{lem} CFR-34 et CFR-35.}
         \label{fig::cfrs}
       \end{figure}
 
 %      Les \glspl{lem} sont l'élément central d'une \gls{dlartpc}. Ce sont eux qui vont permettre l'amplification du signal dans la phase gazeuse. Produits de plusieurs dizaines d'années de recherche et développement, ils ont prouvé être mieux adaptés aux amplifications dans les gaz nobles que les techniques utilisant des chambres à fils, des GEM ou des micro-mégas (\cite{Buzulutskov2000,Breskin2008}). Ce sont des \glspl{pcb} constitués d'une plaque de résine époxy PANASONIC R-1566W (\gls{fr4}) recouverte de chaque côté par une fine couche de cuivre. Des trous sont percés à travers cette plaque, au travers desquelles les électrons primaires, issues de l'interaction d'une particule avec l'argon liquide plus bas, sont accélérés par une forte différence de potentielle appliquée entre les deux couches de cuivre, créant un champ électrique de l'ordre de $\SI{30}{\kilo\volt\per\centi\meter}$. Ceci permet alors de déclencher une avalanche de Townsend (voir \autoref{sec::townsend_avalanche}) et donc d'amplifier le signal.
             
-%            Un effet à prendre en compte dans les détecteurs utilisant des amplificateurs comme les \gls{lem} est le chargement de ces derniers. En effet, les lignes de champs à travers les \gls{lem} sont tels que des électrons vont pouvoir terminer leur course sur le \gls{fr4} au lieu de traverser le dispositif. Une accumulation de ces électrons diminuera alors le champ d'amplification, entraînant une baisse de gain. Ce phénomène, étudié dans cet article \cite{Cantini2014}, peut être décrit par une décroissance exponentielle du gain à laquelle est associée un temps caractéristique (que l'on appellera temps de charge) qu'il convient de mesurer. Comme une exploitation des résultats n'a vraiment de sens qu'à gain constant, il est préférable de diminuer ce temps de charge afin d'atteindre au plus vite un régime permanent.
+%            Un effet à prendre en compte dans les détecteurs utilisant des amplificateurs comme les \glspl{lem} est le chargement de ces derniers. En effet, les lignes de champs à travers les \glspl{lem} sont tels que des électrons vont pouvoir terminer leur course sur le \gls{fr4} au lieu de traverser le dispositif. Une accumulation de ces électrons diminuera alors le champ d'amplification, entraînant une baisse de gain. Ce phénomène, étudié dans cet article \cite{Cantini2014}, peut être décrit par une décroissance exponentielle du gain à laquelle est associée un temps caractéristique (que l'on appellera temps de charge) qu'il convient de mesurer. Comme une exploitation des résultats n'a vraiment de sens qu'à gain constant, il est préférable de diminuer ce temps de charge afin d'atteindre au plus vite un régime permanent.
             
 %            Un autre problème potentielle est que des tensions trop importantes peuvent entraîner des décharges soudaines, entre la grille de un ou plusieurs \gls{lem}, au travers d'un ou plusieurs \gls{lem} ou entre un ou plusieurs \gls{lem} et les anodes. Ces décharges ont, par exemple, grandement limité la prise de données avec le prototype \TOO{} qui n'a pas réussi à atteindre les tensions souhaitées en \autoref{sec::crp_intro}.
             
 %      Les \glspl{lem} de \protodp{} ont une surface de $50\times\SI{50}{\centi\meter\squared}$ permettant de couvrir les $\SI{36}{\meter\squared}$ du démonstrateur \SSS{} avec 144 \glspl{lem}, et une épaisseur de $\SI{1}{\milli\meter}$. Ils sont percés de \numprint{400000} trous de $\SI{500}{\micro\meter}$ de diamètre, répartis selon un motif hexagonale sur la surface du \gls{lem} (voir \autoref{fig::lem}). Chaque trou est entouré d'un anneau dépourvu de cuivre d'une épaisseur de $\SI{40}{\micro\meter}$ appelé rim, servant à assurer la stabilité en tension du \gls{lem}\cite{Breskin2008}. L'épaisseur de cuivre est de $\SI{60}{\micro\meter}$. Les \glspl{lem} sont percés de \numprint{29} trous de fixation au travers desquelles passent les entretoise et deux trous pour passer les connecteurs haute tension. Les spécifications précises sont décrites dans le \autoref{tab::lem_commun}.
             
-      Les \glspl{lem} utilisés dans le prototype de \TOO{} ont un bord dépourvu de cuivre de $\SI{2}{\milli\meter}$, suivi d'un bord de $\SI{2}{\milli\meter}$ de cuivre dépourvu de trous d'amplification. Des zones similaires sont présentes également autour des trous de fixation et des connecteurs haute tension. Les effets de ces zones sur la collection de charge et la résolution en énergie est présentée en \autoref{sec::dead_zones}. Des tests de tenue en haute tension effectués à Saclay (voir \autoref{sec::test_HT}) sur les \glspl{lem} destinés au démonstrateur de \SSS{} ont permis de montrer que ce modèle (appelé CFR-34) ne permettait pas d'atteindre la tension de \SI{3.1}{\kilo\volt} qui correspond à un gain effectif attendu de 20 (\autoref{fig::gain_3L}). Un nouveau modèle (appelé CFR-35) a alors été proposé, avec des bords plus larges. Ces derniers sont constitués d'une zone de $\SI{1}{cm}$ dépourvue de cuivre suivi d'une zone de $\SI{5}{mm}$ de cuivre sans trous d'amplification  (voir \autoref{fig::cfrs}). C'est ce modèle qui a été choisi pour le démonstrateur \SSS{}. Les spécifications précises des deux modèles sont décrites dans le \autoref{tab::lem_diff}.
+      Les \glspl{lem} utilisés dans le prototype de \TOO{} ont un bord dépourvu de cuivre de $\SI{2}{\milli\meter}$, suivi d'un bord de $\SI{2}{\milli\meter}$ de cuivre dépourvu de trous d'amplification. Des zones similaires sont présentes également autour des trous de fixation et des connecteurs haute tension. Les effets de ces zones sur la collection de charge et la résolution en énergie est présentée en \autoref{sec::dead_zones}. Des tests de tenue en haute tension effectués à Saclay (voir \autoref{sec::test_HT}) sur les \glspl{lem} destinés au démonstrateur de \SSS{} ont permis de montrer que ce modèle (appelé CFR-34) ne permettait pas d'atteindre la tension de \SI{3.1}{\kilo\volt} qui correspond à un gain effectif attendu de 20 (\autoref{fig::3L_gain}). Un nouveau modèle (appelé CFR-35) a alors été proposé, avec des bords plus larges. Ces derniers sont constitués d'une zone de $\SI{1}{cm}$ dépourvue de cuivre suivi d'une zone de $\SI{5}{mm}$ de cuivre sans trous d'amplification  (voir \autoref{fig::cfrs}). C'est ce modèle qui a été choisi pour le démonstrateur \SSS{}. Les spécifications précises des deux modèles sont décrites dans le \autoref{tab::lem_diff}.
             
       \begin{table}
         \centering
@@ -148,7 +148,7 @@
           \begin{tabular}{@{}l@{}}Distance centre à \\ centre entre \\ deux trous\end{tabular}  & $\SI{0.8}{\milli\meter}$ & \\
           \hline
         \end{tabular}
-        \caption{\label{tab::lem_commun}Caractéristiques des \gls{lem} communes aux deux modèles utilisés dans \protodp{}.}
+        \caption[Caractéristiques des LEMs communes aux deux modèles utilisés dans WA105]{\label{tab::lem_commun}Caractéristiques des \glspl{lem} communes aux deux modèles utilisés dans \gls{wa105}.}
       \end{table}
             
       \begin{table}
@@ -165,13 +165,12 @@
           Trous de connecteur -- anneau sans trous & \SI{1}{\milli\meter} & \SI{5}{\milli\meter} \\
           \hline
         \end{tabular}
-        \caption{\label{tab::lem_diff}Caractéristiques spécifiques aux modèles de \gls{lem} utilisés dans \protodp{}.}
+        \caption[Caractéristiques spécifiques aux modèles de LEM utilisés dans \protodp{}]{\label{tab::lem_diff}Caractéristiques spécifiques aux modèles de \gls{lem} utilisés dans \protodp{}.}
       \end{table}
 
   \section{Préparation, caractérisation et test à l'IRFU et au CERN}
     
-    %TODO jolis plots
-    Le \gls{cea} Saclay était en charge de la production de la moitié des \glspl{lem} et anodes du démonstrateur de \SSS{}, l'autre moitié étant à la charge du \gls{cern}. Il était également en charge des tests haute tension et des contrôles métrologiques de tous les \glspl{lem} du démonstrateur de \SSS{}. Un appel d'offre pour les modèles a été lancé en février 2017 et l'entreprise ELTOS a été retenue. Il a été demandé à l'entreprise d'effectuer plusieurs mesures sur les \glspl{lem} produits : l'épaisseur de la plaque d'époxy et des couches de cuivre, l'épaisseur des RIMs, la taille des trous d'amplification ainsi que les caractéristiques diélectriques. Le \gls{cea} a par la suite effectué des mesures complémentaires de l'épaisseur totale, ce paramètre ayant un impact particulièrement important sur le gain (voir \autoref{sec::townsend}). Des tests de tenus en haute tension ainsi que des mesures de gain avec une source radioactive dans de l'argon gazeux à densité équivalente à celle de la phase gazeuse d'une \gls{dlartpc} ont été réalisés dans une enceinte haute pression construite dans ce but. Enfin, des tests de continuité des canaux de lecture des anodes ont également été réalisés.
+    Le \gls{cea} Saclay était en charge de la production et les tests des des \glspl{lem} des deux \glspl{crp} instrumentés démonstrateur de \SSS{}, ainsi que les tests des anodes de ces même \glspl{crp}. Un appel d'offre pour les modèles a été lancé en février 2017 et l'entreprise ELTOS a été retenue. Il a été demandé à l'entreprise d'effectuer plusieurs mesures sur les \glspl{lem} produits : l'épaisseur de la plaque d'époxy et des couches de cuivre, l'épaisseur des RIMs, la taille des trous d'amplification ainsi que les caractéristiques diélectriques. Le \gls{cea} a par la suite effectué des mesures complémentaires de l'épaisseur totale, ce paramètre ayant un impact particulièrement important sur le gain (voir \autoref{sec::townsend}). Des tests de tenus en haute tension ainsi que des mesures de gain avec une source radioactive dans de l'argon gazeux à densité équivalente à celle de la phase gazeuse d'une \gls{dlartpc} ont été réalisés dans une enceinte haute pression construite dans ce but. Enfin, des tests de continuité des canaux de lecture des anodes ont également été réalisés.
         
     \subsection{Production et préparation des LEM}
         
@@ -194,7 +193,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{influence_dx_gain.pdf}
-          \caption[Influence de l'épaisseur d'un \gls{lem} sur le gain.]{Influence attendue de l'épaisseur d'un \gls{lem} sur le gain, d'après le formule \eqref{eq::townsend_avalanche_2} ajustée aux données présentées dans \cite{Cantini2014}. On constate qu'à \SI{3.1}{\kilo\volt}, une variation de l'épaisseur de 1\,\% entraîne une variation du gain de l'ordre de 10\,\%.}
+          \caption[Influence de l'épaisseur d'un LEM sur le gain]{Influence attendue de l'épaisseur d'un \gls{lem} sur le gain, d'après le formule \eqref{eq::townsend_avalanche_2} ajustée aux données présentées dans \cite{Cantini2014}. On constate qu'à \SI{3.1}{\kilo\volt}, une variation de l'épaisseur de 1\,\% entraîne une variation du gain de l'ordre de 10\,\%.}
           \label{fig::thickness_influence_on_gain}
         \end{figure}
             
@@ -206,19 +205,19 @@
                 
         \subsubsection{Méthode expérimentale}
                 %documentation dans hardware/lem_plaques/marbre_472
-          La technique d'\acrfull{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. Les rayons réfléchis en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. La distance focale de la lentille dépend de la longueur d'onde, aussi seul un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet. Le crayon optique servant de source est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près. Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \gls{lem} est visible sur la \autoref{fig::soft_measure_LEM}, issue de ce logiciel. %A noter que due à l'absence de motorisation du chariot sur coussin d'air, ce dernier était poussé à la main, ce qui ne garantissait pas une vitesse constante.
+          La technique d'\acrfull{cci} (voir \autoref{fig::CCI}), est employée pour mesurer l'épaisseur des \glspl{lem}. L'image $S'$ d'une source polychromatique ponctuelle $S$ est créée à la surface de l'objet à mesurer grâce à une lentille convergente. Les rayons réfléchis en $S'$ retraversent la lentille et sont déviés grâce à un miroir vers un trou d'épingle $S''$, placé devant un spectromètre. La distance focale de la lentille dépend de la longueur d'onde, aussi seul un spectre très restreint de la lumière initiale atteindra le trou d'épingle. En faisant correspondre la longueur d'onde détectée à une distance à la lentille, il est ainsi possible de mesurer la distance entre la lentille et l'objet. Le crayon optique servant de source est monté sur un rail grâce à un chariot à coussin d'air, lui permettant de se déplacer sans frottement sur un axe $x$, dont la coordonnée est enregistrée au micron près. Le logiciel de mesure utilisé permet de visualiser en direct les variations de hauteurs au cours de la mesure. La forme des trous micrométriques des \glspl{lem} est visible sur la \autoref{fig::soft_measure_LEM}, issue de ce logiciel. %A noter que due à l'absence de motorisation du chariot sur coussin d'air, ce dernier était poussé à la main, ce qui ne garantissait pas une vitesse constante.
           
           \begin{figure}[htpb]
             \begin{subfigure}{0.48\textwidth}
               \includegraphics[width=0.8\textwidth,keepaspectratio]{CCI.png}
-              \caption{\label{fig::CCI}Schéma de la méthode de mesure \gls{cci} servant à mesurer l'épaisseur des \gls{lem}. Les blocs oranges et jaunes représentent une vue en coupe, à l'échelle, d'un \gls{lem} posé sur le marbre avec ses trous d'amplification.}
+              \caption{\label{fig::CCI}Schéma de la méthode de mesure \gls{cci} servant à mesurer l'épaisseur des \glspl{lem}. Les blocs oranges et jaunes représentent une vue en coupe, à l'échelle, d'un \gls{lem} posé sur le marbre avec ses trous d'amplification.}
             \end{subfigure}
             \hfill
             \begin{subfigure}{0.48\textwidth}
               \includegraphics[width=\textwidth,keepaspectratio]{soft_measure_LEM.JPG}
               \caption{\label{fig::soft_measure_LEM}Représentation brute des données de mesure d'un \gls{lem} avec la technique \gls{cci}. Les grands pics sont coupés à l'analyse.}
             \end{subfigure}
-            \caption[Schéma de principe et exemple de mesure de la surface d'un LEM avec la technique CCI.]{Schéma de principe et exemple de mesure de la surface d'un \gls{lem} avec la technique \gls{cci}.}
+            \caption[Schéma de principe et exemple de mesure de la surface d'un LEM avec la technique CCI]{Schéma de principe et exemple de mesure de la surface d'un \gls{lem} avec la technique \gls{cci}.}
           \end{figure}
           
            Le dispositif mesure la distance entre la surface et le crayon optique. Il faut donc disposer d'une surface plate uniforme sur laquelle poser l'objet à mesurer, qui servira de zéro, et aplatir l'objet. Dans notre cas, le zéro est donné  par un marbre micrométrique. Un exemple de mesure de variations de hauteur de ce marbre est présentée en \autoref{fig::marbre}. On constate que le marbre présente une légère pente, qui peut facilement être prise en compte dans les mesures du \gls{lem}. Le \gls{lem} est aplati par une plaque en acier inox percée de 25 trous à travers lesquels les mesures étaient effectuées, ainsi que des briques de plomb placées le long du chemin de mesure (voir \autoref{fig::plate_and_bricks}). Malgré cela, le trou de mesure situé le plus au centre du \gls{lem} présentait encore des variations de $10$ à $\SI{15}{\micro\meter}$ quand une pression supplémentaire était appliquée sur la plaque d'acier. Il a donc était décidé d'ignorer ce trou de mesure.
@@ -235,13 +234,13 @@
               \includegraphics[width=\textwidth,keepaspectratio]{LEM_through_plate.png}
               \caption{\label{fig::LEM_through_plate}Vue du \gls{lem} mesuré à travers un trou de la plaque en acier. Le point vert correspond à la lumière du crayon optique.}
             \end{subfigure}
-            \caption[Photographies du dispositif expérimental utilisé pour les mesures d'épaisseur des LEMs.]{\label{fig::dispositif_experimental}Photographies du dispositif expérimental utilisé pour les mesures d'épaisseur des \glspl{lem}.}
+            \caption[Photographies du dispositif expérimental utilisé pour les mesures d'épaisseur des LEM]{\label{fig::dispositif_experimental}Photographies du dispositif expérimental utilisé pour les mesures d'épaisseur des \glspl{lem}.}
           \end{figure}
 
           \begin{figure}[htpb]
             \centering
             \includegraphics[width=0.8\textwidth,keepaspectratio]{marble.png}
-            \caption[Calibration du système de mesure \gls{cci}.]{\label{fig::marbre}Calibration de la planéité du marbre. Le graphe du haut montre la pente du marbre le long de l'axe de mesure $x$, le graphe du bas montre la dispersion de l'épaisseur du marbre après correction de la pente autour de $x=0$.}
+            \caption[Calibration du système de mesure CCI]{\label{fig::marbre}Calibration de la planéité du marbre. Le graphe du haut montre la pente du marbre le long de l'axe de mesure $x$, le graphe du bas montre la dispersion de l'épaisseur du marbre après correction de la pente autour de $x=0$.}
 %            \begin{minipage}{0.56\textwidth}
 %              \begin{subfigure}[t]{\textwidth}
 %                \includegraphics[width=\textwidth,keepaspectratio]{marble.png}
@@ -269,12 +268,12 @@
         \begin{figure}[htpb]
           \centering
           \includegraphics[width=0.7\textwidth,keepaspectratio]{distri_1_trou_lem.png}
-          \caption[Exemple de mesure de l'épaisseur d'un LEM.]{\label{fig::distri_1_trou_lem}Exemple de mesure de l'épaisseur d'un \gls{lem} à travers un trou de la plaque en acier. Le petit pic de gauche correspond à la lumière réfléchie par le \gls{fr4} du RIM, le pic de droite correspond à la lumière réfléchie par le cuivre.}
+          \caption[Exemple de mesure de l'épaisseur d'un LEM]{\label{fig::distri_1_trou_lem}Exemple de mesure de l'épaisseur d'un \gls{lem} à travers un trou de la plaque en acier. Le petit pic de gauche correspond à la lumière réfléchie par le \gls{fr4} du RIM, le pic de droite correspond à la lumière réfléchie par le cuivre.}
         \end{figure}
         \begin{figure}[htpb]
           \centering
           \includegraphics[width=0.5\textwidth,keepaspectratio]{2D_LEM_thickness_distri.png}
-          \caption[Visualisation de la variation d'épaisseur d'un \gls{lem}.]{\label{fig::distri_24_trou_lem_2D}Visualisation de la variation d'épaisseur totale d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
+          \caption[Uniformité de l'épaisseur d'un LEM]{\label{fig::distri_24_trou_lem_2D}Uniformité de l'épaisseur d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
         \end{figure}
           
         \begin{figure}[htpb]
@@ -292,7 +291,7 @@
             \includegraphics[width=\textwidth,keepaspectratio]{Copper.png}
             \caption{\label{fig::distri_24_trou_cuivre_1D}Distribution de l'épaisseur de cuivre d'un \gls{lem} mesurée à travers les 24 trous de la plaque d'acier.}
           \end{subfigure}
-          \caption[Résultats des mesures d'épaisseur pour un \gls{lem}.]{\label{fig::distri_epaisseur_1_lem}Résultats des mesures d'épaisseur pour un \gls{lem}.}
+          \caption[Résultats des mesures d'épaisseur pour un LEM]{\label{fig::distri_epaisseur_1_lem}Résultats des mesures d'épaisseur pour un \gls{lem}.}
         \end{figure}
                 
         \begin{figure}[htpb]
@@ -314,7 +313,7 @@
             \includegraphics[width=\textwidth,keepaspectratio]{Copper_sum_all_histo_CERN.pdf}
             \caption{\label{fig::distri_cuivre_cern}Distribution de l'épaisseur de cuivre de tous les \glspl{lem} du \gls{crp} 2 du démonstrateur \SSS{} mesurée à travers les 24 trous de la plaque d'acier.}
           \end{subfigure}
-          \caption[Résultats des mesures d'épaisseur pour tous les \glspl{lem}.]{\label{fig::epaisseur_tous_lem}Résultats des mesures d'épaisseur pour tous les \glspl{lem}. La première ligne correspond aux \glspl{lem} du \gls{crp} 1 du démonstrateur \SSS{}, la seconde ligne correspond aux \glspl{lem} du \gls{crp} 2 du démonstrateur \SSS{}.}
+          \caption[Résultats des mesures d'épaisseur pour tous les LEM]{\label{fig::epaisseur_tous_lem}Résultats des mesures d'épaisseur pour tous les \glspl{lem}. La première ligne correspond aux \glspl{lem} du \gls{crp} 1 du démonstrateur \SSS{}, la seconde ligne correspond aux \glspl{lem} du \gls{crp} 2 du démonstrateur \SSS{}.}
         \end{figure}
                 
 %        \begin{figure}[htpb]
@@ -342,7 +341,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{measured_gain_fluctuations}
-          \caption[Variation attendues du gain pour l'épaisseur moyennes des \glspl{lem} mesurés.]{\label{fig::exp_gain_range}Variation attendue du gain pour une épaisseur de \gls{lem} de $\SI{1107}{\micro\meter}\pm\SI{13}{\micro\meter}$, d'après la formule \eqref{eq::townsend_avalanche_2} ajustée aux données du prototype de \threeL{}\cite{Cantini2014}.}
+          \caption[Variation attendues du gain pour l'épaisseur moyennes des \glspl{lem} mesurés]{\label{fig::exp_gain_range}Variation attendue du gain pour une épaisseur de \gls{lem} de $\SI{1107}{\micro\meter}\pm\SI{13}{\micro\meter}$, d'après la formule \eqref{eq::townsend_avalanche_2} ajustée aux données du prototype de \threeL{}\cite{Cantini2014}.}
         \end{figure}
                 
         Les distributions des hauteurs dans les 24 trous de mesure d'un \gls{lem} sont tracées avec correction pour la pente du marbre dans la \autoref{fig::distri_1_trou_lem}. Les pics sur les côtés des trous d'amplification étaient attendus, et sont dues une limitation de la technique \gls{cci} : certains rayons lumineux du crayon optique, qui ne sont pas focalisés sur la surface du \gls{fr4} et qui donc ne devraient pas être détectés, sont tout de même réfléchis par la paroi verticale en cuivre et sont détectés par le dispositif, faussant ainsi la distance mesurée. Ces pics, éliminés dans l'analyse, n'affectent pas la mesure de l'épaisseur totale. Les épaisseur de cuivre et de \gls{fr4} en revanche sont estimés à partir des quelques points de mesures pris sur la surface de \gls{fr4} des RIMs. La statistique étant faible sur cette surface il est possible que la mesure de l'épaisseur soit surestimée à cause de l'effet décrit plus haut. Les comparaisons aux mesures d'ELTOS semblent confirmer cette hypothèse, la technique \gls{cci} donnant un résultat plus grand d'environ \SI{10}{\micro\meter}. Cependant, ELTOS ne mesurant ces épaisseurs que sur les bords des \glspl{lem}, il est également possible que l'épaisseur de cuivre ne soit pas identique au milieux et au bord.
@@ -369,7 +368,7 @@
             \includegraphics[width=\textwidth]{microsection_thickness.png}
             \caption{\label{fig::microsection}Vue d'un échantillon de surface au microscope où l'on peut voir les mesures d'épaisseur de \gls{fr4} et de cuivre.}
           \end{subfigure}
-          \caption[zones de mesure des caractéristiques géométriques d'un \gls{lem}]{\label{fig::mesures_eltos}zones de mesure des caractéristiques géométriques d'un \gls{lem} par ELTOS}
+          \caption[Zones de mesuredes caractéristiques géométriques d'un LEM par ELTOS]{\label{fig::mesures_eltos}zones de mesure des caractéristiques géométriques d'un \gls{lem} par ELTOS}
         \end{figure}
             
         La \autoref{fig::mesures_eltos} montre les zones du \gls{lem} où ELTOS a mesuré les différentes caractéristiques géométriques : la taille totale, l'épaisseur totale, l'épaisseur de cuivre, l'épaisseur de \gls{fr4}, l'épaisseur des RIMs et le diamètre des trous. Les épaisseurs de cuivre et de \gls{fr4} étaient mesurées au microscope sur un des deux échantillons de surface de \gls{lem} prévus dans le gerber à cet effet, donnant une statistique de 72 pour les moyennes et écarts type de chaque \gls{crp} du démonstrateur \SSS{}. L'épaisseur totale était mesurée à 10 microns près avec un micromètre digital, aux quatre coins, donnant une statistique de 144 pour chaque \gls{crp}. L'épaisseur du RIM et le diamètre des trous était mesurés en treize points, donnant une statistique de 468 chacun pour chaque \gls{crp}.
@@ -398,14 +397,14 @@
             \multicolumn{1}{|l|}{Surface Totale} & \numprint{499.43}$\times$\SI{499.43}{\milli\meter\squared} & \SI{30}{\micro\meter} &  &  \\
             \multicolumn{1}{|l|}{Diamètre des trous} & \SI{500}{\micro\meter} & \SI{1}{\micro\meter} &  &  \\ \hline
             \end{tabular}
-          \caption[Mesures des différentes caractéristiques géométriques des \gls{lem}]{Mesures des différentes caractéristiques géométriques des \gls{lem} faites par ELTOS les deux \gls{crp} du démonstrateur \SSS{}, et comparaison aux mesures faites à Saclay avec la technique \gls{cci}.}
+          \caption[Mesures des différentes caractéristiques géométriques des LEM]{\label{tab::mesures_eltos}Mesures des différentes caractéristiques géométriques des \glspl{lem} faites par ELTOS les deux \gls{crp} du démonstrateur \SSS{}, et comparaison aux mesures faites à Saclay avec la technique \gls{cci}.}
         \end{table}
             
         Les mesures réalisées par ELTOS et les mesures réalisées par le \gls{cea} sont compatibles pour les épaisseurs totales, mais il y a une différence notable concernant les mesures des moyennes des épaisseurs de cuivre et de \gls{fr4}, bien que les écarts type soient compatibles. En regardant attentivement la \autoref{fig::microsection}, on se rend compte que la mesure du cuivre faite par ELTOS est sous-estimée d'environ $10-$\SI{12}{\micro\meter}. La même observation a été faite sur d'autres échantillons, ce qui ramène les valeurs d'épaisseur de cuivre d'ELTOS indiquées dans le \autoref{tab::mesures_eltos} à des valeurs entre \SI{55}{\micro\meter} et \SI{57}{\micro\meter}. La différence restante avec les mesures faites avec la technique \gls{cci} peut être due à la limitation expliquée en \autoref{sec::thickness_result}.
             
         La technique \gls{cci} se montre efficace pour mesurer l'épaisseur totale des \glspl{lem}. Bien que le dispositif utilisé ici soit lent (minimum trente minutes pour mesurer un \gls{lem}), il pourra être motorisé et automatisé pour une future production à l'échelle de \gls{dune}. Avec une motorisation et une vitesse de déplacement du crayon optique constante et très lente, il pourra être possible de mesurer les RIMs et les diamètres des trous.
         
-    \subsection{Tests haute tension}\label{sec::test_HT}
+    \subsection{Tests haute tension dans une enceinte haute pression}\label{sec::test_HT}
         
       \begin{figure}[htpb]
         \begin{subfigure}[t]{0.48\textwidth}
@@ -417,7 +416,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{gamelle_source.jpg}
           \caption{\label{fig::gamelle_source}Enceinte haute pression avec une source d'américium, un \gls{lem} et une anode en train d'être préparés pour une mesure de gain.}
         \end{subfigure}
-        \caption[Enceinte haute pression.]{\label{fig::gamelle}Enceinte haute pression utilisée à Saclay pour les tests de tenue en tension et les mesures de gain des \glspl{lem} destinés au démonstrateur \SSS{}.}
+        \caption[Enceinte haute pression]{\label{fig::gamelle}Enceinte haute pression utilisée à Saclay pour les tests de tenue en tension et les mesures de gain des \glspl{lem} destinés au démonstrateur \SSS{}.}
       \end{figure}
 
       \begin{figure}[htpb]
@@ -432,21 +431,21 @@
           \includegraphics[width=0.8\textwidth,keepaspectratio]{sparks_35.png}
           \caption{\label{fig::sparks_35}Visualisation des décharges sur un \gls{lem} du modèle CFR-35 à \SI{3.5}{\kilo\volt}. Le taux de décharge est d'environ \SI{3}{\per\hour}.}
         \end{subfigure}
-        \caption[Visualisation des décharges sur les deux modèles de \gls{lem}.]{\label{fig::sparks}Visualisation des décharges sur les deux modèles de \gls{lem}.}
+        \caption[Visualisation des décharges sur les deux modèles de LEM]{\label{fig::sparks}Visualisation des décharges sur les deux modèles de \gls{lem}.}
       \end{figure}
 
-      Une enceinte haute pression a été construite afin d'y recréer la densité de l'argon gazeux des \gls{dlartpc} de \gls{wa105}. Tous les \glspl{lem} du démonstrateur \SSS{} y ont été soumis à de hautes tensions afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans l'argon. A également été mesuré le gain de quelques \glspl{lem} du \SSS{} grâce à une source d'américium placée dans l'enceinte.
+      Une enceinte haute pression a été construite afin d'y recréer la densité de l'argon gazeux des \glspl{dlartpc} de \gls{wa105}. Tous les \glspl{lem} du démonstrateur \SSS{} y ont été soumis à de hautes tensions afin de déterminer leur tension de claquage, et ce dans de l'air sec ainsi que dans l'argon. A également été mesuré le gain de quelques \glspl{lem} du \SSS{} grâce à une source d'américium placée dans l'enceinte.
             
       Pour les tests haute tension, neuf \glspl{lem} pouvaient être testés en même temps dans l'enceinte. La \autoref{fig::6lems_gamelle} montre  ce dispositif. Pour les mesures de gains, un seul \gls{lem} était placé, ainsi qu'une anode de lecture et la source. L'espacement entre l'anode et le \gls{lem} est le même que sur le \gls{crp}, $\SI{2}{\milli\meter}$. La cathode avec la source est située $\SI{5}{\centi\meter}$ au dessus du \gls{lem}. La \autoref{fig::gamelle_source} montre ce dispositif. Ces tests ont permis de mettre en évidence une limitation des \glspl{lem} du modèle CFR-34, utilisé dans le prototype de \TOO{}. Ces derniers présentaient un taux de claquage bien trop grand (autour de 20 par heure) au delà de \SI{3.3}{\kilo\volt}. La tension voulue étant de \SI{3.1}{\kilo\volt}, cela laissait trop peu de marge d'erreur. Comme les décharges semblaient avoir lieu essentiellement sur les bords (voir \autoref{fig::sparks}), un modèle avec des zones mortes plus grandes a été mis au point, le CFR-35, décrit en \autoref{sec::LEM}. Ce modèle présente alors un taux de claquage autour de 3 par heure à \SI{3.5}{\kilo\volt} et a été retenu pour le \SSS{}. Une étude visant à déterminer la dimension optimale des bords afin de limiter les claquages tout en conservant une zone active raisonnable est en cours avec le logiciel COMSOL Multiphysics.
 
-    \subsection{Mesures de gain}\label{sec::test_gain}
+    \subsection{Mesures de gain dans une enceinte haute pression}\label{sec::test_gain}
 
       \begin{figure}[htpb]
         \includegraphics[width=\textwidth,keepaspectratio]{gain_2.png}
-        \caption[Mesure du gain dans l'enceinte haute pression.]{\label{fig::gain_gamelle}Mesure du gain dans l'enceinte haute pression pour plusieurs modèles de \glspl{lem} (ronds et carrés). Les triangles pleins sont les mesures avant charging up faites par le prototype de \threeL{}\cite{Cantini2014}, les triangles vides sont les gains attendus du \threeL{} après charging up (voir texte).}
+        \caption[Mesure du gain dans l'enceinte haute pression]{\label{fig::gain_gamelle}Mesure du gain dans l'enceinte haute pression pour plusieurs modèles de \glspl{lem} (ronds et carrés). Les triangles pleins sont les mesures avant charging up faites par le prototype de \threeL{}\cite{Cantini2014}, les triangles vides sont les gains attendus du \threeL{} après charging up (voir texte).}
       \end{figure}
 
-      Des mesures de gain ont été faites dans l'enceinte haute pression pour plusieurs \glspl{lem} : des prototypes de $10\times\SI{10}{\centi\meter}$, semblables à ceux utilisés dans le prototype de \threeL{}, ainsi que des \glspl{lem} de $50\times\SI{50}{\centi\meter}$ CFR-34 et CFR-35. Plusieurs pressions ont été utilisées, allant de 1 à \SI{3.3}{\bar}, équivalent à la densité de l'argon gazeux des \gls{dlartpc} de \gls{wa105}. Toutes ces mesures sont faites après charging up complet du \gls{lem}.
+      Des mesures de gain ont été faites dans l'enceinte haute pression pour plusieurs \glspl{lem} : des prototypes de $10\times\SI{10}{\centi\meter}$, semblables à ceux utilisés dans le prototype de \threeL{}, ainsi que des \glspl{lem} de $50\times\SI{50}{\centi\meter}$ CFR-34 et CFR-35. Plusieurs pressions ont été utilisées, allant de 1 à \SI{3.3}{\bar}, équivalent à la densité de l'argon gazeux des \glspl{dlartpc} de \gls{wa105}. Toutes ces mesures sont faites après charging up complet du \gls{lem}.
 
       La \autoref{fig::gain_gamelle} montre le résultat de ces mesures. Tous les \glspl{lem} testés dans l'enceinte ont un comportement identiques. Sur cette même figure sont également représentées les données du prototype de \threeL{} issues de \cite{Cantini2014} avant charging up. Un facteur de \numprint{2.7} a été utilisé pour estimer le gain après charging up de ces mêmes données, correspondant au ratio avant/après charging up mesuré dans le \threeL{} à \SI{3.4}{\kilo\volt}. On peut constater que les mesures réalisées dans l'enceinte haute pression sont inférieure au gain attendu après charging up d'après le \threeL{}. Cette différence n'est pas encore bien comprises, et une calibration précise du gain va être réalisée en effectuant des mesures avec et sans \gls{lem}. 
 
@@ -464,7 +463,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{anode_carde.png}
           \caption{\label{fig::anode_card}Photo du dispositif de mesure. Les cartes de chaque côtés permettent aux \numprint{160} canaux de l'anode de n'en former plus qu'un, si aucun n'est cassé. Les cartes au dessus et en dessous servent à vérifier qu'il n'y a pas de court circuit entre les deux vues de l'anode.}
         \end{subfigure}
-        \caption[Dispositif de mesure de la continuité des canaux des lecture des anodes.]{\label{fig::test_anode}Dispositif de mesure de la continuité des canaux des lecture des anodes.}
+        \caption[Dispositif de mesure de la continuité des canaux de lecture des anodes]{\label{fig::test_anode}Dispositif de mesure de la continuité des canaux des lecture des anodes.}
       \end{figure}
       La continuité des canaux de lecture des anodes ainsi que leur isolation les uns par rapport aux autres ont été testées grâce à des \glspl{pcb} créés à cet effet. Deux jeux de deux cartes de test ont été produits et ont permis de valider les 72 anodes du démonstrateur \SSS{} et les 6 anodes de rechange.
       
@@ -492,21 +491,21 @@
 %        \end{minipage}
         \centering
         \includegraphics[width=0.6\textwidth,keepaspectratio]{anode_test_probleme.png}
-        \caption{\label{fig::anode_test_probleme}Photo de canaux défaillant sur le bord d'une anode.}
+        \caption[Photo de canaux défaillant sur le bord d'une anode]{\label{fig::anode_test_probleme}Photo de canaux défaillant sur le bord d'une anode.}
       \end{figure}
 
-    \subsection{Test des CRP du démonstrateur \SSS{} dans une boite cryogénique}\label{sec::cold_box}
+    \subsection{Test des CRP dans une boite cryogénique au CERN}\label{sec::cold_box}
       
       \begin{figure}
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{crp_assembly.pdf}
-        \caption[Assemblage d'un \gls{crp} au \gls{cern}.]{\label{fig::crp_assembly}Assemblage d'un \gls{crp} au \gls{cern}.}
+        \caption[Assemblage d'un CRP au CERN]{\label{fig::crp_assembly}Assemblage d'un \gls{crp} au \gls{cern}.}
       \end{figure}
       
       \begin{figure}
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{copperresidues.pdf}
-        \caption[Résidus de cuivre sur certains RIMs.]{\label{fig::copperresidues}Résidus de cuivre sur les RIMs de trous au bord d'un \gls{lem} présentant des traces de carbonisation.}
+        \caption[Résidus de cuivre sur certains RIMs]{\label{fig::copperresidues}Résidus de cuivre sur les RIMs de trous au bord d'un \gls{lem} présentant des traces de carbonisation.}
       \end{figure}
 
       Après assemblage au \gls{cern} (\autoref{fig::crp_assembly}) les  \glspl{crp} du démonstrateur \SSS{} ont été testés entre Juin et Décembre 2018 dans des conditions de pression et température équivalente à celles qui seront dans le démonstrateur, grâce à une boite cryogénique construite à cet effet au \gls{cern} (voir \autoref{fig::coldbox}). Cette enceinte a testé les tenues en tension des \glspl{lem} et de la grille et peut contenir un \gls{crp} complet. Elle est équipée de capteurs permettant d'enregistrer en temps réel la pression et la température à plusieurs endroits ainsi que le niveau d'argon liquide, permettant d'estimer la planéité du \gls{crp}. 
@@ -516,7 +515,7 @@
       \begin{figure}[htpb]
         \centering
         \includegraphics[width=\textwidth]{crp_in_coldbox.pdf}
-        \caption[Un CRP dans la boîte cryogénique au CERN.]{\label{fig::coldbox}Un \gls{crp} dans la boîte cryogénique au \gls{cern}.}
+        \caption[Un CRP dans la boîte cryogénique au CERN]{\label{fig::coldbox}Un \gls{crp} dans la boîte cryogénique au \gls{cern}.}
       \end{figure}
 
       La planéité des \glspl{crp}, estimée en comparant les valeurs de capteurs de niveau d'argon liquide répartis sur le pourtour de chaque \gls{crp}, est inférieur à \SI{1.75}{\milli\meter}. Cette planéité aura un impact sur le gain à travers la température dans les \glspl{lem}, qui suit un gradient dans le gaz, et à travers l'efficacité d'extraction qui dépend du champ électrique et donc de la distance grille-\gls{lem} ainsi que de la position de l'interface entre la grille et les \glspl{lem}. L'impact d'une déformation du \gls{crp} est discuté dans le \autoref{chap::5} quand nous parlerons des déformations de celui du \TOO{}. Une déformation de \SI{1.75}{\milli\meter}, à une tension d'extraction de \SI{2.5}{\kilo\volt}, aura une influence sur le gain inférieur au pourcent.
@@ -524,7 +523,7 @@
       \begin{figure}[htpb]
         \centering
         \includegraphics[width=\textwidth]{coldbox_current_voltage.pdf}
-        \caption[Décharges observés dans la boîte cryogénique.]{\label{fig::coldbox_current_voltage}Exemple de décharges observées dans la boîte cryogénique, pour une tension à travers le \gls{lem} de \SI{3.1}{\kilo\volt}, durant treize heures.}
+        \caption[Décharges observées dans la boîte cryogénique]{\label{fig::coldbox_current_voltage}Exemple de décharges observées dans la boîte cryogénique, pour une tension à travers le \gls{lem} de \SI{3.1}{\kilo\volt}, durant treize heures.}
       \end{figure}
     
       Les deux \glspl{crp} sont restés stables durant plusieurs semaines à la tension voulue de \SI{3.1}{\kilo\volt}, ce qui correspond à un gain attendu de 20. Le taux de décharge était de une par heure par \gls{crp}, correspondant à un temps mort d'environ \numprint{0.3}\,\%, ce qui est acceptable pour \gls{dune}. Les grilles d'extraction ont tenu la tension nominale de \SI{7.5}{\kilo\volt}. 
@@ -538,12 +537,12 @@
       \begin{figure}
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{crp_installation.pdf}
-        \caption[Installation de deux \gls{crp} dans le cryostat du \SSS{}.]{\label{fig::crp_installation}Installation de deux \gls{crp} dans le cryostat du \SSS{}.}
+        \caption[Installation de deux \gls{crp} dans le cryostat du \SSS{}]{\label{fig::crp_installation}Installation de deux \gls{crp} dans le cryostat du \SSS{}.}
       \end{figure}
 
       Les deux \gls{crp} non instrumentés ont également été testés en tension et en planéité, et les quatre \gls{crp} ont été installé dans le cryostat entre fin 2018 et début 2019 (\autoref{fig::crp_installation}). Dans la suite, nous nous intéressons aux champs électriques à travers le \gls{crp} et à l'impact de ces derniers sur la collection de charge. Dans un premier temps, les zones dépourvues de trous d'amplification sont étudiées, puis les efficacités de collection des électrons à travers les trous d'amplification pour plusieurs champs électriques.
         
-  \section{Simulation : les zones mortes des LEMs}\label{sec::dead_zones}
+  \section{Simulation des zones mortes des LEM}\label{sec::dead_zones}
     
     Deux modèles de \glspl{lem} sont utilisés dans \gls{wa105}, chacun présentant des aires dépourvues de trous d'amplification pouvant constituer des zones mortes. Les effets de ces zones mortes sur la charge collectée et sur la résolution de la l'énergie détectée ont été simulés pour le modèle CFR-34 (utilisé dans le prototype \TOO{}). %Une première sous-section traite de la méthode de simulation, sont ensuite présentés la carte d'efficacité ainsi créée et l'impact simulé sur la résolution en énergie. Une dernière sous-section discute des limites de cette simulation.
         
@@ -574,7 +573,7 @@
             \includegraphics[width=\textwidth,keepaspectratio]{HT_annotations.png}
             \caption{\label{fig::HT}Zone autour d'un connecteur haute tension d'un \gls{lem} modélisé avec \gls{ansys}.}
           \end{subfigure}
-          \caption[Zones mortes d'un LEM modélisé avec ANSYS.]{Zones mortes d'un \gls{lem} du modèle CFR-34 utilisé dans le prototype \TOO{}, modélisées avec \gls{ansys}. Les conditions de symétrie aux limites permettent de ne simuler qu'une "maille élémentaire" de chaque géométrie.}
+          \caption[Zones mortes d'un LEM modélisé avec ANSYS]{Zones mortes d'un \gls{lem} du modèle CFR-34 utilisé dans le prototype \TOO{}, modélisées avec \gls{ansys}. Les conditions de symétrie aux limites permettent de ne simuler qu'une "maille élémentaire" de chaque géométrie.}
           \label{fig::dead_zones}
         \end{figure}
             
@@ -598,7 +597,7 @@
         \begin{figure}[htpb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{drift_example.png}
-          \caption[Dérive de 10 électrons dans la carte de champ du bord d'un \gls{lem} avec Garfield.]{Dérive de 10 électrons dans un example 2D de carte de champ du bord d'un \gls{lem} créée avec \gls{ansys} par le logiciel Garfield. Le cercle rouge indique les électrons finissant leur dérive sur la zone morte, les cercles verts indiquent les électrons finissant leur dérive sur la zone d'amplification. La simulation d'avalanche n'est pas activée afin d'accélérer le calcul.}
+          \caption[Dérive de 10 électrons dans la carte de champ du bord d'un LEM avec Garfield]{Dérive de 10 électrons dans un example 2D de carte de champ du bord d'un \gls{lem} créée avec \gls{ansys} par le logiciel Garfield. Le cercle rouge indique les électrons finissant leur dérive sur la zone morte, les cercles verts indiquent les électrons finissant leur dérive sur la zone d'amplification. La simulation d'avalanche n'est pas activée afin d'accélérer le calcul.}
           \label{fig::drift_example}
         \end{figure}
                 
@@ -620,7 +619,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{histo_corner_screw_hv.png}
           \caption{Probabilité de transmission d'un électron en fonction de sa position initiale sous le coin, un trou de vis et un connecteur haute tension d'un \gls{lem}.}
         \end{subfigure}
-        \caption[Probabilité de transmission des zones mortes d'un \gls{lem}.]{\label{fig::histo_eff}Probabilité de transmission d'un électron en fonction de sa position initiale après extraction sous les différentes zone mortes d'un \gls{lem} du modèle CFR-34.}
+        \caption[Probabilité de transmission des zones mortes d'un LEM]{\label{fig::histo_eff}Probabilité de transmission d'un électron en fonction de sa position initiale après extraction sous les différentes zone mortes d'un \gls{lem} du modèle CFR-34.}
       \end{figure}
             
       En redéfinissant la taille des bins des histogrammes ainsi obtenus à la largeur des canaux de lecture des anodes (\SI{0.3125}{\centi\meter}), il est possible de créer la carte d'efficacité complète montrée en \autoref{fig::eff_map}. Il apparaît alors que les pertes principales auront lieu sur les bords des anodes, où les premiers canaux ne devraient voir aucune charge tandis que les seconds canaux devraient voir moins de la moitié de la charge. Ceci est validé par les résultats du \TOO{}, les détails sont en \autoref{sec::results-311}.
@@ -630,7 +629,7 @@
 %        A faire avec le 311.
 %                %TODO à faire
             
-    \subsection{Résultat : impact sur la résolution}
+    \subsection{Résultat : impact sur la l'énergie reconstruite}
             
       \begin{figure}[htpb]
         \begin{subfigure}{0.48\textwidth}
@@ -644,7 +643,7 @@
           \includegraphics[width=\textwidth]{electrons_new.png}
           \caption{\label{fig::electron}Simulation de l'impact de la carte d'efficacité sur la charge totale collectée d'électrons de \SI{3}{\giga\eV\per c} dans le démonstrateur \SSS{}. En noir est la charge totale collectée sans zones mortes, en prenant en compte les dispersions et les pertes dues à la recombinaison et aux impuretés dans le liquide. En rouge et la même charge mais en prenant en compte la carte d'efficacité.}
         \end{subfigure}
-          \caption[Carte d'efficacité d'un \gls{lem} du modèle CFR-34 et impact sur la collection de charge.]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34 simulée avec \gls{ansys} et Garfield et simulation de son impact sur la collection de la charge totale d'électrons de \SI{3}{\giga\eV} avec QScan.}
+          \caption[Carte d'efficacité d'un LEM du modèle CFR-34 et impact sur la collection de charge]{Carte d'efficacité d'un \gls{lem} du modèle CFR-34 simulée avec \gls{ansys} et Garfield et simulation de son impact sur la collection de la charge totale d'électrons de \SI{3}{\giga\eV} avec QScan.}
       \end{figure}
         
       Cette étude a été faite avec le logiciel QScan, basé sur le framework GEANT4 pour simuler le passage de particule dans la matière. La géométrie du démonstrateur \SSS{} a été utilisée (le modèle CFR-34 était encore d'actualité au moment de la réalisation de cette étude), mais est également valable pour le prototype \TOO{}, les \glspl{crp} étant identiques mis à part les \glspl{lem}. Plusieurs types de particules à plusieurs impulsions initiales ont été générées au milieu du volume à des angles tirés aléatoirement.
@@ -663,7 +662,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{electrons_relative_dispersion_new.png}
           \caption{\label{fig::electron_dispersion_charge}Simulation de l'impact de la carte d'efficacité du CFR-34 sur la dispersion de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un électron.}
         \end{subfigure}
-        \caption[Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée d'électrons de plusieurs impulsions.]{Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée d'électrons de plusieurs impulsions. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'efficacité.}
+        \caption[Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée d'électrons de plusieurs impulsions]{Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée d'électrons de plusieurs impulsions. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'efficacité.}
       \end{figure}
             
       \begin{figure}[htbp]
@@ -676,7 +675,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{muons_relative_dispersion_new.png}
           \caption{\label{fig::muon_dispersion_charge}Simulation de l'impact de la carte d'efficacité du CFR-34 sur la dispersion de la charge totale collectée à l'anode pour plusieurs impulsions initiales d'un muon.}
         \end{subfigure}
-        \caption[Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée de muons de plusieurs impulsions.]{Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée de muons de plusieurs impulsions. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'éfficacité.}
+        \caption[Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée de muons de plusieurs impulsions]{Simulation de l'impact de la carte d'efficacité du CFR-34 sur la charge totale collectée de muons de plusieurs impulsions. En noir sont les simulations sans carte d'efficacité, en rouge avec carte d'éfficacité.}
       \end{figure}
         
     \subsection{Limites de cette simulation}
@@ -692,12 +691,12 @@
       \begin{figure}[htpb]
         \centering
         \includegraphics[width=0.8\textwidth]{histo_new_bar.png}
-        \caption[Probabilité de transmission d'un électron en fonction de sa position initiale sous le bord d'un \gls{lem} du modèle CFR-35.]{\label{fig::border_CFR_35}Probabilité de transmission d'un électron en fonction de sa position initiale sous le bord d'un \gls{lem} du modèle CFR-35. La courbe pointillée correspond aux canaux de l'anode au dessus du \gls{lem}.}
+        \caption[Probabilité de transmission d'un électron en fonction de sa position initiale sous le bord d'un LEM du modèle CFR-35]{\label{fig::border_CFR_35}Probabilité de transmission d'un électron en fonction de sa position initiale sous le bord d'un \gls{lem} du modèle CFR-35. La courbe pointillée correspond aux canaux de l'anode au dessus du \gls{lem}.}
       \end{figure}
         
-  \section{Efficacité de collection de charge}\label{sec::efficacites}
+  \section{Simulation des efficacités de collection de charge}\label{sec::efficacites}
     
-    L'efficacité d'extraction des électrons de dérive de la phase liquide vers la phase gazeuse est décrite en \autoref{sec::extraction}, et croît avec le champ électrique dans le liquide jusqu'à atteindre 1 à \SI{3}{\kilo\volt\per\centi\meter}. Les mesures faites par le prototype de \threeL{} ont cependant montré que le gain atteint un maximum autour de \SI{2.5}{\kilo\volt\per\centi\meter} et semble même diminuer après\cite{Wu2017} (voir \autoref{fig::wu_extr}). Ceci peut peut être due à une perte d'électron au niveau de la face basse du \gls{lem} qui fait qu'une partie seulement des électrons extraits du liquide atteindront l'amplification. Cet effet, qui sera nommé \textit{efficacité de collection du \gls{lem}} dans le reste du texte, a été simulé en fonction du champ d'amplification et du champ d'extraction afin, d'une part, de vérifier cette hypothèse, et d'autre part afin d'être pris en compte dans l'estimation du gain avec le prototype de \TOO{}. Ce phénomène dépendra du champ dans le gaz et non du champ dans le liquide, aussi l'efficacité de collection du \gls{lem} est étudiée en fonction du champ dans le gaz. Dans les \gls{lartpc} de \gls{wa105}, les champs dans le gaz et le liquide sont reliés par l'équation \eqref{eq::fields_liquid_gas}.
+    L'efficacité d'extraction des électrons de dérive de la phase liquide vers la phase gazeuse est décrite en \autoref{sec::extraction}, et croît avec le champ électrique dans le liquide jusqu'à atteindre 1 à \SI{3}{\kilo\volt\per\centi\meter}. Les mesures faites par le prototype de \threeL{} ont cependant montré que le gain atteint un maximum autour de \SI{2.5}{\kilo\volt\per\centi\meter} et semble même diminuer après\cite{Wu2017} (voir \autoref{fig::wu_extr}). Ceci peut peut être due à une perte d'électron au niveau de la face basse du \gls{lem} qui fait qu'une partie seulement des électrons extraits du liquide atteindront l'amplification. Cet effet, qui sera nommé \textit{efficacité de collection du \gls{lem}} dans le reste du texte, a été simulé en fonction du champ d'amplification et du champ d'extraction afin, d'une part, de vérifier cette hypothèse, et d'autre part afin d'être pris en compte dans l'estimation du gain avec le prototype de \TOO{}. Ce phénomène dépendra du champ dans le gaz et non du champ dans le liquide, aussi l'efficacité de collection du \gls{lem} est étudiée en fonction du champ dans le gaz. Dans les \glspl{lartpc} de \gls{wa105}, les champs dans le gaz et le liquide sont reliés par l'équation \eqref{eq::fields_liquid_gas}.
 
     Le même phénomène peut également arriver après l'amplification : tous les électrons sortant du trou peuvent ne pas arriver à l'anode, et terminer leur course sur le \gls{fr4}. Cet effet sera appelé \textit{efficacité de collection de l'anode} dans le reste du texte et a également été simulé.
     
@@ -711,7 +710,7 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \includegraphics[width=\textwidth,keepaspectratio]{ansys_geom_unzoomed.png}
         \end{subfigure}
-        \caption{\label{fig::ansys_geom}Maille élémentaire de la disposition en nid d'abeille des trous d'amplification d'un \gls{lem} modélisé avec \gls{ansys}. Les conditions de symétrie aux bords assurent la continuité de la géométrie.}
+        \caption[Maille élémentaire d'un LEM modélisée avec ANSYS]{\label{fig::ansys_geom}Maille élémentaire de la disposition en nid d'abeille des trous d'amplification d'un \gls{lem} modélisée avec \gls{ansys}. Les conditions de symétrie aux bords assurent la continuité de la géométrie.}
       \end{figure}
             
       \begin{figure}[htpb]
@@ -724,7 +723,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{champ_dans_lem_ind.png}
           \caption{\label{fig::champ_dans_lem_ind}Champ électrique le long de l'axe central d'un trou d'amplification de \gls{lem} pour un champ d'amplification de \SI{32}{\kilo\volt\per\centi\meter} et plusieurs champs d'induction.}
         \end{subfigure}
-        \caption[Influence des variations des champs d'extraction et d'induction sur le champ électrique aux limites du \gls{lem}.]{\label{fig::champ_dans_lem}Influence des variations des champs d'extraction dans le gaz et d'induction sur le champ électrique aux limites du \gls{lem}. Les zones délimitées par les rectangles jaunes et oranges représentent respectivement le \gls{fr4} et les deux épaisseurs de cuivre.}
+        \caption[Influence des variations des champs d'extraction et d'induction sur le champ électrique aux limites du LEM]{\label{fig::champ_dans_lem}Influence des variations des champs d'extraction dans le gaz et d'induction sur le champ électrique aux limites du \gls{lem}. Les zones délimitées par les rectangles jaunes et oranges représentent respectivement le \gls{fr4} et les deux épaisseurs de cuivre.}
       \end{figure}
       
       Le logiciel de simulation \gls{ansys}, utilisant la méthode des éléments finis, a été utilisé pour générer les cartes de champs de la zone entre la grille d'extraction et l'anode (voir \autoref{fig::ansys_geom}), pour plusieurs configuration de champs électriques. La supposition est faite que l'efficacité de collection du \gls{lem} n'aura aucune influence sur l'efficacité de collection de l'anode et inversement, ce qui est justifié par l'absence de variation du champ en bas du \gls{lem} quand le champ d'induction varie et inversement (voir \autoref{fig::champ_dans_lem}). En revanche, le champ d'amplification va avoir une influence sur les deux efficacités. Il a donc été décidé de simuler l'efficacité de collection du \gls{lem} (de l'anode) en fonction du champ d'amplification et du champ d'extraction (d'induction).
@@ -737,7 +736,7 @@
         \includegraphics[width=0.3\textwidth]{electrons_bottom_copper.pdf}
         \includegraphics[width=0.3\textwidth]{electrons_lem.pdf}
         \includegraphics[width=0.3\textwidth]{electrons_top_copper.pdf}
-        \caption[Point de départ et d'arrivé des électrons à travers le LEM]{\label{fig::drift_histograms}Points de départ (haut) et d'arrivé (milieu) des électrons à travers le \gls{lem} pour un champ d'induction de \SI{5}{\kilo\volt\per\centi\meter}, un champ d'amplification de \SI{30}{\kilo\volt\per\centi\meter} un champ d'extraction dans le gaz de \SI{3}{\kilo\volt\per\centi\meter}. Les trois figures du bas sont une vue en 2D des zones où les électrons terminent leur course. Les cercles verts représentent le RIM d'un trou.}
+        \caption[Points de départ et d'arrivé des électrons à travers le LEM]{\label{fig::drift_histograms}Points de départ (haut) et d'arrivé (milieu) des électrons à travers le \gls{lem} pour un champ d'induction de \SI{5}{\kilo\volt\per\centi\meter}, un champ d'amplification de \SI{30}{\kilo\volt\per\centi\meter} un champ d'extraction dans le gaz de \SI{3}{\kilo\volt\per\centi\meter}. Les trois figures du bas sont une vue en 2D des zones où les électrons terminent leur course. Les cercles verts représentent le RIM d'un trou.}
       \end{figure}
           
       L'efficacité de collection du \gls{lem}, qui correspond à la probabilité qu'a un électron extrait du liquide d'atteindre la zone d'amplification, est définie comme le rapport entre le nombre d'électrons dépassant le RIM inférieur du \gls{lem} et le nombre d'électrons initialement générés. L'efficacité de collection de l'anode est définie comme le rapport entre, d'une part, la somme des électrons passant le RIM inférieur et des électrons générés par avalanche et, d'autre part, le nombre d'électrons arrivant à l'anode. Définit ainsi, cette efficacité correspond à un \gls{lem} avant charging up. Afin de simuler un \gls{lem} après charging up, il faudrait réaliser cette simulation de manière itérative en re-générant une carte de champ prenant en compte les électrons accumulés sur le \gls{fr4}. En effet, les lignes de champ étant modifiées par le charging up, le nombre d'électrons terminant sur les bords des trous avant le RIM supérieur devraient être moindre après charging up. Cette simulation n'a pas été faite par manque de temps.
@@ -762,7 +761,7 @@
         \caption[Efficacités de collection du LEM et de l'anode en fonction des champs électriques à travers le CRP]{\label{fig::eff_coll}Efficacités de collection du \gls{lem} et de l'anode en fonction des champs électriques à travers le \gls{crp}.}
       \end{figure}
 
-      La \autoref{fig::eff_lem_alone} montre l'efficacité de collection du \gls{lem} en fonction du champ d'amplification et du champ d'extraction dans le gaz. On constate qu'elle commence à 1 et décroît (croît) avec le champ d'extraction (d'amplification). La \autoref{fig::eff_guschin_and_combined} montre la convolution de cette efficacité à l'efficacité d'extraction décrite en \autoref{sec::extraction}, obtenue en utilisant l'équation \eqref{eq:;fields_liquid_gas}. On constate qu'avec cette convolution, on retrouve bien un maximum local entre \SI{2}{\kilo\volt\per\centi\meter} et \SI{3}{\kilo\volt\per\centi\meter} dans le liquide, comme observé dans le \threeL{}. On remarque de plus que l'efficacité n'atteint jamais 1. L'efficacité de collection de l'anode, montrée sur la \autoref{fig::eff_anode}, croît avec le champ d'induction et dépend peu du champ d'amplification si ce dernier est supérieur à \SI{15}{\kilo\volt\per\centi\meter}. Cette efficacité ne sera jamais de 1 avec une induction de \SI{5}{\kilo\volt\per\centi\meter}.
+      La \autoref{fig::eff_lem_alone} montre l'efficacité de collection du \gls{lem} en fonction du champ d'amplification et du champ d'extraction dans le gaz. On constate qu'elle commence à 1 et décroît (croît) avec le champ d'extraction (d'amplification). La \autoref{fig::eff_guschin_and_combined} montre la convolution de cette efficacité à l'efficacité d'extraction décrite en \autoref{sec::extraction}, obtenue en utilisant l'équation \eqref{eq::fields_liquid_gas}. On constate qu'avec cette convolution, on retrouve bien un maximum local entre \SI{2}{\kilo\volt\per\centi\meter} et \SI{3}{\kilo\volt\per\centi\meter} dans le liquide, comme observé dans le \threeL{}. On remarque de plus que l'efficacité n'atteint jamais 1. L'efficacité de collection de l'anode, montrée sur la \autoref{fig::eff_anode}, croît avec le champ d'induction et dépend peu du champ d'amplification si ce dernier est supérieur à \SI{15}{\kilo\volt\per\centi\meter}. Cette efficacité ne sera jamais de 1 avec une induction de \SI{5}{\kilo\volt\per\centi\meter}.
 
       Ces simulations sont utilisées au chapitre suivant pour comparer les mesures de gain faites par le \TOO{} avec celles faites par le \threeL{}. En effet, le \TOO{} n'a pas effectué de mesures de gain à champ d'induction et d'extraction fixés, et n'a pas atteint les tensions nominales pour ces champs, aussi faut-il corriger la charge mesurées avec les efficacités simulées ici pour se ramener aux valeurs de champs du \threeL{}.
 
@@ -779,7 +778,7 @@
           \includegraphics[width=\textwidth]{eff_anode_gamelle.pdf}
           \caption{\label{fig::eff_anode_gamelle}Efficacité de collection de l'anode en fonction du champ d'induction et du champ d'amplification. Les triangles sont les mesures faites à Saclay à différents champs d'amplification, normalisées à la valeur maximale de la simulation à ces mêmes champs, en ronds.}
         \end{subfigure}
-        \caption[Comparaison aux mesures des simulations des efficacités de collection du LEM et de l'anode en fonction des champs électriques à travers le CRP.]{\label{fig::eff_gamelle}Comparaison aux mesures des simulations des comportement des efficacités de collection du LEM et de l'anode en fonction des champs électriques à travers le CRP.}
+        \caption[Comparaison aux mesures des simulations des efficacités de collection du LEM et de l'anode en fonction des champs électriques à travers le CRP]{\label{fig::eff_gamelle}Comparaison aux mesures des simulations des comportement des efficacités de collection du LEM et de l'anode en fonction des champs électriques à travers le CRP.}
       \end{figure}
       
       L'enceinte haute pression utilisée pour tester la tenue en tension des \glspl{lem} a permit de mesurer le gain en fonction du champ d'induction et du champ d'extraction dans le gaz. Avec ce dispositif il n'est pas possible d'avoir une valeur absolue des efficacités de collections, ces dernières ne pouvant pas être décorrélées de l'amplification dans le \gls{lem}, mais il est possible de mesurer leur comportement et de les comparer aux simulations. Les mesures ont été faites pour des champs d'inductions allant de \SI{0}{\kilo\volt\per\centi\meter} à \SI{5}{\kilo\volt\per\centi\meter} avec des champs d'amplification allant de \SI{26}{\kilo\volt\per\centi\meter} à \SI{34}{\kilo\volt\per\centi\meter}, et pour des champs d'extraction allant de \SI{0.4}{\kilo\volt\per\centi\meter} à \SI{1.5}{\kilo\volt\per\centi\meter} avec un champ d'amplification de \SI{30}{\kilo\volt\per\centi\meter}. L'alimentation haute tension ne permettait pas de mettre des champs d'extraction plus haut. Ces mesures ayant été faites après des mesures de gain, le charging up était fini. 

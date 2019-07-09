@@ -22,7 +22,7 @@
     \begin{figure}[htpb]
       \centering
       \includegraphics[width=0.8\textwidth]{crp.png}
-      \caption[Schéma du \gls{crp} du \TOO{} vue de dessus.]{\label{fig::crp-chap5}Schéma du \gls{crp} du \TOO{} vue de dessus.}
+      \caption[Schéma du CRP du \TOO{} vue de dessus]{\label{fig::crp-chap5}Schéma du \gls{crp} du \TOO{} vue de dessus.}
     \end{figure}
 
     \subsection{Mesure du gain effectif}
@@ -34,7 +34,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{calibration.pdf}
-          \caption[Réponse de l'électronique de lecture.]{\label{fig::cali-311}Réponse de l'électronique de lecture à des signaux d'intensité variable. À gauche, le signal dans un canal de la vue 0 et un canal de la vue 1, ajustés par l'équation \eqref{eq::resp-function}. À droite, la variation de l'intégrale du signal ajusté en fonction de la charge injectée.}
+          \caption[Réponse de l'électronique de lecture]{\label{fig::cali-311}Réponse de l'électronique de lecture à des signaux d'intensité variable. À gauche, le signal dans un canal de la vue 0 et un canal de la vue 1, ajustés par l'équation \eqref{eq::resp-function}. À droite, la variation de l'intégrale du signal ajusté en fonction de la charge injectée.}
         \end{figure}
 
         La réponse de l'électronique de lecture du \TOO{} a été calibrée en envoyant des impulsions d'amplitudes variable à travers les canaux de lecture. Dans le cas où la charge déposée dans un canal de lecture est étiré en temps, l'intégrale du signal correspondant au coup doit être utilisé pour évaluer la charge incidente. Dans une \gls{dlartpc}, le coup peut en effet être étiré en temps à bas champ d'extraction (voir \autoref{sec::extraction}). Le courant $I(t)$ induit par l'arrivée de ces charges est convolué à la réponse à une charge ponctuelle de l'électronique $V(t)$, résultant en la réponse du canal $V_{out}(t)$ selon l'équation
@@ -58,7 +58,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{event_larsoft.png}
-          \caption[Reconstruction d'un événement dans \gls{larsoft}.]{\label{fig::event_larsoft}Reconstruction d'un événement dans \gls{larsoft}. a) données après suppression du piédestal, b) après suppression du bruit, c) identification des hits, d) groupement en amas, e) reconstruction 3D de la trace.}
+          \caption[Reconstruction d'un événement dans LArSoft]{\label{fig::event_larsoft}Reconstruction d'un événement dans \gls{larsoft}. a) données après suppression du piédestal, b) après suppression du bruit, c) identification des hits, d) groupement en amas, e) reconstruction 3D de la trace.}
         \end{figure}
         Les données brutes enregistrées par l'électronique du \TOO{} sont des fichiers binaires, contenant l'information de la tension mesurée (en ADC) pour les \numprint{1667} bin de temps de \SI{0.4}{\micro\second} de chacun des \numprint{1280} canaux de lecture (\numprint{320} en vue 0 et \numprint{960} en vue 1). Le logiciel \gls{larsoft}\footnote{\url{http://larsoft.org}} a été utilisé pour reconstruire les événements. Il s'agit d'un logiciel C++ utilisant ROOT dédié à l'étude de toutes les \gls{lartpc} existantes ou prévues, \protodp{} inclue.  La reconstruction, illustrée par la \autoref{fig::event_larsoft}, se fait selon les étapes suivantes :
         \begin{enumerate}
@@ -75,7 +75,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=0.65\textwidth,keepaspectratio]{ds.pdf}
-          \caption[Schéma du calcul de $ds$.]{\label{fig::ds-schema}Schéma du calcul de $ds$ entre deux coups consécutifs (points oranges). Le segment rouge représente la trace de la particule traversant un élément de volume délimité par la largeur d'un canal de lecture en vue 0, $ds_0$ désigne $ds$ en vue 0 et $ds_1$ désigne $ds$ en vue 1.}
+          \caption[Schéma du calcul de $ds$]{\label{fig::ds-schema}Schéma du calcul de $ds$ entre deux coups consécutifs (points oranges). Le segment rouge représente la trace de la particule traversant un élément de volume délimité par la largeur d'un canal de lecture en vue 0, $ds_0$ désigne $ds$ en vue 0 et $ds_1$ désigne $ds$ en vue 1.}
         \end{figure}
 
       \subsubsection{Sélections des muons}\label{sec::selection}
@@ -83,7 +83,7 @@
         \begin{figure}[htbp]
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{highway.png}
-          \caption[Illustration de l'algorithme de sélection des muons.]{\label{fig::highway}Illustration de l'algorithme de sélection des muons. Le ratio entre la charge totale déposée dans la zone orange et celle déposée dans la zone verte doit être faible pour une trace de muon, qui ne fait pas de gerbe et n'est pas dévié durant la traversée du détecteur.}
+          \caption[Illustration de l'algorithme de sélection des muons]{\label{fig::highway}Illustration de l'algorithme de sélection des muons. Le ratio entre la charge totale déposée dans la zone orange et celle déposée dans la zone verte doit être faible pour une trace de muon, qui ne fait pas de gerbe et n'est pas dévié durant la traversée du détecteur.}
         \end{figure}
 
         Pour l'analyse du gain présentée ici, seul les muons devaient être utilisés, la \gls{mpv} de la distribution $dQ/ds$ attendue étant connue. Un algorithme capable d'identifier ces derniers a été développé au CERN. Il se base sur le fait qu'un muon cosmique traversant le détecteur aura une trace unique, droite et étroite, contrairement à une gerbe électromagnétique ou hadronique. En regardant la distribution de la charge autour des traces reconstruites, il est possible de définir un critère de sélection des muons. La \autoref{fig::highway} illustre le fonctionnement de cet algorithme : les traces sont segmenté en morceaux de \SI{50}{\centi\meter} et deux régions sont définies autour de chaque segment. Une grande région "A" et petit région "B" (inclue dans la grande région). Les sommes des charges déposée dans ces région, $Q_A$ et $Q_B$, sont calculées et le critère pour sélectionner un muon est le suivant :
@@ -117,7 +117,7 @@
       \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{CRP-metrologie.png}
-        \caption[Mesure de la planéité du \gls{crp}.]{\label{fig::crp_var}Mesure de la planéité du \gls{crp} par photogrammétrie. Le zéro correspond à une distance entre la grille est le \gls{lem} de \SI{10}{\milli\meter}.}
+        \caption[Mesure de la planéité du CRP]{\label{fig::crp_var}Mesure de la planéité du \gls{crp} par photogrammétrie. Le zéro correspond à une distance entre la grille est le \gls{lem} de \SI{10}{\milli\meter}.}
       \end{figure}
 
       \begin{figure}[htbp]
@@ -125,12 +125,12 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{thickness.pdf}
-          \caption[Mesures d'épaisseur des \glspl{lem} du \TOO{}.]{\label{fig::lem_thicnkess_311}Mesures d'épaisseur des \glspl{lem} du \TOO{}, décrites dans le papier technique de 2018\cite{Aimard2018}.}
+          \caption[Mesures d'épaisseur des LEMs du \TOO{}]{\label{fig::lem_thicnkess_311}Mesures d'épaisseur des \glspl{lem} du \TOO{}, décrites dans le papier technique de 2018\cite{Aimard2018}.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{capa.pdf}
-          \caption[Capacitance moyenne entre la grille d'extraction et les \glspl{lem} en fonction du niveau de l'interface liquide-gaz.]{\label{fig::capa}Capacitance moyenne entre la grille d'extraction et les \glspl{lem} en fonction du niveau de l'interface liquide-gaz, ajusté par un modèle de capacité à deux plaques parallèles.}
+          \caption[Capacitance moyenne entre la grille d'extraction et les LEMs en fonction du niveau de l'interface liquide-gaz]{\label{fig::capa}Capacitance moyenne entre la grille d'extraction et les \glspl{lem} en fonction du niveau de l'interface liquide-gaz, ajusté par un modèle de capacité à deux plaques parallèles.}
 %            \centering
 %            \includegraphics[width=\textwidth,keepaspectratio]{gain_var_dg.pdf}
 %            \caption[Variation du gain en fonction de la variation de la distance interface-\gls{lem}]{\label{fig::systematiques_dg}Variation du gain en fonction de la variation de la distance interface-\gls{lem}, prenant en compte le gradient de température dans le gaz et les efficacités d'extraction et de collection, qui dépendent des champs électriques dans le liquide et le gaz.}
@@ -143,20 +143,20 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{fields_vs_dg_gas.pdf}
-          \caption[]{Variations du champ dans le gaz duse aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
+          \caption{Variations du champ dans le gaz dues aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{fields_vs_dg_liquid.pdf}
-          \caption[]{Variations du champ dans le liquide dues aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
+          \caption{Variations du champ dans le liquide dues aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
         \end{subfigure}
-        \caption[Variation des champs d'extraction dues à la déformation du \gls{crp}.]{\label{fig::fields_vs_dg}Variations des champ dans le liquide et le gaz entre la grille et les \glspl{lem} dues aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
+        \caption[Variations des champs d'extraction dues à la déformation du CRP]{\label{fig::fields_vs_dg}Variations des champ dans le liquide et le gaz entre la grille et les \glspl{lem} dues aux déformation du \gls{crp} pour plusieurs valeur de tension d'extraction.}
       \end{figure}
 
       \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{eff_guschin_and_combined.pdf}
-        \caption[Efficacité combinée d'extraction et de collection en fonction du champ dans le liquide.]{\label{fig::eff_guschin_and_combined}Variation de l'efficacité d'extraction (triangles rouges pleins) et de l'efficacité combinée d'extraction et de collection du \gls{lem} en fonction du champ dans le liquide, en supposant une distance grille-interface de \SI{7}{\milli\meter} et une distance interface-\glspl{lem} de \SI{2}{\milli\meter}.}
+        \caption[Efficacité combinée d'extraction et de collection en fonction du champ dans le liquide]{\label{fig::eff_guschin_and_combined}Variation de l'efficacité d'extraction (triangles rouges pleins) et de l'efficacité combinée d'extraction et de collection du \gls{lem} en fonction du champ dans le liquide, en supposant une distance grille-interface de \SI{7}{\milli\meter} et une distance interface-\glspl{lem} de \SI{2}{\milli\meter}.}
       \end{figure}
 
       Le gain dans une \gls{lartpc} est influencé fortement par l'épaisseur des \glspl{lem}, comme nous l'avons discuté en \autoref{sec::epaisseur}. La densité du gaz, qui apparaît dans l'équation de l'avalanche de Townsed \eqref{eq::townsend} aux mêmes endroits que l'épaisseur, aura la même influence. La \autoref{fig::lem_thicnkess_311} présente les mesures d'épaisseur réalisées au \gls{cern} sur les \glspl{lem} présents dans le \TOO{}, dont l'impact sur le gain sera de la dizaine de pourcent. La densité est proportionnelle au rapport de la pression et de la température, deux grandeurs stables au cours du temps dans le \TOO{} (voir \autoref{sec::slow_control}) dont les petites variations auront un impact de l'ordre du pourcent sur le gain. 
@@ -193,7 +193,7 @@
       \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{slow_control.png}
-        \caption[Variation de température et de niveau d'argon dans le \TOO{}.]{\label{fig::slow_control}Variation de température (droite) et de niveau d'argon (gauche) dans le \TOO{} durant une semaine. Les graphiques viennent du TDR de 2018\cite{Aimard2018}.}
+        \caption[Variation de température et de niveau d'argon dans le \TOO{}]{\label{fig::slow_control}Variation de température (droite) et de niveau d'argon (gauche) dans le \TOO{} durant une semaine. Les graphiques viennent du TDR de 2018\cite{Aimard2018}.}
       \end{figure}
 
       \begin{figure}[htbp]
@@ -201,12 +201,12 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{pressure.pdf}
-          \caption[Pression dans le \TOO{} au cours du run 840.]{\label{fig::pressure}Pression dans le \TOO{} au cours du run 840.}
+          \caption[Pression dans le \TOO{} au cours du run 840]{\label{fig::pressure}Pression dans le \TOO{} au cours du run 840.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{temp_vs_height.pdf}
-          \caption[Gradient de température dans le \TOO{} durant le run 840.]{\label{fig::temp_vs_height}Gradient de température dans le \TOO{} durant le run 840. La partie constante correspond aux capteur dans le liquide, la partie linéairement croissante correspond à ceux dans le gaz.}
+          \caption[Gradient de température dans le \TOO{} durant le run 840]{\label{fig::temp_vs_height}Gradient de température dans le \TOO{} durant le run 840. La partie constante correspond aux capteur dans le liquide, la partie linéairement croissante correspond à ceux dans le gaz.}
         \end{subfigure}
       \end{figure}
       
@@ -224,24 +224,24 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_840_0.pdf}
-          \caption[]{Vue 0, run 840.}
+          \caption{Vue 0, run 840.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_840_1.pdf}
-           \caption[]{Vue 1, run 840.}
+           \caption{Vue 1, run 840.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_842_0.pdf}
-          \caption[]{Vue 0, run 842.}
+          \caption{Vue 0, run 842.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_842_1.pdf}
-          \caption[]{Vue 1, run 842.}
+          \caption{Vue 1, run 842.}
         \end{subfigure}
-        \caption[Distribution de la charge déposée par unité de longueur dans le \TOO{}.]{\label{fig::dqds_840_842}Distribution de la charge déposée par unité de longueur dans le \TOO{}.}
+        \caption[Distribution de la charge déposée par unité de longueur dans le \TOO{}]{\label{fig::dqds_840_842}Distribution de la charge déposée par unité de longueur dans le \TOO{}.}
       \end{figure}
 
       \begin{figure}[htbp]
@@ -249,24 +249,24 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ds_840_0.pdf}
-          \caption[]{Vue 0, run 840.}
+          \caption{Vue 0, run 840.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ds_840_1.pdf}
-          \caption[]{Vue 1, run 840.}
+          \caption{Vue 1, run 840.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ds_842_0.pdf}
-          \caption[]{Vue 0, run 842.}
+          \caption{Vue 0, run 842.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ds_842_1.pdf}
-          \caption[]{Vue 1, run 842.}
+          \caption{Vue 1, run 842.}
         \end{subfigure}
-        \caption[Distribution de la longueur de dépôt de charge dans le \TOO{}.]{\label{fig::ds_840_842}Distribution de la longueur de dépôt de charge dans le \TOO{}.}
+        \caption[Distribution de la longueur de dépôt de charge dans le \TOO{}]{\label{fig::ds_840_842}Distribution de la longueur de dépôt de charge dans le \TOO{}.}
       \end{figure}
 
       \begin{figure}[htbp]
@@ -274,17 +274,17 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_840_0_border.pdf}
-          \caption[]{Vue 0, run 840.}
+          \caption{Vue 0, run 840.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_840_1_border.pdf}
-          \caption[]{Vue 1, run 840.}
+          \caption{Vue 1, run 840.}
         \end{subfigure}
-        \caption[Distribution de la charge déposée par unité de longueur sur les seconds canaux les plus au bords des anodes dans le \TOO{}.]{\label{fig::dqds_840_borders}Distribution de la charge déposée par unité de longueur sur les seconds canaux les plus au bords des anodes dans le \TOO{}.}
+        \caption[Effet des zones mortes des LEMs dans le \TOO{}]{\label{fig::dqds_840_borders}Distribution de la charge déposée par unité de longueur sur les seconds canaux les plus au bords des anodes dans le \TOO{}.}
       \end{figure}
 
-      La \autoref{fig::dqds_840_842} montre les distributions des $dQ/ds$ pour les deux vues des runs 840 et 842, chacune corrigée pour la distance de dépôt de charge $ds$ et pour la pureté, ajustée avec une distribution de Landau-Vavilov convoluée à une gaussienne. Une différence de 5\,\% et 4\,\% est observée entre la vue 0 et la vue 1 pour le run 840 et le run 842 respectivement. La \autoref{fig::dqds_840_borders} montre ces mêmes distributions pour tous les coups arrivant sur les  canaux des bords des anodes, afin de vérifier les simulations des effets de bords des \glspl{lem} présentés en \autoref{sec::zones_mortes}. Les canaux directement sur les bords n'ayant enregistré aucun coup, comme le prédit la simulation, seuls les seconds canaux les plus au bord ont été utilisés pour produire les distributions. La \gls{mpv} mesurée est 35\,\% inférieure à celle mesurée sur les autres canaux. Les incertitudes étant grandes due aux différentes systématiques, cette valeur est compatible avec celle simulée, à savoir 42\,\%. Ce point pourra être vérifié avec plus de statistique dans le \SSS{}.
+      La \autoref{fig::dqds_840_842} montre les distributions des $dQ/ds$ pour les deux vues des runs 840 et 842, chacune corrigée pour la distance de dépôt de charge $ds$ et pour la pureté, ajustée avec une distribution de Landau-Vavilov convoluée à une gaussienne. Une différence de 5\,\% et 4\,\% est observée entre la vue 0 et la vue 1 pour le run 840 et le run 842 respectivement. La \autoref{fig::dqds_840_borders} montre ces mêmes distributions pour tous les coups arrivant sur les  canaux des bords des anodes, afin de vérifier les simulations des effets de bords des \glspl{lem} présentés en \autoref{sec::dead_zones}. Les canaux directement sur les bords n'ayant enregistré aucun coup, comme le prédit la simulation, seuls les seconds canaux les plus au bord ont été utilisés pour produire les distributions. La \gls{mpv} mesurée est 35\,\% inférieure à celle mesurée sur les autres canaux. Les incertitudes étant grandes due aux différentes systématiques, cette valeur est compatible avec celle simulée, à savoir 42\,\%. Ce point pourra être vérifié avec plus de statistique dans le \SSS{}.
 
       Les coups sur les deux premiers canaux des bords ont été ignorés dans la \autoref{fig::dqds_840_842} et dans tous les résultats présentés par la suite.
 
@@ -299,14 +299,14 @@
           \begin{subfigure}[t]{0.5\textwidth}
             \centering
             \includegraphics[width=\textwidth,keepaspectratio]{charging_up_840.pdf}
-            \caption[]{Run 840.}
+            \caption{Run 840.}
           \end{subfigure}\hfill
           \begin{subfigure}[t]{0.5\textwidth}
             \centering
             \includegraphics[width=\textwidth,keepaspectratio]{charging_up_842.pdf}
-            \caption[]{Run 842.}
+            \caption{Run 842.}
           \end{subfigure}
-          \caption[Effet du charging up dans le \TOO{}.]{\label{fig::charging_up_311}Effet du charging up dans le \TOO{} pour les run 840 et 842, à un champ d'amplification de \SI{28}{\kilo\volt\per\centi\meter}.}
+          \caption[Effet du charging up dans le \TOO{}]{\label{fig::charging_up_311}Effet du charging up dans le \TOO{} pour les run 840 et 842, à un champ d'amplification de \SI{28}{\kilo\volt\per\centi\meter}.}
         \end{figure}
         
         Nous l'avons évoqué au \autoref{sec::state_of_the_art}, le fait de mettre des RIMs autour des trous d'amplification implique que les lignes de champs à l'intérieur de ces trous peuvent traverser le \gls{fr4}, résultant en une accumulation des électrons sur ce \gls{fr4} au cours du temps. Ceci se traduit par une diminution au cours du temps du gain effectif, comme observé dans le \threeL{}\cite{Cantini2014}. Dans le \TOO{}, les runs n'étaient pas assez long pour observer une décroissance exponentielle. Une droite suffisait à modéliser cette diminution, comme le montre la figure \autoref{fig::charging_up_311}. Cette figure montre le charging up dans les runs 840 et842 dans les deux vues séparément. L'ajustement linéaire permet d'extraire un coefficient directeur, avec lequel il est possible de corriger les $dQ$ de chaque coups pour les ramener au temps initial du run. Ceci a été fait pour tous les runs de plus d'une heure pour les études suivantes. 
@@ -322,14 +322,14 @@
           \begin{subfigure}[t]{0.9\textwidth}
             \centering
             \includegraphics[width=\textwidth,keepaspectratio]{dQds_2D_840.pdf}
-            \caption[]{Run 840.}
+            \caption{Run 840.}
           \end{subfigure}\\
           \begin{subfigure}[t]{0.9\textwidth}
             \centering
             \includegraphics[width=\textwidth,keepaspectratio]{dQds_2D_842.pdf}
-            \caption[]{Run 842.}
+            \caption{Run 842.}
           \end{subfigure}
-          \caption[Variation de la \gls{mpv} sur la surface du \gls{crp} dans le \TOO{}.]{\label{fig::stability}Variation de la \gls{mpv} autour de sa moyenne sur la surface du \gls{crp} du \TOO{}. Les bins en bleus foncé, dans les coins, correspondent à des \gls{lem} à plus bas champ que les autres.}
+          \caption[Variation de la MPV sur la surface du CRP dans le \TOO{}]{\label{fig::stability}Variation de la \gls{mpv} autour de sa moyenne sur la surface du \gls{crp} du \TOO{}. Les bins en bleus foncé, dans les coins, correspondent à des \gls{lem} à plus bas champ que les autres.}
         \end{figure}
 
         Une des caractéristiques importante d'une \gls{dlartpc} est la précision avec laquelle elle peut estimer la charge déposée dans l'argon. Comme nous l'avons dit en \autoref{sec::uncertainties}, les variations de l'épaisseur des \glspl{lem} et de la distance interface-\gls{lem} peut entraîner d'importantes variations, d'autant plus importante que le champ d'amplification est grand. Il est possible de vérifier ces variations en regardant la répartition de la charge sur la surface du \gls{crp}. Ceci a été fait pour les runs 840 et 842. Ces deux runs ont été pris à des champs électriques identiques (voir \autoref{tab::data-collected}) et à 12 heures d'intervalle. La surface du \gls{crp} a été découpée en bin de $25\times\SI{25}{\centi\meter}$ (chaque bin couvre un quart de \gls{lem}), et dans chaque bin a été mesuré pour chaque vue la \gls{mpv} de la distribution de Landau-Vavilov. La \autoref{fig::stability} montre le pourcentage de variation autour de la \gls{mpv} moyenne pour ces deux runs. 
@@ -348,12 +348,12 @@
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{gain_vs_extr.pdf}
-        \caption[\gls{mpv} en fonction du champ d'extraction dans le \TOO{}.]{\label{fig::gain_vs_extr}\gls{mpv} en fonction du champ d'extraction dans le \TOO{}.}
+        \caption[MPV en fonction du champ d'extraction dans le \TOO{}]{\label{fig::gain_vs_extr}\gls{mpv} en fonction du champ d'extraction dans le \TOO{}.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{comp_311_eff.pdf}
-          \caption[\gls{mpv} et \gls{mpv} divisée par l'efficacité de collection du \gls{lem}, normalisées à l'efficacité d'extraction mesurée dans \cite{guschin} à \SI{2}{\kilo\volt\per\centi\meter}.]{\label{fig::comp_311_eff}\gls{mpv} et \gls{mpv} divisée par l'efficacité de collection du \gls{lem}, normalisées à l'efficacité d'extraction mesurée dans \cite{guschin} à \SI{2}{\kilo\volt\per\centi\meter}.}
+          \caption[MPV et MPV divisée par l'efficacité de collection du LEM, normalisées à l'efficacité d'extraction]{\label{fig::comp_311_eff}\gls{mpv} et \gls{mpv} divisée par l'efficacité de collection du \gls{lem}, normalisées à l'efficacité d'extraction mesurée dans \cite{guschin} à \SI{2}{\kilo\volt\per\centi\meter}.}
         \end{subfigure}
       \end{figure}
       Des données ont été prises à champ d'amplification et d'induction constant, en faisant varier le champ d'extraction, afin d'étudier les efficacités d'extraction et de collection. La \autoref{fig::gain_vs_extr} montre la variation du \gls{mpv} en fonction du champ d'extraction pour les deux vues séparément, les barres d'erreurs sont issues des systématiques discutées dans la \autoref{sec::uncertainties}. Comme attendu, la charge mesurée augmente avec le champ d'extraction.
@@ -365,7 +365,7 @@
       \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{gain_vs_ampli.pdf}
-        \caption[Gain en fonction du champ d'amplification.]{\label{fig::gain_vs_ampli}Gain en fonction du champ d'amplification dans le \TOO{} normalisé aux champs d'induction et d'extraction ainsi qu'à la densité du \threeL{}.}
+        \caption[Gain en fonction du champ d'amplification]{\label{fig::gain_vs_ampli}Gain en fonction du champ d'amplification dans le \TOO{} normalisé aux champs d'induction et d'extraction ainsi qu'à la densité du \threeL{}.}
       \end{figure}
 
       \begin{figure}[htbp]
@@ -373,27 +373,27 @@
         \begin{subfigure}[t]{0.5\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ratio_3L_311.pdf}
-        \caption[]{\label{fig::ratio_3L_311_all}Tous les runs présentée dans le \autoref{tab::data-collected}.}
+        \caption{\label{fig::ratio_3L_311_all}Tous les runs présentée dans le \autoref{tab::data-collected}.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.5\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ratio_3L_311_extr.pdf}
-          \caption[]{\label{fig::ratio_3L_311_extr}Les runs du scan d'extraction.}
+          \caption{\label{fig::ratio_3L_311_extr}Les runs du scan d'extraction.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.5\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ratio_3L_311_amp.pdf}
-          \caption[]{\label{fig::ratio_3L_311_ampli}Les runs du moi de septembre.}
+          \caption{\label{fig::ratio_3L_311_ampli}Les runs du moi de septembre.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.5\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{ratio_3L_311_rawdata.pdf}
-          \caption[]{\label{fig::ratio_3L_311_rawdata}Les runs du moi de novembre.}
+          \caption{\label{fig::ratio_3L_311_rawdata}Les runs du moi de novembre.}
         \end{subfigure}
         \caption[Ratio entre le gain dans le \threeL{} et le gain dans le \TOO{} en fonction de la date de prise de donnée]{\label{fig::ratio_3L_311}Ratio entre le gain dans le \threeL{} et le gain dans le \TOO{} en fonction de la date de prise de donnée. Les points en rouges sont les valeurs attendues du ratio entre le gain avant et après charging up, tirées de la \autoref{fig::3L_gain}.}
       \end{figure}
 
-      La courbe du gain en fonction du champ d'amplification est montrée sur la \autoref{fig::gain_vs_ampli}. En triangles rouges sont les mesures du \threeL{} avant charging up avec l'ajustement de la fonction du gain \eqref{eq::gain_eff}. En cercles bleus sont les données mesurées par le \TOO{}, ramenées aux champs et à la densité du \threeL{} grâce aux simulations des efficacités de collections du \gls{lem} et de l'anode telles que présentées en \autoref{sec::efficacites}. Les dates de prise de données sont dans le \autoref{tab::data-collected}. Les deux derniers points, à 30 et \SI{31}{\kilo\volt\per\centi\meter}, ne viennent pas de l'analyse de \gls{larsoft}, ce dernier reconstruisant mal ces runs. La \autoref{sec::rawdatasoft} est dédiée à la reconstruction de ces runs. En \autoref{fig::ratio_3L_311} est présentée le ratio entre le gain effectif du \threeL{} et le gain corrigé du \TOO{} en fonction de la date de prise de donnée. Sur cette même figure, les points rouges représentent le ratio observé dans le \threeL{} entre le gain avant et après charging up. Ce ratio dépendant de la géométrie des \glspl{lem}, il est attendu qu'il soit identique dans le \TOO{}. Les incertitudes sur la \autoref{fig::gain_vs_ampli} correspondent aux minima et maxima des courbes de la \autoref{fig::systematiques_dg}, chaque courbe correspondant aux conditions de chaque run utilisées pour le scan.
+      La courbe du gain en fonction du champ d'amplification est montrée sur la \autoref{fig::gain_vs_ampli}. En triangles rouges sont les mesures du \threeL{} avant charging up avec l'ajustement de la fonction du gain \eqref{eq::gain_eff}. En cercles bleus sont les données mesurées par le \TOO{}, ramenées aux champs et à la densité du \threeL{} grâce aux simulations des efficacités de collections du \gls{lem} et de l'anode telles que présentées en \autoref{sec::efficacites}. Les dates de prise de données sont dans le \autoref{tab::data-collected}. Les deux derniers points, à 30 et \SI{31}{\kilo\volt\per\centi\meter}, ne viennent pas de l'analyse de \gls{larsoft}, ce dernier reconstruisant mal ces runs. La \autoref{sec::rawdatasoft} est dédiée à la reconstruction de ces runs. En \autoref{fig::ratio_3L_311} est présentée le ratio entre le gain effectif du \threeL{} et le gain corrigé du \TOO{} en fonction de la date de prise de donnée. Sur cette même figure, les points rouges représentent le ratio observé dans le \threeL{} entre le gain avant et après charging up. Ce ratio dépendant de la géométrie des \glspl{lem}, il est attendu qu'il soit identique dans le \TOO{}. Les incertitudes sur la \autoref{fig::gain_vs_ampli} sont expliquées en \autoref{sec::uncertainties}.
 
       Les valeurs mesurées par le \TOO{} sont systématiquement inférieures aux mesures du \threeL{}. Ceci peut être due principalement à deux choses : 
       \begin{itemize}
@@ -415,19 +415,19 @@
       \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{dQds_1197_0.pdf}
-        \caption[]{Vue 0, run 1197.}
+        \caption{Vue 0, run 1197.}
       \end{subfigure}\hfill
       \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{dQds_1197_1.pdf}
-        \caption[]{Vue 1, run 1197.}
+        \caption{Vue 1, run 1197.}
       \end{subfigure}
-      \caption[Distribution de la charge déposée par unité de longueur dans le \TOO{}.]{\label{fig::dqds_1197}Distribution de la charge reconstruite déposée par unité de longueur dans le run 1197.}
+      \caption[Distribution de la charge déposée par unité de longueur dans le \TOO{}]{\label{fig::dqds_1197}Distribution de la charge reconstruite déposée par unité de longueur dans le run 1197.}
     \end{figure}
 
     Les runs à \SI{30}{\kilo\volt\per\centi\meter} et \SI{31}{\kilo\volt\per\centi\meter} n'étais pas bien reconstruits avec \gls{larsoft}. En appliquant toutes les coupures décrites précédemment, seules trois traces étaient sélectionnées pour le run 1197 et une pour le run 1199, avec trop peu de coups pour extraire une \gls{mpv}. Il est possible d'appliquer des coupures moins restrictives, mais la distribution résultante n'a alors plus de sens. La \autoref{fig::dqds_1197} montre les distribution $dQ/ds$ sans coupure sur la longueur, sur l'angle, ou sur les traces traversantes : ces distribution ne ressemblent pas à des Landau-Vavilov et il est impossible d'en extraire une information relative à la \gls{mpv}. Plusieurs coupures ont été testées sans succès : faire varier la tolérance sur les angles, sur la longueur, sur le nombre de traces... n'aboutissant pas à une distribution exploitable et n'ayant pas la main sur l'algorithme de reconstruction, un algorithme d'analyse dédié à ces runs a été développé en python.
 
-    \subsection{Potentiel problèmes de reconstruction}
+    \subsection{Potentiels problèmes de reconstruction}
 
       \begin{figure}[htbp]
         \centering
@@ -439,7 +439,7 @@
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{cnusub_adcs_2D_zoom.png}
         \end{subfigure}
-        \caption[Événement du run 1197 vue 1 après suppression du bruit cohérent.]{\label{fig::cnusub_adcs_2D}Événement du run 1197 vue 1 après suppression du bruit cohérent. Le zoom autour du canal 750 montre des zones sans dépôt de charge apparent le long de la trace. L'étirement en temps des dépôts de charge important est clairement visible.}
+        \caption[Événement du run 1197 vue 1 après suppression du bruit cohérent]{\label{fig::cnusub_adcs_2D}Événement du run 1197 vue 1 après suppression du bruit cohérent. Le zoom autour du canal 750 montre des zones sans dépôt de charge apparent le long de la trace. L'étirement en temps des dépôts de charge important est clairement visible.}
       \end{figure}
 
       L'algorithme développé en python traite la suppression du bruit différemment de \gls{larsoft}. La première étape est la suppression du piédestal grâce aux données de runs de calibration dédiés. Ensuite, seul le bruit cohérent est supprimé, de la même manière que dans \gls{larsoft} : les canaux branchés sur une même carte électronique sont regroupés (32 caaux par groupe) l'ADC moyen de chaque bin de temps est calculé. Ces moyennes sont ensuite soustraites à l'ADC vu dans les bins de temps leur correspondant. Pour ce faire, comme dans \gls{larsoft}, les \glspl{roi} sont préalablement identifiées grâce à un seuil en ADC et ignorées dans le calcul des moyennes. La \autoref{fig::cnusub_adcs_2D} montre le résultat de cet algorithme pour un événement du run 1197, en vue 1.
@@ -451,19 +451,19 @@
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{pedsub_adcs_high_threshold.pdf}
-          \caption[]{Avant suppression du bruit cohérent. Le pic du dépôt de charge est trop faible pour passer le seuil, et n'est pas vu comme un coup. Ce coup manqué est alors utilisé pour calculer le bruit cohérent.}
+          \caption{Avant suppression du bruit cohérent. Le pic du dépôt de charge est trop faible pour passer le seuil, et n'est pas vu comme un coup. Ce coup manqué est alors utilisé pour calculer le bruit cohérent.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{cnsub_adcs_high_threshold.pdf}
-          \caption[]{Après suppression du bruit cohérent. Le fait de ne pas avoir ignoré le coup pour le calcul du bruit cohérent élimine complètement le coup.}
+          \caption{Après suppression du bruit cohérent. Le fait de ne pas avoir ignoré le coup pour le calcul du bruit cohérent élimine complètement le coup.}
         \end{subfigure}
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{cnsub_fromtrack.pdf}
-          \caption[]{Après seconde passe de suppression du bruit cohérent. Si suffisamment de coups sont trouvés à l'étape précédente, une trace peut être trouvée grâce à la transformation de Hough. Ceci fait, le bruit cohérent peut être recalculé en ignorant la zone autour de la trace et ainsi trouver les coups manquants et mieux estimer la charge des coups déjà trouvé.}
+          \caption{Après seconde passe de suppression du bruit cohérent. Si suffisamment de coups sont trouvés à l'étape précédente, une trace peut être trouvée grâce à la transformation de Hough. Ceci fait, le bruit cohérent peut être recalculé en ignorant la zone autour de la trace et ainsi trouver les coups manquants et mieux estimer la charge des coups déjà trouvé.}
         \end{subfigure}
-        \caption[Supression du bruit cohérent.]{\label{fig::strip_before_after_cnsub}Signal d'un canal du run 1197, avant suppression du bruit cohérent, après suppression du bruit cohérent et après une seconde passe de suppression de bruit cohérent après avoir trouvé la trace.}
+        \caption[Supression du bruit cohérent]{\label{fig::strip_before_after_cnsub}Signal d'un canal du run 1197, avant suppression du bruit cohérent, après suppression du bruit cohérent et après une seconde passe de suppression de bruit cohérent après avoir trouvé la trace.}
       \end{figure}
 
       Ceci a deux conséquence : d'abord, la sélection des muons décrite en \autoref{sec::selection} peut ignorer ces traces à cause de cet étalement, qui fait apparaître les traces comme étant plus larges. Ensuite, un étalement en temps provoque une diminution du maximum d'ADC. Les coups de plus basse énergie peuvent alors être ratés. Rater des coups a également deux conséquences. Premièrement, les ADCs de ces coups sont vus comme du bruit et sont utilisés pour calculer la moyenne d'ADC dans chaque bin en temps, ce qui la surestime. La suppression du bruit cohérent va donc enlever plus d'ADC qu'elle ne devrait, éliminant encore plus de coups.  Deuxièmement, la méthode de reconstruction des traces de \gls{larsoft} utilise des amas. Si trop de canaux ne voient pas de coups, cette méthode va identifier de nombreuses petites traces à la place de quelques longues traces. L'algorithme d'appareillage qui associe un amas en vue 0 à un amas en vue 1 aura alors du mal à fonctionner. De plus, les petites traces ainsi reconstruites ne passent pas les coupures choisies pour réaliser les distributions de $dQ/ds$.
@@ -474,7 +474,7 @@
 
     \subsection{Identification et soustraction du bruit cohérent}
 
-      Afin de palier au problème de soustraction du bruit cohérent, une étape supplémentaire a été ajoutée, après reconstruction des traces (dont la méthode est expliquée dans la prochaine section). Si l'on sait où se trouve la trace, il est alors possible de forcer l'identification des \gls{roi} sur le signal avant suppression du bruit cohérent autour de cette trace. Ceci ne permet pas de mieux reconstruire les traces mais permet, d'une part, de bien mieux mesurer le $dQ$, et d'autre part de trouver les coups auparavant ratés. La \autoref{fig::strip_before_after_cnsub} montre l'effet de cet étape sur un canal où aucun coup n'avait initialement été vu. La \autoref{fig::dQds_Rawdatasoft} montre la distribution de $dQ/ds$ avec et sans cette seconde étape de soustraction du bruit cohérent pour la vue 0 du run 1197 : la seconde étape est nécessaire pour avoir une distribution qui ait du sens. La reconstruction et la sélection des traces utilisées pour produire ces histogrammes sont détaillées ci-dessous.
+      Afin de palier au problème de soustraction du bruit cohérent, une étape supplémentaire a été ajoutée, après reconstruction des traces (dont la méthode est expliquée dans la prochaine section). Si l'on sait où se trouve la trace, il est alors possible de forcer l'identification des \gls{roi} sur le signal avant suppression du bruit cohérent autour de cette trace. Ceci ne permet pas de mieux reconstruire les traces mais permet, d'une part, de bien mieux mesurer le $dQ$, et d'autre part de trouver les coups auparavant ratés. La \autoref{fig::strip_before_after_cnsub} montre l'effet de cet étape sur un canal où aucun coup n'avait initialement été vu. La \autoref{fig::dqds_1197_Rawdatasoft} montre la distribution de $dQ/ds$ avec et sans cette seconde étape de soustraction du bruit cohérent pour la vue 0 du run 1197 : la seconde étape est nécessaire pour avoir une distribution qui ait du sens. La reconstruction et la sélection des traces utilisées pour produire ces histogrammes sont détaillées ci-dessous.
 
     \subsection{Reconstruction des traces et transformation de Hough}
 
@@ -494,7 +494,7 @@
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{HT_real_data.pdf}
         \end{subfigure}
-        \caption[Transformation de Hough dans le \TOO{}.]{\label{fig::HT_real_data}Transformation de Hough appliquée dans le \TOO{}. En haut, les points reconstruits dans la vue 1 d'un événement du run 1197. En bas, l'espace de Hough associé. Les points en verts sont ceux vus par la suite comme étant sur la trace, ceux en rouge ne sont associés à aucune trace.}
+        \caption[Transformation de Hough dans le \TOO{}]{\label{fig::HT_real_data}Transformation de Hough appliquée dans le \TOO{}. En haut, les points reconstruits dans la vue 1 d'un événement du run 1197. En bas, l'espace de Hough associé. Les points en verts sont ceux vus par la suite comme étant sur la trace, ceux en rouge ne sont associés à aucune trace.}
       \end{figure}
 
       La transformation de Hough utilise l'alignement de plusieurs points pour reconstruire des traces, peu importe leur espacement. L'idée est de convertir chaque point dans un espace $x-y$ en une sinusoïdale dans un espace dit "de Hough". Les intersections de ces sinusoïdales correspondent alors à des alignements de points et donc à des traces. Il est alors possible d'identifier des traces même avec peu de coups.
@@ -518,24 +518,24 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1197_dQds_0.pdf}
-          \caption[]{Vue 0, run 1197, sans la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 0, run 1197, sans la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1197_dQds_1.pdf}
-          \caption[]{Vue 1,  run 1197, sans la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 1,  run 1197, sans la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1197_dQds_fromtrack_0.pdf}
-          \caption[]{Vue 0, run 1197, avec la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 0, run 1197, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1197_dQds_fromtrack_1.pdf}
-          \caption[]{Vue 1, run 1197, avec la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 1, run 1197, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}
-        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197.]{\label{fig::dqds_1197_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197. Les deux figures du haut sont faites sans la seconde étape de bruit cohérent, une différence qui n'a aucun sens physique est observable entre les 2 vues. La figure du bas est la même distribution avec la seconde étape de suppression de bruit cohérent.}
+        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197]{\label{fig::dqds_1197_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197. Les deux figures du haut sont faites sans la seconde étape de bruit cohérent, une différence qui n'a aucun sens physique est observable entre les 2 vues. La figure du bas est la même distribution avec la seconde étape de suppression de bruit cohérent.}
       \end{figure}
 
 
@@ -544,20 +544,20 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1199_dQds_fromtrack_0.pdf}
-          \caption[]{Vue 0, run 1199, avec la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 0, run 1199, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{1199_dQds_fromtrack_1.pdf}
-          \caption[]{Vue 1, run 1199, avec la seconde étape de suppression de bruit cohérent.}
+          \caption{Vue 1, run 1199, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}
-        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199.]{\label{fig::dqds_1199_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199 avec la seconde étape de suppression de bruit cohérent.}
+        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199]{\label{fig::dqds_1199_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199 avec la seconde étape de suppression de bruit cohérent.}
       \end{figure}
 
       \begin{figure}[htbp]      
         \centering
         \includegraphics[width=0.6\textwidth,keepaspectratio]{dQds_fromtrack_840.pdf}
-        \caption[Test de l'algorithme sur le run 840.]{\label{fig::dQds_rawdatasoft_840}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 840 vue 0.}
+        \caption[Test de l'algorithme sur le run 840]{\label{fig::dQds_rawdatasoft_840}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 840 vue 0.}
       \end{figure}
 
       La transformation de Hough permet de reconstruire des traces morcelées mais droites, ce qui est nécessaire pour les runs 1197 et 1199, mais n'est pas performant du tout pour identifier une gerbe électromagnétique, hadronique ou une trace courbée. Les événements ont donc été sélectionnées à l'oeil, en regardant le résultat de la première soustraction du bruit cohérent. Afin d'éviter d'avoir à passer à travers un trop grand nombre d'événements, seuls ceux ayant passé la coupure de l'algorithme de l'équation \eqref{eq::cbr}, dont le seuil de tolérance de \numprint{0.1} a été monté à \numprint{0.3}, ont été inspectés. Les résultats en terme de distribution de $dQ/ds$ sont montrés en \autoref{fig::dqds_1197_Rawdatasoft} (deux figures du bas) pour le run 1197 et \autoref{fig::dqds_1199_Rawdatasoft} pour le run 1199. Quelques événements du run 840 ont également été analysés afin de valider l'algorithme. La \autoref{fig::dQds_rawdatasoft_840} montre les distributions de $dQ/ds$ de ces quelques événements, à comparer avec la \autoref{fig::dqds_840_842} faite à partir de la reconstruction de \gls{larsoft}. On constate que le nouvel algorithme donne une valeur de \gls{mpv} légèrement supérieure mais que les résultats sont globalement compatibles. 

@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,oldfontcommands,twoside,openright]{memoir}
+\documentclass[11pt,a4paper,oldfontcommands,twoside,openright,draft]{memoir}
 \input{packages}
 \input{colors}
 \input{hansen}
@@ -17,59 +17,60 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-\begin{document} 
+\begin{document}
+
+\selectlanguage{french}
+
 %%\layout
 \input{Front-back_covers/Front-back_covers}
 %%\newgeometry{twoside}
 %\newpage
-\thispagestyle{empty}
+%\thispagestyle{empty}
 %\begin{tikzpicture}[remember picture, overlay] 
 %\end{tikzpicture}
-\newpage
+%\newpage
 
-\pagestyle{myheadings}
-\markright{} 
+%\pagestyle{myheadings}
+%\markright{} 
 
 %%\setcounter{chapter}{0}             % to start with the chapter no 1 
 %%\setcounter{page}{1}                % to start with the page number 
 %%\setcounter{figure}{0}              % to start the numbering of figures 
 
-%\input{introduction/introduction}
-%\newpage
+\thispagestyle{empty}
+\input{acknowledgment/acknowledgment}
 %\thispagestyle{empty}
 %\begin{tikzpicture}[remember picture, overlay] 
 %\end{tikzpicture}
 %\newpage
-%\input{acknowledgment/acknowledgment}
 %\newpage
 %\thispagestyle{empty}
 %\begin{tikzpicture}[remember picture, overlay] 
 %\end{tikzpicture}
 %\newpage
 
-
+\chapter*{}
 \tableofcontents*
 \printglossaries
 \listoffigures*
 \listoftables*
+
+\thispagestyle{empty}
+\input{introduction/introduction}
+\pagestyle{myheadings} % All pages have headers and footers
 \mainmatter
 \normalsize 
-
-
-\newpage
-\thispagestyle{empty}
-\pagestyle{myheadings} % All pages have headers and footers
 \input{Chapitre_1/Chapitre_1.tex}
-%\newpage
-%\input{Chapitre_2/Chapitre_2.tex}
-%\newpage
-%\input{Chapitre_3/Chapitre_3.tex}
-%\newpage
-%\input{Chapitre_4/Chapitre_4.tex}
-%\newpage
-%\input{Chapitre_5/Chapitre_5.tex}
-%\newpage
+\newpage
+\input{Chapitre_2/Chapitre_2.tex}
+\newpage
+\input{Chapitre_3/Chapitre_3.tex}
+\newpage
+\input{Chapitre_4/Chapitre_4.tex}
+\newpage
+\input{Chapitre_5/Chapitre_5.tex}
+\newpage
 \backmatter
-%\input{conclusion/conclusion.tex}
+\input{conclusion/conclusion.tex}
 
 \end{document}

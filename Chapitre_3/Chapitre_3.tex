@@ -21,7 +21,8 @@
     Le projet \gls{wa105}, au \gls{cern}, prototype la technologie \gls{dlartpc} en vue de l'utiliser pour réaliser un modules de \SI{12}{\kilo\tonne} du détecteur lointain de \gls{dune} (\autoref{fig::wa105}). Un premier prototype de \TOO{} (\SI{4.2}{tonne}), construit et opéré au \gls{cern} entre 2016 et 2017, a prouvé que la technologie fonctionne avec une distance de dérive de \SI{1}{\meter} et une surface de lecture de charge de \SI{3}{\meter\squared}. Il a également testé et validé les choix technologiques utilisés pour la réalisation démonstrateur de \protodp{}; il a permis de souligner quelques difficultés techniques, notamment sur la tenue en tension des \glspl{lem}, qui ont pu être prises en compte pour la réalisation de ce démonstrateur de \SSS{} (\SI{300}{\tonne} d'argon liquide). Ce dernier, construit au \gls{cern} et qui prendra des données cosmiques à partir du mois d'août 2019, a pour but d'évaluer la capacité d'une \gls{dlartpc} de plusieurs centaines de tonnes à répondre aux besoins de \gls{dune} en terme de ratio signal/bruit, de résolution spatiale, de résolution en énergie, ainsi que développer les techniques de construction et d'exploitation d'une \gls{dlartpc} de plusieurs kilo tonnes.
 
     \begin{figure}[htbp]
-      \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{wa105_scale.png}\end{center}
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{wa105_scale.png}        
       \caption[Schéma de \protodp{WA105/protoDU$\nu$E-DP}.]{\label{fig::wa105}Schéma de \gls{wa105} et de sa place dans le développement de la technologie \gls{dlartpc}.}
     \end{figure}
 
@@ -51,7 +52,8 @@
     \subsection{Le prototype de \TOO{}}\label{sec::TOO-intro}
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=0.8\textwidth,keepaspectratio]{311_2.png}\end{center}
+        \centering
+        \includegraphics[width=0.8\textwidth,keepaspectratio]{311_2.png}        
         \caption[Schéma du prototype de \TOO{}.]{\label{fig::311}Schéma du prototype de \TOO{}.}
       \end{figure}
 
@@ -60,8 +62,14 @@
         \item[$\bullet$] Prouver que la technologie \gls{dlartpc} fonctionne à l'échelle de plusieurs tonnes avec une dérive de \SI{1}{\meter} et une surface de lecture de plusieurs \si{\meter\squared}. Il devait donc réussir à voir des traces traversant l'ensemble de la hauteur du détecteur, et reconstruire leurs différentes caractéristiques (énergie, angles, positions...). Il devait aussi étudier la stabilité du gain sur la surface de lecture ainsi que son comportement en fonction du temps et en fonction des différents champs électriques appliqués.
         \item[$\bullet$] La plupart des choix techniques faits pour la construction du \TOO{} sont identiques à ceux fait pour le \SSS{}, notamment le cryostat, l'approvisionnement en argon, les \glspl{pmt}, le \gls{crp}), et l'électronique de lecture. Le \TOO{} a donc servi à tester ces choix afin d'anticiper d'éventuels problèmes.
       \end{itemize}
-      %TRACE
-      La \autoref{fig::trace_311} montre une trace vue dans le \TOO{}, qui a donc validé le premier objectif. Le comportement du gain est étudié en détail dans le \autoref{chap::5} en utilisant des muons cosmiques, dont le dépôt de charge attendu sert de référence (voir \autoref{sec::ionisation}).
+      
+      La \autoref{fig::trace_311} montre deux traces traversant toute la hauteur du \TOO{}, une gerbe électromagnétique et un muon. Le champ d'amplification était alors de \SI{29}{\kilo\volt\per\centi\meter}, correspondant à un gain attendu de 9. Le comportement du gain est étudié en détail dans le \autoref{chap::5} en utilisant des muons cosmiques, dont le dépôt de charge attendu sert de référence (voir \autoref{sec::ionisation}).
+
+      \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{311_event}        
+        \caption[Quelques événements vus dans le  \TOO{}.]{\label{fig::trace_311}Une gerbe électromagnétique et un muon cosmique vus dans le \TOO{}. L'amplification était alors de \SI{29}{\kilo\volt\per\centi\meter}.}
+      \end{figure}
 
       Comme il est expliqué au \autoref{chap::5}, des problèmes de tenue en tension durant les opérations ont grandement limité la quantité et la qualité de données. Ces problèmes, surtout dus au design des \glspl{lem} et à la tension mécanique des fils de la grille d'extraction, ont été pris en compte dans la conception des \glspl{crp} du \SSS{}.
 
@@ -73,7 +81,8 @@
       Le remplissage d'argon liquide du cryostat se fait en quatre étapes. La première étape, appelée "boucle ouverte", consiste à injecter de l'argon gazeux à température ambiante à un débit de \SI{2}{\liter\per\second} en bas du cryostat par quatre tuyaux, chacun percés de trois ouvertures. Ceci permet de pousser l'air présent uniformément vers le haut du volume où il est évacué. Le processus continue après que tout l'air ait été évacué jusqu'à ce que les concentrations d'impuretés se stabilisent, ce qui correspond environ à 80 fois le volume du cryostat. Commence alors la seconde étape : la circulation d'argon continue mais ce dernier n'est pas évacué. Il passe à travers un purificateur et est réinjecté dans le cryostat afin de continuer à diminuer les impuretés. Ceci prend une centaine de volumes de cryostat avec un débit de \SI{4}{\liter\per\second}. La troisième étape est le refroidissement, fait en injectant aux quatre coins du bas du cryostat un mélange d'argon gazeux à température ambiante et d'argon liquide à \SI{87}{\kelvin}, pour un débit de \SI{500}{\liter\per\minute} et \SI{1266}{\liter\per\minute} respectivement. Il faut environ cinq jours pour arriver à la température à \SI{170}{\kelvin}, après quoi la quatrième étape, le remplissage, peut commencer. Durant les opérations, l'argon liquide est continûment prélevé, purifié et réinjecté par une pompe située dans un coin en bas du cryostat. Deux volumes par jour circulent ainsi dans le cryostat. De plus, l'argon gazeux est également continûment récupéré, liquéfié et réinjecté dans le cryostat. 
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{crp_exp.png}\end{center}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{crp_exp.png}        
         \caption[Schéma explosé du CRP du \TOO{}.]{\label{fig::crp_exp}Schéma explosé du \gls{crp} du \TOO{}.}
       \end{figure}
 
@@ -84,7 +93,8 @@
     \subsection{Le démonstrateur de \SSS{}}
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=0.8\textwidth,keepaspectratio]{666.png}\end{center}
+        \centering
+        \includegraphics[width=0.8\textwidth,keepaspectratio]{666.png}        
         \caption[Schéma du démonstrateur de \SSS{}.]{\label{fig::666}Schéma du démonstrateur de \SSS{}.}
       \end{figure}
 
@@ -96,7 +106,8 @@
       Les performances du \SSS{}, qui commencera à prendre des données en cosmiques en août 2019, seront directement extrapolables aux dimensions de \gls{dune}.
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{crp_666_complete.png}\end{center}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{crp_666_complete.png}
         \caption[Schéma des CRPs du \SSS{}.]{\label{fig::crp_666}Schéma des quatre \glspl{crp} du démonstrateur de \SSS{}.}
       \end{figure}
 
@@ -109,7 +120,8 @@
       La \autoref{fig::pic_crp} est une photographie de l'intérieur du cryostat montrant les quatre \glspl{crp} vus de dessous, et une photographie du bas du volume durant l'installation des \glspl{pmt}.
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{fisheye.png}\end{center}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{fisheye.png}        
         \caption[Photographie de l'intétrieur du démonstrateur de \SSS{}.]{\label{fig::pic_crp}Photographies de l'intérieur du démonstrateur de \SSS{} (mars 2019). On y voit, en haut, les quatre \glspl{crp} dont deux sont instrumentés avec des \glspl{lem} et d'anodes, un non instrumenté et un muni de quatre anodes sans \glspl{lem}. Ce dernier pourra étudier la collection de charge sans amplification et ainsi avoir une mesure direct de l'efficacité d'extraction sur la charge lue. En bas sont visibles les cathodes et les \glspl{pmt}, alors en cours d'installation.}
       \end{figure}
 
@@ -176,7 +188,7 @@
 
       \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth,keepaspectratio]{wu_extr.png}
+        \includegraphics[width=0.6\textwidth,keepaspectratio]{wu_extr.png}
         \caption[Effet du champ d'extraction sur le gain mesuré dans le prototype de \threeL{}.]{\label{fig::wu_extr}Effet du champ d'extraction sur le gain mesuré dans le prototype de \threeL{}\cite{Wu2017}.}
       \end{figure}
 
@@ -200,13 +212,15 @@
       \end{table}
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=\textwidth,keepaspectratio]{LEM_zoom.png}\end{center}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{LEM_zoom.png} 
         \caption[Photo d'un amplificateur d'électron.]{Photo d'un \gls{lem} avec agrandissement de la disposition en nid d'abeille des trous d'amplification. Le modèle présenté est celui utilisé dans le prototype de \TOO{}, ceux utilisés dans le prototype de \threeL{} mesuraient $10\times\SI{10}{\centi\meter\squared}$.}
         \label{fig::lem}
       \end{figure}
 
       \begin{figure}[htbp]
-        \begin{center}\includegraphics[width=0.8\textwidth,keepaspectratio]{anode.png}\end{center}
+        \centering
+        \includegraphics[width=0.8\textwidth,keepaspectratio]{anode.png}
         \caption[Photo et schéma d'une anode.]{Photo et schéma d'une anode de $50\times\SI{50}{\centi\meter\squared}$. Le design vient des études du prototype de \threeL{}\cite{Wu2017,Cantini2013} et permet un partage égal de la charge entre les deux vues tout en minimisant la capacitance.}
         \label{fig::anode}
       \end{figure}
@@ -216,7 +230,7 @@
           \flushleft
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{gain_3L.pdf}
-        \end{subfigure}
+        \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \flushleft
           \centering

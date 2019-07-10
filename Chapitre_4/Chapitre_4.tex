@@ -3,7 +3,7 @@
         ``Potentielle citation sans aucun rapport avec le sujet"\par\raggedleft--- \textup{Personne inconnue}, contexte à déterminer
     }
     
-  Dans ce chapitre sont présentés les tests des \glspl{lem} et anodes de \protodp{} réalisés au \gls{cea} et au \gls{cern} entre 2015 et 2019, ainsi que les simulations des champs électriques à travers le \gls{crp} et leur impact sur la collection de charge.
+  Dans ce chapitre sont présentés les tests des \glspl{lem} et anodes de \protodp{} réalisés au \gls{cea} et au \gls{cern} entre 2015 et 2019, ainsi que les simulations des champs électriques à travers le \gls{crp} et leur impact sur la collection de charge. Ces simulations sont comparées aux données du \TOO{} et utilisées pour l'analyse de ce dernier dans le \autoref{chap::5}.
     
   \section{Les LEMs et anodes de \texorpdfstring{protoDU$\nu$E}{protoDUNE}-DP}
 %    \section{Introduction technique}
@@ -622,7 +622,7 @@
         \caption[Probabilité de transmission des zones mortes d'un LEM]{\label{fig::histo_eff}Probabilité de transmission d'un électron en fonction de sa position initiale après extraction sous les différentes zone mortes d'un \gls{lem} du modèle CFR-34.}
       \end{figure}
             
-      En redéfinissant la taille des bins des histogrammes ainsi obtenus à la largeur des canaux de lecture des anodes (\SI{0.3125}{\centi\meter}), il est possible de créer la carte d'efficacité complète montrée en \autoref{fig::eff_map}. Il apparaît alors que les pertes principales auront lieu sur les bords des anodes, où les premiers canaux ne devraient voir aucune charge tandis que les seconds canaux devraient voir moins de la moitié de la charge. Ceci est validé par les résultats du \TOO{}, les détails sont en \autoref{sec::results-311}.
+      En redéfinissant la taille des bins des histogrammes ainsi obtenus à la largeur des canaux de lecture des anodes (\SI{0.3125}{\centi\meter}), il est possible de créer la carte d'efficacité complète montrée en \autoref{fig::eff_map}. Il apparaît alors que les pertes principales auront lieu sur les bords des anodes, où les premiers canaux ne devraient voir aucune charge tandis que les seconds canaux devraient voir autour de 40\,\% de la charge. Ce comportement est validé par les résultats du \TOO{} (\autoref{sec::results-311}), bien que la valeur de 40\,\% ne soit pas retrouvée.
             
 %      \subsubsection{Comparaison aux données}
 %            
@@ -789,7 +789,17 @@
 
 %  \section{Simulation du gain}\label{sec::gain_simulation}
 %    \textcolor{red}{J'ai déjà quelques plots, il faut juste que je les retrouve... mais la conclusion sera que le comportement du gain en fonction du champ électrique ne correspond pas aux mesures du 3L même en prenant en compte les efficacités de collections. L'explication proposée sera donc la génération d'électrons par effet photoélectrique avec les UV produit à l'ionisation.}
-        
+       
+  \section{Conclusion et perspectives}
+
+    Les tests décris dans ce chapitre ont permis de mettre en évidence une limitation de la tenue en tension des \glspl{lem}, qui a été prise en compte pour la réalisation du modèle CFR-35 utilisé dans le \SSS{}. Des zones mortes plus grandes permettent une meilleure tenue en tension, permettant d'atteindre les gains requis pour \gls{dune}. Cependant, comme l'ont montré les simulations décrites en \autoref{sec::dead_zones}, ceci implique une perte de zone active. Certains canaux de lecture des anodes ne recevront qu'une fraction de la charge, ce qui peut être pris en compte maintenant que cette fraction a été simulée, mais d'autres seront complètement aveugle. Des vertex ou des topologies compliquées se trouvant sous ces canaux seront mal ou pas reconstruits, pouvant entraîner une pertes d'efficacité de reconstruction. Ce phénomène reste à étudier avec un logiciel adapté afin d'optimiser les algorithmes de reconstruction.
+
+    En parallèle, une solution permettant à la fois de réduire les zones mortes tout en prévenant les décharges est envisagée. Il s'agit de recouvrir les bords des \glspl{lem} avec de l'isolant. En effet, des simulations faites avec COMSOL Multiphysics ont montré que des champs électriques très intenses (de l'ordre de la centaine de millier de volt par centimètre) peuvent se trouver à la limite du cuivre et du \gls{fr4}, sur les bords. Recouvrir ces zones d'isolant permettra de prévenir les décharges. Des tests préliminaires vont être réalisés avec des \glspl{lem} du modèle CFR-35 et du capton, une technique de production adaptée à la taille des bords du modèle CFR-34 est en cours de développement.
+
+    La simulations faites avec \gls{ansys} et Garfield a permis de mettre en évidence le faite que l'efficacité de collection du \gls{lem} décroît avec le champ présent dans le gaz entre l'interface liquide-gaz et le \gls{lem}. Ceci se traduit par la présence d'un plateau d'efficacité une fois prise en compte l'efficacité d'extraction liquide-gaz. Ce plateau, bien qu'inférieur à 1, se situe à des tensions comprises entre \SI{2}{\kilo\volt} et \SI{3}{\kilo\volt} pour les \glspl{crp} du \SSS{}, tensions qui ont été atteintes dans la boîte cryogénique. De fait, les variations de la planéité de ces \glspl{crp}, inférieur à \SI{1.75}{\milli\meter}, auront un impact négligeable sur l'efficacité combinée d'extraction et de collection quand bien même elles modifieraient un peu les champs électriques.
+
+    La simulation de l'efficacité de collection de l'anode en fonction du champ d'induction a été faite pour un \gls{lem} avant charging up et a été comparée au comportement du gain en fonction du champ d'induction avec un \gls{lem} après charging up, les mesures ne pouvant être faites avant dans l'enceinte haute pression du \gls{cea} Saclay. Les comportements sont similaires, aussi les résultats de cette simulation, ainsi que ceux de l'efficacité de collection du \gls{lem}, sont utilisés dans le chapitre suivant pour estimer le gain effectif dans le \TOO{} aux champs électriques utilisés dans le prototype de \threeL{}, que le \TOO{} n'a pas atteint. Une simulation d'un \gls{lem} pendant et après charging up pourra être réalisé en itérant la méthode décrite en \autoref{sec::efficacites} et en prenant en compte les modifications du champ électrique induites par l'accumulation d'électrons sur le \gls{fr4} au niveau des trous des \glspl{lem}. Une efficacité plus grande est attendue après charging up, les lignes de champs empêchant alors les électrons de finir leur course sur le \gls{fr4}.
+
 \FloatBarrier
 
 \printbibliography

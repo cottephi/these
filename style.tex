@@ -23,6 +23,10 @@
 \patchcmd{\footrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
 \makeatother
 
+% Fig and table numbering is reinitialised at end of chapter, not before
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+
 \defbibheading{bibliography}[\bibname]{%
     \newpage
     \chapter*{Bibliography}%
@@ -32,8 +36,6 @@
 \AtBeginEnvironment{subappendices}{%
     \chapter*{Appendix}
     \addcontentsline{toc}{chapter}{Annexes}
-    \counterwithin{figure}{section}
-    \counterwithin{table}{section}
 }
 
 %tcolorbox style

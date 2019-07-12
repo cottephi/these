@@ -1,4 +1,4 @@
-\chapter{Analyse des performances du \texorpdfstring{$3\times 1\times 1$}{3x1x1}}\label{chap::5}
+\chapter{Analyse des performances du \texorpdfstring{\TOO{}}{3x1x1\;m3}}\label{chap::5}
     \chapterprecishere{
         ``Potentielle citation sans aucun rapport avec le sujet"\par\raggedleft--- \textup{Personne inconnue}, contexte à déterminer
     }
@@ -27,7 +27,7 @@
 
     \subsection{Mesure du gain effectif}
 
-      Les anodes de lectures du \TOO sont segmentées en deux vues. La vue 0, de $100\times\SI{100}{\centi\meter}$, correspond aux canaux de lecture de \SI{3}{\meter} tandis que la vue 1, de $100\times\SI{300}{\centi\meter}$, correspond aux canaux de lecture de \SI{1}{\meter} (voir \autoref{fig::crp-chap5}). La charge déposée par unité de longueur se répartira de manière équitable entre ces deux vues (les diffusions sont négligeables sur une dérive de \SI{1}{\meter}, voir \autoref{sec::ionisation}), selon une convolution entre une distribution de Landau-Vavilov et une gaussienne (voir \autoref{sec::ionisation}). Un ajustement peut alors être fait pour extraire la valeur de la \gls{mpv} de la distribution de Landau-Vavilov, dont la valeur est connue pour des muons cosmiques, à savoir \SI{8.26}{\femto\coulomb\per\centi\meter} (voir \autoref{tab::muon}). Le gain effectif est alors défini comme le rapport entre la somme des \gls{mpv} de la distribution de la charge dans les deux vues et la \gls{mpv} attendue.
+      Les anodes de lectures du \TOO sont segmentées en deux vues. La vue 0, de $100\times\SI{100}{\centi\meter\squared}$, correspond aux canaux de lecture de \SI{3}{\meter} tandis que la vue 1, de $100\times\SI{300}{\centi\meter\squared}$, correspond aux canaux de lecture de \SI{1}{\meter} (voir \autoref{fig::crp-chap5}). La charge déposée par unité de longueur se répartira de manière équitable entre ces deux vues (les diffusions sont négligeables sur une dérive de \SI{1}{\meter}, voir \autoref{sec::ionisation}), selon une convolution entre une distribution de Landau-Vavilov et une gaussienne (voir \autoref{sec::ionisation}). Un ajustement peut alors être fait pour extraire la valeur de la \gls{mpv} de la distribution de Landau-Vavilov, dont la valeur est connue pour des muons cosmiques, à savoir \SI{8.26}{\femto\coulomb\per\centi\meter} (voir \autoref{tab::muon}). Le gain effectif est alors défini comme le rapport entre la somme des \gls{mpv} de la distribution de la charge dans les deux vues et la \gls{mpv} attendue.
 
       \subsubsection{Calibration}
 
@@ -96,7 +96,7 @@
 
         Une coupure supplémentaire consiste à ne sélectionner que les traces qui traversent entièrement le détecteur de bas en haut. En effet, pour une telle trace, il n'y a pas d'ambiguïté quant à la position des coups le long de la hauteur du détecteur : les coups au premier bin de temps sont au niveau du \gls{crp} tandis que les coups au dernier bin de temps sont en bas du détecteur (la durée d'enregistrement d'un événement est de \SI{667}{\micro\second}, soit \SI{1.09}{\meter} à une vitesse de dérive de \SI{1.63}{\milli\meter\per\micro\second}). Dans ce cas là, il est possible d'estimer le pourcentage de charge perdue à cause des impuretés et de corriger le $dQ$ mesuré. En revanche, si une trace commence ou finit au milieu du détecteur, cela peut signifier qu'une particule est arrivée dans le volume fiduciel alors que l'enregistrement de l'événement avait déjà commencé (ou inversement, qu'elle était déjà là). Il est alors impossible de savoir depuis combien de temps les électrons de ces traces dérivent et la correction pour les pertes dues aux impuretés ne peut pas être prise en compte.
 
-        Une mesure préliminaire du temps de vie effectif des électrons dû à ces impuretés dans le \TOO{} a indiqué une valeur autour de \SI{4}{\milli\second}\cite{Aimard2018}. Ceci a été fait en regardant l'atténuation de la moyenne de la distribution $dQ/ds$ en fonction de la profondeur des coups dans le run 840 qui a duré une dizaine d'heures. Cette analyse avait été faite avant la définitions des coupures décrites ci-dessous, et la contamination des données par des particules autre que des muons était alors plus grande. De plus, la courte distance de \SI{1}{\meter} rend délicat l'ajustement de l'équation \eqref{eq::e_lifetime} étant données les incertitudes systématiques présentes sur le gain à travers la surface du \gls{crp} (de l'ordre de 12\,\%, voir \autoref{sec::uncertainties} et \autoref{fig::stability}). Les analyses utilisant la lumière vue par les \glspl{pmt} tend à indiquer une valeur plus grande que \SI{4}{\milli\second}, mais aucune valeur définitive n'a été annoncée. Les coupures décrites ci-dessus ne laissant pas assez de statistiques pour évaluer la \gls{mpv} de $dQ/ds$ à plusieurs profondeurs, une valeur de $\tau_e = \SI{7}{\milli\second}$ pour le temps de vie des électrons a été utilisée, correspondant à la pureté achevée dans \protosp{}. Ceci correspond à une atténuation maximum (à une distance de dérive de \SI{1}{\meter}) de 8\,\%.
+        Une mesure préliminaire du temps de vie effectif des électrons dû à ces impuretés dans le \TOO{} a indiqué une valeur autour de \SI{4}{\milli\second}\cite{Aimard2018}. Ceci a été fait en regardant l'atténuation de la moyenne de la distribution $dQ/ds$ en fonction de la profondeur des coups dans le run 840 qui a duré une dizaine d'heures. Cette analyse avait été faite avant la définitions des coupures décrites ci-dessous, et la contamination des données par des particules autre que des muons était alors plus grande. De plus, la courte distance de \SI{1}{\meter} rend délicat l'ajustement de l'équation \eqref{eq::e_lifetime} étant données les incertitudes systématiques présentes sur le gain à travers la surface du \gls{crp} (de l'ordre de 12\,\%, voir \autoref{sec::uncertainties} et \autoref{fig::stability}). Les analyses utilisant la lumière vue par les \glspl{pmt} tend à indiquer une valeur plus grande que \SI{4}{\milli\second}, mais aucune valeur définitive n'a été annoncée. Les coupures décrites ci-dessus ne laissant pas assez de statistiques pour évaluer la \gls{mpv} de $dQ/ds$ à plusieurs profondeurs, une valeur de $\tau_e = \SI{7}{\milli\second}$ pour le temps de vie des électrons a été utilisée, correspondant à la pureté achevée dans \protosp{}. Ceci correspond à une atténuation maximum (à une distance de dérive de \SI{1}{\meter}) de 8\,\%. Le volume de \protosp{} étant bien plus grand que celui du \TOO{} (de l'ordre de de grandeur du volume du \SSS{}), la pureté dans le \TOO{} peut même être meilleure que cela.
         
       \subsubsection{Corrections et normalisations aux données du \threeL{}}
         
@@ -125,16 +125,17 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{thickness.pdf}
-          \caption[Mesures d'épaisseur des LEMs du \TOO{}]{\label{fig::lem_thicnkess_311}Mesures d'épaisseur des \glspl{lem} du \TOO{}, décrites dans le papier technique de 2018\cite{Aimard2018}.}
+          \caption{\label{fig::lem_thicnkess_311}Mesures d'épaisseur des \glspl{lem} du \TOO{}, décrites dans le papier technique de 2018\cite{Aimard2018}.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{capa.pdf}
-          \caption[Capacitance moyenne entre la grille d'extraction et les LEMs en fonction du niveau de l'interface liquide-gaz]{\label{fig::capa}Capacitance moyenne entre la grille d'extraction et les \glspl{lem} en fonction du niveau de l'interface liquide-gaz, ajusté par un modèle de capacité à deux plaques parallèles.}
+          \caption{\label{fig::capa}Capacitance moyenne entre la grille d'extraction et les \glspl{lem} en fonction du niveau de l'interface liquide-gaz, ajusté par un modèle de capacité à deux plaques parallèles.}
 %            \centering
 %            \includegraphics[width=\textwidth,keepaspectratio]{gain_var_dg.pdf}
 %            \caption[Variation du gain en fonction de la variation de la distance interface-\gls{lem}]{\label{fig::systematiques_dg}Variation du gain en fonction de la variation de la distance interface-\gls{lem}, prenant en compte le gradient de température dans le gaz et les efficacités d'extraction et de collection, qui dépendent des champs électriques dans le liquide et le gaz.}
         \end{subfigure}
+        \caption[Épaisseur des \glspl{lem} du \TOO{} et mesure de la capacitance en fonction du niveau de l'interface liquide-gaz]{Épaisseur des \glspl{lem} du \TOO{} et mesure de la capacitance en fonction du niveau de l'interface liquide-gaz.}
       \end{figure}
 
 
@@ -201,13 +202,14 @@
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{pressure.pdf}
-          \caption[Pression dans le \TOO{} au cours du run 840]{\label{fig::pressure}Pression dans le \TOO{} au cours du run 840.}
+          \caption{\label{fig::pressure}Pression dans le \TOO{} durant le run 840.}
         \end{subfigure}\hfill
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{temp_vs_height.pdf}
-          \caption[Gradient de température dans le \TOO{} durant le run 840]{\label{fig::temp_vs_height}Gradient de température dans le \TOO{} durant le run 840. La partie constante correspond aux capteurs dans le liquide, la partie linéairement croissante correspond à ceux dans le gaz.}
+          \caption{\label{fig::temp_vs_height}Gradient de température dans le \TOO{} durant le run 840. La partie constante correspond aux capteurs dans le liquide, la partie linéairement croissante correspond à ceux dans le gaz.}
         \end{subfigure}
+        \caption[Pression et température durant le run 840]{Pression et température durant le run 840.}
       \end{figure}
       
 %      LAr level stability: 100 microns
@@ -348,13 +350,14 @@
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{gain_vs_extr.pdf}
-        \caption[MPV en fonction du champ d'extraction dans le \TOO{}]{\label{fig::gain_vs_extr}\gls{mpv} en fonction du champ d'extraction dans le \TOO{}.}
+        \caption{\label{fig::gain_vs_extr}\gls{mpv} en fonction du champ d'extraction dans le \TOO{}.}
         \end{subfigure}\\
         \begin{subfigure}[t]{0.9\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{comp_311_eff.pdf}
-          \caption[MPV et MPV divisée par l'efficacité de collection du LEM, normalisées à l'efficacité d'extraction]{\label{fig::comp_311_eff}\gls{mpv} et \gls{mpv} divisée par l'efficacité de collection du \gls{lem}, normalisées à l'efficacité d'extraction mesurée dans \cite{guschin} à \SI{2}{\kilo\volt\per\centi\meter}.}
+          \caption{\label{fig::comp_311_eff}\gls{mpv} et \gls{mpv} divisée par l'efficacité de collection du \gls{lem}, normalisées à l'efficacité d'extraction mesurée dans \cite{guschin} à \SI{2}{\kilo\volt\per\centi\meter}.}
         \end{subfigure}
+        \caption[Comportement du gain en fonction du champ d'extraction dans le \TOO{}]{Comportement du gain en fonction du champ d'extraction dans le \TOO{}.}
       \end{figure}
       Des données ont été prises à champs d'amplification et d'induction constants, en faisant varier le champ d'extraction, afin d'étudier les efficacités d'extraction et de collection. La \autoref{fig::gain_vs_extr} montre la variation du \gls{mpv} en fonction du champ d'extraction pour les deux vues séparément, les barres d'erreurs sont issues des systématiques discutées dans la \autoref{sec::uncertainties}. Comme attendu, la charge mesurée augmente avec le champ d'extraction.
 
@@ -411,7 +414,7 @@
 %
 %      Concernant les runs à \SI{30}{\kilo\volt\per\centi\meter} et \SI{31}{\kilo\volt\per\centi\meter}, ils ont été pris deux mois plus tard. Pendant ce temps, de nombreux tests de tenu en tension ont été réalisés, et le \gls{crp} a été totalement immergé afin de réaliser des mesures de capacitance (celles présentées en \autoref{fig::capa}). Il est donc possible que les électrons accumulés sur le \gls{fr4} ait été partiellement ou totalement nettoyés, ce qui expliquerait le ratio de \numprint{1.2} pour le run à \SI{30}{\kilo\volt\per\centi\meter}.
 
-  \section{Reconstruction des runs à bas champ d'extraction}\label{sec::rawdatasoft}
+  \section{Reconstruction des traces des runs à bas champ d'extraction}\label{sec::rawdatasoft}
 
     \begin{figure}[htbp]
       \centering
@@ -442,7 +445,7 @@
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{cnusub_adcs_2D_zoom.png}
         \end{subfigure}
-        \caption[Événement du run 1197 vue 1 après suppression du bruit cohérent]{\label{fig::cnusub_adcs_2D}Événement du run 1197 vue 1 après suppression du bruit cohérent. Le zoom autour du canal 750 montre des zones sans dépôt de charge apparent le long de la trace. L'étirement en temps des dépôts de charge important est clairement visible.}
+        \caption[Événement du run 1197 vue 1 après suppression du bruit cohérent]{\label{fig::cnusub_adcs_2D}Événement du run 1197 vue 1 après suppression du bruit cohérent. Le zoom autour du canal 750 montre des zones sans dépôt de charge apparent le long de la trace. L'étirement en temps des dépôts de charge important dû à l'extraction lente est clairement visible.}
       \end{figure}
 
       L'algorithme développé en python traite la suppression du bruit différemment de \gls{larsoft}. La première étape est la suppression du piédestal grâce aux données de runs de calibration dédiés. Ensuite, seul le bruit cohérent est supprimé, de la même manière que dans \gls{larsoft} : les canaux branchés sur une même carte électronique sont regroupés (32 canaux par groupe) l'ADC moyen de chaque bin de temps est calculé. Ces moyennes sont ensuite soustraites à l'ADC vu dans les bins de temps leur correspondant. Pour ce faire, comme dans \gls{larsoft}, les \glspl{roi} sont préalablement identifiées grâce à un seuil en ADC et ignorées dans le calcul des moyennes. La \autoref{fig::cnusub_adcs_2D} montre le résultat de cet algorithme pour un événement du run 1197, en vue 1.
@@ -560,10 +563,12 @@
       \begin{figure}[htbp]      
         \centering
         \includegraphics[width=0.6\textwidth,keepaspectratio]{dQds_fromtrack_840.pdf}
-        \caption[Test de l'algorithme sur le run 840]{\label{fig::dQds_rawdatasoft_840}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 840 vue 0.}
+        \caption[Test de l'algorithme sur le run 840]{\label{fig::dQds_rawdatasoft_840}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 840 vue 0. La \gls{mpv} de \numprint{8.0} est légèrement supérieure à celle de \numprint{7.3} mesurée avec \gls{larsoft} (\autoref{fig::dqds_840_842}).}
       \end{figure}
 
       La transformation de Hough permet de reconstruire des traces morcelées mais droites, ce qui est nécessaire pour les runs 1197 et 1199, mais n'est pas performant du tout pour identifier une gerbe électromagnétique, hadronique ou une trace courbée. Les événements ont donc été sélectionnées à l'oeil, en regardant le résultat de la première soustraction du bruit cohérent. Afin d'éviter d'avoir à passer à travers un trop grand nombre d'événements, seuls ceux ayant passé la coupure de l'algorithme de l'équation \eqref{eq::cbr}, dont le seuil de tolérance de \numprint{0.1} a été augmenté à \numprint{0.3}, ont été inspectés. Les résultats en terme de distribution de $dQ/ds$ sont montrés en \autoref{fig::dqds_1197_Rawdatasoft} (deux figures du bas) pour le run 1197 et \autoref{fig::dqds_1199_Rawdatasoft} pour le run 1199. Quelques événements du run 840 ont également été analysés afin de valider l'algorithme. La \autoref{fig::dQds_rawdatasoft_840} montre les distributions de $dQ/ds$ de ces quelques événements, à comparer avec la \autoref{fig::dqds_840_842} faite à partir de la reconstruction de \gls{larsoft}. On constate que le nouvel algorithme donne une valeur de \gls{mpv} légèrement supérieure mais que les résultats sont globalement compatibles. 
+
+      \FloatBarrier
 
   \section{Conclusion et perspectives}
 

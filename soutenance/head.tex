@@ -1,0 +1,54 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{beamerthemesplit}
+\usepackage{graphics,epsfig, subfigure}
+\usepackage{url}
+
+\definecolor{jd_blue0}{rgb}{0.51,0.34,1.00}
+\definecolor{jdbishop}{rgb}{0.27,0.14,0.29}
+\definecolor{jddarkbl}{rgb}{0.18,0.14,0.29}
+\definecolor{jd_brown}{rgb}{0.29,0.14,0.14}
+\definecolor{jd_green}{HTML}{096F35}
+\definecolor{jdorange}{rgb}{1.00,0.55,0.00}
+\definecolor{jdredred}{rgb}{0.50,0.00,0.00}
+\definecolor{SchoolColor}{rgb}{0.145,0.666,1}
+\definecolor{pheniics}{HTML}{1a899c}
+\definecolor{pheniics_purple}{HTML}{64003d}
+\definecolor{chaptercolor}{gray}{0.8}
+\mode<presentation>
+{  \usetheme{PaloAlto}
+
+  \setbeamercolor{palette primary}{bg=pheniics,fg=white}
+  \setbeamercolor{palette secondary}{bg=pheniics_purple,fg=white}
+  \setbeamercolor{palette tertiary}{bg=pheniics_purple,fg=white}
+  \setbeamercolor{palette quaternary}{bg=pheniics_purple,fg=white}
+  \setbeamercolor{palette sidebar primary}{fg=white}
+  \setbeamercolor{palette sidebar secondary}{fg=white}
+  \setbeamercolor{palette sidebar tertiary}{fg=pheniics_purple}
+  \setbeamercolor{palette sidebar quaternary}{fg=pheniics_purple}
+  \setbeamercolor{structure}{fg=pheniics} % itemize, enumerate, etc
+  \setbeamercolor{section in toc}{fg=black}
+
+  \useinnertheme{circles}
+  \usefonttheme[onlymath]{serif}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+  \setbeamertemplate{navigation symbols}{}
+  \addtobeamertemplate{footline}{
+    \usebeamercolor[fg]{author in sidebar}
+    \vskip-1cm\hskip15pt
+    \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+  }
+}
+\setbeamercovered{invisible}
+%\setbeamertemplate{background}{\includegraphics[width=1\textwidth]{natfak_baggrund.pdf}}
+
+\graphicspath{{../Chapitre_1/pictures/}{../Chapitre_2/pictures/}{../Chapitre_3/pictures/}{../Chapitre_4/pictures/}{../Chapitre_5/pictures/}{../Front-back_covers/images/}}
+ 
+\logo{\includegraphics[width=1.5cm]{logo_CEA.png}}
+\title[Le projet WA105]{Le projet WA105 : un démonstrateur de Chambre à Projection Temporelle à Argon Liquide Double Phase utilisant des détecteurs LEMs}
+\author{Philippe Cotte}
+\institute{CEA Paris-Saclay \\ Université Paris-Saclay}
+\date{17 Septembre 2019}

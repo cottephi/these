@@ -1,10 +1,11 @@
-\documentclass{beamer}
+\documentclass[10pt]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{beamerthemesplit}
 \usepackage{graphics,epsfig, subfigure}
 \usepackage{url}
+\usepackage{siunitx}
 
 \definecolor{jd_blue0}{rgb}{0.51,0.34,1.00}
 \definecolor{jdbishop}{rgb}{0.27,0.14,0.29}
@@ -45,10 +46,14 @@
 \setbeamercovered{invisible}
 %\setbeamertemplate{background}{\includegraphics[width=1\textwidth]{natfak_baggrund.pdf}}
 
-\graphicspath{{../Chapitre_1/pictures/}{../Chapitre_2/pictures/}{../Chapitre_3/pictures/}{../Chapitre_4/pictures/}{../Chapitre_5/pictures/}{../Front-back_covers/images/}}
+\graphicspath{{../Chapitre_1/pictures/}{../Chapitre_2/pictures/}{../Chapitre_3/pictures/}{../Chapitre_4/pictures/}{../Chapitre_5/pictures/}{../Front-back_covers/images/}{pictures/}}
  
 \logo{\includegraphics[width=1.5cm]{logo_CEA.png}}
 \title[Le projet WA105]{Le projet WA105 : un démonstrateur de Chambre à Projection Temporelle à Argon Liquide Double Phase utilisant des détecteurs LEMs}
 \author{Philippe Cotte}
 \institute{CEA Paris-Saclay \\ Université Paris-Saclay}
 \date{17 Septembre 2019}
+
+\def\TOO{$3\times 1\times \SI{1}{\meter\cubed}$}
+\def\SSS{$6\times 6\times \SI{6}{\meter\cubed}$}
+\def\threeL{\SI{3}{\liter}}

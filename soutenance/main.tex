@@ -8,35 +8,824 @@
 
   \begin{frame}{Table des matières}\tableofcontents\end{frame}}
   \setcounter{framenumber}{0}
-  \begin{frame}{frame title}{frame subtitle}
-    \section{Section}
-      \subsection{Sous-Section}
 
-      \begin{block}{LEMs}
-        \begin{columns}
-          \column{.5\textwidth} \hspace{0.5cm}
-          \includegraphics[width=0.7\textwidth]{LEM_zoom.png} 
-          \column{.5\textwidth}
-          \textit{text}
-        \end{columns}
-      \end{block}
-      \pause
-      \begin{block}{Anodes}
-        \begin{columns}
-          \column{.5\textwidth} \hspace{0.5cm}
-          \includegraphics[width=0.7\textwidth]{anode.png} 
-          \column{.5\textwidth}
-          \textit{Text}
-        \end{columns}
-      \end{block}
+  \section{Contexte}
+    \subsection{DU$\nu$E}
+
+  \begin{frame}{Contexte}{DU$\nu$E : Deep Underground Neutrino Experiment}
+     \begin{scriptsize}
+    	\begin{minipage}{0.53\textwidth}
+    		\centering
+    		\includegraphics[width=\textwidth]{dune.pdf}\\
+    		\vspace{1cm}
+    		\centering
+    		1 des 4 modules du détecteur lointain: LArTPC Double Phase\\
+    		\includegraphics[width=\textwidth]{dune_module.png}\\
+    		\vspace{1cm}
+    	\end{minipage}
+    	\hfill
+    	\begin{minipage}{0.43\textwidth}
+    		\begin{itemize}
+    			\item[$\bullet$] Expérience de neutrinos d'accélérateur à longue ligne de base au USA, prévue pour fin 2016
+    			\item[$\bullet$] Détectera dans le \textbf{Dakota du Sud} des $\nu$/$\overline{\nu}$ envoyés du \textbf{Fermilab} à \textbf{\SI{1300}{\kilo\meter}}.
+    			\item[$\bullet$] \textbf{Principaux objectifs: }
+	    			\begin{itemize}
+	    				\item[$\bullet$] Violation de CP
+	    				\item[$\bullet$] Ordre des masses
+	    			\end{itemize}
+    			\item[$\bullet$] Détecteur lointain : 4 \textbf{Chambre à projection temporelle à argon liquide} 
+    			($\geq$ \SI{10}{\kilo\tonne} chacun).
+    		\end{itemize}
+    		\vspace{.3cm}
+    		$\Rightarrow$ \textbf{ProtoDU$\nu$E} test \textbf{2 versions} de la technologie LArTPC  à \SI{300}{\tonne} à la plateforme neutrinos du CERN.\\
+    		
+    		$\Rightarrow$ \textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} test la version \textcolor{red}{\textbf{Double Phase}} de la LArTPC.
+	    \end{minipage}
+	\end{scriptsize}
   \end{frame}
 
-  \begin{frame}{frame title 2}{frame subtitle 2}\end{frame}
-  \begin{frame}{frame title 3}{frame subtitle 3}\end{frame}
-  \begin{frame}{frame title 4}{frame subtitle 4}
-    \section{section 2}
-      \subsection{Sous-section 2}
-        
-  \end{frame}
+  \begin{frame}{Contexte}{DU$\nu$E : Deep Underground Neutrino Experiment}
+    \begin{scriptsize}
+    	\begin{columns}
+    		\begin{column}{0.6\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{oscillation_CP.png}\\\vspace{0.2cm}
+    			 \includegraphics[width=0.95\textwidth]{sensitivities_2.png}\\
+    			 \begin{scriptsize}
+    			 	Meilleures sensibilités seront présentées dans le TDR 2019
+    			 \end{scriptsize}
+    		\end{column}
+    		\begin{column}{0.4\textwidth}
+    			\begin{itemize}
+	    			\item[$\bullet$]$\delta_{CP}\ne0$ et $\pi$ pourrait expliquer asymétrie \textcolor{red}{matière-antimatière} dans l'univers.\\
+	    			\item[$\bullet$] Plusieurs théories dépendent de \textcolor{red}{l'ordre des masses} des neutrinos.
+	    			\item[$\bullet$] Les deux influencent la probabilité de changement de saveur.
+	    		\end{itemize}
+    			\begin{scriptsize}
+	    			$\Rightarrow$ Pour mesurer \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$ vs $E$}: \\
+	    			Besoin d'une reconstruction précise des interactions neutrinos pour atteindre $5\sigma$ pour la violation de CP.
+    			\end{scriptsize}
+    			\begin{itemize}
+    				\item[$\bullet$] Reconstruction des traces en 3D
+    				\item[$\bullet$] Calorimétrie
+    				\item[$\bullet$] PID précis
+    				\item[$\bullet$]Résolution en énergie $\leq$3\%
+    			\end{itemize}
+    		\end{column}
+    	\end{columns}
+	  \end{scriptsize}
+    \end{frame}
+
+    \subsection[DLArTPC et WA105]{La technologie DLArTPC et le projet WA105}
+
+  \begin{frame}{La technologie DLArTPC et le projet WA105}{L'argon liquide comme milieu de détection}
+	  \begin{scriptsize}
+    	\begin{columns}
+    		\begin{column}{0.6\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
+    			\flushleft
+    			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-Simple Phase}\end{footnotesize}
+    		\end{column}
+    		\begin{column}{0.4\textwidth}
+    			\begin{footnotesize}
+    				\textbf{Pourquoi l'argon liquide?}
+    			\end{footnotesize}
+    			\begin{itemize}
+    				\item[$\bullet$] MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
+    				(Bruit électronique $\sim \SI{1000}{e^-}$)
+    				\item[$\bullet$] Gaz noble $\rightarrow$ ne piège pas les électrons.
+    				\item[$\bullet$] Très bon trajectographe et calorimètre entièrement homogène.
+    				\item[$\bullet$] Scintille au moment de l'ionisation $\rightarrow$ déclencheur et/ou $t_0$ \\ + transparent pour les photons  d'ionisation.
+    				\item[$\bullet$] Dense (\SI{1.4}{\gram\per\centi\meter^3}).
+    				\item[$\bullet$] Peu cher et abondant.
+    			\end{itemize}
+    			\begin{footnotesize}
+	    			\textbf{$\Rightarrow$ Chambre à bulle électronique.}
+	    		\end{footnotesize}
+    		\end{column}
+    	\end{columns}
+	  \end{scriptsize}
+    \end{frame}
+
+  {
+    	\setlength\pdfpagewidth{12.8cm}%
+    	\setlength\pdfpageheight{9.15cm}%
+    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{nu_platform.png}}
+    	\begin{frame}[plain]
+    	\end{frame}
+    }
+
+    \begin{frame}{La technologie DLArTPC et le projet WA105}{Chambres à Projection Temporelle à Argon Liquide}
+    	\begin{scriptsize}
+    			\includegraphics[width=0.9\textwidth]{tpcs.png}\\\vfill
+    			\begin{columns}
+    				\begin{column}{0.5\textwidth}
+    					\begin{itemize}
+    						\item[$\bullet$] Tout se passe dans l'argon liquide.
+    						\item[$\bullet$] Mesure directe de l'énergie.
+    						\item[$\bullet$] Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
+    					\end{itemize}
+    				\end{column}\hfill
+    				\begin{column}{0.5\textwidth}
+    					\begin{itemize}
+    						\item[$\bullet$] Amplification des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
+    						\item[$\bullet$] Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
+    						\item[$\bullet$] Premières données en août 2019.
+    					\end{itemize}
+    				\end{column}
+    			\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{La technologie DLArTPC et le projet WA105}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP at CERN}
+        \centering
+    	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
+    \end{frame}
+
+    \begin{frame}{La technologie DLArTPC et le projet WA105}{Le démonstrateur de \SSS{}}
+    	\begin{scriptsize}
+                \centering
+    			\includegraphics[width=0.9\textwidth]{666_full.png}\\
+    			\vfill
+    			\textbf{Nouvelle technologie : principaux défis :}\\
+    			\begin{minipage}{0.32\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] \textcolor{red}{But: Gain $\geq 20$} \\(S/B $\geq 200$ pour une MIP)
+    					\item[$\bullet$] \textcolor{red}{Stabilité sur de très longues périodes (DU$\nu$E $\sim$ 20 ans)}
+    				\end{itemize}
+    			\end{minipage}\hfill
+    			\begin{minipage}{0.32\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] Impuretés: 0.1\;ppb
+    					\item[$\bullet$] Effet de charge d'espace
+    					(pas dans DU$\nu$E)
+    				\end{itemize}
+	    		\end{minipage}\hfill
+	    		\begin{minipage}{0.32\textwidth}
+	    			\begin{itemize}
+	    				\item[$\bullet$] Grande distance de dérive (Cathode à \SI{300}{\kilo\volt})
+	    				\item[$\bullet$] Extrapolable à l'échelle de DU$\nu$E
+	    			\end{itemize}
+	    		\end{minipage}
+    	\end{scriptsize} 
+    \end{frame}
+
+
+    \section[Tests et mesures]{Tests et mesures sur les CRPs du \SSS{}}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Le sandwich LEM-anode}
+	    	\begin{scriptsize}
+			     \textbf{\textcolor{red}{Mission de l'Irfu}: }Tester et caractériser les  LEMs et anodes de 2 des 4 CRPs.\\\vfill
+			\end{scriptsize}
+	   		\begin{minipage}{0.48\textwidth}
+	   			\begin{scriptsize}
+		   			\textbf{Gain effectif:}\\
+		   		\end{scriptsize}
+	   			$G_{eff} = \mathcal{T}e^{A\rho d e^{-B\rho d/V}}$\\
+	   			\begin{scriptsize}
+	    			\begin{itemize}
+	    				\item[$\bullet$] $\mathcal{T}$: Transparence électrique du sandwich LEM-anode.
+	    				\item[$\bullet$] $A,B$: coefficients, dépendent du gaz.
+	    				\item[$\bullet$] $d$: distance d'amplification (\SI{1}{\milli\meter}).
+	    				\item[$\bullet$] $V$: tension d'amplification ($\sim$\SI{3}{\kilo\volt}).
+	    				\item[$\bullet$] $\rho$: densité du gaz ($\propto P/T$).
+	    			\end{itemize}
+	    		\end{scriptsize} 
+	   			\vfill
+                \centering
+				\includegraphics[width=0.8\textwidth]{gain_3L.pdf}
+	   		\end{minipage}\hfill
+	   		\begin{minipage}{0.48\textwidth}
+	   			\includegraphics[width=\textwidth]{lem_anode.png}
+	   		\end{minipage}
+    \end{frame}
+
+    \subsection[Épaisseur]{L'épaisseur des LEMs}
+     \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{L'épaisseur des LEMs}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.5\textwidth}
+    				\begin{center}
+    					$G _{eff}= \mathcal{T}e^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
+    				\end{center}
+    				$\textcolor{red}{d}$: Distance d'amplification, i.e \textcolor{red}{épaisseur du LEM}.\\
+    				$\Rightarrow$ Impact exponentiel sur le gain.\\
+    				$\Rightarrow$ Nécessaire de connaître les fluctuations de cette épaisseur pour \textcolor{red}{vérifier l'uniformité du gain}.\\
+    				\vfill
+    				\centering \includegraphics[height=0.6\textheight]{CCI.png}\\\vfill
+    			\end{column}
+    			\hfill
+    			\begin{column}{0.5\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] Utilise Imagerie Chromatique Confocal.
+    					\item[$\bullet$] Mesure l'épaisseur des 72 LEMs du \SSS{}.
+    					\item[$\bullet$] Création d'un script Python pour l'analyse des résultats.
+    				\end{itemize}
+    				\centering \includegraphics[height=0.6\textheight]{./pictures/plate_and_bricks.png}\\
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{L'épaisseur des LEMs}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.48\textwidth}
+    				\centering
+    				Épaisseur dans un trou de mesure\\
+    				\centering
+    				\includegraphics[width=0.7\textwidth]{distri_1_trou_lem.png}\\
+    				\vspace{0.15cm}
+    				\centering
+    				Épaisseur moyenne (36 LEMs)\\
+    				\includegraphics[width=0.7\textwidth]{LEM_sum_all_histo_CERN.pdf}
+    			\end{column}
+    			\hfill
+    			\begin{column}{0.48\textwidth}
+    				\centering
+    				Uniformité de l'épaisseur dans 1 LEM\\
+    				\centering
+    				\includegraphics[width=0.6\textwidth]{2D_LEM_thickness_distri.png}\\
+    				\vspace{0.15cm}
+    				\centering
+    				\includegraphics[width=\textwidth]{measured_gain_fluctuations.pdf}
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+
+%  \begin{frame}{frame title}{frame subtitle}
+%      \begin{block}{LEMs}
+%        \begin{columns}
+%          \column{.5\textwidth} \hspace{0.5cm}
+%          \includegraphics[width=0.7\textwidth]{LEM_zoom.png} 
+%          \column{.5\textwidth}
+%          \textit{text}
+%        \end{columns}
+%      \end{block}
+%      \pause
+%      \begin{block}{Anodes}
+%        \begin{columns}
+%          \column{.5\textwidth} \hspace{0.5cm}
+%          \includegraphics[width=0.7\textwidth]{anode.png} 
+%          \column{.5\textwidth}
+%          \textit{Text}
+%        \end{columns}
+%      \end{block}
+%  \end{frame}
+
+
+    \subsection[Tension et gain]{Tenue en tension et gain des LEMs}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Préparation des LEMs et anodes à Saclay}
+    	\begin{scriptsize}
+    		\begin{center}
+		    	\includegraphics[width=\textwidth]{pretest.png}
+	    	\end{center}
+	    	\begin{columns}
+	    		\begin{column}{0.5\textwidth}
+	    			\begin{itemize}
+	    				\item[$\bullet$] LEM produits par ELTOS (Italie).
+	    				\item[$\bullet$] ELTOS teste que les spécifications sont respectées: épaisseur, RIM, trou, taille.
+	    			\end{itemize}
+	    		\end{column}\hfill
+	    		\begin{column}{0.5\textwidth}
+	    			\textbf{Au DEDIP}:
+	    			\begin{itemize}
+	    				\item[$\bullet$] Mesure de l'épaisseur.
+	    				\item[$\bullet$] Soudure des connecteurs haute tension, collage des séparateurs MACOR.
+	    				\item[$\bullet$] Nettoyage, polymérisation, séchage.
+	    			\end{itemize}
+	    		\end{column}
+	    	\end{columns}
+	    \end{scriptsize} 
+    \end{frame}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Tenue en tension des LEMs}
+    	\begin{scriptsize}
+    		\begin{center}
+    			\textbf{Teste des LEMs à la desité d'une DLArTPC dans une enceinte haute pression : Haute tension maximum}\\
+    			$G _{eff}= \mathcal{T}e^{A\textcolor{red}{\rho} d e^{-B\textcolor{red}{\rho}d/\textcolor{red}{V}}}$
+    		\end{center} 
+    		\begin{columns}
+		    	\begin{column}{0.5\textwidth}
+		    		\includegraphics[height=3.7cm]{gamelle.jpg}\\
+		    		\begin{itemize}
+		    			\item[$\bullet$] $\rho \propto P/T$
+		    			\item[$\bullet$] Pas de système cryo : \textcolor{red}{température ambiante}.
+		    			\item[$\bullet$] Densité d'une DLArTPC à \textcolor{red}{\SI{3.3}{\bar}}.
+		    		\end{itemize}
+		    	\end{column}\hfill
+		    	\begin{column}{0.5\textwidth}
+		    		\includegraphics[height=3.7cm]{6lems_gamelle.jpg}\\
+		    		\begin{itemize}
+		    			\item[$\bullet$] Enceinte haute pressions: remplie d'argon gazeux.
+		    			\item[$\bullet$] Empilement de 6-9 LEMs.
+		    			\item[$\bullet$] A testé plus de 100 LEMs.
+		    		\end{itemize}
+		    	\end{column}
+		    \end{columns}
+	    \end{scriptsize} 
+    \end{frame}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Tenue en tension des LEMs}
+   		\begin{columns}
+    		\begin{column}{0.5\textwidth}
+    			\begin{center}
+	    			\begin{scriptsize}
+		    			CFR-34 à 33--\SI{35}{\kilo\volt\per\centi\meter}\\
+		    			\textcolor{red}{$\sim$ 20 décharges par heure}\\
+		    		\end{scriptsize}
+	    			\begin{tiny}
+		    			(Design fait par \textbf{ETHZ}, utilisé dans le \TOO{})
+		    		\end{tiny}\\
+	    			\includegraphics[height=3.1cm]{sparks_34.png}
+    			\end{center}
+    		\end{column}\hfill
+    		\begin{column}{0.5\textwidth}
+    			\begin{center}
+	    			\begin{scriptsize}
+		    			CFR-35 à \SI{35}{\kilo\volt\per\centi\meter} \\
+		    			\textcolor{red}{$\sim$ 3 20 décharges par heure}\\
+		    		\end{scriptsize}
+	    			\begin{tiny}
+	    				(Design fait par le \textbf{CEA}, utilisé dans le \SSS{})
+	   				\end{tiny}\\
+	    			\includegraphics[height=3.1cm]{sparks_35.png}
+	    		\end{center}
+    		\end{column}
+    	\end{columns}\vspace{0.1cm}
+    	\begin{columns}
+    		\begin{column}{0.5\textwidth}
+    			\begin{scriptsize}
+	    			\begin{itemize}
+	    				\item[$\bullet$] CFR-34 instable au delà de \SI{32}{\kilo\volt\per\centi\meter}.
+	    				\item[$\bullet$] Décharges surtout sur les bords et les coins.
+	    			\end{itemize}
+	    			\begin{itemize}
+	    				\item[$\Rightarrow$] Nouveau design (CFR-35) avec bords plus grands.
+	    				\item[$\Rightarrow$] Nombre de décharges plus faible d'un ordre de grandeur.
+	    			\end{itemize}
+	    		\end{scriptsize}
+    		\end{column}\hfill
+    		\begin{column}{0.5\textwidth}
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\begin{scriptsize}
+	    				CFR-34
+	    			\end{scriptsize}
+    				\includegraphics[width=.9\textwidth]{CFR-34.png}
+    			\end{minipage}\hfill
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\begin{scriptsize}
+	    				CFR-35
+    				\end{scriptsize}
+    				\includegraphics[width=.9\textwidth]{CFR-35.png}
+    			\end{minipage}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Mesures de gain}
+        %TODO mettre à jour
+    	\begin{scriptsize}
+    		\begin{center}\textbf{Teste des LEMs à la desité d'une DLArTPC dans une enceinte haute pression : gain}\\\end{center}
+    		\begin{columns}
+    			\begin{column}{0.46\textwidth}
+    				\centering \includegraphics[width=\textwidth]{gamelle_source.png}
+    			\end{column}\hfill
+    			\begin{column}{0.58\textwidth}
+    				\centering \includegraphics[width=\textwidth]{./pictures/gain.png}
+    			\end{column}
+    		\end{columns}\vfill
+    		\begin{columns}
+    			\begin{column}{0.38\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] 1 sandwich LEM-anode.
+    					\item[$\bullet$] Source $^{241}$Am.
+    					\item[$\bullet$] Peut mesurer le gain.
+    				\end{itemize}
+    			\end{column}\hfill
+    			\begin{column}{0.58\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] Gain dans les LEMs de $10\times$\SI{10}{\centi\meter\squared} et $50\times$\SI{50}{\centi\meter\squared} se comporte de la même manière
+    				\end{itemize}
+    			\end{column}
+    		\end{columns}
+%    		\vfill
+%    		\textbf{$\Rightarrow$ Use CFR-35 for $\mathbf{6 \boldsymbol{\times} 6 \boldsymbol{\times} \SI[detect-weight]{6}{\meter\cubed}}$}.\\
+    		%\textbf{Note:} Not sure about absolute gain value. Based on 3L measurements, CFR-35 should reach gain of $\sim$200.
+    	\end{scriptsize}
+    \end{frame}
+
+{
+	\setlength\pdfpagewidth{12.8cm}%
+	\setlength\pdfpageheight{9cm}%
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_bottom.png}}
+	\begin{frame}[plain]
+	\end{frame}
+}
+
+    \begin{frame}{Tests et mesures sur les CRPs du \SSS{}}{Boîte cryogénique au CERN}
+    	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
+        %TODO : rajouter discussion à propos des variations induites pas la planéité
+   		\begin{columns}
+   			\begin{column}{0.4\textwidth}
+   				\includegraphics[width=\textwidth]{./pictures/crp_inserting_coldbox.png}\\
+   				\includegraphics[width=\textwidth]{./pictures/in_coldbox.png}\\
+   				CERN, bâtiment 182
+    		\end{column}
+    		\begin{column}{0.6\textwidth}
+    			\begin{scriptsize}
+	    			\textbf{Test des CRPs en condition double phase avant leur insertion dans le cryostat du \SSS{}.}\\
+	    			
+	    			\begin{itemize}
+	    				\item[$\bullet$] \textbf{Tension maximum}
+	    				\begin{itemize}
+	    					\item Grille stable à la \textcolor{red}{valeur nominale de \SI{7.5}{\kilo\volt}}.
+	    					\item LEMs stables à \textcolor{red}{3.0--\SI{3.1}{\kilo\volt}}\\
+				    					$\Rightarrow$ Gain effectif estimé \textcolor{red}{$\geq 20$}.
+	    				\end{itemize}
+	    				\item[$\bullet$] \textbf{Stabilité (décharges par heure)}
+	    				\begin{itemize}
+	    					\item Stable sur plusieurs jours (semaines).
+	    					\item \textcolor{red}{1 décharge par heure} par CRP (1 décharge en 36 heures par LEM): \textcolor{red}{ok pour DUN$\nu$E}.
+	    					\item \textcolor{red}{1 décharge par heure} $\Rightarrow$ temps mort $\sim$0.3\%.
+	    				\end{itemize}
+	    				\item[$\bullet$] \textbf{Planéité}
+	    				\begin{itemize}
+	    					\item \textcolor{red}{\SI{1.2}{\milli\meter}} à travers le CRP : ok.
+	    				\end{itemize}
+	    			\end{itemize}
+	    		\end{scriptsize}
+    		\end{column}
+    	\end{columns}
+	    \end{frame}
+
+       {
+       	\setlength\pdfpagewidth{12.8cm}%
+       	\setlength\pdfpageheight{11.5cm}%
+       	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/fisheye.png}}
+       \begin{frame}[plain]
+       	
+       \end{frame}
+	    }
+
+    \section[Simulations]{Simulations du passage d'électrons à travers le CRP}
+      \subsection{Zones mortes}
+    
+    \begin{frame}{Simulations du passage d'électrons à travers le CRP}{Zones mortes}
+    	\begin{scriptsize}
+    		\begin{minipage}{0.38\textwidth}
+    			\begin{center}
+    				\includegraphics[width=0.8\textwidth]{corner_annotations.png}\\
+    				design : CFR-34\\
+    			\end{center} 
+    			Zones mortes = zones sans trous d'amplification:
+    			\begin{itemize}
+    				\item[$\bullet$] Bords du LEM
+    				\item[$\bullet$] Trous des vis.
+    				\item[$\bullet$] Connecteurs haute tension.
+    			\end{itemize}
+    			$\Rightarrow$ Collection de charge?\\
+    			$\Rightarrow$ Résolution en énergie?\\
+    			
+    			\textbf{ANSYS} simule la carte de champ à travers le CRP.\\
+    			\textbf{GarField} simule la dérive des électrons dans cette carte.\\
+    		\end{minipage}
+    		\begin{minipage}{0.58\textwidth}
+    			\centering
+    			\includegraphics[width=0.8\textwidth]{drift_example.png}\\
+    			\vspace{0.5cm} \hspace{0.1cm}
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\textbf{Carte d'efficacité du LEM}\\
+    				\includegraphics[width=\textwidth]{eff_map.png}
+    			\end{minipage}\hfill
+    			\begin{minipage}{0.48\textwidth}
+    				\centering
+    				\textbf{Impact sur la charge vue dans le} $\mathbf{6 \times 6 \times 6} \,\textbf{\si[detect-weight]{\meter\cubed}}$\\
+    				\includegraphics[width=\textwidth]{electron.png}
+    			\end{minipage}
+    		\end{minipage}
+    	\end{scriptsize} 
+    \end{frame}
+
+    \subsection{Efficacités de collection}
+
+    \begin{frame}{Simulations du passage d'électrons à travers le CRP}{Efficacités de collection}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\hspace{-1.5cm}
+	    		\begin{column}{0.3\textwidth}
+	    			\vspace{-2.5cm}
+	    			\hbox{
+	    				$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{ext} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
+	    			}\\
+	    			\vspace{1.3cm}
+	    			\textbf{Difficulté rencontrée dans le $\mathbf{3 \times 1 \times \SI[detect-weight]{1}{\meter\cubed}}$:} Tension de la grille d'extraction limitée à \SI{5}{\kilo\volt}\\
+	    			\vspace{0.3cm}
+	    			$\Rightarrow$ N'a pas pu opérer à champ d'extraction et d'induction fixés.\\
+	    			$\Rightarrow$ Besoin de connaître l'\textcolor{red}{impact} de ces champs \textcolor{red}{sur la collection de charge}.\\
+	    			\vfill
+%	    			\vspace{0.3cm}	    			
+%		    		$\mathbf{G_{eff} = G_{LEM}} $ \\\hspace{0.7cm} $\boldsymbol{\times \epsilon}_{\mathbf{extraction}}$ \\\hspace{0.7cm} \textcolor{red}{$\boldsymbol{\times} \mathbf{P_{LEM}}$}\\\hspace{0.7cm} \textcolor{blue}{$\boldsymbol{\times} \mathbf{P_{Anode}}$}
+	    		\end{column}\hfill\hspace{-3.2cm}
+	    		\begin{column}{0.65\textwidth}
+%	    			\flushright
+	    			\includegraphics[width=1.18\textwidth]{./pictures/coll_proba_2.png}\\
+	    		\end{column}
+	    	\end{columns}
+    	\end{scriptsize} 
+    \end{frame}
+
+    \begin{frame}{Simulations du passage d'électrons à travers le CRP}{Efficacités de collection}
+        \hbox{
+     		$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{ext} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
+     	}
+   		\begin{columns}
+            \begin{column}{0.5\textwidth}
+                \centering $\textcolor{red}{\epsilon_{LEM}}$
+                \includegraphics[width=\textwidth]{eff_lem_alone.pdf}
+            \end{column}\hfill
+            \begin{column}{0.5\textwidth}
+                \centering $\textcolor{blue}{\epsilon_{Anode}}$
+                \includegraphics[width=\textwidth]{eff_anode.pdf}
+            \end{column}
+        \end{columns}
+   		\begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Dépend du champ dans le gaz entre l'interface et le LEM
+                    \item[$\bullet$] Champ calculable à partir de la tension grille--LEM et de la position de l'interface
+                \end{itemize}
+            \end{column}\hfill
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Dépend du charging up du LEM (discuté plus loin)
+                    \item[$\bullet$] Simulée ici avant charging up.
+                \end{itemize}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+    \subsection{Comparaison aux mesures}
+
+    \begin{frame}{Simulations du passage d'électrons à travers le CRP}{Charging up}
+    	\begin{scriptsize}
+    		\begin{columns}
+    			\begin{column}{0.5\textwidth}
+    				\includegraphics[width=0.85\textwidth]{CU.png}\\
+                    \vspace{0.1cm}
+    				\includegraphics[width=\textwidth]{3L_charging_up.png}\\
+    				\includegraphics[width=0.7\textwidth]{gain_3L.pdf}
+    			\end{column}\hfill
+    			\begin{column}{0.5\textwidth}
+    				\begin{itemize}
+    					\item[$\bullet$] Lignes de champ traversent le FR4\\
+    					$\Rightarrow$ L'accumulation d'électron \textcolor{blue}{déforme et atténue} le champ
+    					\item[$\bullet$] Charging up: \textcolor{red}{$G_{eff}(t)$ décroît} jusqu'à un plateau.
+%    					\item[$\bullet$] Le temps de charging up time dépend de la tension dans le LEM et du taux de dépôt de charge.
+    				\end{itemize}
+    				\vspace{0.3cm}
+    				\begin{itemize}
+    					\item[$\bullet$] Simulation de $\textcolor{blue}{\epsilon_{Anode}}$ suppose un LEM \textcolor{red}{avant charging up}
+    					\item[$\bullet$] Mesures de gain dans l'enceinte faites \textcolor{red}{après charging up}
+    					\item[$\bullet$] Mesures de gain dans le \TOO{} faites \textcolor{red}{pendant le charging up}
+    					\item[$\Rightarrow$] $\textcolor{blue}{\epsilon_{Anode}}$ simulée sera plus faible que dans le \TOO{} (moins de pertes dues au charging up). Mais ce qui compte vraiment est le \textbf{comportement} de $\textcolor{blue}{\epsilon_{Anode}}$
+    				\end{itemize}
+    			\end{column}
+    		\end{columns}
+    	\end{scriptsize}
+    \end{frame}
+    
+    \begin{frame}{Simulations du passage d'électrons à travers le CRP}{Comparaison aux mesures}
+        \begin{scriptsize}
+            Mesures de gain faites dans l'enceinte haute pression : impossible de mesurer les efficacités directement \\$\Rightarrow$ comportement du gain normalisé aux efficacités simulées.
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \centering $\textcolor{red}{\epsilon_{LEM}}$
+                \includegraphics[width=\textwidth]{eff_lem_gamelle.pdf}
+            \end{column}\hfill
+            \begin{column}{0.5\textwidth}
+                \centering $\textcolor{blue}{\epsilon_{Anode}}$
+                \includegraphics[width=\textwidth]{eff_anode_gamelle.pdf}
+            \end{column}
+        \end{columns}
+   		\begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Pas d'efficacité d'extraction (pas de liquide)
+                    \item[$\bullet$] Champ maximum limité par la distance Cathode-LEM et l'alimentation HT
+                    \item[$\bullet$] Comportement similaire entre \SI{1}{\kilo\volt\per\centi\meter} et \SI{1.5}{\kilo\volt\per\centi\meter}
+                \end{itemize}
+            \end{column}\hfill
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Comportement similaire, mais différences allant jusqu'à 15\,\%
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        \end{scriptsize}
+    \end{frame}
+
+
+    \section{Le prototype de \TOO{}}
+        \subsection{Introduction}
+
+    \begin{frame}{Le prototype de \TOO{}}{Introduction}
+		\begin{columns}
+			\begin{column}{0.48\textwidth}
+				\centering
+				\includegraphics[width=0.8\textwidth]{311_2.png}
+			\end{column}\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{scriptsize}
+					\textcolor{red}{Jalon de la technologie DLArTPC :} \\ a montré son fonctionnement à \SI{4}{\tonne}.\\
+					Signal/Bruit $\sim$ 10 pour une MIP à une amplification de \SI{28}{\kilo\volt\per\centi\meter}.
+				\end{scriptsize}
+			\end{column}\hfill
+		\end{columns}
+		\centering
+		\includegraphics[width=0.77\textwidth]{./pictures/events.png}\\
+	\end{frame}
+	    
+    \begin{frame}{Le prototype de \TOO{}}{Introduction}
+    	\begin{scriptsize}
+    		\vfill
+    		\begin{columns}
+    			\begin{column}{0.35\textwidth}
+    				Construit en 2016--2017, opéré entre Juin et Novembre 2017.\\
+    				\vspace{0.3cm}
+    				\textbf{But:} Tester les choix technologiques faits pour le \SSS{}.\\
+    				\vspace{0.3cm}
+    				\textbf{Difficultés:} 
+    				\begin{itemize}
+    					\item[$\bullet$] Tension maximum limitée à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
+    					\item[$\bullet$] Haute tension à travers les LEMs instable
+    				\end{itemize}
+    				\textbf{$\Rightarrow$ Problèmes résolus dans le \SSS{}} \\
+    				\vspace{0.3cm}
+    				\textbf{Analyse principale :} Gain (vs amplification, vs extraction, stabilité)\\
+    				$\Rightarrow$ On regarde les muons cosmiques (MIP).
+    			\end{column}\hfill
+    			\begin{column}{0.65\textwidth}
+    				\includegraphics[width=\textwidth]{./pictures/run840.png}\\
+    			\end{column}
+    		\end{columns}
+	    \end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Le prototype de \TOO{}}{Introduction}
+    	\begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.6\textwidth}
+                    \centering \includegraphics[width=\textwidth]{langau.pdf}
+                \end{column}\hfill
+                \begin{column}{0.4\textwidth}
+                    \begin{itemize}
+       					\item[$\bullet$] Muon cosmique : MIP \\ $\Rightarrow$ dépôt d'énergie attendu connu
+       					\item[$\bullet$] Valeur la plus probable (MPV) = \SI{1.7}{\mega\electronvolt\per\centi\meter}
+       					\item[$\bullet$] Après recombinaison avec les ions (loi de Birk) : \SI{8.26}{\femto\coulomb\per\centi\meter}
+       					\item[$\bullet$] $G_{eff}=\frac{MPV_0 + MPV_1}{MPV_{attendue}}$
+       				\end{itemize}
+                \end{column}
+            \end{columns}
+            \vspace{0.2cm}
+            Calibration de l'électronique du \TOO{} $\Rightarrow$ conversion ADC$\times$temps$\to$\si{\femto\coulomb}
+            \begin{center} \includegraphics[width=0.8\textwidth]{calibration.pdf} \end{center}
+	    \end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Le prototype de \TOO{}}{Introduction}
+        \begin{center} \vspace{-0.5cm}\includegraphics[width=\textwidth]{CRP-metrologie.png} \end{center}
+        \begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.6\textwidth}
+                    \centering \includegraphics[width=\textwidth]{./pictures/extr_eff.pdf}
+                \end{column}\hfill
+                \begin{column}{0.4\textwidth}
+                    \begin{itemize}
+       					\item[$\bullet$] Déformation du CRP : $\pm\SI{1.8}{\milli\meter}$
+       					\item[$\Rightarrow$]  25\,\% variation des champs entre la grille et l'interface et entre l'interface et les LEMs
+       					\item[$\bullet$] Variation de $\epsilon_{extr}\times\epsilon_{LEM}$ à basse tension d'extraction
+       				\end{itemize}
+                     \textbf{Note : } dans le \SSS{}, la tension Grille-LEM $\sim\SI{2.5}{\kilo\volt}$ fait que l'efficacité sera $\sim$ constantes avec le champ électrique.
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Le prototype de \TOO{}}{Introduction}
+        \begin{scriptsize}
+        \includegraphics[width=\textwidth]{highway.png}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Muon : trace longue, droite et nette \\ $\Rightarrow$ Coupure sur $\frac{Q_A-Q_B}{Q_A} < 0.1$
+                    \item[$\bullet$] Coupures supplémentaires : \begin{itemize}\item longueur $>\SI{50}{\centi\meter}$. \item \SI{2}{\degree} autour de la verticale, de l'horizontale, et des directions parallèle aux canaux des anodes.\end{itemize}
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item[$\bullet$] Efficacité de sélection des muons : 68\,\%
+                    \item[$\bullet$] Échantillon final : 92\,\% de muons
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        \end{scriptsize}
+    \end{frame}
+    
+    \subsection{Résultats}
+
+    \begin{frame}{Le prototype de \TOO{}}{Résultats}
+        \begin{scriptsize}
+            \centering Deux runs à 12 heures d'intervalle. Extraction \SI{1.9}{\kilo\volt\per\centi\meter}, Amplification \SI{28}{\kilo\volt\per\centi\meter}, Induction \SI{1.5}{\kilo\volt\per\centi\meter}\\\vspace{0.2cm}
+            \begin{center} \vspace{-0.5cm}\includegraphics[width=0.9\textwidth]{dQds_2D_840.pdf} \end{center}
+            \begin{center} \vspace{-0.5cm}\includegraphics[width=0.9\textwidth]{dQds_2D_842.pdf} \end{center}
+            \vspace{-0.5cm}
+            \begin{itemize}
+    			\item[$\bullet$] Variations attendues dues aux variations d'épaisseur et à la planéité du CRP : $\pm 12 \,\%$
+    			\item[$\bullet$] Variations observées jusqu'à $\sim \pm15\,\%$ : compatibles
+			\end{itemize}
+        \end{scriptsize}
+    \end{frame}
+
+   \begin{frame}{Le prototype de \TOO{}}{Résultats}
+        \begin{scriptsize}
+            \includegraphics[width=\textwidth]{charging_up.png}
+            \begin{itemize}
+                \item[$\bullet$] Charging up $\sim$ linéaire
+                \item[$\bullet$] Persiste une fois la tension coupée
+            \end{itemize}
+        \end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Le prototype de \TOO{}}{Résultats}
+        \begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{./pictures/gain_vs_extr.pdf}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{./pictures/comp_311_eff.pdf}
+                \end{column}
+            \end{columns}\vspace{0.5cm}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item[$\bullet$] Champs d'amplification (\SI{28}{\kilo\volt\per\centi\meter}) et d'induction (\SI{1}{\kilo\volt\per\centi\meter}) constants
+                        \item[$\bullet$] Grandes barres d'erreur à faibles champs dues aux imperfections de la planéité
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item[$\bullet$] MPV Normalisée à $\epsilon_{extr}$ à \SI{2}{\kilo\volt\per\centi\meter} pour comparer le comportement
+                        \item[$\bullet$] La MPV divisée par  $\epsilon_{LEM}$ est plus en accord avec $\epsilon_{extr}$ que la MPV seule.
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
+    \end{frame}
+
+    \begin{frame}{Le prototype de \TOO{}}{Résultats}
+        \begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{./pictures/gain_vs_ampli.pdf} \\ 
+                    \begin{itemize}
+                        \item[$\bullet$] \TOO{} \textcolor{red}{légèrement sous les résultats} du \threeL{} après charging up, sauf au delà de \SI{28}{\kilo\volt\per\centi\meter}.
+                        \item[$\bullet$] Run à \SI{28}{\kilo\volt\per\centi\meter} fait plus tôt : charging up incomplet.
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item[$\bullet$] État du charging up inconnu dans le \TOO{}
+                        \item[$\Rightarrow$]  \textcolor{red}{Devrait être entre les résultats du \threeL{} avant et après charging up}
+                    \end{itemize}
+                    \begin{itemize}
+                        \item[$\bullet$] \textcolor{red}{Run au delà de \SI{28}{\kilo\volt\per\centi\meter}} : très grandes barres  d'erreurs 
+                           \begin{itemize}
+                                \begin{scriptsize}
+                                    \item Plus grand champ d'ampli $\Rightarrow$ plus grand impact des variations d'épaisseurs des LEMs
+                                     \item Plus faible champ d'extraction ($\sim \SI{1}{\kilo\volt\per\centi\meter}$) $\Rightarrow$ plus grand impact des imperfections de planéité
+                                    \item[$\bullet$] Reconstruits avec une autre méthode que les autres runs (décrite plus loin)
+                                \end{scriptsize}
+                            \end{itemize}
+                    \end{itemize}
+                \end{column}
+            \end{columns}\vspace{0.2cm}
+            $\Rightarrow$ Beaucoup de corrections appliquées pour calculer le gain : beaucoup d'incertitudes systématiques.\\
+            $\Rightarrow$ $\epsilon_{Anode}$ avant charging up utilisée, alors que le \TOO{} est en cours ou après charging up.
+        \end{scriptsize}
+    \end{frame}
+
+      % RECONSTRUCTION DES DERNIERS POINTS
+      %REVOIR LES TITRES
+      % BORDER
+      % LARSOFT
+      % SLIDES DE SEPARATION
     
 \end{document}

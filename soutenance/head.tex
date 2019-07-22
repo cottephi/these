@@ -57,3 +57,17 @@
 \def\TOO{$3\times 1\times \SI{1}{\meter\cubed}$}
 \def\SSS{$6\times 6\times \SI{6}{\meter\cubed}$}
 \def\threeL{\SI{3}{\liter}}
+\def\dune{DU$\nu$E}
+
+\newenvironment{specialframe}
+{
+    \begingroup
+    \advance\textwidth2cm % see beamerthemeGoettingen.sty for the number
+    \hsize\textwidth
+    \columnwidth\textwidth
+    \begin{frame}[plain]
+}
+{
+    \end{frame}
+    \endgroup
+}

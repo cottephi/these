@@ -28,7 +28,7 @@
   \section{Contexte}
     \subsection{WA105}
 
-    \begin{frame}{Présentation du projet WA105}{Prototype la technologie DLArTPC}
+    \begin{frame}{Présentation du projet WA105}{Prototype de la nouvelle technologie DLArTPC}
         \begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.75\textwidth}
@@ -38,40 +38,65 @@
                 \begin{column}{0.25\textwidth}
                     \begin{itemize}
                         \item Prototype une nouvelle technologie : DLArTPC
-                        \item Techno qui sera utilisée dans la future expérience \dune{} 
-                        \item TPC utilisant de l'argon liquide
+                        \item Techno qui sera utilisée dans la future expérience \textcolor{red}{\dune{}}
+                        \item TPC utilisant de l'argon liquide pour détecter des \textcolor{red}{neutrinos}
                         \item \textbf{+ : Double phase} \\$\to$ amplification du signal dans de l'argon gazeux
                     \end{itemize}
                 \end{column}
             \end{columns}
         \end{scriptsize}
     \end{frame}
+    
+    \begin{frame}{La technologie DLArTPC et le projet WA105}{Chambres à Projection Temporelle à Argon Liquide}
+       	\begin{scriptsize}
+       			\includegraphics[width=0.9\textwidth]{tpcs.png}\\\vfill
+       			\begin{columns}
+       				\begin{column}{0.5\textwidth}
+       					\begin{itemize}
+       						\item Tout se passe dans l'argon liquide.
+       						\item Mesure directe de l'énergie.
+       						\item Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
+       					\end{itemize}
+       				\end{column}\hfill
+       				\begin{column}{0.5\textwidth}
+       					\begin{itemize}
+       						\item Amplification des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
+       						\item Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
+       						\item Premières données en août 2019.
+       					\end{itemize}
+       				\end{column}
+       			\end{columns}
+       	\end{scriptsize}
+    \end{frame}
 
+    \begin{frame}{La technologie DLArTPC et le projet WA105}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP au CERN}
+        \centering
+       	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
+    \end{frame}
+    
     \subsection{DU$\nu$E}
 
     \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}
         \begin{scriptsize}
             \centering
             \includegraphics[width=\textwidth]{dune.pdf}\\
-            \vspace{1cm}
-            \begin{columns}
-                \begin{column}{0.5\textwidth}
-                    \begin{itemize}
-                        \item Expérience d'\textbf{oscillation des neutrinos} d'accélérateur à longue ligne de base au USA, prévue pour fin 2026
-                        \item Détectera dans le \textbf{Dakota du Sud} des $\nu$/$\overline{\nu}$ envoyés du \textbf{Fermilab} à \textbf{\SI{1300}{\kilo\meter}}.
-                    \end{itemize}
-                \end{column}
-                \begin{column}{0.5\textwidth}
-                    \textbf{Mesurera la probabilité de changement de saveur $P(\nu_{\mu}\to\nu_e)$ vs $E$ pour répondre à : }
-                    \begin{itemize}
-                        \item La symétrie CP est-elle violée dans le secteur leptonique?
-                        \item Quel est l'ordre des masses des neutrinos?
-                    \end{itemize}
-                \end{column}
-            \end{columns}
+            \vspace{0.4cm}
+            \begin{minipage}[t]{0.48\textwidth}
+                \begin{itemize}
+                    \item Expérience d'\textbf{oscillation des neutrinos} d'accélérateur à longue ligne de base aux USA, prévue pour fin 2026
+                    \item Détectera dans le \textbf{Dakota du Sud} des $\nu$/$\overline{\nu}$ envoyés du \textbf{Fermilab} à \textbf{\SI{1300}{\kilo\meter}}.
+                \end{itemize}
+            \end{minipage}\hfill
+             \begin{minipage}[t]{0.48\textwidth}
+                \textbf{Mesurera la probabilité de changement de saveur $P(\nu_{\mu}\to\nu_e)$ vs $E$ pour répondre à : }
+                \begin{itemize}
+                    \item La symétrie CP est-elle violée dans le secteur leptonique?
+                    \item Quel est l'ordre des masses des neutrinos?
+                \end{itemize}
+            \end{minipage}\vfill
         \end{scriptsize}
     \end{frame}
-
+    
     \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}
         \begin{scriptsize}
             \begin{columns}
@@ -85,8 +110,8 @@
                 \end{column}
                 \begin{column}{0.4\textwidth}
                     \begin{itemize}
-                        \item $\delta_{CP}\ne0$ et $\pi$ pourrait expliquer asymétrie \textcolor{red}{matière-antimatière} dans l'univers.\\
-                        \item Plusieurs théories dépendent de \textcolor{red}{l'ordre des masses} des neutrinos.
+                        \item Si symétrie CP violée dans le secteur leptonique $\Rightarrow$ peut expliquer asymétrie \textcolor{red}{matière-antimatière} dans l'univers.\\
+                        \item Plusieurs théories de grande unification dépendent de \textcolor{red}{l'ordre des masses} des neutrinos.
                         \item[$\Rightarrow$] Les deux influencent la probabilité de changement de saveur.
                     \end{itemize}
                     \begin{scriptsize}
@@ -132,9 +157,36 @@
 %            Timeline\\
         \end{scriptsize}
     \end{frame}
-
-
-    \subsection[DLArTPC]{La technologie DLArTPC}
+    
+  \begin{frame}{L'argon liquide comme milieu de détection}
+ 	  \begin{scriptsize}
+       	\begin{columns}
+       		\begin{column}{0.6\textwidth}
+       			\centering
+       			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
+       			\flushleft
+       			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-Simple Phase}\end{footnotesize}
+       		\end{column}
+       		\begin{column}{0.4\textwidth}
+       			\begin{footnotesize}
+       				\textbf{Pourquoi l'argon liquide?}
+       			\end{footnotesize}
+       			\begin{itemize}
+       				\item MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
+       				(Bruit électronique $\sim \SI{1000}{e^-}$)
+       				\item Gaz noble $\rightarrow$ ne piège pas les électrons.
+       				\item Très bon trajectographe et calorimètre entièrement homogène.
+       				\item Scintille au moment de l'ionisation $\rightarrow$ déclencheur et/ou $t_0$ \\ + transparent pour les photons  d'ionisation.
+       				\item Dense (\SI{1.4}{\gram\per\centi\meter^3}).
+       				\item Peu cher et abondant.
+       			\end{itemize}
+       			\begin{footnotesize}
+   	    			\textbf{$\Rightarrow$ Chambre à bulle électronique.}
+   	    		\end{footnotesize}
+       		\end{column}
+       	\end{columns}
+ 	  \end{scriptsize}
+    \end{frame}
 
   {
     	\setlength\pdfpagewidth{12.8cm}%
@@ -143,64 +195,7 @@
     	\begin{frame}[plain]
     	\end{frame}
     }
-
-  \begin{frame}{La technologie DLArTPC et le projet WA105}{L'argon liquide comme milieu de détection}
-	  \begin{scriptsize}
-    	\begin{columns}
-    		\begin{column}{0.6\textwidth}
-    			\centering
-    			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
-    			\flushleft
-    			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-Simple Phase}\end{footnotesize}
-    		\end{column}
-    		\begin{column}{0.4\textwidth}
-    			\begin{footnotesize}
-    				\textbf{Pourquoi l'argon liquide?}
-    			\end{footnotesize}
-    			\begin{itemize}
-    				\item MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
-    				(Bruit électronique $\sim \SI{1000}{e^-}$)
-    				\item Gaz noble $\rightarrow$ ne piège pas les électrons.
-    				\item Très bon trajectographe et calorimètre entièrement homogène.
-    				\item Scintille au moment de l'ionisation $\rightarrow$ déclencheur et/ou $t_0$ \\ + transparent pour les photons  d'ionisation.
-    				\item Dense (\SI{1.4}{\gram\per\centi\meter^3}).
-    				\item Peu cher et abondant.
-    			\end{itemize}
-    			\begin{footnotesize}
-	    			\textbf{$\Rightarrow$ Chambre à bulle électronique.}
-	    		\end{footnotesize}
-    		\end{column}
-    	\end{columns}
-	  \end{scriptsize}
-    \end{frame}
-
-    \begin{frame}{La technologie DLArTPC et le projet WA105}{Chambres à Projection Temporelle à Argon Liquide}
-    	\begin{scriptsize}
-    			\includegraphics[width=0.9\textwidth]{tpcs.png}\\\vfill
-    			\begin{columns}
-    				\begin{column}{0.5\textwidth}
-    					\begin{itemize}
-    						\item Tout se passe dans l'argon liquide.
-    						\item Mesure directe de l'énergie.
-    						\item Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
-    					\end{itemize}
-    				\end{column}\hfill
-    				\begin{column}{0.5\textwidth}
-    					\begin{itemize}
-    						\item Amplification des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
-    						\item Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
-    						\item Premières données en août 2019.
-    					\end{itemize}
-    				\end{column}
-    			\end{columns}
-    	\end{scriptsize}
-    \end{frame}
-
-    \begin{frame}{La technologie DLArTPC et le projet WA105}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP au CERN}
-        \centering
-    	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
-    \end{frame}
-
+    
     \section[Tests des CRPs]{Tests et mesures sur les CRPs du \SSS{}}
 
     {
@@ -225,7 +220,7 @@
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
     					\item \textcolor{red}{But: Gain $\geq 20$} \\(S/B $\geq 200$ pour une MIP)
-    					\item \textcolor{red}{Stabilité sur de très longues périodes (DU$\nu$E $\sim$ 20 ans)}
+    					\item \textcolor{red}{Stabilité sur de très longues périodes (plusieurs années)}
     				\end{itemize}
     			\end{minipage}\hfill
     			\begin{minipage}{0.32\textwidth}
@@ -519,7 +514,6 @@
 
     \begin{frame}{Boîte cryogénique au CERN}
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
-        %TODO : rajouter discussion à propos des variations induites pas la planéité
    		\begin{columns}
    			\begin{column}{0.4\textwidth}
    				\includegraphics[width=\textwidth]{./pictures/crp_inserting_coldbox.png}\\
@@ -575,6 +569,7 @@
             \begin{column}{0.5\textwidth}
                 Timeline:
                 %TODO
+                \textcolor{red}{A FAIRE DEBUT SEPTEMBRE}
             \end{column}
         \end{columns}
     \end{frame}
@@ -679,6 +674,28 @@
         \end{columns}
         \end{scriptsize}
     \end{frame}
+    
+    \begin{frame}{Avec un champ d'amplification de \SI{28}{\kilo\volt\per\centi\meter}}
+        \begin{scriptsize}
+            \includegraphics[width=\textwidth]{./pictures/dQds_840.png}\\
+            \begin{columns}[t]
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item \textcolor{red}{$G_{eff}=1.8$}
+                        \item Dans le \threeL{} après charging up : $G_{eff}=3.2$
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item Dans le \TOO{}, Extraction : \SI{1.8}{\kilo\volt\per\centi\meter}, Induction : \SI{1.5}{\kilo\volt\per\centi\meter}
+                        \item Dans le \threeL{}, Extraction : \SI{2.5}{\kilo\volt\per\centi\meter}, Induction : \SI{5}{\kilo\volt\per\centi\meter}
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+            \vfill
+            \TOO{} et \threeL{} : différents champs d'extraction et d'induction\\
+        \end{scriptsize}
+    \end{frame}
 
     \subsection[Efficacités de collection]{Efficacités de collection}
 
@@ -687,16 +704,19 @@
     		\begin{columns}
     			\hspace{-1.5cm}
 	    		\begin{column}{0.3\textwidth}
-	    			\vspace{-2.5cm}
+	    			\vspace{-2cm}
 	    			\hbox{
 	    				$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{ext} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
 	    			}\\
-	    			\vspace{1.3cm}
+	    			\vspace{0.7cm}
 	    			\textbf{Difficulté rencontrée dans le $\mathbf{3 \times 1 \times \SI[detect-weight]{1}{\meter\cubed}}$:} Tension de la grille d'extraction limitée à \SI{5}{\kilo\volt}\\
 	    			\vspace{0.3cm}
 	    			$\Rightarrow$ N'a pas pu opérer à champ d'extraction et d'induction fixés.\\
-	    			$\Rightarrow$ Besoin de connaître l'\textcolor{red}{impact} de ces champs \textcolor{red}{sur la collection de charge}.\\
-	    			\vfill
+	    			$\Rightarrow$ Besoin de connaître l'\textcolor{red}{impact} de ces champs \textcolor{red}{sur la collection de charge : }\\
+	    			\begin{itemize}
+                        \item Pour comparer \TOO{} et \threeL{}
+                        \item Pour étudier gain vs amplification
+                    \end{itemize}
 %	    			\vspace{0.3cm}	    			
 %		    		$\mathbf{G_{eff} = G_{LEM}} $ \\\hspace{0.7cm} $\boldsymbol{\times \epsilon}_{\mathbf{extraction}}$ \\\hspace{0.7cm} \textcolor{red}{$\boldsymbol{\times} \mathbf{P_{LEM}}$}\\\hspace{0.7cm} \textcolor{blue}{$\boldsymbol{\times} \mathbf{P_{Anode}}$}
 	    		\end{column}\hfill\hspace{-3.2cm}
@@ -707,17 +727,43 @@
 	    	\end{columns}
     	\end{scriptsize} 
     \end{frame}
+    
+    \begin{frame}{Outils de simulation}
+        \begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{ansys_geom.png}
+                \end{column}\hfill
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{./pictures/losses_with_lem.png}
+                \end{column}
+            \end{columns}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item Champ à travers le CRP simulé avec ANSYS (éléments finis)
+                        \item Défini un élément de base de la géométrie en nid d'abeille, conditions de symétrie pour générer toute la géométrie
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item Cartes de champs intégrées dans GarField : simulation de dérive des électrons à travers le CRP
+                        \item Capable de retracer le parcours microscopique des électrons dans l'argon gazeux
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
+    \end{frame}
+    
 
     \begin{frame}{Simulation : efficacités de collection}
-        % EFFlem : change liquide-gaz
-        %RAJOUTER ANSYS
         \hbox{
      		$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extr} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
      	}
    		\begin{columns}
             \begin{column}{0.5\textwidth}
                 \centering $\textcolor{red}{\epsilon_{LEM}}$
-                \includegraphics[width=\textwidth]{eff_lem_alone.pdf}
+                \includegraphics[width=\textwidth]{./pictures/eff_lem_alone.pdf}
             \end{column}\hfill
             \begin{column}{0.5\textwidth}
                 \centering $\textcolor{blue}{\epsilon_{Anode}}$
@@ -1086,7 +1132,27 @@
   \subsection{Lumière}
 
     \begin{frame}{Lumière}
-        Un slide sur la lumière
+        \begin{scriptsize}
+            \centering \includegraphics[width=0.7\textwidth]{./pictures/scintillation.pdf}\\\vfill
+            \centering Deux sources de lumières dans une DLArTPC:
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    Ionisation primaire :
+                    \begin{itemize}
+                        \item L'ionisation de l'argon produit une scintillation (\SI{128}{\nano\meter})
+                        \item L'argon est transparent à cette lumière
+                        \item Utilisée comme $t_0$
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    Électroluminescence dans le gaz :
+                    \begin{itemize}
+                        \item Le passage d'électrons dans le gaz avec un champ de plus de \SI{2}{\kilo\volt\per\centi\meter} produit de l'électroluminescence
+                        \item Informe sur le gain et la pureté
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
     \end{frame}
 
   \section{Conclusion}
@@ -1095,6 +1161,8 @@
         \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{
             311 ok \\
             perpectives pour le 666 : space charge, Ion feedback, montrer events si il y en a
+            %TODO
+            \textcolor{red}{A FAIRE DEBUT SEPTEMBRE}
         }
     \end{specialframe}
     

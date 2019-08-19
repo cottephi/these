@@ -9,17 +9,37 @@ General comments
 
 + et.al -> et al.
 
+IMAGES
++ p6: figure 1.3 cité et pas encore la 1.2
+- p16: figure 1.5 cité et pas la 1.4 - deux des 4 graphes de la figure 1.5 montrent des effets de matière, pas encore évoqués quand elle est citée.
++ p50: figure 2.5 cité avant les autre
++ p63: figure 3.14 comme premiere citation.
++ p67: figure 3.4 avant 3.3.
++ p72: figure 3.10 avant 3.9.
++ 101: figure 4.5 cité avant 4.4.
++ 104: figure 4.8 cité avant 4.7.
++ 114: figure 4.19 cité avant 4.18.
++ 143: figure 5.8 cité avant 5.7.
++ 148: figure 5.15 cité avant 5.14.
++ 158: figure 5.25 cité avant 5.24.
+
+FOOTNOTE :
++ p89: footnote 3 en ligne 3 est dans la page 90.
+p97: footnote 1 est dans la page 98.
+
+CITATIONS :
++ p22: figure 1.6 pas cité
++ p81: table 3.3 pas cité dans le texte.
+
 INTRO
 + Dakota du Nord -> du Sud
 
 CHAP1
-- p5-line7: manque reference -> est-ce la phrase "Plusieurs extensions du modèle standard sont possibles pour inclure ces masses (voir section 1.E), extension qui implique de la nouvelle physique." ? Il y a des références dans l'annexe.
 + p8: equation entre 1.5 et 1.6. Je pense qu’il manque un delta_ij dans le dernier equivalence.
 + p10: premiere point ligne 4. Je ne comprends pas la phrase “…de L d’electron d’une saveur donnée…”
 + p23: Il faudrait que le texte et le tableau 1.1 soient coherent. Pour les atmosphériques tu écrive 1-10^5 GeV mais dans le tableau c’est 10^2 - 10^5 MeV. De plus les valeurs dans le tableau ne sont pas cohérents. pour calculer Dm tu fais E/L (premiere ligne). Pourquoi dans le cas des réacteurs Dm est 10^-2 - 10^-3 et pas 10^-2 - 10^-6? Tu peux revoir le tableau?
-p6: figure 1.3 cité et pas encore la 1.2
-p16: figure 1.5 cité et pas la 1.4
-p22: figure 1.6 pas cité
+
+- p5-line7: manque reference -> est-ce la phrase "Plusieurs extensions du modèle standard sont possibles pour inclure ces masses (voir section 1.E), extension qui implique de la nouvelle physique." ? Il y a des références dans l'annexe.
 
 CHAP2
 + p48: dans la reference cité pour opera il y a 10 neutrino tau candidates et pas 5.
@@ -28,36 +48,21 @@ CHAP2
 + p53 ligne9: attention a la conversion #sigma=sqrt(Delta chi2) qui n’est pas correcte (voir par example https://arxiv.org/pdf/1305.5150v2.pdf)
 + p55: la caption figure 2.6 ne colle pas avec la figure (signe de hadron et muons par example)
 + p55: la caption figure 2.7 est misleading. A droite et a gauche on a le spectre de neutrino et antineutrino mais la difference est le mode de fonctionnement du beam (polarisation des horns).
-- p56 ligne 13: je ne comprends pas bien. le beam dump est ce que tu appelle absorbeur et il est present dans DUnE. - Il y a un absorbeur dans DUNE, mais après le tuyau de désintégration. Les neutrinos sont déjà produits quand le faisceau atteint d'absorbeur. Mais ce n'est pas la technique de production dite du Beam Dump. Dans cette technique, il n'y a pas de tuyau de désintégration, l'absorbeur étant directement après les cornes. Les neutrinos sont alors produits DANS l'absorbeur.
 + p60: je ne comprends pas le tableau. C’est quoi la difference entre Requis et Attendu? Qu’est-ce que c’est LArIAT?
-p50: figure 2.5 cité avant les autre
+
+- p56 ligne 13: je ne comprends pas bien. le beam dump est ce que tu appelle absorbeur et il est present dans DUnE. - Il y a un absorbeur dans DUNE, mais après le tuyau de désintégration. Les neutrinos sont déjà produits quand le faisceau atteint d'absorbeur. Mais ce n'est pas la technique de production dite du Beam Dump. Dans cette technique, il n'y a pas de tuyau de désintégration, l'absorbeur étant directement après les cornes. Les neutrinos sont alors produits DANS l'absorbeur.
 
 CHAP3
-p63: CRP utilisé pour la premiere fois. Expliquer l’acronyme.
-p63: figure 3.14 comme premiere citation.
-p65: tu dis que la vitesse des ions est très faible et après tu donne les valeurs pour les electrons en detail. Je mettrai quand meme l-ordre de grandeur de la vitesse de drift des ions pour donner une idée au lecteur.
-p67: figure 3.4 avant 3.3.
-p69 line15: vir-> voir
-p72: figure 3.10 avant 3.9.
-p76: et.al.->et al.
-p77: tu donne un valeur de 31kV cm (qui devrait être kV/cm) mails figure 3.16 est en kV. Il faudrais utiliser la meme convention entre texte et figure.
-p81: table 3.3 pas cité dans le texte.
-p89: footnote 3 en ligne 3 est dans la page 90.
-p90: et.al.->et al.
-p91: Le tableau Tableau 3.5 -> le tableau 3.5
-p92: et.al.->et al.
++ p63: CRP utilisé pour la premiere fois. Expliquer l’acronyme.
++ p65: tu dis que la vitesse des ions est très faible et après tu donne les valeurs pour les electrons en detail. Je mettrai quand meme l-ordre de grandeur de la vitesse de drift des ions pour donner une idée au lecteur.
++ p69 line15: vir-> voir
++ p77: tu donne un valeur de 31kV cm (qui devrait être kV/cm) mails figure 3.16 est en kV. Il faudrais utiliser la meme convention entre texte et figure.
++ p91: Le tableau Tableau 3.5 -> le tableau 3.5
 
 CHAP4
-97: footnote 1 est dans la page 98.
-101: figure 4.5 cité avant 4.4.
-104: figure 4.8 cité avant 4.7.
-107: figure 4.9 bas sur l’image il y a CRP1 mais c’est CRP2.
-114: figure 4.19 cité avant 4.18.
-118: les champs sont donnée en kV (-5,-35 et -2)mais j’imagine  c’est des kV/cm.
-128 line6 :de devrait -> ne devrait.
++ 107: figure 4.9 bas sur l’image il y a CRP1 mais c’est CRP2.
++ 118: les champs sont donnée en kV (-5,-35 et -2)mais j’imagine  c’est des kV/cm.
++ 128 line6 :de devrait -> ne devrait.
 
 CHAP5
-135: caption figure 5.1. Est-ce que tu est sur que c-est de bas an haut et pas le contraire?
-143: figure 5.8 cité avant 5.7.
-148: figure 5.15 cité avant 5.14.
-158: figure 5.25 cité avant 5.24.
++ 135: caption figure 5.1. Est-ce que tu est sur que c-est de bas an haut et pas le contraire?

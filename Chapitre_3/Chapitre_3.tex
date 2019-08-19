@@ -10,9 +10,9 @@
 
   \section{Introduction}
 
-    La technologie \gls{dlartpc} utilise une fine couche d'argon gazeux au dessus d'un volume d'argon liquide pour amplifier la charge déposée par les particules chargées traversant le milieu. Ceci permet d'atteindre un meilleur ratio signal/bruit qu'une \gls{lartpc} simple phase tout en améliorant la résolution spatiale. Dans la \gls{dlartpc} de \gls{dune} (\autoref{fig::dlartpc}), une particule traversant le volume d'argon liquide ionise ce dernier, un champ électrique de \driftfield{} permet de faire dériver les électrons ainsi libérés jusqu'au \gls{crp}, où ils sont extrait vers la phase gazeuse par un champ électrique de \SI{2}{\kilo\volt\per\centi\meter} appliqué entre une grille d'extraction immergée et les amplificateurs dans le gaz. Ces amplificateurs (appelés \glspl{lem}, \autoref{fig::lem}), sont des \glspl{pcb} de \SI{1}{\milli\meter} d'épaisseur percés de trous de \SI{500}{\micro\meter} à travers desquels est appliqué un champ électrique de  \SI{31}{\kilo\volt\per\centi\meter}. Les électrons, en traversant ces amplificateurs, génèrent alors une avalanche de Townsend, amplifiant le signal d'un facteur 20. Les électrons quittent ensuite les \glspl{lem} et sont amenés, par un champ de  \SI{5}{\kilo\volt\per\centi\meter}, aux anodes de lectures segmentées en 2 vues, capables de reconstruire les événements en 2 dimensions. La connaissance de la vitesse de dérive des électrons dans l'argon liquide, et du temps initial ($t_0$) de l'événement, donné par la lumière de scintillation émise au moment de l'ionisation de l'argon liquide, permet de reconstruire la troisième coordonnée et ainsi de produire des images d'une précisions millimétrique des interactions.
+    La technologie \gls{dlartpc} utilise une fine couche d'argon gazeux au dessus d'un volume d'argon liquide pour amplifier la charge déposée par les particules chargées traversant le milieu. Ceci permet d'atteindre un meilleur ratio signal/bruit qu'une \gls{lartpc} simple phase tout en améliorant la résolution spatiale. Dans la \gls{dlartpc} de \gls{dune} (\autoref{fig::dlartpc}), une particule traversant le volume d'argon liquide ionise ce dernier, un champ électrique de \driftfield{} permet de faire dériver les électrons ainsi libérés jusqu'au \gls{crp}, où ils sont extrait vers la phase gazeuse par un champ électrique de \SI{2}{\kilo\volt\per\centi\meter} appliqué entre une grille d'extraction immergée et les amplificateurs dans le gaz. Ces amplificateurs (appelés \glspl{lem}), sont des \glspl{pcb} de \SI{1}{\milli\meter} d'épaisseur percés de trous de \SI{500}{\micro\meter} à travers desquels est appliqué un champ électrique de  \SI{31}{\kilo\volt\per\centi\meter}. Les électrons, en traversant ces amplificateurs, génèrent alors une avalanche de Townsend, amplifiant le signal d'un facteur 20. Les électrons quittent ensuite les \glspl{lem} et sont amenés, par un champ de  \SI{5}{\kilo\volt\per\centi\meter}, aux anodes de lectures segmentées en 2 vues, capables de reconstruire les événements en 2 dimensions. La connaissance de la vitesse de dérive des électrons dans l'argon liquide, et du temps initial ($t_0$) de l'événement, donné par la lumière de scintillation émise au moment de l'ionisation de l'argon liquide, permet de reconstruire la troisième coordonnée et ainsi de produire des images d'une précisions millimétrique des interactions.
 
-    \begin{figure}[htbp]
+    \begin{figure}[!htb]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{dlartpc_full.png}
       \caption[Schéma d'une chambre à projection temporelle à double phase d'argon liquide]{\label{fig::dlartpc}Schéma d'une chambre à projection temporelle à double phase d'argon liquide. La dérive des électrons se fait verticalement afin de pouvoir amplifier ces derniers à travers un ou plusieurs \acrfull{lem} situé dans une fine couche d'argon gazeux en haut du volume d'argon liquide.}
@@ -20,7 +20,7 @@
     
     Le projet \gls{wa105}, au \gls{cern}, prototype la technologie \gls{dlartpc} en vue de l'utiliser pour réaliser un modules de \SI{12}{\kilo\tonne} du détecteur lointain de \gls{dune} (\autoref{fig::wa105}). Un premier prototype de \TOO{} (\SI{4.2}{tonne}), construit et opéré au \gls{cern} entre 2016 et 2017, a prouvé que la technologie fonctionne avec une distance de dérive de \SI{1}{\meter} et une surface de lecture de charge de \SI{3}{\meter\squared}. Il a également testé et validé les choix technologiques utilisés pour la réalisation démonstrateur de \protodp{}; il a permis de souligner quelques difficultés techniques, notamment sur la tenue en tension des \glspl{lem}, qui ont pu être prises en compte pour la réalisation de ce démonstrateur de \SSS{} (\SI{300}{\tonne} d'argon liquide). Ce dernier, construit au \gls{cern} et qui prendra des données cosmiques à partir du mois d'août 2019, a pour but d'évaluer la capacité d'une \gls{dlartpc} de plusieurs centaines de tonnes à répondre aux besoins de \gls{dune} en terme de ratio signal/bruit, de résolution spatiale, de résolution en énergie, ainsi que développer les techniques de construction et d'exploitation d'une \gls{dlartpc} de plusieurs kilo tonnes.
 
-    \begin{figure}[htbp]
+    \begin{figure}[!htb]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{wa105_scale.png}        
       \caption[Le projet WA105]{\label{fig::wa105}\gls{wa105} et de sa place dans le développement de la technologie \gls{dlartpc}.}
@@ -47,17 +47,17 @@
 
       Une amplification permet également de travailler avec des canaux de lecture plus fins, étant donné que le seuil en énergie peut être plus bas. Ceci peut alors améliorer la résolution spatiale sur deux dimensions.
 
-      Concernant les inconvénients, il y en a deux principaux. Le premier concerne la précision sur la mesure de l'énergie. En effet, le processus d'avalanche de Townsend dépend exponentiellement de la densité du gaz et de l'épaisseur des \glspl{lem} servant à l'amplification (voir équation \autoref{eq::townsend}). Des variations de l'ordre du pourcent de l'un de ces paramètres peut entraîner une variation de l'ordre de la dizaine de pourcent sur le gain. L'effet de l'épaisseur des \glspl{lem} est discutés en détail en \autoref{sec::epaisseur}. Concernant la densité, le \TOO{} a montré qu'il est possible de travailler à des conditions thermodynamiques très stables (variations de l'ordre du pour mille, voir \autoref{sec::slow_control}). Le second inconvénient est l'effet de charge d'espace, et concerne essentiellement les grands prototypes en surface. La vitesse de dérive des ions dans l'argon liquide est bien plus faible que celle des électrons. Une accumulation d'ions dans le volume liquide peut donc entraîner une modification du champ électrique et ainsi déformer les traces. Ce processus est vrai pour les \glspl{lartpc} simple phase également, mais il peut être accru dans les \glspl{dlartpc} à cause du retour dans le liquide des ions produits lors de l'amplification\cite{Romero2016}. Toutefois, si le taux d'événements est faible, la plupart de ces ions seront évacués entre deux événements. Ce sera la cas dans \gls{dune}, qui sera protégé des rayons cosmiques et qui détectera des événements rares, c'était le cas dans le \TOO{}, qui a une volume suffisamment petit, mais ce n'est pas le cas des prototypes de \protodp{}.
+      Concernant les inconvénients, il y en a deux principaux. Le premier concerne la précision sur la mesure de l'énergie. En effet, le processus d'avalanche de Townsend dépend exponentiellement de la densité du gaz et de l'épaisseur des \glspl{lem} servant à l'amplification (voir équation \autoref{eq::townsend}). Des variations de l'ordre du pourcent de l'un de ces paramètres peut entraîner une variation de l'ordre de la dizaine de pourcent sur le gain. L'effet de l'épaisseur des \glspl{lem} est discutés en détail en \autoref{sec::epaisseur}. Concernant la densité, le \TOO{} a montré qu'il est possible de travailler à des conditions thermodynamiques très stables (variations de l'ordre du pour mille, voir \autoref{sec::slow_control}). Le second inconvénient est l'effet de charge d'espace, et concerne essentiellement les grands prototypes en surface. La vitesse de dérive des ions dans l'argon liquide est bien plus faible que celle des électrons (de l'ordre de \SI{1}{\centi\meter\per\second}). Une accumulation d'ions dans le volume liquide peut donc entraîner une modification du champ électrique et ainsi déformer les traces. Ce processus est vrai pour les \glspl{lartpc} simple phase également, mais il peut être accru dans les \glspl{dlartpc} à cause du retour dans le liquide des ions produits lors de l'amplification\cite{Romero2016}. Toutefois, si le taux d'événements est faible, la plupart de ces ions seront évacués entre deux événements. Ce sera la cas dans \gls{dune}, qui sera protégé des rayons cosmiques et qui détectera des événements rares, c'était le cas dans le \TOO{}, qui a une volume suffisamment petit, mais ce n'est pas le cas des prototypes de \protodp{}.
 
     \subsection{Le prototype de \TOO{}}\label{sec::TOO-intro}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{311_2.png}        
         \caption[Schéma du prototype de \TOO{}]{\label{fig::311}Schéma du prototype de \TOO{}.}
       \end{figure}
 
-      Le \TOO{}, construit et exploité entre 2016 et 2017, avait deux objectifs principaux :
+      Le \TOO{} (\autoref{fig::311}), construit et exploité entre 2016 et 2017, avait deux objectifs principaux :
       \begin{itemize}
         \item[$\bullet$] Prouver que la technologie \gls{dlartpc} fonctionne à l'échelle de plusieurs tonnes avec une dérive de \SI{1}{\meter} et une surface de lecture de plusieurs \si{\meter\squared}. Il devait donc réussir à voir des traces traversant l'ensemble de la hauteur du détecteur, et reconstruire leurs différentes caractéristiques (énergie, angles, positions...). Il devait aussi étudier la stabilité du gain sur la surface de lecture ainsi que son comportement en fonction du temps et en fonction des différents champs électriques appliqués.
         \item[$\bullet$] La plupart des choix techniques faits pour la construction du \TOO{} sont identiques à ceux fait pour le \SSS{}, notamment le cryostat, l'approvisionnement en argon, les \glspl{pmt}, le \gls{crp}), et l'électronique de lecture. Le \TOO{} a donc servi à tester ces choix afin d'anticiper d'éventuels problèmes.
@@ -65,7 +65,7 @@
       
       La \autoref{fig::trace_311} montre deux traces traversant toute la hauteur du \TOO{}, une gerbe électromagnétique et un muon. Le champ d'amplification était alors de \SI{29}{\kilo\volt\per\centi\meter}, correspondant à un gain attendu de 9. Le comportement du gain est étudié en détail dans le \autoref{chap::5} en utilisant des muons cosmiques, dont le dépôt de charge attendu sert de référence (voir \autoref{sec::ionisation}).
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{311_event}        
         \caption[Quelques événements vus dans le  \TOO{}]{\label{fig::trace_311}Une gerbe électromagnétique et un muon cosmique vus dans le \TOO{}. L'amplification était alors de \SI{29}{\kilo\volt\per\centi\meter}.}
@@ -73,14 +73,14 @@
 
       Comme il est expliqué au \autoref{chap::5}, des problèmes de tenue en tension durant les opérations ont grandement limité la quantité et la qualité de données. Ces problèmes, surtout dus au design des \glspl{lem} et à la tension mécanique des fils de la grille d'extraction, ont été pris en compte dans la conception des \glspl{crp} du \SSS{}.
 
-      Tous les détails techniques présentés ici sont tirés de \cite{Aimard2018}. Le prototype de \TOO{} est présenté en \autoref{fig::311}. Ses dimensions extérieures sont de $\numprint{7.3}\times\numprint{4.7}\times\SI{4.8}{\meter\cubed}$. Le volume interne du cryostat
+      Tous les détails techniques présentés ici sont tirés de \cite{Aimard2018}. Les dimensions extérieures du \TOO{} sont de $\numprint{7.3}\times\numprint{4.7}\times\SI{4.8}{\meter\cubed}$. Le volume interne du cryostat
       est d'environ \SI{23}{\meter\cubed}. Ce dernier est constitué d'une couche d'acier inoxydable ondulé, capable d'absorber les déformations dues aux contractions thermiques, et d'un isolant d'un mètre d'épaisseur. Le volume actif de \TOO{} est délimité par la cage de dérive , fournissant le champ de dérive homogène de \driftfield{}, la cathode en bas de la cage de dérive et le \gls{crp}, en haut de la cage de dérive. La cage de dérive est un assemblage vertical de vingt anneaux creux de section de \SI{34}{\milli\meter} d'acier inoxydable espacés de \SI{5}{\centi\meter}. Ces anneaux sont reliés entre eux par des résistances de \SI{100}{\ohm} (à température ambiante), le tout assurant un champ de dérive uniforme dans les \SI{3}{\meter\cubed} du volume actif. La cathode est une grille faite de tubes d'acier inoxydables de \SI{4}{\milli\meter} de diamètre répartis espacés de \SI{2}{\centi\meter}, fixée à l'anneau du bas de la cage de dérive. Sous la cathode sont situés cinq \glspl{pmt} servant à la détection de la lumière de scintillation émise lors de l'ionisation de l'argon, utilisée pour déterminer le temps initial des événements. Ces \glspl{pmt} ont également servi de déclencheur. 
 
       L'ensemble est suspendu au top-cap, couvercle isolant de \SI{1.2}{\meter} d'épaisseur fermant le cryostat. Le \gls{crp} n'est pas solidaire de la cage de dérive et, grâce à trois câbles traversant le top-cap, peut être positionné précisément en fonction du niveau d'argon liquide. Le top-cap est traversé par les cheminées permettant d'amener la haute tension aux différents éléments et de récupérer les données des différents capteurs, que ce soit les anodes de lectures, les \glspl{pmt}, ou les capteurs de température, de pression et de niveau d'argon permettant la surveillance en temps réel des conditions à l'intérieur du cryostat. A l'extérieur du cryostat, aux deux extrémités du volume total, se trouvent des plans \gls{crt} pouvant servir de déclencheur externe capable de sélectionner des événement quasi-horizontaux.
 
       Le remplissage d'argon liquide du cryostat se fait en quatre étapes. La première étape, appelée "boucle ouverte", consiste à injecter de l'argon gazeux à température ambiante à un débit de \SI{2}{\liter\per\second} en bas du cryostat par quatre tuyaux, chacun percés de trois ouvertures. Ceci permet de pousser l'air présent uniformément vers le haut du volume où il est évacué. Le processus continue après que tout l'air ait été évacué jusqu'à ce que les concentrations d'impuretés se stabilisent, ce qui correspond environ à 80 fois le volume du cryostat. Commence alors la seconde étape : la circulation d'argon continue mais ce dernier n'est pas évacué. Il passe à travers un purificateur et est réinjecté dans le cryostat afin de continuer à diminuer les impuretés. Ceci prend une centaine de volumes de cryostat avec un débit de \SI{4}{\liter\per\second}. La troisième étape est le refroidissement, fait en injectant aux quatre coins du bas du cryostat un mélange d'argon gazeux à température ambiante et d'argon liquide à \SI{87}{\kelvin}, pour un débit de \SI{500}{\liter\per\minute} et \SI{1266}{\liter\per\minute} respectivement. Il faut environ cinq jours pour arriver à la température à \SI{170}{\kelvin}, après quoi la quatrième étape, le remplissage, peut commencer. Durant les opérations, l'argon liquide est continûment prélevé, purifié et réinjecté par une pompe située dans un coin en bas du cryostat. Deux volumes par jour circulent ainsi dans le cryostat. De plus, l'argon gazeux est également continûment récupéré, liquéfié et réinjecté dans le cryostat. 
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{crp_exp.png}        
         \caption[Schéma explosé du CRP du \TOO{}]{\label{fig::crp_exp}Schéma explosé du \gls{crp} du \TOO{}.}
@@ -88,11 +88,11 @@
 
       Une vue explosée du \gls{crp} du \TOO{} est présentée en \autoref{fig::crp_exp}. Ce dernier est composé de 12 \gls{las} de $50\times\SI{50}{\centi\meter\squared}$,  espacés de \SI{0.5}{\milli\meter}, et d'une grille d'extraction constituée d'un maillage carré de fils d'inox tendus à \SI{3}{\newton\per\meter}. Ces fils sont espacés de \SI{3.125}{\milli\meter} ce qui est égal à la taille des canaux de lecture des anodes. Chaque anode est munie de $160\times160$ canaux de lecture horizontaux, avec une impédance de \SI{160}{\pico\farad\per\meter}. Les anodes sont reliées entre elles par des nappes et des connecteurs KEL permettant de former des canaux de lecture continus de \SI{1}{\meter} et \SI{3}{\meter}. Le bruit de fond correspondant aux \SI{160}{\pico\farad\per\meter} est inférieur à \numprint{2000} électrons dans les canaux de \SI{3}{\meter}\cite{Aimard2018}. Chaque \gls{lem} est fixé à \SI{2}{\milli\meter} sous son anode par 29 vis en \gls{peek} munies d'entretoises en MACOR. Les zones des \glspl{lem} autour de ces vis et des connecteurs haute tension sont dépourvues de cuivre et de trous d'amplification, de même que le bord du \gls{lem}. Ceci réduit la surface active du \gls{lem} à 96\,\%. L'impact de ces zones mortes sur la collection de charge est étudiée en \autoref{sec::dead_zones}. Les différents éléments du \gls{crp} sont fixés sur un cadre en G10, dont le coefficient de dilatation thermique est proche de celui des \glspl{las} le tout monté sur un cadre en inox muni de détecteurs de niveau d'argon, permettant de mesurer en direct la position du \gls{crp} par rapport à l'interface liquide-gaz. Le cadre en inox est suspendu au top-cap par trois câbles permettant d'ajuster la position verticale du \gls{crp}. La \autoref{fig::dlartpc} présente une vue en coupe du champ électrique à travers le \gls{crp} pour les tensions nominales d'opération.
 
-      L'emplacement de l'électronique de lecture est un des avantages de la \gls{dlartpc} sur la \gls{lartpc} simple phase : les cartes front-end sont situées en bas des cheminées, et profitent ainsi de la basse température du cryostats qui réduit le bruit électronique tout en pouvant être retirées pour maintenance durant les opérations sans avoir à ouvrir le top-cap. La numérisation des signaux quant à elle est faite à l'extérieur du cryostat. Les 320 canaux longs de \SI{3}{\meter} constituent la \textit{vue 0} du détecteur, tandis que les 960 canaux de \SI{1}{\meter} constituent la \textit{vue 1}. Chaque canal est découpé en \numprint{1667} bins de temps de \SI{0.4}{\micro\second} chacun, couvrant ainsi une fenêtre de \SI{667}{\micro\second}. La vitesse de dérive d'un électron dans l'argon liquide et un champ de \driftfield{} étant de \SI{1.63}{\milli\meter\per\micro\second} (vir \autoref{sec::vitesse_derive}) ce temps correspond à une distance de \SI{1.09}{\meter}. Chaque canal est numérisé avec une résolution de 12 bits, couvrant \SI{1200}{\femto\coulomb}.
+      L'emplacement de l'électronique de lecture est un des avantages de la \gls{dlartpc} sur la \gls{lartpc} simple phase : les cartes front-end sont situées en bas des cheminées, et profitent ainsi de la basse température du cryostats qui réduit le bruit électronique tout en pouvant être retirées pour maintenance durant les opérations sans avoir à ouvrir le top-cap. La numérisation des signaux quant à elle est faite à l'extérieur du cryostat. Les 320 canaux longs de \SI{3}{\meter} constituent la \textit{vue 0} du détecteur, tandis que les 960 canaux de \SI{1}{\meter} constituent la \textit{vue 1}. Chaque canal est découpé en \numprint{1667} bins de temps de \SI{0.4}{\micro\second} chacun, couvrant ainsi une fenêtre de \SI{667}{\micro\second}. La vitesse de dérive d'un électron dans l'argon liquide et un champ de \driftfield{} étant de \SI{1.63}{\milli\meter\per\micro\second} (voir \autoref{sec::vitesse_derive}) ce temps correspond à une distance de \SI{1.09}{\meter}. Chaque canal est numérisé avec une résolution de 12 bits, couvrant \SI{1200}{\femto\coulomb}.
 
     \subsection{Le démonstrateur de \SSS{} de proto\texorpdfstring{DU$\nu$E}{DUNE}-DP}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{666.png}        
         \caption[Schéma du démonstrateur de \SSS{}]{\label{fig::666}Schéma du démonstrateur de \SSS{}.}
@@ -105,13 +105,13 @@
       \end{itemize}
       Les performances du \SSS{}, qui commencera à prendre des données en cosmiques en août 2019, seront directement extrapolables aux dimensions de \gls{dune}.
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{crp_666_complete.png}
         \caption[Schéma des CRPs du \SSS{}]{\label{fig::crp_666}Schéma des quatre \glspl{crp} du démonstrateur de \SSS{}.}
       \end{figure}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \begin{subfigure}{0.48\textwidth}
           \centering
           \includegraphics[width=\textwidth,keepaspectratio]{drift_cage_666.pdf}
@@ -131,16 +131,17 @@
 
       La \autoref{fig::pic_crp} est une photographie de l'intérieur du cryostat montrant les quatre \glspl{crp} vus de dessous, et une photographie du bas du volume durant l'installation des \glspl{pmt}. La \autoref{fig::cryogenie_666} montre les câblages sur le toit du cryostat et les installations cryogéniques.
 
-      \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=\textwidth,keepaspectratio]{cryogenie_666.pdf}
-        \caption[Câble et système cryogénique du \SSS{}]{\label{fig::cryogenie_666}Câble et système cryogénique du \SSS{}.}
-      \end{figure}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{fisheye.png}        
         \caption[Photographie de l'intétrieur du démonstrateur de \SSS{}]{\label{fig::pic_crp}Photographies de l'intérieur du démonstrateur de \SSS{} (mars 2019). On y voit, en haut, les quatre \glspl{crp} dont deux sont instrumentés avec des \glspl{lem} et d'anodes, un non instrumenté et un muni de quatre anodes sans \glspl{lem}. Ce dernier pourra étudier la collection de charge sans amplification et ainsi avoir une mesure direct de l'efficacité d'extraction sur la charge lue. En bas sont visibles les cathodes et les \glspl{pmt}, alors en cours d'installation.}
+      \end{figure}
+      
+      \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{cryogenie_666.pdf}
+        \caption[Câble et système cryogénique du \SSS{}]{\label{fig::cryogenie_666}Câble et système cryogénique du \SSS{}.}
       \end{figure}
 
   \section{Fonctionnement d'une DLArTPC utilisant des LEMs}\label{sec::dlartpc}
@@ -172,13 +173,13 @@
 
     \subsection{Extraction des électrons du liquide vers le gaz}\label{sec::extraction}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{eff_vs_E.pdf}
         \caption[Efficacité d'extraction en fonction du champ électrique]{\label{fig::guschin}Efficacité d'extraction des électrons depuis le liquide vers le gaz en fonction du champ électrique dans le liquide issu d'un ajustement aux données de \cite{guschin}. La ligne pointillée rouge montre la fraction d'électrons extrait en moins de \SI{0.1}{\micro\second}, la ligne en tiraits bleus montre la fraction d'électrons extrait en plus de \SI{0.1}{\micro\second}.}
       \end{figure}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \begin{subfigure}[t]{0.5\textwidth}
           \flushleft
           \captionsetup{width=.95\linewidth}
@@ -204,7 +205,7 @@
         \end{eqnarray}
       où $\epsilon_l$ et $\epsilon_g$ sont les constantes diélectriques de l'argon liquide et gazeux respectivement. Dans le design des \glspl{dlartpc} de \gls{wa105} et du prototype de \threeL{}, la grille est située \SI{1}{\centi\meter} sous le \gls{lem} et l'interface au milieu entra la grille et le \gls{lem}. Pour atteindre un champ de \SI{2}{\kilo\volt\per\centi\meter}, il est alors nécessaire d'appliquer une différence de potentiel de \SI{2.5}{\kilo\volt}.
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=0.6\textwidth,keepaspectratio]{wu_extr.png}
         \caption[Effet du champ d'extraction sur le gain mesuré dans le prototype de \threeL{}]{\label{fig::wu_extr}Effet du champ d'extraction sur le gain mesuré dans le prototype de \threeL{}\cite{Wu2017}.}
@@ -229,21 +230,21 @@
         \caption[Caractéristiques des LEMs et anodes utilisé dans le \threeL{}]{\label{tab::lem_anode}Caractéristiques des LEMs et anodes préconisées par les résultats du prototype de \threeL{}}
       \end{table}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=\textwidth,keepaspectratio]{LEM_zoom.png} 
         \caption[Photo d'un amplificateur d'électron]{Photo d'un \gls{lem} avec agrandissement de la disposition en nid d'abeille des trous d'amplification. Le modèle présenté est celui utilisé dans le prototype de \TOO{}, ceux utilisés dans le prototype de \threeL{} mesuraient $10\times\SI{10}{\centi\meter\squared}$.}
         \label{fig::lem}
       \end{figure}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=0.8\textwidth,keepaspectratio]{anode.png}
         \caption[Photo et schéma d'une anode]{Photo et schéma d'une anode de $50\times\SI{50}{\centi\meter\squared}$. Le design vient des études du prototype de \threeL{}\cite{Wu2017,Cantini2013} et permet un partage égal de la charge entre les deux vues tout en minimisant la capacitance.}
         \label{fig::anode}
       \end{figure}
 
-      \begin{figure}[htbp]
+      \begin{figure}[!htb]
         \begin{subfigure}[t]{0.48\textwidth}
           \flushleft
           \centering
@@ -258,7 +259,7 @@
         \label{fig::3L_gain}Gauche : gain en fonction de la tension d'amplification, mesuré par le prototype de \threeL{} avant et après charging up, ajusté par l'équation \eqref{eq::gain_eff}. Droite : Ratio calculé entre le gain avant et après charging up avec les résultats de cet ajustement.}
       \end{figure}
 
-      Une étude de 2008 sur les \glspl{lem}\cite{Breskin2008} a montré qu'il est nécessaire de munir ces derniers de RIMs protecteurs : autour des trous d'amplifications, un anneau sans cuivre doit être présent afin d'assurer la stabilité en tension (voir \autoref{fig::lem}). Sans ça, des effets de pointes provoquent des décharges fréquentes et empêchent d'atteindre les tensions requises pour avoir des gain conséquents. Par la suite, le prototype de \threeL{}\cite{Cantini2013,Cantini2014} a permis d'étudier de nombreux aspects de la technologie \gls{dlartpc}. Il a mesuré le gain effectif en fonction du champ d'amplification, montrant qu'un gain de 20 est atteignable pour un champ d'amplification de \SI{31}{\kilo\volt\centi\meter} (voir \autoref{fig::3L_gain}). Il a également étudié le comportement du gain en fonction du temps. Ce dernier décroît jusqu'à atteindre une valeur plateau $G_{\infty}$ suivant la loi
+      Une étude de 2008 sur les \glspl{lem}\cite{Breskin2008} a montré qu'il est nécessaire de munir ces derniers de RIMs protecteurs : autour des trous d'amplifications, un anneau sans cuivre doit être présent afin d'assurer la stabilité en tension (voir \autoref{fig::lem}). Sans ça, des effets de pointes provoquent des décharges fréquentes et empêchent d'atteindre les tensions requises pour avoir des gain conséquents. Par la suite, le prototype de \threeL{}\cite{Cantini2013,Cantini2014} a permis d'étudier de nombreux aspects de la technologie \gls{dlartpc}. Il a mesuré le gain effectif en fonction du champ d'amplification, montrant qu'un gain de 20 est atteignable pour un champ d'amplification de \SI{31}{\kilo\volt\per\centi\meter}, soit une différence de potentiel entre le haut et le bas du \gls{lem} de \SI{3.1}{\kilo\volt} (voir \autoref{fig::3L_gain}). Il a également étudié le comportement du gain en fonction du temps. Ce dernier décroît jusqu'à atteindre une valeur plateau $G_{\infty}$ suivant la loi
       \begin{equation}
         G_{eff}(t) = \frac{G_{eff}^{\infty}}{1-\left(1-\frac{G_{eff}^{\infty}}{G_{eff}^0}\right)\times e^{-t/\tau_{cu}}}.
       \end{equation}
@@ -272,7 +273,7 @@
     
   \section{Les processus physiques dans l'argon liquide}\label{sec::lar}
 
-%    \begin{figure}[htbp]
+%    \begin{figure}[!htb]
 %      \begin{subfigure}[t]{0.57\textwidth}
 %        \flushleft
 %        \centering
@@ -315,8 +316,8 @@
         \item[$\bullet$] Il scintille lors de l'ionisation, et est transparent à sa propre scintillation, ce qui permet à cette scintillation d'être utilisée temps initiale pour les événements, voir comme déclencheur.
         \item[$\bullet$] Il est peu cher et abondant.
       \end{itemize}
-      Les propriétés physico-chimique de l'argon sont résumées dans le \autoref{tab::Ar}.
-      \begin{table}[htpb]
+      Les propriétés physiques et chimiques de l'argon sont résumées dans le \autoref{tab::Ar}.
+      \begin{table}[!htb]
         \centering
         \begin{tabular}{|l|c|}
           \hline
@@ -354,7 +355,7 @@
 
       \subsubsection{Énergie déposée dans l'argon liquide}
 
-        \begin{table}[htpb]
+        \begin{table}[!htb]
           \centering
           \begin{tabular}{|cl|l|cl|}
             \cline{1-2} \cline{4-5}
@@ -371,7 +372,7 @@
           \caption[Paramètres utilisés dans les équations \eqref{eq::bethe_bloch}, \eqref{eq::bethe_tcut} et \eqref{eq::mpv}]{\label{tab::bethe_params}Paramètres utilisés dans les équations \eqref{eq::bethe_bloch}, \eqref{eq::bethe_tcut} et \eqref{eq::mpv}. Tableau tiré de \cite{pdg2018}.}
         \end{table}
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{langau.pdf}
           \caption[Distribution de Landau-Vavilov convoluée à une gaussienne]{\label{fig::langau}Distribution de Landau-Vavilov (pointillés noirs) convoluée à une gaussienne (trait plein bleu). Les traits verticaux indiquent les valeurs les plus probables des deux distributions.}
@@ -385,13 +386,13 @@
         \end{equation}
         Les définitions des différents paramètres de cette équation sont donnés dans le \autoref{tab::bethe_params}, les valeurs pour l'argon sont données dans le \autoref{tab::Ar}. Ce pouvoir d'arrêt dépend de l'impulsion de la particule incidente, de sa charge électrique, ainsi que du milieu traversé. Il dépend également de la masse de la particule à travers $T_{max}$, mais cette dépendance n'est visible qu'à très haute énergie\cite{pdg2018}. En pratique, à charge fixée, cette moyenne dans un milieu donné ne dépend que de l'impulsion de la particule incidente. L'allure de cette moyenne en fonction de l'impulsion pour un muon est représentée en trait pleins bleu sur la \autoref{fig::bethe_landau}. On y voit une valeur minimum à \SI{2.12}{\mega\electronvolt\per\centi\meter}, ce qui correspond à une \gls{mip}. Les autres courbes sont expliquées plus loin.
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{dE_dx.pdf}
           \caption[Énergie perdue par unité de longueur d'une MIP en fonction de l'impulsion]{\label{fig::bethe_landau}Énergie perdue par unité de longueur par un muon dans de l'argon liquide en fonction de l'impulsion. En trait plein bleu est représentée la formule de Bethe et Bloch, résultat de l'équation \eqref{eq::bethe_bloch}, représentant l'énergie moyenne perdue par unité de longueur. Le minimum est désigné par $\frac{dE}{dx}\rvert_{MIP,\,mean}$. Les deux traits pointillés bleus représentent la formule de Bethe et Bloch avec une coupure sur l'énergie maximum transférée, résultat de l'équation \eqref{eq::bethe_tcut}. En points-tiraits de couleur sont représentés des \glspl{mpv} de la Landau-Vavilov pour plusieurs distances de dépôt d'énergie.}
         \end{figure}
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.7\textwidth,keepaspectratio]{muon_600m_0deg.png}
           \caption[Flux de muons cosmique sur terre]{\label{fig::muon_flux}Flux de muons cosmique sur terre, à une altitude de \SI{600}{\meter} et un angle zénithal de 0\cite{Shukla2016}. Pour comparaison, le \gls{cern} se situe entre \SI{400}{\meter} et \SI{500}{\meter}.}
@@ -411,7 +412,7 @@
         \end{eqnarray}
         Où $z$ est la charge électrique de la particule incidente. Cette \gls{mpv} ne dépend pas de la coupure $T_{cut}$, a un minimum $\frac{dE}{dx}\biggr\rvert_{MIP,MPV}$ pour une certaine impulsion et présente un plateau à haute énergie. De plus, elle varie en $a\ln(ds)+b$. Elle est présentée en fonction de l'impulsion en \autoref{fig::bethe_landau} en points-tiraits pour plusieurs valeurs de $ds$. En vert pour $ds=\SI{0.3125}{\centi\meter}$, qui est la plus petite valeur possible dans \protodp{} et qui correspond à la taille d'une piste de lecture. En rouge pour $ds=\SI{1}{\centi\meter}$, qui est la valeur la plus souvent mesurée dans le prototype de \TOO{}, et en brun pour $ds=\SI{3}{\centi\meter}$, valeur au delà de laquelle très peu de traces sont observées dans le prototype de \TOO{}. Plus de détails sur les $ds$ mesurés dans le \TOO{} sont apportés en \autoref{sec::results-311}. On constate que l'impulsion correspondant au minimum ne dépend pas de $ds$ et vaut \SI{0.56}{\giga\eV\per c}. De plus, la variation de l'énergie déposée autour de ce minimum est faible. La majorité des muons cosmiques arrivant sur terre étant entre \SI{0.3}{\giga\eV\per c} et \SI{3}{\giga\eV\per c} (voir \autoref{fig::muon_flux}), considérer ces derniers comme étant au minimum d'ionisation est une bonne approximation et permet ainsi d'estimer le gain d'une \gls{dlartpc}. $\frac{dE}{dx}\rvert_{MPV}$ est également montrée en fonction de $ds$ en \autoref{fig::mpv_ds}. On voit qu'elle augmente d'environ 10\;\% entre \SI{0.3125}{\centi\meter} et \SI{3}{\centi\meter}.
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{MPV_vs_ds.pdf}
           \caption[Valeur la plus probable de la distribution de Landau-Vavilov en fonction de la distance de dépôt d'énergie]{\label{fig::mpv_ds}Valeur la plus probable de la distribution de Landau-Vaviloc en fonction de la distance de dépôt d'énergie, pour des muons au minimum d'ionisation et pour des muons de \SI{4}{\giga\electronvolt}.}
@@ -423,7 +424,7 @@
 
         Lors du passage d'une particule ionisante dans la matière, cette dernière va exciter et/ou ioniser les atomes du milieu en leur transférant une partie de son énergie, principalement par collision. Si l'énergie ainsi transférée lors d'une collision est supérieure à l'énergie nécessaire pour arracher un électron à l'atome, appelée énergie d'ionisation et notée $W$, un ou plusieurs électrons vont être arrachés et libérés dans le milieu. Autrement, l'atome peut se retrouver dans un état excité et devra se désexciter par rayonnement de photons.
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{R_vs_MPV.pdf}
           \caption[Facteur de recombinaison de la loi de Birk en fonction du dépôt d'énergie par unité de longueur]{\label{fig::birk}Facteur de recombinaison de la loi de Birk (équation \eqref{eq::birk}) en fonction du dépôt d'énergie par unité de longueur. La valeur indiquée par les pointillés correspond au minimum de la \gls{mpv} de la Landau-Vavilov en fonction de l'impulsion  pour un distance de dépôt d'énergie de \SI{1}{\centi\meter} (\autoref{fig::bethe_landau}).}
@@ -443,7 +444,7 @@
 
       \subsubsection{Photons de scintillation}
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{scintillation.pdf}
           \caption[Scintillation dans une chambre à projection temporelle à argon liquide double phase]{\label{fig::scintillation}Scintillation vue dans le prototype de \TOO{}\cite{Aimard2018}. En noir est tracée la moyenne des mesures de 3 \glspl{pmt} en l'absence de champ d'amplification. En rouge est tracée la même mesure en présence d'un champ d'amplification. Le pic à \SI{200}{\micro\second} correspond à l'ionisation initiale, dans le liquide. Le continuum correspond à la traversée progressive des électrons dans le gaz, où une scintillation sera présente pour des champs électrique de l'ordre de \SI{2}{\kilo\volt\per\centi\meter} ou plus. La durée d'émission d'environ \SI{600}{\micro\second} correspond à la durée de dérive attendue pour des électrons parcourant \SI{1}{\meter} dans un champ de \driftfield{}.}
@@ -477,7 +478,7 @@
 
       \subsubsection{Vitesse de dérive des électrons}\label{sec::vitesse_derive}
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{vd.pdf}
           \caption[Vitesse de dérive des électrons dans de l'argon liquide en fonction du champ électrique]{\label{fig::velocity}Vitesse de dérive des électrons dans de l'argon liquide en fonction du champ électrique. La courbe est obtenue à partir de l'équation \eqref{eq::velocity} et des ajustements fait par Walkowiak et al.\cite{Walkowiak2000}.}
@@ -489,7 +490,7 @@
         \end{equation}
         Walkowiak et al.\cite{Walkowiak2000} ont mesuré cette vitesse et y ont ajusté avec la formule précédente en choisissant comme température de référence $T_0=\SI{90.371}{\kelvin}$.%, obtenant les coefficients présentés en \autoref{tab::fit_par}. 
         La \autoref{fig::velocity} montre la vitesse en fonction du champ électrique à \SI{87.3}{\kelvin}. A \driftfield{}, elle vaut $\SI{1.63\pm0.081}{\milli\meter\per\micro\second}$.
-%        \begin{table}[htpb]
+%        \begin{table}[!htb]
 %          \centering
 %          \begin{tabular}{ccc}
 %          $P_1$ & = & $\SI{-0.01481\pm0.00095}{\per\kelvin}$ \\
@@ -518,7 +519,7 @@
         \end{equation}
         \gls{icarus} a mesuré un temps de vie de \SI{15}{\milli\second}\cite{Antonello2014}, correspondant à \SI{0.0257}{ppb}. Le prototype simple phase de \protosp{}, muni d'instruments permettant de mesurer la pureté de l'argon, a mesuré une concentration d'impuretés de \SI{0.055}{ppb}, correspondant à un temps de vie de \SI{7}{\milli\second}. Le \autoref{tab::lifetime} présente les fractions d'électrons restants pour ces différents temps de vie pour plusieurs longueurs de dérive, en supposant un champ de dérive de \driftfield{}.
 
-        A partir d'ici, il est possible d'estimer la charge attendue au \gls{crp} par unité de longueur. Le tableau \autoref{tab::muon} montre que, en supposant que les muons sont au minimum d'ionisation et en utilisant la \gls{mpv} de la distribution de Landau-Vavilov, la charge attendue est de \SI{7.63}{\femto\coulomb\per\centi\meter}.
+        A partir d'ici, il est possible d'estimer la charge attendue au \gls{crp} par unité de longueur. Le \autoref{tab::muon} montre que, en supposant que les muons sont au minimum d'ionisation et en utilisant la \gls{mpv} de la distribution de Landau-Vavilov, la charge attendue est de \SI{7.63}{\femto\coulomb\per\centi\meter}.
 
         \begin{table}[]
           \centering
@@ -547,7 +548,7 @@
             Signal/Bruit (sans gain) & $>13(16)$  \\
             \hline
           \end{tabular}
-          \caption[Charge par unité de longueur attendue au \gls{crp} pour un muon au minimum d'ionisation dans l'argon liquide]{\label{tab::muon} Calcul de la charge par unité de longueur attendue, avant dérive (i.e avant absorption par d'éventuelles impuretés), pour un muon au minimum d'ionisation dans l'argon liquide, avec un champ de dérive de \driftfield{}. Une distance de dépôt d'énergie de \SI{1}{\centi\meter} est utilisée pour calculer la \gls{mpv}. Aucune coupure sur l'énergie maximum transférée n'est appliquée pour le calcul de l'énergie moyenne. La valeur de \SI{23.6}{\eV} de l'énergie d'ionisation dans l'argon liquide est utilisée pour calculer le nombre d'électrons. Le rapport signal sur bruit est calculé en supposant une répartition égale des charges entre les vues des anodes et un bruit électronique inférieur à \numprint{2000} électrons, correspondant à la capacitance des anodes du prototype de \TOO{}.}
+          \caption[Charge par unité de longueur attendue au CRP pour un muon au minimum d'ionisation dans l'argon liquide]{\label{tab::muon} Calcul de la charge par unité de longueur attendue, avant dérive (i.e avant absorption par d'éventuelles impuretés), pour un muon au minimum d'ionisation dans l'argon liquide, avec un champ de dérive de \driftfield{}. Une distance de dépôt d'énergie de \SI{1}{\centi\meter} est utilisée pour calculer la \gls{mpv}. Aucune coupure sur l'énergie maximum transférée n'est appliquée pour le calcul de l'énergie moyenne. La valeur de \SI{23.6}{\eV} de l'énergie d'ionisation dans l'argon liquide est utilisée pour calculer le nombre d'électrons. Le rapport signal sur bruit est calculé en supposant une répartition égale des charges entre les vues des anodes et un bruit électronique inférieur à \numprint{2000} électrons, correspondant à la capacitance des anodes du prototype de \TOO{}.}
         \end{table}
         
 %        \cite{Buckley1989} : $\tau = \frac{1}{k_s N_s}$ avec $k_s\sim \SI{e11}{\liter\per\mole\per\second}$ et $N_s=$ concentration $O_2$ équivalente $=\rho_{O_2}\times N_{Ar}$, avec $\rho_{O_2}=[O_2]$ en particule d'$O_2$ par particule d'argon et $N_{Ar}$ le nombre de mole d'argon liquide par litre.\\

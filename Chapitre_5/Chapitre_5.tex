@@ -14,7 +14,7 @@
     \begin{figure}[htpb]
       \centering
       \includegraphics[width=\textwidth]{events.pdf}
-      \caption[Quelques événements vus dans le \TOO{}]{\label{fig::data-sample}Quelques événements vus dans le \TOO{} à un champ d'extraction de \SI{1.7}{\kilo\volt\per\centi\meter} dans le liquide, un champ d'amplification de \SI{28}{\kilo\volt\per\centi\meter} et un champ d'induction de \SI{1}{\kilo\volt\per\centi\meter}. La colonne de gauche est la vue 0, la colonne de droite est la vue 1. De bas en haut : deux gerbes hadroniques et une gerbe électromagnétique.}
+      \caption[Quelques événements vus dans le \TOO{}]{\label{fig::data-sample}Quelques événements vus dans le \TOO{} à un champ d'extraction de \SI{1.7}{\kilo\volt\per\centi\meter} dans le liquide, un champ d'amplification de \SI{28}{\kilo\volt\per\centi\meter} et un champ d'induction de \SI{1}{\kilo\volt\per\centi\meter}. La colonne de gauche est la vue 0, la colonne de droite est la vue 1. De haut en bas : deux gerbes hadroniques et une gerbe électromagnétique.}
     \end{figure}
   
   \section{Méthode d'analyse}\label{sec::methode-analyse}
@@ -113,12 +113,6 @@
         \paragraph{Normalisation : densité} Les mesures du \threeL{} ont été faites à une pression de \SI{980}{\milli\bar} et à une température au niveau des \glspl{lem} de \SI{87}{\kelvin}. Dans le \TOO{}, la pression moyenne était de \SI{999}{\milli\bar} et la température au niveau des \glspl{lem} de \SI{89}{\kelvin} (voir \autoref{sec::slow_control}). En ajustant l'équation du gain effectif \eqref{eq::gain_eff} aux données du \threeL{}, il est possible de calculer le gain attendu à la densité dans le \TOO{} et d'appliquer un facteur correctif aux $dQ$ mesurés.
 
     \subsection{Principales incertitudes}\label{sec::uncertainties}
-        
-      \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=\textwidth,keepaspectratio]{CRP-metrologie.png}
-        \caption[Mesure de la planéité du CRP]{\label{fig::crp_var}Mesure de la planéité du \gls{crp} par photogrammétrie. Le zéro correspond à une distance entre la grille est le \gls{lem} de \SI{10}{\milli\meter}.}
-      \end{figure}
 
       \begin{figure}[htbp]
         \centering
@@ -136,6 +130,12 @@
 %            \caption[Variation du gain en fonction de la variation de la distance interface-\gls{lem}]{\label{fig::systematiques_dg}Variation du gain en fonction de la variation de la distance interface-\gls{lem}, prenant en compte le gradient de température dans le gaz et les efficacités d'extraction et de collection, qui dépendent des champs électriques dans le liquide et le gaz.}
         \end{subfigure}
         \caption[Épaisseur des \glspl{lem} du \TOO{} et mesure de la capacitance en fonction du niveau de l'interface liquide-gaz]{Épaisseur des \glspl{lem} du \TOO{} et mesure de la capacitance en fonction du niveau de l'interface liquide-gaz.}
+      \end{figure}
+
+      \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{CRP-metrologie.png}
+        \caption[Mesure de la planéité du CRP]{\label{fig::crp_var}Mesure de la planéité du \gls{crp} par photogrammétrie. Le zéro correspond à une distance entre la grille est le \gls{lem} de \SI{10}{\milli\meter}.}
       \end{figure}
 
 
@@ -250,31 +250,6 @@
         \centering
         \begin{subfigure}[t]{0.48\textwidth}
           \centering
-          \includegraphics[width=\textwidth,keepaspectratio]{ds_840_0.pdf}
-          \caption{Vue 0, run 840.}
-        \end{subfigure}\hfill
-        \begin{subfigure}[t]{0.48\textwidth}
-          \centering
-          \includegraphics[width=\textwidth,keepaspectratio]{ds_840_1.pdf}
-          \caption{Vue 1, run 840.}
-        \end{subfigure}\\
-        \begin{subfigure}[t]{0.48\textwidth}
-          \centering
-          \includegraphics[width=\textwidth,keepaspectratio]{ds_842_0.pdf}
-          \caption{Vue 0, run 842.}
-        \end{subfigure}\hfill
-        \begin{subfigure}[t]{0.48\textwidth}
-          \centering
-          \includegraphics[width=\textwidth,keepaspectratio]{ds_842_1.pdf}
-          \caption{Vue 1, run 842.}
-        \end{subfigure}
-        \caption[Distribution de la longueur de dépôt de charge dans le \TOO{}]{\label{fig::ds_840_842}Distribution de la longueur de dépôt de charge dans le \TOO{}.}
-      \end{figure}
-
-      \begin{figure}[htbp]
-        \centering
-        \begin{subfigure}[t]{0.48\textwidth}
-          \centering
           \includegraphics[width=\textwidth,keepaspectratio]{dQds_840_0_border.pdf}
           \caption{Vue 0, run 840.}
         \end{subfigure}\hfill
@@ -285,6 +260,31 @@
         \end{subfigure}
         \caption[Effet des zones mortes des LEMs dans le \TOO{}]{\label{fig::dqds_840_borders}Distribution de la charge déposée par unité de longueur sur les seconds canaux les plus au bord des anodes dans le \TOO{}.}
       \end{figure}
+      
+    \begin{figure}[htbp]
+      \centering
+      \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{ds_840_0.pdf}
+        \caption{Vue 0, run 840.}
+      \end{subfigure}\hfill
+      \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{ds_840_1.pdf}
+        \caption{Vue 1, run 840.}
+      \end{subfigure}\\
+      \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{ds_842_0.pdf}
+        \caption{Vue 0, run 842.}
+      \end{subfigure}\hfill
+      \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{ds_842_1.pdf}
+        \caption{Vue 1, run 842.}
+      \end{subfigure}
+      \caption[Distribution de la longueur de dépôt de charge dans le \TOO{}]{\label{fig::ds_840_842}Distribution de la longueur de dépôt de charge dans le \TOO{}.}
+    \end{figure}
 
       La \autoref{fig::dqds_840_842} montre les distributions des $dQ/ds$ pour les deux vues des runs 840 et 842, chacune corrigée pour la distance de dépôt de charge $ds$ et pour la pureté, ajustée avec une distribution de Landau-Vavilov convoluée à une gaussienne. Une différence de 5\,\% et 4\,\% est observée entre la vue 0 et la vue 1 pour le run 840 et le run 842 respectivement. La \autoref{fig::dqds_840_borders} montre ces mêmes distributions pour tous les coups arrivant sur les  canaux des bords des anodes, afin de vérifier les simulations des effets de bords des \glspl{lem} présentés en \autoref{sec::dead_zones}. Les canaux directement sur les bords n'ayant enregistré aucun coup, comme le prédit la simulation, seuls les seconds canaux les plus au bord ont été utilisés pour produire les distributions. La \gls{mpv} mesurée est 35\,\% inférieure à celle mesurée sur les autres canaux. Cette valeur est inférieure à celle prédite par la simulations, à savoir autour de 60\,\%. Ce point pourra être vérifié avec plus de statistique dans le \SSS{}, une explication est que la simulation a été faites à des tensions d'extraction de d'amplification plus grande que celles utilisées dans les runs 840 et 842 ce qui impact des lignes de champs.
 
@@ -480,7 +480,7 @@
 
     \subsection{Identification et soustraction du bruit cohérent}
 
-      Afin de palier le problème de soustraction du bruit cohérent, une étape supplémentaire a été ajoutée, après reconstruction des traces (dont la méthode est expliquée dans la prochaine section). Si l'on sait où se trouve la trace, il est alors possible de forcer l'identification des \gls{roi} sur le signal avant suppression du bruit cohérent autour de cette trace. Ceci ne permet pas de mieux reconstruire les traces mais permet, d'une part, de bien mieux mesurer le $dQ$, et d'autre part de trouver les coups auparavant ratés. La \autoref{fig::strip_before_after_cnsub} montre l'effet de cet étape sur un canal où aucun coup n'avait initialement été vu. La \autoref{fig::dqds_1197_Rawdatasoft} montre la distribution de $dQ/ds$ avec et sans cette seconde étape de soustraction du bruit cohérent pour la vue 0 du run 1197 : la seconde étape est nécessaire pour avoir une distribution qui ait du sens. La reconstruction et la sélection des traces utilisées pour produire ces histogrammes sont détaillées ci-dessous.
+      Afin de palier le problème de soustraction du bruit cohérent, une étape supplémentaire a été ajoutée, après reconstruction des traces (dont la méthode est expliquée dans la prochaine section). Si l'on sait où se trouve la trace, il est alors possible de forcer l'identification des \gls{roi} sur le signal avant suppression du bruit cohérent autour de cette trace. Ceci ne permet pas de mieux reconstruire les traces mais permet, d'une part, de bien mieux mesurer le $dQ$, et d'autre part de trouver les coups auparavant ratés. La \autoref{fig::strip_before_after_cnsub} montre l'effet de cet étape sur un canal où aucun coup n'avait initialement été vu. %La \autoref{fig::dqds_1197_Rawdatasoft} montre la distribution de $dQ/ds$ avec et sans cette seconde étape de soustraction du bruit cohérent pour la vue 0 du run 1197 : la seconde étape est nécessaire pour avoir une distribution qui ait du sens. La reconstruction et la sélection des traces utilisées pour produire ces histogrammes sont détaillées ci-dessous.
 
     \subsection{Reconstruction des traces et transformation de Hough}
 
@@ -541,7 +541,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{1197_dQds_fromtrack_1.pdf}
           \caption{Vue 1, run 1197, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}
-        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197]{\label{fig::dqds_1197_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197. Les deux figures du haut sont faites sans la seconde étape de bruit cohérent, une différence qui n'a aucun sens physique est observable entre les 2 vues. La figure du bas est la même distribution avec la seconde étape de suppression de bruit cohérent.}
+        \caption[Reconstruction de la charge déposée par unité de longueur dans le run 1197]{\label{fig::dqds_1197_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1197. Les deux figures du haut sont faites sans la seconde étape de bruit cohérent, une différence qui n'a aucun sens physique est observable entre les 2 vues. La figure du bas est la même distribution avec la seconde étape de suppression de bruit cohérent.}
       \end{figure}
 
 
@@ -557,7 +557,7 @@
           \includegraphics[width=\textwidth,keepaspectratio]{1199_dQds_fromtrack_1.pdf}
           \caption{Vue 1, run 1199, avec la seconde étape de suppression de bruit cohérent.}
         \end{subfigure}
-        \caption[Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199]{\label{fig::dqds_1199_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199 avec la seconde étape de suppression de bruit cohérent.}
+        \caption[Reconstruction de la charge déposée par unité de longueur dans le run 1199]{\label{fig::dqds_1199_Rawdatasoft}Reconstruction de la distribution de la charge déposée par unité de longueur dans le run 1199 avec la seconde étape de suppression de bruit cohérent.}
       \end{figure}
 
       \begin{figure}[htbp]      

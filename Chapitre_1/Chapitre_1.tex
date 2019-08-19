@@ -16,13 +16,13 @@
     
   \section{Brève histoire de la physique des particules}
     	    
-      \begin{figure}[htpb!]
+      \begin{figure}[!htb!]
         \centering
         \includegraphics[width=0.8\textwidth]{SM.png}\\
         \tiny{By L. Boyle, modified by P. Cotte. Creative Commons SA}
         \caption[Le modèle standard de la physique des particules]{\label{fig::SM}Le modèle standard de la physique des particules. Voir encadré \ref{box::SM}.}
       \end{figure}
-      \begin{figure*}[htpb!]
+      \begin{figure*}[!htb!]
         \begin{activitybox}[label=box::SM]{Le modèle standard de la physique des particules}
           La \autoref{fig::SM} schématise le modèle standard de la physique des particules tel que nous le comprenons aujourd’hui. Il repose sur un concept de symétrie et de brisure de symétrie. La ligne du haut représente l'univers dans ses premiers instants ($\sim\SI{e-11}{\second}$), avant que la température moyenne ne descende en dessous du seuil de \SI{160}{\giga\electronvolt}. Le potentiel de Higgs $V(H)$ (colonne de droite) était alors symétrique, et son minimum correspondait à un champ de Higgs $H$ nul. Toutes les particules étaient alors de masse nulle. La seconde ligne décrit l'univers tel qu'il est aujourd'hui. Quand la température de l'univers est passé en dessous de \SI{160}{\giga\electronvolt}, le minimum du potentiel de Higgs correspondait à un champ non nul, baignant tout l'espace et avec lequel les particules interagissent pour acquérir leur masse.
         
@@ -73,7 +73,7 @@
       Dans les deux cas, le neutrino interagira avec le noyau de l'atome du milieu de détection et produira dans l'état final un ou plusieurs hadrons, chargés ou neutre. Pour étudier une probabilité de changement de saveur, il faut donc reconstruire la saveur et l'énergie des neutrinos incidents, et donc mesurer l'énergie et la saveur des leptons produits dans l'état final (électrons et muons pour \gls{dune}), ainsi que l'énergie des gerbes hadroniques du même état final.
     \end{activitybox}
 
-      \gls{sno} détectait les neutrinos solaires, par interaction par courant chargé (CC) et par courant neutre (NC), permettant d'avoir accès à la fois au flux de neutrinos électroniques (NC et CC) et au flux de neutrinos muoniques et tauiques (NC). Comme le montre la \autoref{fig::SNO_plot}, la somme des trois flux correspond bien au flux total prédit par le modèle solaire standard alors que le flux de neutrinos électroniques est inférieur aux prédictions, montrant qu'une partie du flux change de saveur mais que le flux total est conservé.
+      \gls{sno} détectait les neutrinos solaires, par interaction par courant chargé (CC) et par courant neutre (NC), permettant d'avoir accès à la fois au flux de neutrinos électroniques (NC et CC) et au flux de neutrinos muoniques et tauiques (NC). La somme des trois flux correspondait bien au flux total prédit par le modèle solaire standard alors que le flux de neutrinos électroniques était inférieur aux prédictions, montrant qu'une partie du flux change de saveur mais que le flux total est conservé.
 
       Super-Kamiokande détecte des neutrinos issus des interactions de rayons cosmiques avec l'atmosphère. Il pouvait ainsi comparer les flux des neutrinos pour différents angles zénithaux, correspondant à des créations du neutrino allant de juste au dessus du détecteur (angle nul) à l'autre bout du globe (angle de $\pi$). Comme nous allons le montrer plus loin, la probabilité qu'a un neutrino de changer de saveur dépend de la distance parcourue (équation \eqref{eq::proba_oscillation}). Une dépendance du flux en l'angle zénithal a donc indiqué un phénomène de changement de saveur dépendant de la distance. La \autoref{fig::superK_plot} montre cette dépendance pour des détections de neutrinos muoniques.
 
@@ -142,7 +142,7 @@
         \end{itemize}
         %TODO: comprendre comment moyenner dans une exp. de faisceau.
         
-        \begin{figure}[htpb]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.9\textwidth,keepaspectratio]{numu-nue-vs-L-3flav.pdf}
           \caption[$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$]{\label{fig::3flavors_oscillations}$P(\nu_{\mu}\to\nu_e)$ en fonction de $L$ pour un neutrino de \SI{0.9}{\giga\electronvolt} et \SI{2.5}{\giga\electronvolt}. La ligne verticale représente la ligne de base de \gls{dune}. Le faisceau de neutrino envoyé aura des énergies allant de \SI{0.5}{\giga\electronvolt} et \SI{5}{\giga\electronvolt}, incluant donc les deux premiers maxima locaux de probabilité.}
@@ -175,7 +175,7 @@
 
 
 
-        \begin{figure}[htbp]
+        \begin{figure}[!htb]
           \begin{subfigure}[t]{0.56\textwidth}
             \includegraphics[width=\textwidth]{SNO_plot.png}
             \caption{\label{fig::SNO_plot}Composition $\nu_{\mu}$ et $\nu_{\tau}$ du flux des neutrinos solaires $^8$B en fonction de sa composition en $\nu_e$\cite{Aharmim2013}. La prédiction du modèle solaire est $\phi_{e}=\SI{5.15e6}{\nu\per\centi\meter\per\second}$. Les traits pointillés indiquent alors les valeurs possibles $\phi_{\mu\tau}$ et $\phi_e$ si les neutrinos peuvent changer de saveurs. Le flux mesuré par courant chargé $\phi_{CC}^{\gls{sno}}$ n'est sensible qu'aux $\nu_e$ et est donc égal à $\phi_{e}$. \gls{sno} l'a mesuré autour de $\SI{1.76e6}{\nu\per\centi\meter\per\second}$ (bande verticale rouge). Le flux mesuré par diffusion élastique $\phi_{ES}^{\gls{sno}}$ est égal à $\phi_{e}+0.1559\phi_{\mu\tau}$ (bande verte). \gls{sno} l'a mesuré autour de $\SI{2.39e6}{\nu\per\centi\meter\per\second}$. Le flux de courant neutre $\phi_{NC}^{\gls{sno}}$ est sensible de manière égale aux trois saveurs et est donc égal à $\phi_{e}+\phi_{\mu\tau}$, soit au flux total attendu. \gls{sno} le mesure autour de $\SI{5.09e6}{\nu\per\centi\meter\per\second}$, compatible avec la prédiction. Le fait que ces trois bandes s'interceptent en un même point indique que le flux total de neutrinos est en accord avec la prédiction, mais qu'il n'est pas composé uniquement de $\nu_e$, indiquant un changement de saveur.}
@@ -465,7 +465,7 @@
           \sin^2(2\theta) = \frac{\left(\frac{\Delta m^2}{2E}\sin(2\theta_0)\right)^2}{\left(\frac{\Delta m^2}{2E}\cos(2\theta_0) - \sqrt{2}G_F N_e\right)^2 + \left(\frac{\Delta m^2}{2E}\sin(2\theta_0)\right)^2}.
         \end{equation}
         
-        \begin{figure}[htpb]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.8\textwidth,keepaspectratio]{msw_ne.pdf}
           \caption[L'effet de résonnance MSW]{\label{fig::amp_matter_vs_Ne}Amplitude de probabilité de changement de saveur de neutrinos se propageant dans la matière (approximation à deux saveur) en fonction de la densité d'électron $N_e$, pour différents angles de mélange dans le vide et différentes différences de masse au carré : il existe une valeur de $N_e$ où cette probabilité est de 1.}
@@ -515,7 +515,7 @@
 
       Les expériences cherchant à mesurer une différence entre $P(\nu_{\mu}\to\nu_e)$ et $P(\anu_{\mu}\to\anu_e)$ afin de déterminer $\delta_{CP}$ devront donc favoriser les plus faibles lignes de bases, afin de s'affranchir des effets de matières (c'est ce que fait \gls{t2k} et ce que fera Hyper-Kamiokande). A l'inverse, une très longue ligne de base est préférable pour les mesures du signe de $\Delta m^2_{31}$ (c'est ce que fait \gls{nova} et ce que fera \gls{dune}), mais la sensibilité à $\delta_{CP}$ en sera diminuée. A noter qu'il est théoriquement possible de mesurer $\delta_{CP}$ et le signe de $\Delta m^2_{31}$ en étudiant uniquement $P(\nu_{\mu}\to\nu_e)$ étant donné que les valeurs de $A$ et $\delta_{CP}$ ont un impact direct sur $P(\nu_{\mu}\to\nu_e)$. Mais une comparaison neutrino-antineutrino, en plus d'accroître la sensibilité à $\delta_{CP}$, permettra d'observer directement l'asymétrie matière-antimatière. La \autoref{fig::3flav_oscillation_cp} montre l'effet de $\delta_{CP}$ sur la probabilité de transition sans effets de matière : plus $L/E$ augmente (et donc, à $L$ fixé, plus $E$ diminue) plus l'effet est important. Or, comme nous l'avons dit plus haut, l'effet de matière est plus faible au second maximum. Une expérience à longue ligne de base peut donc espérer déterminer la violation de CP si elle peut atteindre ce second maximum.
 
-      \begin{figure}[htpb]
+      \begin{figure}[!htb]
         \centering
         \begin{subfigure}[t]{0.49\textwidth}
           \centering
@@ -587,7 +587,7 @@
 
       Il existe plusieurs sources capables de nous donner des renseignements sur les oscillations des neutrinos. La nature des informations accessibles dépend principalement des énergies $E$ et des lignes de base $L$. Le \autoref{tab::carac-experiments} présente ces différentes grandeurs pour les types d'expériences présentés ci-dessous, et précise les valeurs de $\Delta m^2$ mesurables.
 
-      \begin{figure}[htpb]
+      \begin{figure}[!htb]
         \centering
         \includegraphics[width=.8\textwidth,keepaspectratio]{pmns.png}
         \caption[La matrice PMNS]{\label{fig::pmns}Coefficients de la matrice PMNS. Image tirée de \cite{King2015}. Contrairement à la matrice CKM de mélange des quarks, qui est presque diagonale, le mélange des saveurs est très important dans le secteur leptonique.}
@@ -633,7 +633,7 @@
       \begin{equation}\label{eq::mu_approx_atmo}
         P(\nu_{\mu}\to\nu_{\mu}) = 1 - \sin^2(2\theta_{23})\sin^2\left(\Delta m^2_{31}\frac{L}{4E}\right).
       \end{equation}
-      De ce fait, la matrice $u_{23}$ est appelée matrice du "secteur atmosphérique". Ce secteur est également accessible grâce aux expériences de neutrinos d'accélérateurs à longue ligne de base, décrites plus en détail au chapitre suivant. Les principales expériences de neutrinos d'accélérateurs ayant fourni des résultats dans le secteur atmosphérique sont K2K\cite{Collaboration2006a}, \gls{t2k}\cite{Abe2018}, \gls{nova}\cite{Adamson2016} et \gls{minos}\cite{Collaboration2014}. La mesure la plus précise à ce jour, issue d'un ajustement global des données actuelles, donne à $3\sigma$ $\sin^2(\theta_{23})=\numprint{0.425}^{+\numprint{0.19}}_{-\numprint{0.044}}$\cite{pdg2018} si l'ordre des masses est normale (voir \autoref{sec::hierarchy}), $\sin^2(\theta_{23})=0.589^{+0.047}_{-0.205}$ si elle est inversée. Ceci correspond à $\theta_{23}\simeq\SI{41}{\degree}$ si l'ordre est normal, et $\theta_{23}\simeq\SI{50}{\degree}$ si il est inversé.
+      De ce fait, la matrice $u_{23}$ est appelée matrice du "secteur atmosphérique". Ce secteur est également accessible grâce aux expériences de neutrinos d'accélérateurs à longue ligne de base, décrites plus en détail au chapitre suivant. Les principales expériences de neutrinos d'accélérateurs ayant fourni des résultats dans le secteur atmosphérique sont K2K\cite{Collaboration2006a}, \gls{t2k}\cite{Abe2018}, \gls{nova}\cite{Adamson2016} et \gls{minos}\cite{Collaboration2014}. La mesure la plus précise à ce jour, issue d'un ajustement global des données actuelles, donne à $3\sigma$ $\sin^2(\theta_{23})=\numprint{0.425}^{+\numprint{0.19}}_{-\numprint{0.044}}$\cite{pdg2018} si l'ordre des masses est normale (voir \autoref{sec::hierarchy}), $\sin^2(\theta_{23})=\numprint{0.589}^{+\numprint{0.047}}_{-\numprint{0.205}}$ si elle est inversée. Ceci correspond à $\theta_{23}\simeq\SI{41}{\degree}$ si l'ordre est normal, et $\theta_{23}\simeq\SI{50}{\degree}$ si il est inversé.
 
       Les approximations \eqref{eq::approx_31_eq_32} et \eqref{eq::approx_13_eq_0}, donnant la probabilité de survie des neutrinos électroniques venus du soleil \eqref{eq::solar_oscillation}, justifie que la matrice $u_{12}$ soit appelée matrice du "secteur solaire". Elle fut la première a être étudiée, surtout par Homestake\cite{Lande1990}, SAGE\cite{Collaboration2009}, Gallex/GNO\cite{Hampel1999}, et plus tard par  Kamiokande-II\cite{Hirata1992}, \gls{sno}\cite{Aharmim2013}, Super-Kamiokande\cite{Abe2018} et Borexino\cite{Collaboration2013}. KamLand\cite{Collaboration2004}, une expérience de neutrino de réacteur, a également fourni des informations sur le secteur solaire. La mesure la plus précise à ce jour, issue d'un ajustement global des données actuelles donne $\sin^2(\theta_{12})=\numprint{0.297}^{+\numprint{0.057}}_{-\numprint{0.047}}$\cite{pdg2018}, correspondant à $\theta_{12}\simeq\SI{33}{\degree}$, où les incertitudes correspondent à $3\sigma$.
 
@@ -643,7 +643,8 @@
       \end{equation}
       comme probabilité de survie des antineutrinos électroniques, approximations valables pour les expériences de neutrinos de réacteurs. Ceci justifie que la matrice $u_{13}$ soit appelée matrice du "secteur réacteur". La petite valeur de $\theta_{13}$ (inférieur à $\SI{10}{\degree}$) le rend plus difficilement mesurable. Les mesures des termes solaires et atmosphériques ont permis de déterminer qu'avec une ligne de base d'environ \SI{2}{\kilo\meter}, un détecteur proche d'un réacteur pouvait mesurer $\theta_{13}$, ce qui a été fait par Daya Bay\cite{An2014}. Double Chooz\cite{Crespo-Anadon2014} et Reno\cite{Collaboration2010} ont également mesuré $\theta_{13}$ à des lignes de base de \SI{1}{\kilo\meter} et \SI{1.4}{\kilo\meter} respectivement. Les expériences de neutrinos d'accélérateur à longue ligne de base K2K\cite{Collaboration2006a}, \gls{minos}\cite{Collaboration2014} et \gls{t2k}\cite{Abe2018} ont également fourni des résultats concernant $\theta_{13}$. La mesure la plus précise à ce jour, issue d'un ajustement global des données actuelles donne à $3\sigma$ $\sin^2(\theta_{13})=\numprint{0.0215}^{+\numprint{0.025}}_{-\numprint{0.025}}$\cite{pdg2018} si l'ordre des masses est normale (voir \autoref{sec::hierarchy}), $\sin^2(\theta_{13})=\numprint{0.0216}^{+\numprint{0.026}}_{-\numprint{0.026}}$ si elle est inversée. Ceci correspond à $\theta_{13}\simeq\SI{8.44}{\degree}$.
 
-    A ce jour, il reste trois grandes inconnues dans le domaine des oscillations des neutrinos. La valeur précise de la phase de violation de CP, l'ordre des masses (quel état de masse est le plus lourd) et l'octant de $\theta_{23}$ (est-ce que $\theta_{23}>\pi/4$ ou $\theta_{23}<\pi/4$?).
+    Les mesures les plus précises à ce jour des paramètres d'oscillation sont résumées dans le \autoref{tab::pmns_values} et la \autoref{fig::pmns} montre les valeurs correspondantes des éléments de la matrice \gls{pmns}.
+    Il reste actuellement trois grandes inconnues dans le domaine des oscillations des neutrinos. La valeur précise de la phase de violation de CP, l'ordre des masses (quel état de masse est le plus lourd) et l'octant de $\theta_{23}$ (est-ce que $\theta_{23}>\pi/4$ ou $\theta_{23}<\pi/4$?).
 
     \subsection{Ce qu'il reste à découvrir}\label{sec::a_decouvrir}
 
@@ -660,7 +661,7 @@
 
       \subsubsection{L'ordre des masses}\label{sec::hierarchy}
 
-        \begin{figure}[htpb]
+        \begin{figure}[!htb]
           \centering
           \includegraphics[width=0.7\textwidth,keepaspectratio]{mass_hierarchy.png}
           \caption[Les deux ordres de masse possibles]{\label{fig::mass_hierarchy}Les deux ordres de masse possibles et leurs composition en états de saveurs en fonction de la valeur de $\delta_{CP}$. Tiré de \cite{Qian2015}. $\Delta m^2_{sol}=\Delta m^2_{21}$ et $\Delta m^2_{atm}=\Delta m^2_{31}\simeq\Delta m^2_{32}$.}

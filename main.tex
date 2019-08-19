@@ -7,11 +7,17 @@
 \input{commands}
 \DeclareLanguageMapping{frenchb}{english}
 \bibliography{bibli.bib}
-\graphicspath{{Front-back_covers/images/}}
 \usetikzlibrary{calc}
 \input{acronymes.tex}
 \makeglossaries
-\graphicspath{{Chapitre_1/pictures/}{Chapitre_2/pictures/}{Chapitre_3/pictures/}{Chapitre_4/pictures/}{Chapitre_5/pictures/}{Front-back_covers/images/}}
+\graphicspath{{Chapitre_1/pictures/}{Chapitre_2/pictures/}{Chapitre_3/pictures/}{Chapitre_4/pictures/}{Chapitre_5/pictures/}{covers/media/}}
+
+% Méta-données du PDF / PDF meta-datas
+\hypersetup{
+	pdfauthor={\PhDname},
+	pdfsubject={Manuscrit de thèse de doctorat},
+	pdftitle={\PhDTitle},
+}
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
@@ -22,7 +28,8 @@
 \selectlanguage{french}
 
 %%\layout
-\input{Front-back_covers/Front-back_covers}
+%\input{covers/Front-back_covers}
+\input{covers/front_cover}
 %%\newgeometry{twoside}
 %\newpage
 %\thispagestyle{empty}
@@ -67,5 +74,5 @@
 \input{Chapitre_5/Chapitre_5.tex}
 \backmatter
 \input{conclusion/conclusion.tex}
-
+\input{covers/back_cover}
 \end{document}

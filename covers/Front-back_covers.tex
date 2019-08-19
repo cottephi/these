@@ -1,0 +1,250 @@
+%https://www.universite-paris-saclay.fr/fr/la-these-contenu-langue-de-redaction-droit-dauteur-confidentialite-format-et-page-de-couverture
+
+\frontmatter
+\usetikzlibrary{calc}
+\thispagestyle{empty}
+
+\chapter*{}
+%\addcontentsline{toc}{chapter}{Page de garde}%
+\thispagestyle{empty}
+
+
+
+%% Positionner le cadre dans la page.
+%% Modifier yshift modifie la position des bords haut et bas du cadre.
+%% Modifier xshift modifie la position des bords gauche et droit du cadre.
+%% Il faut toujours les modifier deux par deux (ceux qui ont la même valeur ensemble).
+\begin{tikzpicture}[remember picture,overlay,color=pheniics_purple]
+	\draw[very thick]
+		([yshift=-120pt,xshift=30pt]current page.north west)--     
+		([yshift=-120pt,xshift=-30pt]current page.north east)--    
+		([yshift=50pt,xshift=-30pt]current page.south east)--      
+		([yshift=50pt,xshift=30pt]current page.south west)--cycle; 
+\end{tikzpicture}
+
+
+
+
+
+%% Logos en haut de la page
+\begin{textblock}{13.8}(1,0.5)
+	\includegraphics[width=\textwidth]{Logo_ALL.png} %% Logo de Paris Saclay
+	\label{Logo Paris Saclay}
+\end{textblock}
+
+%\begin{textblock}{12.8}(14.5,2)
+%	\includegraphics[height=2.4cm]{Title/Logos/UPS.png} %% Logo de votre établissement
+%	\label{Logo Etablissement}
+%\end{textblock}
+
+
+%% Position du NNT
+\begin{textblock}{12.8}(0.7,2.45)
+	NNT : \textcolor{red}{[NNT number]}
+\end{textblock}
+
+
+
+\begin{textblock}{12.8}(1.6,3.5)
+  %% Texte
+  \begin{center}
+    \textcolor{pheniics_purple}{ %% Couleur violette du premier paragraphe
+      \LARGE\textsc{Thèse de doctorat\\ de l'Université Paris-Saclay} \\
+      \LARGE{\textsc{préparée à l'Université Paris-Sud}} \\ \bigskip
+  	  \color{black} %% Couleur noir du reste du texte
+	  \vfill \vfill
+	  \Large{CEA/Irfu/DPhP}
+	  \vfill \vfill
+      \Large\textsc{École doctorale n$^{\circ}576$}\\ %% Numéro ED
+      \Large{Particules, Hadrons, Énergie, Noyau, Instrumentation, Imagerie, Cosmos et Simulation (PHENIICS)} \\
+	  \Large{Spécialité de doctorat: \textcolor{red}{Physique des neutrinos} } %% Spécialité
+      \vfill  
+   	  \Large{par}
+   	  \vfill
+   	  \LARGE{\textbf{\textsc{Philippe Cotte}}} %% Nom du docteur
+      \vfill
+      \Large{Le projet WA105 : un prototype de Chambre à Projection Temporelle à Argon Liquide Diphasique utilisant des détecteurs LEMs} %% Titre de la thèse
+      \vfill
+    }
+  \end{center}
+
+  \small{
+%% Jury
+    \begin{flushleft}
+    Thèse présentée et soutenue à Gif-Sur-Yvette le \textcolor{red}{17 septembre 2019}. \\
+    \bigskip
+    Composition du jury :
+    \end{flushleft}
+%% Members of the jury
+%% If needed, one can add jurymemberG or remove one jury member.
+
+    \begin{center}
+      \begin{tabular}{llll}
+
+	  % Président du jury, Rapporteur, Examinateur
+	
+	    Pr.		& A. Tonazzo,			& Université Paris-Diderot, Laboratoire
+APC,		& Présidente du Jury	\\
+  	    Dr		& A. Meregaglia,			& Université de Bordeaux, CENBG,		& Rapporteur			\\	
+  	    Dr		& I. Gil Botella,			& CIEMAT, Madrid,		& Rapporteur			\\
+  	    Dr.		& E. Baussan,			& Université de Strasbourg, IPHC,		& Examinateur		\\
+  	    Dr.		& P. Schune,			& CEA-Paris Saclay,		& Examinateur		\\
+	    Dr.		& E. Mazzucato,			& CEA-Paris Saclay,		& Directeur de thèse	\\  
+   
+      \end{tabular}    
+    \end{center}
+  }
+
+\end{textblock}
+
+%% Logos en bas de la page
+\begin{textblock}{3}(0.63,13.2)
+	\includegraphics[width=\textwidth]{logo_CEA.png} %% Logo de Paris Saclay
+	\label{Logo CEA}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% old %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+%\frontmatter
+%\usetikzlibrary{calc}
+%\thispagestyle{empty}
+
+
+%%%% the purple border line %%%
+%\begin{tikzpicture}[remember picture, overlay]
+%    \draw[line width=1.2 pt, pheniics_purple] 
+%    ($(current page.south west)+(1 cm,+1. cm)$) 
+%    -- ($(current page.north west)+(1 cm,-1. cm)$) 
+%    -- ($(current page.north east)+(-1 cm,-1. cm)$) 
+%    -- ($(current page.south east)+(-1 cm,1. cm)$)
+%    -- ($(current page.south west)+(1 cm,1. cm)$);
+%\end{tikzpicture}
+%
+%{\begin{center}
+%	\vspace{-3.5cm}
+%	%%% logo %%%
+%	\includegraphics[width=14cm]{Logo_ALL.png}\\
+%	\vspace{1cm}
+%	
+%	%%% university title %%%
+%	\textcolor{violet!80!red!80!black}{{{\uppercase{\Large Thèse de Doctorat de L'Université Paris-Saclay Préparée à l'Université Paris-Sud}}}}\\
+%	\vspace{1cm}
+%	%%% doctoral school title %%%
+%	ÉCOLE DOCTORALE N$^{\circ}$576\\
+%	Particules Hadrons Énergie et Noyau : Instrumentation, Image, Cosmos et Simulation (PHENIICS)\\
+%	Spécialité de doctorat : Physique des neutrinos expérimentale\par
+%	\vspace{1.5cm}
+%	%%% name %%%
+% 	Par\par  \large \textbf{M. Philippe Cotte} \par
+%	\vspace{1cm}
+%	%%% thesis title %%%
+%	\Large \textsc{\textcolor{SchoolColor}{
+%	\textbf{Le projet WA105 : un prototype de Chambre à Projection Temporelle à Argon Liquide Diphasique utilisant des détecteurs LEMs}}}\par
+%\end{center}
+%
+%\vspace{2cm}
+%\hspace{-1cm}{\textit{Thèse présentée et soutenue à Orsay, le 1 septembre 2016} \par}
+%\vspace{1cm}
+%\hspace{-1cm}{  Composition de jury: \par}
+%\hspace{-1cm}{  M. Hubert Farnsworth, \textit{Professeur, Université de Lefutur,} Rapporteur \par}
+%\hspace{-1cm}{  M. Malcolm Reynolds, \textit{Professeur, Université de Serenity,} Rapporteur \par}
+%\hspace{-1cm}{  M. Derrial Book, \textit{Professeur, Université de l'Aliance,} Examinateur \par}
+%\hspace{-1cm}{  Mme Turanga Leela, \textit{Chargée de Recherche, TU Arcturan,} Examinatrice \par}
+%\hspace{-1cm}{  Mme Amy Wong, \textit{Directrice de recherche, Planet Express,} Directrice de thèse \par}
+%\hspace{-1cm}{  M. John Zoidberg, \textit{Chargé de Recherche, IPN Decapod,} Co-directeur de thèse \par}
+%}
+%
+%
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%
+%%%% a lifehack to adgust the font size and spacing %%%
+%\makeatletter
+%\newcommand*\mysize{%
+%  \@setfontsize\mysize{9.5}{9.0}%
+%}
+%\makeatother
+%
+%\newpage
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture, overlay] 
+%\end{tikzpicture}
+%     
+%\newpage
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture, overlay]
+%	%%% the University+ED logo %%%
+%    \node [anchor=north west, shift={(1.2 cm,-0.2cm)}] at (current page.north west) {\includegraphics[width=7.5cm]{pheniics.png}};
+%     \mysize 
+%    \node [anchor=north, yshift=-2.1 cm, text width=18cm, inner sep=.3cm] (resume) at (current page.north) {
+%    \begin{minipage}{\linewidth}
+%    %%% title %%%
+%\justify{     {\textbf{Titre:}} Un titre long et beau qui prend probablement plus d'une ligne\\
+%	%%% key words %%%
+%     			  {\textbf{Mots clés:}} \textit{astrologie, exo-psychologie, arts sombres, Voyage spatial}\\       		
+%     			  {\textbf{Résumé:}}  \lipsum[1-3] %%% replace by the text of the abstract in French %%%
+%}
+%    \end{minipage}
+%    };
+%
+%    
+%    %%% draw a purple frame around each abstract %%%
+%    \draw[line width=1 pt, violet!80!red] (resume.south west) -- (resume.north west) -- (resume.north east) -- (resume.south east) -- (resume.south west);
+%    
+%    %%% footnote %%%
+%    \node [anchor=south west, violet!80!red, shift={(1.2 cm,0.5cm)}, inner sep=0.2pt] at (current page.south west) {
+%    \begin{minipage}{12cm}
+%    {\textbf{Université Paris-Saclay}} \\
+%    Espace Technologique / Immeuble Discovery \\
+%    Route de l'Orme aux Merisiers RD 128 / 91190 Saint-Aubin, France 
+%    \end{minipage}
+%    };
+%    
+%    %%% the "e" image at the bottom %%%
+%    \node [anchor=south east, violet!80!red!80!black, shift={(-1.5 cm,0.5cm)}, inner sep=0pt] at (current page.south east) {\includegraphics[width=1.6 cm]{e.png}};
+%    
+%\end{tikzpicture}
+%
+%\newpage
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture, overlay] 
+%\end{tikzpicture}
+%
+%\newpage
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture, overlay]
+%	%%% the University+ED logo %%%
+%    \node [anchor=north west, shift={(1.2 cm,-0.2cm)}] at (current page.north west) {\includegraphics[width=7.5cm]{pheniics.png}};
+%     \mysize 
+%    \node [anchor=north, yshift=-2.1 cm, text width=18cm, inner sep=.3cm] (resume) at (current page.north) {
+%    \begin{minipage}{\linewidth}
+%    %%% title %%%
+%    %%% title %%%
+%\justify{     {\textbf{Title:}} A long and beautiful title that probably takes more than one line\\
+%	%%% key words %%%
+%     			  {\textbf{Key words:}} \textit{astrology, exo-psychology, dark arts, space travel} \\
+%    			  {\textbf{Abstract:}} \lipsum[1-3]  %%% replace by the text of the abstract in English %%%
+%}
+%    \end{minipage}
+%    };
+%
+%    
+%    %%% draw a purple frame around each abstract %%%
+%    \draw[line width=1 pt, violet!80!red] (resume.south west) -- (resume.north west) -- (resume.north east) -- (resume.south east) -- (resume.south west);
+%    
+%    %%% footnote %%%
+%    \node [anchor=south west, violet!80!red, shift={(1.2 cm,0.5cm)}, inner sep=0.2pt] at (current page.south west) {
+%    \begin{minipage}{12cm}
+%    {\textbf{Université Paris-Saclay}} \\
+%    Espace Technologique / Immeuble Discovery \\
+%    Route de l'Orme aux Merisiers RD 128 / 91190 Saint-Aubin, France 
+%    \end{minipage}
+%    };
+%    
+%    %%% the "e" image at the bottom %%%
+%    \node [anchor=south east, violet!80!red!80!black, shift={(-1.5 cm,0.5cm)}, inner sep=0pt] at (current page.south east) {\includegraphics[width=1.6 cm]{e.png}};
+%    
+%\end{tikzpicture}

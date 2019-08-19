@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  This is the template for the front and back covers of the thesis 
+%  as demanded by the Paris Saclay University. It is a somewhat
+%  crude draft, so don't hesitate to adjust it by twitching the
+%  \hspace{} and \vspace{} distances in order to meet your needs,
+%  and also the font size of the abstract (mine was rather long
+%  so I had to invent rather wide fields along with the rather compact text)
+%  Also mind that it has to be compiled with LaTeX twice.
+%  Enjoy!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\graphicspath{{images/}}
+\usepackage[francais]{babel}
+\usepackage{ragged2e}
+\usepackage{lipsum}
+
+\begin{document}
+
+%%%   define the colour of the title							%%%  
+%%%   could be set to match general colour theme 	%%%
+\definecolor{SchoolColor}{rgb}{0.145,0.666,1} %%% Cyanish %%
+
+\usetikzlibrary{calc}
+\thispagestyle{empty}
+
+%%% the purple border line %%%
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=1.2 pt, violet!80!red] 
+    ($(current page.south west)+(1 cm,+1. cm)$) 
+    -- ($(current page.north west)+(1 cm,-1. cm)$) 
+    -- ($(current page.north east)+(-1 cm,-1. cm)$) 
+    -- ($(current page.south east)+(-1 cm,1. cm)$)
+    -- ($(current page.south west)+(1 cm,1. cm)$);
+\end{tikzpicture}
+
+{\begin{center}
+	\vspace{-3.5cm}
+	%%% logo %%%
+	\includegraphics[width=14cm]{Logo_ALL.png}\\
+	\vspace{1cm}
+	
+	%%% university title %%%
+	\textcolor{violet!80!red!80!black}{{{\uppercase{\Large These de Doctorat de L'Universit\'{e} Paris-Saclay Prepar\'{e}e \`{a} l'Universit\'{e} Paris-Sud}}}}\\
+	\vspace{1cm}
+	%%% doctoral school title %%%
+	\'{E}COLE DOCTORALE N°576\\
+	Particules Hadrons \'{E}nergie et Noyau : Instrumentation, Image, Cosmos et Simulation (PHENIICS)\\
+	Sp\'{e}cialit\'{e} de doctorat : Structure et r\'{e}actions nucl\'{e}aires\par
+	\vspace{1.5cm}
+	%%% name %%%
+ 	Par\par  \large \textbf{M. Philip J. Fry} \par
+	\vspace{1cm}
+	%%% thesis title %%%
+	\Large \textsc{\textcolor{SchoolColor}{
+	\textbf{Un titre long et beau qui prend probablement plus d'une ligne}}}\par
+\end{center}
+
+\vspace{2.5cm}
+\hspace{-1cm}{\textit{Th\`{e}se pr\'{e}sent\'{e}e et soutenue \`{a} Orsay, le 1 septembre 2016} \par}
+\vspace{1cm}
+\hspace{-1cm}{  Composition de jury: \par}
+\hspace{-1cm}{  M. Hubert Farnsworth, \textit{Professeur, Universit\'{e} de Lefutur,} Rapporteur \par}
+\hspace{-1cm}{  M. Malcolm Reynolds, \textit{Professeur, Universit\'{e} de Serenity,} Rapporteur \par}
+\hspace{-1cm}{  M. Derrial Book, \textit{Professeur, Universit\'{e} Catholique de l'Aliance,} Examinateur \par}
+\hspace{-1cm}{  Mme Turanga Leela, \textit{Charg\'{e}e de Recherche, TU Arcturan,} Examinatrice \par}
+\hspace{-1cm}{  Mme Amy Wong, \textit{Directrice de recherche, Planet Express,} Directrice de th\'{e}se \par}
+\hspace{-1cm}{  M. John Zoidberg, \textit{Charg\'{e} de Recherche, IPN Decapod,} Co-directeur de th\'{e}se \par}
+}
+\clearpage
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%%% a lifehuck to adgust the font size and spacing %%%
+\makeatletter
+\newcommand*\mysize{%
+  \@setfontsize\mysize{9.5}{9.0}%
+}
+\makeatother
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+	%%% the University+ED logo %%%
+    \node [anchor=north west, shift={(1.2 cm,-0.2cm)}] at (current page.north west) {\includegraphics[width=7.5cm]{pheniics.png}};
+     \mysize 
+    \node [anchor=north, yshift=-2.1 cm, text width=18cm, inner sep=.3cm] (resume) at (current page.north) {
+    \begin{minipage}{\linewidth}
+    %%% title %%%
+\justify{     {\bf Titre:} Un titre long et beau qui prend probablement plus d'une ligne\\
+	%%% key words %%%
+     			  {\bf Mots cl\'{e}s:} \textit{astrologie, exo-psychologie, arts sombres, Voyage spatial}\\       		
+     			  {\bf R\'{e}sum\'{e}:}  \lipsum[1-6] %%% replace by the text of the abstract in French %%%
+}
+    \end{minipage}
+    };
+    
+    \node [anchor=north, yshift=-0.3 cm, text width=18cm, inner sep=.3cm] (abstract) at (resume.south) { % abstract:
+    \begin{minipage}{\linewidth}
+    
+    %%% title %%%
+\justify{     {\bf Title:} A long and beautiful title that probably takes more than one line\\
+	%%% key words %%%
+     			  {\bf Key words:} \textit{astrology, exo-psychology, dark arts, space travel} \\
+    			  {\bf Abstract:} \lipsum[1-6]  %%% replace by the text of the abstract in English %%%
+}
+    \end{minipage}
+    };
+    
+    %%% draw a purple frame around each abstract %%%
+    \draw[line width=1 pt, violet!80!red] (resume.south west) -- (resume.north west) -- (resume.north east) -- (resume.south east) -- (resume.south west);
+    \draw[line width=1 pt, violet!80!red] (abstract.south west) -- (abstract.north west) -- (abstract.north east) -- (abstract.south east) -- (abstract.south west);
+    
+    %%% footnote %%%
+    \node [anchor=south west, violet!80!red, shift={(1.2 cm,0.5cm)}, inner sep=0.2pt] at (current page.south west) {
+    \begin{minipage}{12cm}
+    {\bf Universit\'{e} Paris-Saclay} \\
+    Espace Technologique / Immeuble Discovery \\
+    Route de l'Orme aux Merisiers RD 128 / 91190 Saint-Aubin, France 
+    \end{minipage}
+    };
+    
+    %%% the "e" image at the bottom %%%
+    \node [anchor=south east, violet!80!red!80!black, shift={(-1.5 cm,0.5cm)}, inner sep=0pt] at (current page.south east) {\includegraphics[width=1.6 cm]{e.png}};
+    
+\end{tikzpicture}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\end{document}

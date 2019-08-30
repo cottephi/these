@@ -9,7 +9,9 @@
             \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{\titlepage}
         \end{specialframe}
     }
-    \begin{specialframe}\tableofcontents\end{specialframe}
+    \begin{specialframe}{Table des matières}
+        \tableofcontents[hideallsubsections]
+    \end{specialframe}
 
   \setcounter{framenumber}{0}
     {
@@ -26,110 +28,128 @@
     }
 
   \section{Contexte}
-    \subsection{WA105}
-
-    \begin{frame}{Présentation du projet WA105}{Prototype de la nouvelle technologie DLArTPC}
-        \begin{scriptsize}
-            \begin{columns}
-                \begin{column}{0.75\textwidth}
-                    \centering
-                    \includegraphics[height=0.9\textheight]{./pictures/wa105.png}
-                \end{column}
-                \begin{column}{0.25\textwidth}
+    
+    \begin{frame}{La plateforme neutrino du CERN}{ProtoDU$\nu$-SP et WA105/ProtoDU$\nu$-DP}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=0.9\textheight]{./pictures/neutrino_platform.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{scriptsize}
+                    Stratégie Européenne de physique des particules de 2013 : implication du CERN dans la recherche mondiale en physique des neutrinos : \\ $\Rightarrow$ Extension du hall de test en faisceau du site de Prévessin.\vspace{0.4cm}
                     \begin{itemize}
-                        \item Prototype une nouvelle technologie : DLArTPC
-                        \item Techno qui sera utilisée dans la future expérience \textcolor{red}{\dune{}}
-                        \item TPC utilisant de l'argon liquide pour détecter des \textcolor{red}{neutrinos}
-                        \item \textbf{+ : Double phase} \\$\to$ amplification du signal dans de l'argon gazeux
+                        \item Prototypage de \textbf{Chambres à Projection Temporelle à Argon Liquide} : ProtoDU$\nu$-SP et \textcolor{red}{WA105/ProtoDU$\nu$-DP}
+                        \item Technologie choisie pour la future expérience d'oscillation des neutrinos DU$\nu$E
+                        \item Tests en faisceaux et/ou en cosmiques
                     \end{itemize}
-                \end{column}
-            \end{columns}
-        \end{scriptsize}
+                \end{scriptsize}
+            \end{column}
+        \end{columns}
     \end{frame}
-    
-    \begin{frame}{La technologie DLArTPC et le projet WA105}{Chambres à Projection Temporelle à Argon Liquide}
-       	\begin{scriptsize}
-       			\includegraphics[width=0.9\textwidth]{tpcs.png}\\\vfill
-       			\begin{columns}
-       				\begin{column}{0.5\textwidth}
-       					\begin{itemize}
-       						\item Tout se passe dans l'argon liquide.
-       						\item Mesure directe de l'énergie.
-       						\item Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
-       					\end{itemize}
-       				\end{column}\hfill
-       				\begin{column}{0.5\textwidth}
-       					\begin{itemize}
-       						\item Amplification des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
-       						\item Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
-       						\item Premières données en août 2019.
-       					\end{itemize}
-       				\end{column}
-       			\end{columns}
-       	\end{scriptsize}
-    \end{frame}
-
-    \begin{frame}{La technologie DLArTPC et le projet WA105}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}-DP au CERN}
-        \centering
-       	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
-    \end{frame}
-    
+        
     \subsection{DU$\nu$E}
+        
+    \begin{frame}{Oscillations des neutrinos : les grandes inconnues}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[width=0.8\textwidth]{./pictures/CP_schema.png}\\
+                \includegraphics[width=\textwidth]{mass_hierarchy.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{scriptsize}
+                    \begin{itemize}
+                        \item La symétrie CP est-elle violée dans le secteur leptonique?  \\ $\Rightarrow$ Pourrait expliquer l'asymétrie matière-antimatière de l'univers
+                        \item Quel est l'ordre des masses des neutrinos?  \\ $\Rightarrow$ Contrainte sur certaines théories au delà du modèle standard 
+                    \end{itemize}
+                    \vspace{0.4cm}
+                    \textbf{Connaissances actuelles :}
+                \end{scriptsize}
+                \begin{itemize}
+                    \item \begin{scriptsize}$\delta_{CP} \ne 0$ ou $\pi$ à $2\sigma$ (i.e CP semble violée)\end{scriptsize} \\  \tiny{T2K, Physical Review Letters 121.17 (oct. 2018)}
+                    \item \begin{scriptsize}3$\sigma$ en faveur de l'ordre des masses normal\end{scriptsize} \\ \tiny{NO$\nu$A, Physics Letters B 782 (juil. 2018), p. 633–640}
+                \end{itemize}
+            \end{column}
+        \end{columns}
+    \end{frame}
 
-    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}
+    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Une expérience d'oscillation de neutrinos d'accélérateur à longue ligne de base}
+        \includegraphics[width=\textwidth]{./pictures/dune.png}\\
         \begin{scriptsize}
-            \centering
-            \includegraphics[width=\textwidth]{dune.pdf}\\
-            \vspace{0.4cm}
-            \begin{minipage}[t]{0.48\textwidth}
-                \begin{itemize}
-                    \item Expérience d'\textbf{oscillation des neutrinos} d'accélérateur à longue ligne de base aux USA, prévue pour fin 2026
-                    \item Détectera dans le \textbf{Dakota du Sud} des $\nu$/$\overline{\nu}$ envoyés du \textbf{Fermilab} à \textbf{\SI{1300}{\kilo\meter}}.
-                \end{itemize}
-            \end{minipage}\hfill
-             \begin{minipage}[t]{0.48\textwidth}
-                \textbf{Mesurera la probabilité de changement de saveur $P(\nu_{\mu}\to\nu_e)$ vs $E$ pour répondre à : }
-                \begin{itemize}
-                    \item La symétrie CP est-elle violée dans le secteur leptonique?
-                    \item Quel est l'ordre des masses des neutrinos?
-                \end{itemize}
-            \end{minipage}\vfill
+        \vspace{0.4cm}
+        \begin{columns}
+            \begin{column}{0.75\textwidth}
+                \includegraphics[width=\textwidth]{numu-nue-vs-E-MH-CP.pdf}
+            \end{column}
+            \hspace{-0.5cm}
+            \begin{column}{0.35\textwidth}
+                 \begin{itemize}
+                     \item Les $\nu_{\mu}$ initiaux ont une probabilité $P(\nu_{\mu}\to\nu_e)$ d'être des $\nu_e$ à l'arrivée
+                     \item \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$} vs $E$ dépend de \textcolor{red}{$\delta_{CP}$} et de l'\textcolor{red}{ordre des masses}.
+                     \item Fin 2026 : 7 ans de faisceau de $\nu_{\mu}$ puis 7 ans de faisceau $\overline{\nu}_{\mu}$.
+                 \end{itemize}
+            \end{column}
+        \end{columns}
+%            \centering
+%            \includegraphics[width=\textwidth]{./pictures/dune.png}\\
+%            \vspace{0.4cm}
+%            \begin{figure}[htpb]
+%              \begin{subfigure}[t]{0.49\textwidth}
+%                \includegraphics[width=\textwidth,keepaspectratio]{numu-nue-vs-E-cp.pdf}
+%              \end{subfigure}\hfill
+%              \begin{subfigure}[t]{0.49\textwidth}
+%                \includegraphics[width=\textwidth,keepaspectratio]{numu-nue-vs-E-MH.pdf}
+%              \end{subfigure}
+%%                \caption[Probabilité de changement de saveur en fonction de $E$ à \SI{1300}{\kilo\meter}]{\label{fig::two_unknown_effects}Probabilité de changement de saveur en fonction de $E$ à \SI{1300}{\kilo\meter}. Le graphe de gauche montre l'impact de $\delta_{CP}$, avec un ordre des masses normal. Le graphe de droite montre l'impact de l'ordre des masses, avec $\delta_{CP}=0$.}
+%            \end{figure}
+%            \begin{minipage}[t]{0.48\textwidth}
+%                \begin{itemize}
+%                    \item Expérience d'\textbf{oscillation des neutrinos} d'accélérateur à longue ligne de base aux USA, prévue pour fin 2026
+%                    \item Détectera dans le \textbf{Dakota du Sud} des $\nu$/$\overline{\nu}$ envoyés du \textbf{Fermilab} à \textbf{\SI{1300}{\kilo\meter}}.
+%                \end{itemize}
+%            \end{minipage}\hfill
+%             \begin{minipage}[t]{0.48\textwidth}
+%                \textbf{Mesurera la probabilité de changement de saveur $P(\nu_{\mu}\to\nu_e)$ vs $E$ pour répondre à : }
+%                \begin{itemize}
+%                    \item La symétrie CP est-elle violée dans le secteur leptonique?
+%                    \item Quel est l'ordre des masses des neutrinos?
+%                \end{itemize}
+%            \end{minipage}\vfill
         \end{scriptsize}
     \end{frame}
     
-    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}
+    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Sensibilités}
         \begin{scriptsize}
+            \begin{table}[]
+            \begin{tabular}{|l|l||l|l|}
+            \hline
+             & \multicolumn{1}{c||}{\textbf{Ordre des masses}} &  & \multicolumn{1}{c|}{\textbf{Violation de CP}} \\ \hline
+            \textbf{1 an} & \begin{tabular}[c]{@{}l@{}}$5\sigma$\\  si $\delta_{CP}= \pm\frac{\pi}{2}$\end{tabular} & \textbf{7 ans} & \begin{tabular}[c]{@{}l@{}}$5\sigma$\\  si $\delta_{CP}=\pm\frac{\pi}{2}$\end{tabular} \\
+            \textbf{2 ans} & \begin{tabular}[c]{@{}l@{}}$5\sigma$\\ $\forall \delta_{CP}$\end{tabular} & \textbf{10 ans} & \begin{tabular}[c]{@{}l@{}}$5\sigma$ pour 50\,\% \\ des valeurs de $\delta_{CP}$\end{tabular} \\ \hline
+            \end{tabular}
+            \end{table}\vspace{0.2cm}
             \begin{columns}
                 \begin{column}{0.6\textwidth}
                     \centering
-                    \includegraphics[width=\textwidth]{oscillation_CP.png}\\\vspace{0.2cm}
-                    \includegraphics[width=0.95\textwidth]{sensitivities_2.png}\\
-                    \begin{scriptsize}
-                        Meilleures sensibilités seront présentées dans le TDR 2019
-                    \end{scriptsize}
+%                    \includegraphics[width=\textwidth]{oscillation_CP.png} \\ \vspace{0.2cm}
+                    \includegraphics[width=0.95\textwidth]{sensitivities.png}\\
+                    TDR de DU$\nu$E 2019
                 \end{column}
                 \begin{column}{0.4\textwidth}
-                    \begin{itemize}
-                        \item Si symétrie CP violée dans le secteur leptonique $\Rightarrow$ peut expliquer asymétrie \textcolor{red}{matière-antimatière} dans l'univers.\\
-                        \item Plusieurs théories de grande unification dépendent de \textcolor{red}{l'ordre des masses} des neutrinos.
-                        \item[$\Rightarrow$] Les deux influencent la probabilité de changement de saveur.
-                    \end{itemize}
                     \begin{scriptsize}
-                        Pour mesurer \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$ vs $E$}: \\
-                        Besoin d'une reconstruction précise des interactions neutrinos pour atteindre $5\sigma$ pour la violation de CP.
+                        Pour atteindre ces sensibilités : \\
                     \end{scriptsize}
                     \begin{itemize}
-                        \item Reconstruction des traces en 3D
+                        \item Trajectographie 3D
                         \item Calorimétrie
-                        \item PID précis
-                        \item Résolution en énergie $\leq$3\%
+                        \item PID
+%                        \item Résolution en énergie $\leq$3\%
                     \end{itemize}
                 \end{column}
             \end{columns}
         \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}
+    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Les 4 modules du détecteur lointain}
         \begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.55\textwidth}
@@ -142,61 +162,114 @@
                 \end{column}
                 \begin{column}{0.45\textwidth}
                     \begin{itemize}
-                        \item Détecteur lointain = 4 modules de LArTPC
+                        \item Détecteur lointain = $4\times\SI{10}{\kilo\tonne}$ modules de LArTPC
                         \item 2 Simple Phase, 1 Double phase, 1 à déterminer
-                    \end{itemize}
-                    \textbf{Premier module simple phase} : construit de août 2024 à août 2025, rempli fin 2026.\\
-                    \textbf{Début des prises de données} : fin 2026.\\
-                    \textbf{Second module simple phase} : construit de sept. 2025 à oct. 2026, rempli début 2028.\\
-                    \begin{itemize}
-                        \item[$\Rightarrow$] \textbf{ProtoDU$\nu$E} teste les \textbf{2 versions} de la technologie LArTPC  à \SI{300}{\tonne} à la plateforme neutrinos du CERN.\\
-                        \item[$\Rightarrow$]\textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} test la version\\ \textcolor{red}{\textbf{Double Phase}} de la LArTPC.\\
-                    \end{itemize}
+                    \end{itemize}\vspace{0.4cm}
+                    \textbf{Premier module SP} : été 2026.\\
+                    \textbf{Premières données} : fin 2026\\
+                    \textbf{Second module SP} : début 2028.\\\vspace{0.4cm}
+
+                    $\Rightarrow$\textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} est le prototype de la version \textcolor{red}{\textbf{Double Phase}} de la LArTPC.\\
                 \end{column}
             \end{columns}
 %            Timeline\\
         \end{scriptsize}
     \end{frame}
+        
+    \begin{frame}{La technologie LArTPC}{Chambres à Projection Temporelle à Argon Liquide}
+       	\begin{scriptsize}
+       			\includegraphics[width=0.9\textwidth]{tpcs.png}\\\vfill
+       			\begin{columns}
+       				\begin{column}{0.5\textwidth}
+       					\begin{itemize}
+       						\item Tout se passe dans l'argon liquide.
+       						\item Reconstruction 3D des événements (précision millimétrique).
+       						\item Mesure directe de l'énergie (précision $\simeq\SI{100}{\kilo\electronvolt}$).
+%       						\item Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
+       					\end{itemize}
+       				\end{column}\hfill
+       				\begin{column}{0.5\textwidth}
+       					\begin{itemize}
+       						\item \textcolor{red}{Amplification} des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
+       						\item Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
+       						\item Premières données en septembre 2019.
+       					\end{itemize}
+       				\end{column}
+       			\end{columns}
+       	\end{scriptsize}
+    \end{frame}
+            
+          \begin{frame}{L'argon liquide comme milieu de détection}
+         	  \begin{scriptsize}
+               	\begin{columns}
+               		\begin{column}{0.6\textwidth}
+               			\centering
+               			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
+               			\flushleft
+               			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-Simple Phase}\end{footnotesize}
+               		\end{column}
+               		\begin{column}{0.4\textwidth}
+               			\begin{footnotesize}
+               				\textbf{Pourquoi l'argon liquide?}
+               			\end{footnotesize}
+               			\begin{itemize}
+               				\item Dense (\SI{1.4}{\gram\per\centi\meter^3}).
+               				\item Peu cher et abondant.
+               				(Bruit électronique $\sim \SI{1000}{e^-}$)
+               				\item Gaz noble $\rightarrow$ ne piège pas les électrons.
+               				\item Très bon trajectographe et calorimètre entièrement homogène.
+               				\item Scintille au moment de l'ionisation $\rightarrow$ déclencheur et/ou $t_0$ \\ + transparent pour les photons  d'ionisation.
+             				\item MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
+               			\end{itemize}
+               			\begin{footnotesize}
+           	    			\textbf{$\Rightarrow$ Chambre à bulle électronique.}
+           	    		\end{footnotesize}
+               		\end{column}
+               	\end{columns}
+         	  \end{scriptsize}
+            \end{frame}
     
-  \begin{frame}{L'argon liquide comme milieu de détection}
- 	  \begin{scriptsize}
-       	\begin{columns}
-       		\begin{column}{0.6\textwidth}
-       			\centering
-       			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
-       			\flushleft
-       			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-Simple Phase}\end{footnotesize}
-       		\end{column}
-       		\begin{column}{0.4\textwidth}
-       			\begin{footnotesize}
-       				\textbf{Pourquoi l'argon liquide?}
-       			\end{footnotesize}
-       			\begin{itemize}
-       				\item MIP $\rightarrow\sim\SI{60000}{e^-\per\centi\meter}$. \\
-       				(Bruit électronique $\sim \SI{1000}{e^-}$)
-       				\item Gaz noble $\rightarrow$ ne piège pas les électrons.
-       				\item Très bon trajectographe et calorimètre entièrement homogène.
-       				\item Scintille au moment de l'ionisation $\rightarrow$ déclencheur et/ou $t_0$ \\ + transparent pour les photons  d'ionisation.
-       				\item Dense (\SI{1.4}{\gram\per\centi\meter^3}).
-       				\item Peu cher et abondant.
-       			\end{itemize}
-       			\begin{footnotesize}
-   	    			\textbf{$\Rightarrow$ Chambre à bulle électronique.}
-   	    		\end{footnotesize}
-       		\end{column}
-       	\end{columns}
- 	  \end{scriptsize}
+    \subsection{WA105}
+
+    \begin{frame}{Le projet WA105/ProtoDU$\nu$E--DP}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}--DP au CERN}
+        \begin{scriptsize}
+            \begin{columns}
+                \begin{column}{0.75\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{./pictures/wa105.png}
+                \end{column}
+                \begin{column}{0.25\textwidth}
+                    \textbf{Démonstrateur de \SSS{} (\SI{300}{\tonne})}\\
+                    \begin{itemize}
+                        \item Teste DLArTPC à grande échelle
+                        \item Directement extrapolable à DU$\nu$E
+                        \item Mis en route en août 2019
+                    \end{itemize}
+                    \vspace{1cm}
+                    \textbf{$+$ 1 premier prototype de \TOO{} (\SI{4}{\tonne})}\\
+                    \begin{itemize}
+                        \item Teste les  choix technologiques du \SSS{}
+                        \item Opéré en 2017
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
     \end{frame}
 
-  {
-    	\setlength\pdfpagewidth{12.8cm}%
-    	\setlength\pdfpageheight{9.15cm}%
-    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{nu_platform.png}}
-    	\begin{frame}[plain]
-    	\end{frame}
-    }
+    \begin{frame}{La technologie DLArTPC}
+        \centering
+       	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
+    \end{frame}
+
+%  {
+%    	\setlength\pdfpagewidth{12.8cm}%
+%    	\setlength\pdfpageheight{9.15cm}%
+%    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{nu_platform.png}}
+%    	\begin{frame}[plain]
+%    	\end{frame}
+%    }
     
-    \section[Tests des CRPs]{Tests et mesures sur les CRPs du \SSS{}}
+    \section[Tests des LEMs]{Tests et mesures des détecteurs LEMs du démonstrateur de \SI{300}{\tonne}}
 
     {
     	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/1.pdf}}
@@ -204,7 +277,7 @@
             \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{
                 \begin{center}
                     \begin{Huge}
-                            \textcolor{pheniics_purple}{\textbf{Tests et mesures sur les CRPs du \SSS{}}}
+                            \textcolor{pheniics_purple}{\textbf{\insertsection}}
                     \end{Huge}
                 \end{center}
             }
@@ -220,20 +293,18 @@
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
     					\item \textcolor{red}{But: Gain $\geq 20$} \\(S/B $\geq 200$ pour une MIP)
-    					\item \textcolor{red}{Stabilité sur de très longues périodes (plusieurs années)}
+    					\item \textcolor{red}{Stabilité (plusieurs années)}
     				\end{itemize}
     			\end{minipage}\hfill
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
     					\item Impuretés: 0.1\;ppb
-    					\item Effet de charge d'espace
-    					(pas dans DU$\nu$E)
+    					\item \SI{6}{\meter} de dérive : \SI{500}{\volt\per\centi\meter} $\Rightarrow$ Cathode à \SI{300}{\kilo\volt}
     				\end{itemize}
 	    		\end{minipage}\hfill
 	    		\begin{minipage}{0.32\textwidth}
 	    			\begin{itemize}
-	    				\item Grande distance de dérive (Cathode à \SI{300}{\kilo\volt})
-	    				\item Extrapolable à l'échelle de DU$\nu$E
+    					\item[\danger] Effet de charge d'espace (pas dans DU$\nu$E)
 	    			\end{itemize}
 	    		\end{minipage}
     	\end{scriptsize} 
@@ -247,7 +318,7 @@
 	   			$G_{eff} = \mathcal{T}e^{A\rho d e^{-B\rho d/V}}$\\
 	   			\begin{scriptsize}
 	    			\begin{itemize}
-	    				\item $\mathcal{T}$: Transparence électrique du sandwich LEM-anode.
+	    				\item $\mathcal{T}$: Transparence au électrons du sandwich LEM-anode.
 	    				\item $A,B$: coefficients, dépendent du gaz.
 	    				\item $d$: distance d'amplification (\SI{1}{\milli\meter}).
 	    				\item $V$: tension d'amplification ($\sim$\SI{3}{\kilo\volt}).
@@ -256,7 +327,7 @@
 	    		\end{scriptsize} 
 	   			\vfill
                 \centering
-				\includegraphics[width=0.8\textwidth]{gain_3L.pdf}
+				\includegraphics[width=0.8\textwidth]{gain_3L.pdf}\\\tiny{C. Cantini et al., 2014, doi : 10.1088/1748-0221/10/03/P03017}
 	   		\end{minipage}\hfill
 	   		\begin{minipage}{0.48\textwidth}
 	   			\includegraphics[width=\textwidth]{lem_anode.png}
@@ -264,7 +335,7 @@
     \end{frame}
 
     \begin{frame}{La mission de l'Irfu}
-        \centering \textbf{\textcolor{red}{Mission de l'Irfu}: }Tester et caractériser les LEMs et anodes de 2 des 4 CRPs.\\\vfill
+        \centering \textbf{\textcolor{red}{Mission de l'Irfu}: }Production, test et caractérisation des LEMs et anodes de 2 des 4 CRPs.\\\vfill
     	\begin{scriptsize}
         	\begin{columns}
             	\begin{column}{0.5\textwidth}
@@ -272,6 +343,10 @@
                    	\includegraphics[width=\textwidth]{anode_carde.png}
             	\end{column}
        	        \begin{column}{0.5\textwidth}
+           	        \textbf{Tenue en tension?\\
+           	        Gain?\\
+           	        Uniformité de l'épaisseur des LEMs?\\
+           	        Continuité des pistes des anodes?\\}\vspace{0.3cm}
            	        \begin{itemize}
                	        \item Réalisation de l'infrastructure nécessaire aux testes des LEMs et anodes
                	        \item LEMs produit par ELTOS sur la base du design testé dans le prototype de \threeL{} par ETHZ (CFR-34, été 2017)
@@ -291,14 +366,14 @@
 	    	\begin{columns}
 	    		\begin{column}{0.5\textwidth}
 	    			\begin{itemize}
-	    				\item ELTOS vérifie que les spécifications sont respectées: épaisseurs, RIMs, trous, taille.
+	    				\item ELTOS vérifie que les dimensions demandées sont respectées
 	    			\end{itemize}
 	    		\end{column}\hfill
 	    		\begin{column}{0.5\textwidth}
-	    			\textbf{Au DEDIP}:
+	    			\textbf{\hspace{0.3cm}Au CEA (DEDIP)}:
 	    			\begin{itemize}
-	    				\item Mesure de l'épaisseur.
-	    				\item Soudure des connecteurs haute tension, collage des séparateurs MACOR.
+	    				\item Mesure de l'uniformité de l'épaisseur.
+	    				\item Soudure et collage.
 	    				\item Nettoyage, polymérisation, séchage.
 	    			\end{itemize}
 	    		\end{column}
@@ -317,7 +392,7 @@
     				\begin{center}
     					$G _{eff}= \mathcal{T}e^{A\rho \textcolor{red}{d} e^{-B\rho \textcolor{red}{d}/V}}$\\
     				\end{center}
-    				$\textcolor{red}{d}$: Distance d'amplification, i.e \textcolor{red}{épaisseur du LEM}.\\
+    				$\textcolor{red}{d}$: \textcolor{red}{épaisseur du LEM}.\\
     				$\Rightarrow$ Impact exponentiel sur le gain.\\
     				$\Rightarrow$ Nécessaire de connaître les fluctuations de cette épaisseur pour \textcolor{red}{vérifier l'uniformité du gain}.\\
     				\vfill
@@ -326,7 +401,7 @@
     			\hfill
     			\begin{column}{0.5\textwidth}
     				\begin{itemize}
-    					\item Utilise Imagerie Chromatique Confocal.
+    					\item Imagerie Chromatique Confocale.
     					\item Mesure l'épaisseur des 72 LEMs du \SSS{}.
     					\item Création d'un script Python pour l'analyse des résultats.
     				\end{itemize}
@@ -389,7 +464,7 @@
     \begin{frame}{Tenue en tension des LEMs}
     	\begin{scriptsize}
     		\begin{center}
-    			\textbf{Teste des LEMs à la desité d'une DLArTPC dans une enceinte haute pression : Haute tension maximum}\\
+    			\textbf{Test des LEMs à la densité d'une DLArTPC dans une enceinte haute pression : Haute tension maximum}\\
     			$G _{eff}= \mathcal{T}e^{A\textcolor{red}{\rho} d e^{-B\textcolor{red}{\rho}d/\textcolor{red}{V}}}$
     		\end{center} 
     		\begin{columns}
@@ -431,7 +506,7 @@
     			\begin{center}
 	    			\begin{scriptsize}
 		    			CFR-35 à \SI{35}{\kilo\volt\per\centi\meter} \\
-		    			\textcolor{red}{$\sim$ 3 20 décharges par heure}\\
+		    			\textcolor{red}{$\sim$ 3 décharges par heure}\\
 		    		\end{scriptsize}
 	    			\begin{tiny}
 	    				(Design fait par le \textbf{CEA}, utilisé dans le \SSS{})
@@ -448,7 +523,7 @@
 	    				\item Décharges surtout sur les bords et les coins.
 	    			\end{itemize}
 	    			\begin{itemize}
-	    				\item[$\Rightarrow$] Nouveau design (CFR-35) avec bords plus grands.
+	    				\item[$\Rightarrow$] Nouveau design (CFR-35) avec bords plus grands. \textcolor{red}{(Solution temporaire)}
 	    				\item[$\Rightarrow$] Nombre de décharges plus faible d'un ordre de grandeur.
 	    			\end{itemize}
 	    		\end{scriptsize}
@@ -475,7 +550,7 @@
     \begin{frame}{Mesures de gain}
         %TODO mettre à jour
     	\begin{scriptsize}
-    		\begin{center}\textbf{Teste des LEMs à la desité d'une DLArTPC dans une enceinte haute pression : gain}\\\end{center}
+%    		\begin{center}\textbf{Teste des LEMs à la densité d'une DLArTPC dans une enceinte haute pression : gain}\\\end{center}
     		\begin{columns}
     			\begin{column}{0.46\textwidth}
     				\centering \includegraphics[width=\textwidth]{gamelle_source.png}
@@ -494,7 +569,9 @@
     			\end{column}\hfill
     			\begin{column}{0.58\textwidth}
     				\begin{itemize}
-    					\item Gain dans les LEMs de $10\times$\SI{10}{\centi\meter\squared} et $50\times$\SI{50}{\centi\meter\squared} se comporte de la même manière
+        				\item Bon accord avec les mesures du \SI{3}{\liter} après charging up.
+    					\item LEMs de $10\times$\SI{10}{\centi\meter\squared} et $50\times$\SI{50}{\centi\meter\squared} se comportent de la même manière à haut gain.
+    					\item Petites différences à faible gain.
     				\end{itemize}
     			\end{column}
     		\end{columns}
@@ -512,7 +589,7 @@
 	\end{frame}
 }
 
-    \begin{frame}{Boîte cryogénique au CERN}
+    \begin{frame}{Boîte cryogénique au CERN (Juillet -- Décembre 2018)}
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
    		\begin{columns}
    			\begin{column}{0.4\textwidth}
@@ -539,7 +616,7 @@
 	    				\end{itemize}
 	    				\item \textbf{Planéité}
 	    				\begin{itemize}
-	    					\item \textcolor{red}{\SI{1.2}{\milli\meter}} à travers le CRP : ok.
+	    					\item \textcolor{red}{$<$\SI{2}{\milli\meter}} à travers le CRP %: ok.
 	    				\end{itemize}
 	    			\end{itemize}
 	    		\end{scriptsize}
@@ -569,25 +646,25 @@
             \begin{column}{0.5\textwidth}
                 Timeline:
                 %TODO
-                \textcolor{red}{A FAIRE DEBUT SEPTEMBRE}
+                \textcolor{red}{A COMPLETER (photos caméras CRP, les 4 CRPs grilles + LEMs (2.5kV) testés avec cathode à 50kV, bulles?)}
             \end{column}
         \end{columns}
     \end{frame}
 
+    \section[Analyse du \SI{4}{\tonne}]{Simulations et analyses du prototype de \SI{4}{\tonne}}
+    
     {
     	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/1.pdf}}
         \begin{specialframe}
             \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{
                 \begin{center}
                     \begin{Huge}
-                            \textcolor{pheniics_purple}{\textbf{Simulations du CRP et analyse des résultats du \TOO{}}}
+                            \textcolor{pheniics_purple}{\textbf{\insertsection}}
                     \end{Huge}
                 \end{center}
             }
         \end{specialframe}
     }
-
-    \section[\TOO{}]{Simulations du CRP et analyse des résultats du \TOO{}}
 
     \begin{frame}{Le prototype de \TOO{}}
 		\begin{columns}
@@ -597,7 +674,7 @@
 			\end{column}\hfill
 			\begin{column}{0.48\textwidth}
 				\begin{scriptsize}
-					\textcolor{red}{Jalon de la technologie DLArTPC :} \\ a montré son fonctionnement à \SI{4}{\tonne}.\\
+					\textcolor{red}{A démontré le fonctionnement de DLArTPC à \SI{4}{\tonne}}
 					Signal/Bruit $\sim$ 10 pour une MIP à une amplification de \SI{28}{\kilo\volt\per\centi\meter}.
 				\end{scriptsize}
 			\end{column}\hfill
@@ -615,21 +692,46 @@
     				\vspace{0.3cm}
     				\textbf{But:} Tester les choix technologiques faits pour le \SSS{}.\\
     				\vspace{0.3cm}
-    				\textbf{Difficultés:} 
+    				\textbf{Difficultés rencontrées:} 
     				\begin{itemize}
     					\item Tension maximum limitée à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
     					\item Haute tension à travers les LEMs instable
+    					\item Déformation du CRP $\sim\SI{3}{\milli\meter}$
     				\end{itemize}
     				\textbf{$\Rightarrow$ Problèmes résolus dans le \SSS{}} \\
     				\vspace{0.3cm}
     				\textbf{Analyse principale :} Gain (vs amplification, vs extraction, stabilité)\\
-    				$\Rightarrow$ On utilise les muons cosmiques (MIP).
+    				$\Rightarrow$ Utilise les muons cosmiques (MIP).
     			\end{column}\hfill
     			\begin{column}{0.65\textwidth}
     				\includegraphics[width=\textwidth]{./pictures/run840.png}\\
     			\end{column}
     		\end{columns}
 	    \end{scriptsize}
+    \end{frame}
+    
+    \begin{frame}{Lumière}
+        \begin{scriptsize}
+            \centering \includegraphics[width=0.7\textwidth]{./pictures/scintillation.pdf}\\\vfill
+            \centering Deux sources de lumières dans une DLArTPC:
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    Ionisation primaire :
+                    \begin{itemize}
+                        \item L'ionisation de l'argon produit une scintillation (\SI{128}{\nano\meter})
+                        \item L'argon est transparent à cette lumière
+                        \item Utilisée comme $t_0$
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    Électroluminescence dans le gaz :
+                    \begin{itemize}
+                        \item Le passage d'électrons dans le gaz avec un champ de plus de \SI{2}{\kilo\volt\per\centi\meter} produit de l'électroluminescence
+                        \item Informe sur le gain et la pureté (N$_2$)
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{scriptsize}
     \end{frame}
 
     \subsection{Méthode d'analyse}
@@ -666,6 +768,7 @@
                 \end{itemize}
             \end{column}
             \begin{column}{0.5\textwidth}
+                \hspace{0.3cm} Simulation Monte Carlo :
                 \begin{itemize}
                     \item Efficacité de sélection des muons : 68\,\%
                     \item Échantillon final : 92\,\% de muons
@@ -704,11 +807,9 @@
     		\begin{columns}
     			\hspace{-1.5cm}
 	    		\begin{column}{0.3\textwidth}
-	    			\vspace{-2cm}
-	    			\hbox{
-	    				$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{ext} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
-	    			}\\
-	    			\vspace{0.7cm}
+	    			$G_{eff} = \mathcal{T}e^{A\rho d e^{-B\rho d/V}}$\\
+	    			$\mathbf{\mathcal{T}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{ext} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$\\
+	    			\vspace{0.6cm}
 	    			\textbf{Difficulté rencontrée dans le $\mathbf{3 \times 1 \times \SI[detect-weight]{1}{\meter\cubed}}$:} Tension de la grille d'extraction limitée à \SI{5}{\kilo\volt}\\
 	    			\vspace{0.3cm}
 	    			$\Rightarrow$ N'a pas pu opérer à champ d'extraction et d'induction fixés.\\
@@ -759,7 +860,7 @@
     \begin{frame}{Simulation : efficacités de collection}
         \hbox{
      		$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extr} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
-     	}
+     	}\vspace{0.2cm}
    		\begin{columns}
             \begin{column}{0.5\textwidth}
                 \centering $\textcolor{red}{\epsilon_{LEM}}$
@@ -780,18 +881,20 @@
                 \end{scriptsize}
             \end{column}\hfill
             \begin{column}{0.5\textwidth}
+              \begin{scriptsize}
                 \begin{itemize}
-                    \item Dépend du charging up du LEM (discuté plus loin)
+                    \item Dépend du charging up du LEM
                     \item Simulée ici avant charging up.
                 \end{itemize}
+              \end{scriptsize}
             \end{column}
         \end{columns}
     \end{frame}
     
-    \begin{frame}{Efficacités de collection : comparaison aux mesures}
-        Dans l'enceinte haute pression
+    \begin{frame}{Efficacités de collection : mesures dans l'enceinte haute pression}
         \begin{scriptsize}
-            impossible de mesurer les efficacités directement \\$\Rightarrow$ comportement du gain normalisé aux efficacités simulées.
+            $\mathbf{ \textcolor{red}{\epsilon_{LEM}}}$ et $\mathbf{ \textcolor{blue}{\epsilon_{anode}}}$ sont corrélées : valeurs individuelles pas mesurables. Mais \textbf{effets} individuels mesurables.\\
+            $\Rightarrow$ Mesure de $G$ vs $E_{extr}$ et $E_{ind}$, puis normalisation aux efficacités simulées.
         \begin{columns}
             \begin{column}{0.5\textwidth}
                 \centering $\textcolor{red}{\epsilon_{LEM}}$
@@ -805,31 +908,26 @@
    		\begin{columns}
             \begin{column}{0.5\textwidth}
                 \begin{itemize}
-                    \item Pas d'efficacité d'extraction (pas de liquide)
-                    \item Champ maximum limité par la distance Cathode-LEM et l'alimentation HT
+%                    \item Pas d'efficacité d'extraction (pas de liquide)
+%                    \item Champ maximum limité par la distance Cathode-LEM et l'alimentation HT
                     \item Comportement similaire entre \SI{1}{\kilo\volt\per\centi\meter} et \SI{1.5}{\kilo\volt\per\centi\meter}
                 \end{itemize}
             \end{column}\hfill
             \begin{column}{0.5\textwidth}
                 \begin{itemize}
                     \item Comportement similaire, mais différences allant jusqu'à 15\,\%
+                    \item[\danger] Mesures faites après charging up, simulations faites avant charging up!
                 \end{itemize}
             \end{column}
         \end{columns}
         \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Efficacités de collection : comparaison aux mesures}
-        Dans le \TOO{}
+    \begin{frame}{Efficacités de collection : mesures dans le \TOO{}}
         \begin{scriptsize}
-            \begin{columns}
-                \begin{column}{0.5\textwidth}
-                    \includegraphics[width=\textwidth]{./pictures/gain_vs_extr.pdf}
-                \end{column}
-                \begin{column}{0.5\textwidth}
-                    \includegraphics[width=\textwidth]{./pictures/comp_311_eff.pdf}
-                \end{column}
-            \end{columns}\vspace{0.5cm}
+            \centering
+            \includegraphics[width=0.75\textwidth]{./pictures/comp_311_eff.pdf}
+            \vspace{0.2cm}
             \begin{columns}
                 \begin{column}{0.5\textwidth}
                     \begin{itemize}
@@ -992,16 +1090,19 @@
     \begin{frame}{Gain vs amplification}
         \begin{scriptsize}
             \centering \includegraphics[width=0.75\textwidth]{./pictures/gain_vs_ampli.pdf} \\
+            \vspace{0.2cm}
             \begin{columns}
                 \begin{column}{0.5\textwidth} 
                     \begin{itemize}
-                        \item[$\Rightarrow$]  \textcolor{red}{Devrait être entre les résultats du \threeL{} avant et après charging up}
+                        \item  \textcolor{red}{Bon accord avec le \threeL{} après charging up}
+                        \item[$\Rightarrow$] Charging up complet.
                     \end{itemize}
                 \end{column}
                 \begin{column}{0.5\textwidth}
+                    Petite différence avec \SI{3}{\liter} :
                     \begin{itemize}
-                        \item \TOO{} \textcolor{red}{légèrement sous les résultats} du \threeL{} après charging up, sauf au delà de \SI{28}{\kilo\volt\per\centi\meter}.
-                        \item[$\Rightarrow$] Charging up complet.
+                        \item Différences d'épaisseur? 
+                        \item $\textcolor{blue}{\epsilon_{Anode}}$?
                     \end{itemize}
                 \end{column}
             \end{columns}
@@ -1033,6 +1134,8 @@
     \subsection{Reconstruction des runs à haute amplification}
     
     \begin{frame}{Problème lors de la suppression du bruit cohérent}
+        %TODO 
+        \textcolor{red}{Rajouter un exemple ou ca marche}
         \begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.5\textwidth}
@@ -1048,9 +1151,9 @@
                         \item Soustraction de cette moyenne par bin de temps dans chaque canal d'ADC
                     \end{itemize}
                    \textbf{ Exemple d'un canal d'ADC avant et après suppression du bruit cohérent dans le run à \SI{30}{\kilo\volt\per\centi\meter} }: \\Le coup n'est pas vue et n'est pas ignoré pour le calcul du bruit cohérent. \\
-                   $\Rightarrow$ Suppression trop forte et le coup est supprimé
-                   $\Rightarrow$ Trace segmentée
-                   $\Rightarrow$ Mauvaise reconstruction avec LArSoft
+                   $\Rightarrow$ Suppression trop forte et le coup est supprimé \\
+                   $\Rightarrow$ Trace segmentée \\
+                   $\Rightarrow$ Mauvaise reconstruction avec LArSoft \\
                 \end{column}
             \end{columns}
         \end{scriptsize}
@@ -1102,7 +1205,7 @@
                         \item Identification des ROI
                         \item Un passage de suppression de bruit cohérent
                         \item Identifications des coups
-                        \item \textbf{Transformation de Hough} : cherche des droites et non des segments
+                        \item \textbf{Transformation de Hough} : \textcolor{red}{cherche des droites et non des segments}
                         \item \textbf{Seconde suppression du bruit sachant où sont les traces}, calcul de $dQ/ds$
                     \end{enumerate}
                     $\Rightarrow$ Une trace segmentée peut être reconstruite
@@ -1120,42 +1223,16 @@
             \begin{center} \includegraphics[width=0.8\textwidth]{cnsub_fromtrack.pdf} \end{center}
             \begin{columns}
                 \begin{column}{0.6\textwidth}
+                    Transformation de Hough\\
                     \includegraphics[width=\textwidth]{1197_dQds_0.pdf}
                 \end{column}
                 \begin{column}{0.4\textwidth}
+                    LArSoft\\
                     \includegraphics[width=\textwidth]{dQds_1197_0.pdf}
                 \end{column}
             \end{columns}
         \end{scriptsize}
     \end{frame}
-
-  \subsection{Lumière}
-
-    \begin{frame}{Lumière}
-        \begin{scriptsize}
-            \centering \includegraphics[width=0.7\textwidth]{./pictures/scintillation.pdf}\\\vfill
-            \centering Deux sources de lumières dans une DLArTPC:
-            \begin{columns}
-                \begin{column}{0.5\textwidth}
-                    Ionisation primaire :
-                    \begin{itemize}
-                        \item L'ionisation de l'argon produit une scintillation (\SI{128}{\nano\meter})
-                        \item L'argon est transparent à cette lumière
-                        \item Utilisée comme $t_0$
-                    \end{itemize}
-                \end{column}
-                \begin{column}{0.5\textwidth}
-                    Électroluminescence dans le gaz :
-                    \begin{itemize}
-                        \item Le passage d'électrons dans le gaz avec un champ de plus de \SI{2}{\kilo\volt\per\centi\meter} produit de l'électroluminescence
-                        \item Informe sur le gain et la pureté
-                    \end{itemize}
-                \end{column}
-            \end{columns}
-        \end{scriptsize}
-    \end{frame}
-
-  \section{Conclusion}
 
     \begin{specialframe}
         \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{

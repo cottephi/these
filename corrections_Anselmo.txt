@@ -39,7 +39,7 @@ CHAP1
 + p10: premiere point ligne 4. Je ne comprends pas la phrase “…de L d’electron d’une saveur donnée…”
 + p23: Il faudrait que le texte et le tableau 1.1 soient coherent. Pour les atmosphériques tu écrive 1-10^5 GeV mais dans le tableau c’est 10^2 - 10^5 MeV. De plus les valeurs dans le tableau ne sont pas cohérents. pour calculer Dm tu fais E/L (premiere ligne). Pourquoi dans le cas des réacteurs Dm est 10^-2 - 10^-3 et pas 10^-2 - 10^-6? Tu peux revoir le tableau?
 
-- p5-line7: manque reference -> est-ce la phrase "Plusieurs extensions du modèle standard sont possibles pour inclure ces masses (voir section 1.E), extension qui implique de la nouvelle physique." ? Il y a des références dans l'annexe.
++ p5-line7: manque reference
 
 CHAP2
 + p48: dans la reference cité pour opera il y a 10 neutrino tau candidates et pas 5.
@@ -50,7 +50,7 @@ CHAP2
 + p55: la caption figure 2.7 est misleading. A droite et a gauche on a le spectre de neutrino et antineutrino mais la difference est le mode de fonctionnement du beam (polarisation des horns).
 + p60: je ne comprends pas le tableau. C’est quoi la difference entre Requis et Attendu? Qu’est-ce que c’est LArIAT?
 
-- p56 ligne 13: je ne comprends pas bien. le beam dump est ce que tu appelle absorbeur et il est present dans DUnE. - Il y a un absorbeur dans DUNE, mais après le tuyau de désintégration. Les neutrinos sont déjà produits quand le faisceau atteint d'absorbeur. Mais ce n'est pas la technique de production dite du Beam Dump. Dans cette technique, il n'y a pas de tuyau de désintégration, l'absorbeur étant directement après les cornes. Les neutrinos sont alors produits DANS l'absorbeur.
++ p56 ligne 13: je ne comprends pas bien. le beam dump est ce que tu appelle absorbeur et il est present dans DUnE. - Il y a un absorbeur dans DUNE, mais après le tuyau de désintégration. Les neutrinos sont déjà produits quand le faisceau atteint d'absorbeur. Mais ce n'est pas la technique de production dite du Beam Dump. Dans cette technique, il n'y a pas de tuyau de désintégration, l'absorbeur étant directement après les cornes. Les neutrinos sont alors produits DANS l'absorbeur.
 
 CHAP3
 + p63: CRP utilisé pour la premiere fois. Expliquer l’acronyme.

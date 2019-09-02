@@ -184,14 +184,14 @@
        					\begin{itemize}
        						\item Tout se passe dans l'argon liquide.
        						\item Reconstruction 3D des événements (précision millimétrique).
-       						\item Mesure directe de l'énergie (précision $\simeq\SI{100}{\kilo\electronvolt}$).
+       						\item Mesure directe de l'énergie (précision $\sim\SI{100}{\kilo\electronvolt}$).
 %       						\item Les premiers événements de protoDU$\nu$E-SP ont été vus l'an dernier.
        					\end{itemize}
        				\end{column}\hfill
        				\begin{column}{0.5\textwidth}
        					\begin{itemize}
        						\item \textcolor{red}{Amplification} des charges dans le gaz\\$\Rightarrow$ Meilleur ratio signal/bruit.
-       						\item Plus grande distances de dérive, moins de canaux de lecture, meilleure résolution spatiale.
+       						\item Plus grande distance de dérive, moins de canaux de lecture, meilleure résolution spatiale.
        						\item Premières données en septembre 2019.
        					\end{itemize}
        				\end{column}
@@ -248,7 +248,7 @@
                     \vspace{1cm}
                     \textbf{$+$ 1 premier prototype de \TOO{} (\SI{4}{\tonne})}\\
                     \begin{itemize}
-                        \item Teste les  choix technologiques du \SSS{}
+                        \item Teste certains choix technologiques du \SSS{}
                         \item Opéré en 2017
                     \end{itemize}
                 \end{column}
@@ -333,6 +333,27 @@
 	   			\includegraphics[width=\textwidth]{lem_anode.png}
 	   		\end{minipage}
     \end{frame}
+    
+    \begin{frame}{Le charging up}
+        \begin{scriptsize}
+            \begin{columns}
+      			\begin{column}{0.5\textwidth}
+          			\includegraphics[width=\textwidth]{RIM.png}\\\vspace{1cm}
+      				\includegraphics[width=\textwidth]{3L_charging_up.png}\\
+      			\end{column}\hfill
+      			\begin{column}{0.5\textwidth}
+      				\includegraphics[width=\textwidth]{CU.png}\\\vspace{1cm}
+          			\textbf{RIM autour des trous :}
+      				\begin{itemize}
+      					\item[$\Rightarrow$] Lignes de champ traversent le FR4\\
+      					\item[$\Rightarrow$] L'accumulation d'électron \textcolor{blue}{déforme et atténue} le champ
+%    					\item Le temps de charging up time dépend de la tension dans le LEM et du taux de dépôt de charge.
+      				\end{itemize}
+      				Charging up: \textcolor{red}{$G_{eff}(t)$ décroît} jusqu'à un plateau ($\sim$ quelques jours).
+      			\end{column}
+      		\end{columns}
+        \end{scriptsize}
+    \end{frame}
 
     \begin{frame}{La mission de l'Irfu}
         \centering \textbf{\textcolor{red}{Mission de l'Irfu}: }Production, test et caractérisation des LEMs et anodes de 2 des 4 CRPs.\\\vfill
@@ -348,7 +369,7 @@
            	        Uniformité de l'épaisseur des LEMs?\\
            	        Continuité des pistes des anodes?\\}\vspace{0.3cm}
            	        \begin{itemize}
-               	        \item Réalisation de l'infrastructure nécessaire aux testes des LEMs et anodes
+               	        \item Réalisation de l'infrastructure nécessaire aux tests des LEMs et anodes
                	        \item LEMs produit par ELTOS sur la base du design testé dans le prototype de \threeL{} par ETHZ (CFR-34, été 2017)
                	        \item Modification du design afin d'atteindre une meilleure tenue en tension (CFR-35, Janvier--Octobre 2018)
                	        \item Instrumentation de 2 CRPs sur 4
@@ -366,13 +387,13 @@
 	    	\begin{columns}
 	    		\begin{column}{0.5\textwidth}
 	    			\begin{itemize}
-	    				\item ELTOS vérifie que les dimensions demandées sont respectées
+	    				\item ELTOS mesure l'épaisseur des LEMs et s'assure du respect du cahier des charges
 	    			\end{itemize}
 	    		\end{column}\hfill
 	    		\begin{column}{0.5\textwidth}
 	    			\textbf{\hspace{0.3cm}Au CEA (DEDIP)}:
 	    			\begin{itemize}
-	    				\item Mesure de l'uniformité de l'épaisseur.
+	    				\item Contrôle de l'uniformité de l'épaisseur.
 	    				\item Soudure et collage.
 	    				\item Nettoyage, polymérisation, séchage.
 	    			\end{itemize}
@@ -380,7 +401,7 @@
 	    	\end{columns}
 	    \end{scriptsize}
 	    \vspace{0.5cm}
-        $\Rightarrow$ LEM près pour les tests hautes tensions et mesures de gain!
+        $\Rightarrow$ LEM prêts pour les tests hautes tensions et mesures de gain!
     \end{frame}
 
     \subsection[Épaisseur]{Mesure de l'épaisseur des LEMs}
@@ -464,7 +485,7 @@
     \begin{frame}{Tenue en tension des LEMs}
     	\begin{scriptsize}
     		\begin{center}
-    			\textbf{Test des LEMs à la densité d'une DLArTPC dans une enceinte haute pression : Haute tension maximum}\\
+    			\textbf{Test des LEMs à la densité d'une DLArTPC dans une enceinte haute pression : stabilité en tension}\\
     			$G _{eff}= \mathcal{T}e^{A\textcolor{red}{\rho} d e^{-B\textcolor{red}{\rho}d/\textcolor{red}{V}}}$
     		\end{center} 
     		\begin{columns}
@@ -556,7 +577,7 @@
     				\centering \includegraphics[width=\textwidth]{gamelle_source.png}
     			\end{column}\hfill
     			\begin{column}{0.58\textwidth}
-    				\centering \includegraphics[width=\textwidth]{./pictures/gain.png}
+    				\centering \includegraphics[width=\textwidth]{./pictures/New_LEM_Gain.pdf}
     			\end{column}
     		\end{columns}\vfill
     		\begin{columns}
@@ -572,6 +593,7 @@
         				\item Bon accord avec les mesures du \SI{3}{\liter} après charging up.
     					\item LEMs de $10\times$\SI{10}{\centi\meter\squared} et $50\times$\SI{50}{\centi\meter\squared} se comportent de la même manière à haut gain.
     					\item Petites différences à faible gain.
+    					\item  Gain max CFR--35 $>$ Gain max CFR--34
     				\end{itemize}
     			\end{column}
     		\end{columns}
@@ -591,7 +613,7 @@
     	\end{frame}
     }
 
-    \begin{frame}{Boîte cryogénique au CERN (Juillet -- Décembre 2018)}
+    \begin{frame}{Boîte cryogénique au CERN (Juil. -- Déc. 2018)}
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
    		\begin{columns}
    			\begin{column}{0.4\textwidth}
@@ -640,7 +662,7 @@
        \end{frame}
 	    }
 
-    \begin{frame}{État actuel et planning}
+    \begin{frame}{Les grandes étapes}
         \begin{columns}
             \begin{column}{0.4\textwidth}
                 \includegraphics[width=\textwidth]{./pictures/status_666.png}\\
@@ -713,11 +735,11 @@
     				\vspace{0.3cm}
     				\textbf{Difficultés rencontrées:} 
     				\begin{itemize}
-    					\item Tension maximum limitée à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
+    					\item Grille limitée à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
     					\item Haute tension à travers les LEMs instable
     					\item Déformation du CRP $\sim\SI{3}{\milli\meter}$
     				\end{itemize}
-    				\textbf{$\Rightarrow$ Problèmes résolus dans le \SSS{}} \\
+    				\textbf{$\Rightarrow$ Solutions apportées dans le \SSS{}} \\
     				\vspace{0.3cm}
     				\textbf{Analyse principale :} Gain (vs amplification, vs extraction, stabilité)\\
     				$\Rightarrow$ Utilise les muons cosmiques (MIP).
@@ -765,7 +787,7 @@
                     \begin{itemize}
        					\item Muon cosmique : MIP \\ $\Rightarrow$ dépôt d'énergie attendu connu
        					\item Valeur la plus probable (MPV) = \SI{1.7}{\mega\electronvolt\per\centi\meter}
-       					\item Après recombinaison avec les ions (loi de Birk) : \SI{8.26}{\femto\coulomb\per\centi\meter}
+       					\item Après recombinaison avec les ions (loi de Birks) : \SI{8.26}{\femto\coulomb\per\centi\meter}
        					\item $G_{eff}=\frac{MPV_0 + MPV_1}{MPV_{attendue}}$
        				\end{itemize}
                 \end{column}
@@ -957,7 +979,7 @@
                 \begin{column}{0.5\textwidth}
                     \begin{itemize}
                         \item MPV Normalisée à $\epsilon_{extr}$ à \SI{2}{\kilo\volt\per\centi\meter} pour comparer le comportement
-                        \item La MPV divisée par  $\epsilon_{LEM}$ est plus en accord avec $\epsilon_{extr}$ que la MPV seule.
+                        \item La MPV divisée par  $\epsilon_{LEM}$ est meilleure que la MPV seule.
                     \end{itemize}
                 \end{column}
             \end{columns}
@@ -977,7 +999,7 @@
        					\item[$\Rightarrow$]  25\,\% variation des champs entre la grille et l'interface et entre l'interface et les LEMs
        					\item Variation de $\epsilon_{extr}\times\epsilon_{LEM}$ à basse tension d'extraction
        				\end{itemize}
-                     \textbf{Note : } dans le \SSS{}, la tension Grille-LEM $\sim\SI{2.5}{\kilo\volt}$ fait que l'efficacité sera $\sim$ constantes avec le champ électrique.
+                     \textbf{Note : } dans le \SSS{},  $\Delta V$ Grille-LEM $\sim\SI{2.5}{\kilo\volt}\Rightarrow$ efficacité $\sim$ constantes.
                 \end{column}
             \end{columns}
         \end{scriptsize}
@@ -998,33 +1020,33 @@
 
   \subsection{Charging up}
 
-    \begin{frame}{Charging up}
-    	\begin{scriptsize}
-    		\begin{columns}
-    			\begin{column}{0.5\textwidth}
-    				\includegraphics[width=0.85\textwidth]{CU.png}\\
-                    \vspace{0.1cm}
-    				\includegraphics[width=\textwidth]{3L_charging_up.png}\\
-    				\includegraphics[width=0.7\textwidth]{gain_3L.pdf}
-    			\end{column}\hfill
-    			\begin{column}{0.5\textwidth}
-    				\begin{itemize}
-    					\item Lignes de champ traversent le FR4\\
-    					$\Rightarrow$ L'accumulation d'électron \textcolor{blue}{déforme et atténue} le champ
-    					\item Charging up: \textcolor{red}{$G_{eff}(t)$ décroît} jusqu'à un plateau.
-%    					\item Le temps de charging up time dépend de la tension dans le LEM et du taux de dépôt de charge.
-    				\end{itemize}
-    				\vspace{0.3cm}
-    				\begin{itemize}
-    					\item Simulation de $\textcolor{blue}{\epsilon_{Anode}}$ suppose un LEM \textcolor{red}{avant charging up}
-    					\item Mesures de gain dans l'enceinte faites \textcolor{red}{après charging up}
-    					\item Mesures de gain dans le \TOO{} faites \textcolor{red}{pendant le charging up}
-    					\item[$\Rightarrow$] $\textcolor{blue}{\epsilon_{Anode}}$ simulée sera plus faible que dans le \TOO{} (moins de pertes dues au charging up). Mais ce qui compte vraiment est le \textbf{comportement} de $\textcolor{blue}{\epsilon_{Anode}}$
-    				\end{itemize}
-    			\end{column}
-    		\end{columns}
-    	\end{scriptsize}
-    \end{frame}
+%    \begin{frame}{Charging up}
+%    	\begin{scriptsize}
+%    		\begin{columns}
+%    			\begin{column}{0.5\textwidth}
+%    				\includegraphics[width=0.85\textwidth]{CU.png}\\
+%                    \vspace{0.1cm}
+%    				\includegraphics[width=\textwidth]{3L_charging_up.png}\\
+%    				\includegraphics[width=0.7\textwidth]{gain_3L.pdf}
+%    			\end{column}\hfill
+%    			\begin{column}{0.5\textwidth}
+%    				\begin{itemize}
+%    					\item Lignes de champ traversent le FR4\\
+%    					$\Rightarrow$ L'accumulation d'électron \textcolor{blue}{déforme et atténue} le champ
+%    					\item Charging up: \textcolor{red}{$G_{eff}(t)$ décroît} jusqu'à un plateau.
+%%    					\item Le temps de charging up time dépend de la tension dans le LEM et du taux de dépôt de charge.
+%    				\end{itemize}
+%    				\vspace{0.3cm}
+%    				\begin{itemize}
+%    					\item Simulation de $\textcolor{blue}{\epsilon_{Anode}}$ suppose un LEM \textcolor{red}{avant charging up}
+%    					\item Mesures de gain dans l'enceinte faites \textcolor{red}{après charging up}
+%    					\item Mesures de gain dans le \TOO{} faites \textcolor{red}{pendant le charging up}
+%    					\item[$\Rightarrow$] $\textcolor{blue}{\epsilon_{Anode}}$ simulée sera plus faible que dans le \TOO{} (moins de pertes dues au charging up). Mais ce qui compte vraiment est le \textbf{comportement} de $\textcolor{blue}{\epsilon_{Anode}}$
+%    				\end{itemize}
+%    			\end{column}
+%    		\end{columns}
+%    	\end{scriptsize}
+%    \end{frame}
 
    \begin{frame}{Charging up dans le \TOO{}}
         \begin{scriptsize}
@@ -1063,13 +1085,13 @@
     			\vspace{0.5cm} \hspace{0.1cm}
     			\begin{minipage}{0.48\textwidth}
     				\centering
-    				\textbf{Carte d'efficacité du LEM}\\
+    				\textbf{Carte d'efficacité du LEM CFR-34}\\
     				\includegraphics[width=\textwidth]{eff_map.png}
     			\end{minipage}\hfill
     			\begin{minipage}{0.48\textwidth}
     				\centering
-    				\textbf{Impact sur la charge vue dans le} $\mathbf{6 \times 6 \times 6} \,\textbf{\si[detect-weight]{\meter\cubed}}$\\
-    				\includegraphics[width=\textwidth]{electron.png}
+    				\textbf{Impact sur la charge collectée d'un événement électron}\\
+    				\includegraphics[width=1.2\textwidth]{electron.png}
     			\end{minipage}
     		\end{minipage}
     	\end{scriptsize} 
@@ -1258,13 +1280,49 @@
         \end{scriptsize}
     \end{frame}
 
-    \begin{specialframe}
-        \vspace{2cm}\hspace*{-1.8cm}\parbox[t]{\textwidth}{
-            311 ok \\
-            perpectives pour le 666 : space charge, Ion feedback, montrer events si il y en a
-            %TODO
-            \textcolor{red}{A FAIRE DEBUT SEPTEMBRE}
-        }
-    \end{specialframe}
+%    \begin{specialframe}
+%        \hspace*{-1.8cm}\parbox[t]{\textwidth}{
+%            \centering \begin{Huge}
+%            \textbf{Conclusion}
+%            \vspace{2cm}
+%            \end{Huge}
+%            \begin{itemize}
+%                \item Principe de la DLArTPC \textcolor{green}{\checkmark} à \SI{4}{\tonne}
+%                \item[$\Rightarrow$] Tenu en tension grille et LEMs : problèmes réglés dans le \SSS{}
+%                \item \SSS{} : début d'opération prometteur
+%            \end{itemize}
+%            \vspace{0.3cm}
+%            \textbf{À suivre :}
+%            \begin{itemize}
+%                \item Gain $> 20$?
+%                \item Pureté?
+%                \item Stabilité?
+%            \end{itemize}
+%        }
+%    \end{specialframe}
+    {
+        \usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/1.pdf}}
+        \begin{specialframe}
+            \hspace*{-1.8cm}\parbox[t]{\textwidth}{
+                        \centering \begin{Huge}
+                        \vspace{2cm}
+                        \textbf{Conclusion}
+                        \vspace{1cm}
+                        \end{Huge}
+                        \begin{itemize}
+                            \item Principe de la DLArTPC \textcolor{green}{\checkmark} à \SI{4}{\tonne}
+                            \item[$\Rightarrow$] Tenu en tension grille et LEMs : solutions apportées dans le \SSS{}
+                            \item \SSS{} : début d'opération prometteur, premières traces observées
+                        \end{itemize}
+                        \vspace{0.3cm}
+                        \textbf{À suivre :}
+                        \begin{itemize}
+                            \item Gain $> 20$?
+                            \item Pureté?
+                            \item Stabilité?
+                        \end{itemize}
+                    }
+        \end{specialframe}
+    }
     
 \end{document}

@@ -9,8 +9,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="227.97314pt"
-   height="426.48221pt"
-   viewBox="0 0 227.97314 426.48221"
+   height="131.44727pt"
+   viewBox="0 0 227.97314 131.44727"
    version="1.1"
    id="svg2"
    inkscape:version="0.91 r13725"
@@ -47,13 +47,13 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.70239274"
-     inkscape:cx="-198.74803"
-     inkscape:cy="196.42338"
-     inkscape:window-x="65"
+     inkscape:zoom="1.4047855"
+     inkscape:cx="110.22691"
+     inkscape:cy="70.163471"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g5480" />
+     inkscape:current-layer="surface147174" />
   <defs
      id="defs4">
     <g
@@ -1331,7 +1331,7 @@
   </defs>
   <g
      id="surface528"
-     transform="translate(-669.60542,-7.2165988)">
+     transform="translate(-669.60542,-165.29937)">
     <g
        clip-path="url(#clip2)"
        id="g294"
@@ -1706,7 +1706,9 @@
         <g
            id="g5620"
            clip-path="url(#clip2-5)"
-           style="clip-rule:nonzero">
+           style="clip-rule:nonzero"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90">
           <use
              id="use5622"
              transform="matrix(0.550453,0,0,0.550488,168.66,427.07992)"

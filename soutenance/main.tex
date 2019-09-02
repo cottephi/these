@@ -580,14 +580,16 @@
     		%\textbf{Note:} Not sure about absolute gain value. Based on 3L measurements, CFR-35 should reach gain of $\sim$200.
     	\end{scriptsize}
     \end{frame}
+    
+    \subsection{Au CERN}
 
-{
-	\setlength\pdfpagewidth{12.8cm}%
-	\setlength\pdfpageheight{9cm}%
-	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_bottom.png}}
-	\begin{frame}[plain]
-	\end{frame}
-}
+    {
+    	\setlength\pdfpagewidth{12.8cm}%
+    	\setlength\pdfpageheight{9cm}%
+    	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_bottom.png}}
+    	\begin{frame}[plain]
+    	\end{frame}
+    }
 
     \begin{frame}{Boîte cryogénique au CERN (Juillet -- Décembre 2018)}
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
@@ -640,16 +642,33 @@
 
     \begin{frame}{État actuel et planning}
         \begin{columns}
-            \begin{column}{0.5\textwidth}
-                \includegraphics[width=0.75\textwidth]{./pictures/status_666.png}
-            \end{column}
-            \begin{column}{0.5\textwidth}
-                Timeline:
-                %TODO
-                \textcolor{red}{A COMPLETER (photos caméras CRP, les 4 CRPs grilles + LEMs (2.5kV) testés avec cathode à 50kV, bulles?)}
+            \begin{column}{0.4\textwidth}
+                \includegraphics[width=\textwidth]{./pictures/status_666.png}\\
+                \includegraphics[width=\textwidth]{./pictures/crp_out_lar.png}\\
+                \includegraphics[width=\textwidth]{./pictures/crp_in_lar.png}
+            \end{column}\hfill
+            \begin{column}{0.55\textwidth}
+                \begin{itemize}
+                    \item \textbf{Automne 2017 : Installation du cryostat à la plateforme neutrino}
+                    \item\textbf{Printemps 2018} : Installation de la cage de dérive
+                    \item \textbf{Hiver 2018 -- 2019} : Insertion des CRPs
+                    \item \textbf{Mai 2019} : Fermeture
+                    \item \textbf{Juin -- Juillet 2019} : Refroidissement et remplissage 
+                    \item \textbf{Août 2019} : Mise en route
+                    \item \textbf{Début septembre 2019} : 1ère traces
+                \end{itemize}
             \end{column}
         \end{columns}
     \end{frame}
+    
+    {
+       	\setlength\pdfpagewidth{12.8cm}%
+       	\setlength\pdfpageheight{6.75cm}%
+       	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/tracks_666.png}}
+       \begin{frame}[plain]
+             	
+       \end{frame}
+     }
 
     \section[Analyse du \SI{4}{\tonne}]{Simulations et analyses du prototype de \SI{4}{\tonne}}
     
@@ -1134,26 +1153,30 @@
     \subsection{Reconstruction des runs à haute amplification}
     
     \begin{frame}{Problème lors de la suppression du bruit cohérent}
-        %TODO 
-        \textcolor{red}{Rajouter un exemple ou ca marche}
+        
         \begin{scriptsize}
             \begin{columns}
-                \begin{column}{0.5\textwidth}
+                \begin{column}{0.45\textwidth}
+                    \centering \textbf{Signal trouvé:}\\
+                    \centering \includegraphics[width=\textwidth]{./pictures/good_pedsub.png}\\
+                    \centering \includegraphics[width=\textwidth]{./pictures/good_cnsub.png}\\
+                    \centering \textbf{Signal non trouvé:}\\
                     \centering \includegraphics[width=\textwidth]{pedsub_adcs_high_threshold.pdf}\\
                     \centering \includegraphics[width=\textwidth]{cnsub_adcs_high_threshold.pdf}\\
                  \end{column}
-                \begin{column}{0.5\textwidth}
-                    \textbf{Bruit cohérent = bruit commun à tous les canaux d'une même carte d'électronique.} 
-                    \textbf{Suppression du bruit cohérent :} 
+                \begin{column}{0.55\textwidth}
+                    \textbf{Bruit cohérent = bruit commun à tous les canaux d'une même carte d'électronique.} \\\vspace{0.3cm}
+                    Suppression du bruit cohérent :
                     \begin{itemize}
                         \item regroupement des canaux par groupe de 32
                         \item Calcul de la moyenne d'ADC pour chaque bin de temps
                         \item Soustraction de cette moyenne par bin de temps dans chaque canal d'ADC
-                    \end{itemize}
-                   \textbf{ Exemple d'un canal d'ADC avant et après suppression du bruit cohérent dans le run à \SI{30}{\kilo\volt\per\centi\meter} }: \\Le coup n'est pas vue et n'est pas ignoré pour le calcul du bruit cohérent. \\
-                   $\Rightarrow$ Suppression trop forte et le coup est supprimé \\
-                   $\Rightarrow$ Trace segmentée \\
-                   $\Rightarrow$ Mauvaise reconstruction avec LArSoft \\
+                    \end{itemize} 
+                    \vspace{0.3cm}
+                    \textbf{ Exemple d'un canal d'ADC avant et après suppression du bruit cohérent dans le run à \SI{30}{\kilo\volt\per\centi\meter} }: \\Le coup n'est pas vue et n'est pas ignoré pour le calcul du bruit cohérent. \\
+                     Suppression trop forte $\Rightarrow$ coup supprimé \\
+                    $\Rightarrow$ Trace segmentée \\
+                    $\Rightarrow$ Mauvaise reconstruction avec LArSoft \\
                 \end{column}
             \end{columns}
         \end{scriptsize}
@@ -1163,10 +1186,11 @@
         \begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.65\textwidth}
+                    \centering \textbf{Exemple de reconstruction, haute extraction}\\
                     \centering \includegraphics[width=\textwidth]{event_larsoft.png}
                 \end{column}
                 \begin{column}{0.35\textwidth}
-                    \centering Run à \SI{30}{\kilo\volt\per\centi\meter} (vue 0)\\
+                    \centering \textbf{Exemple de distribution $dQ/ds$, basse extraction}\\
                     \centering \includegraphics[width=\textwidth]{dQds_1197_0.pdf}
                 \end{column}
             \end{columns}\vfill
@@ -1188,7 +1212,7 @@
         \end{scriptsize}
     \end{frame}
     
-    \begin{frame}{Transformation de Hough}
+    \begin{frame}{Solution : transformation de Hough}
         \textbf{Paramétrisation d'une droite }: $r=x\cos(\theta)+y\sin(\theta)$\\
         \textbf{Calcul de $\boldsymbol{r}$ pour $\boldsymbol{\theta\in[0,\pi]}$} : un point dans un repère cartésien correspond à une sinusoïdale dans l'espace de Hough.\\
         $\Rightarrow$ Un ensemble de points sur une même droite dans un repère cartésien correspond à un point dans l'espace de Hough.\\

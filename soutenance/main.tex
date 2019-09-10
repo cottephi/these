@@ -49,7 +49,7 @@
         
     \subsection{DU$\nu$E}
         
-    \begin{frame}{Oscillations des neutrinos : les grandes inconnues}
+    \begin{frame}{Oscillations des neutrinos : les grandes inconnues}{Ordre des masses et violation de CP}
         \begin{columns}
             \begin{column}{0.5\textwidth}
                 \includegraphics[width=0.8\textwidth]{./pictures/CP_schema.png}\\
@@ -151,23 +151,25 @@
         \end{scriptsize}
     \end{frame}
     
-    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Sensibilités}
+    \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Prérequis du système de détection}
         \begin{scriptsize}
             \begin{columns}
-                \begin{column}{0.6\textwidth}
-                    - Énergie $\sim \si{\giga\eV}\Rightarrow$ création de particules
-                    - diff neutrino e et neutrino mu (images?)\\ 
-                    - rec supernovae event
+                \begin{column}{0.5\textwidth}
+                    \includegraphics[width=\textwidth]{nu_events.pdf}\\\textit{Événements vus dans ICARUS T600}
                 \end{column}
-                 \begin{column}{0.4\textwidth}
-                    \begin{scriptsize}
-                        Pour atteindre ces sensibilités : \\
-                    \end{scriptsize}
+                 \begin{column}{0.5\textwidth}
                     \begin{itemize}
-                        \item Trajectographie 3D
-                        \item Calorimétrie
-                        \item PID
-%                        \item Résolution en énergie $\leq$3\%
+                        \item Détection de neutrino
+                        \item Différencier $\nu_e$ et $\nu_{\mu}$ : \\ - $\neq dE/dx$ \\ - Gap en début de gerbe $\mathcal{O}(\si{\centi\meter})$
+                        \item Neutrino de supernovæ : \\ - imprévisible \\ - \SI{2}{\tera\byte\per\second} de données
+                        \item Désintégration du proton : \\ - trace de kaon $\mathcal{O}(\si{\centi\meter})$ \\ - Besoin d'un $t_0$
+                    \end{itemize}
+                    \begin{itemize}
+                        \item[$\Rightarrow$] Multi-kilotonne
+                        \item[$\Rightarrow$] Calorimètre
+                        \item[$\Rightarrow$] Trajectographe 3D $\mathcal{O}(\si{\milli\meter})$
+                        \item[$\Rightarrow$] PID
+                        \item[$\Rightarrow$] Opération continue sur plusieurs années
                     \end{itemize}
                 \end{column}
             \end{columns}
@@ -193,8 +195,7 @@
                     \textbf{Premier module SP} : été 2026.\\
                     \textbf{Premières données} : fin 2026\\
                     \textbf{Second module DP} : début 2028.\\\vspace{0.4cm}
-
-                    $\Rightarrow$\textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} est le prototype de la version \textcolor{red}{\textbf{Double Phase}} de la LArTPC.\\
+                    $\Rightarrow$\textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} est le prototype de la version \textcolor{red}{\textbf{Double Phase}}, ou DLArTPC.\\
                 \end{column}
             \end{columns}
 %            Timeline\\
@@ -209,7 +210,7 @@
            			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
            			\flushleft
            			\begin{footnotesize}\textit{Événements dans protoDU$\nu$E-SP (08/2018)}\\
-           			\textcolor{red}{Bruit $<$ \numprint{1000} $e^{-}$, impuretés $\sim\SI{0.055}{ppb}$}\end{footnotesize}
+           			\textcolor{red}{Bruit $<$ \numprint{1000} $e^{-}$, impuretés $\sim\SI{55}{ppt}$}\end{footnotesize}
            		\end{column}
            		\begin{column}{0.4\textwidth}
            			\begin{footnotesize}
@@ -252,7 +253,7 @@
        				\end{column}
        			\end{columns}
        			\vfill
-       			\textbf{$\Rightarrow$ Nécessite électronique bas bruit et impuretés $<$ \SI{100}{ppb}}
+       			\textbf{$\Rightarrow$ Nécessite électronique bas bruit et impuretés $<\SI{100}{ppt}$}
        	\end{scriptsize}
     \end{frame}
     
@@ -283,12 +284,12 @@
 %        \end{scriptsize}
 %    \end{frame}
 
-    \begin{frame}{Le projet WA105/ProtoDU$\nu$E--DP}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}--DP au CERN depuis 2015}
+    \begin{frame}{Le projet WA105/ProtoDU$\nu$E--DP}{Au CERN, depuis 2015}
         \centering
        	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
     \end{frame}
     
-    \begin{frame}{Les LEMs}
+    \begin{frame}{Les LEMs}{Où se passe l'amplification}
         \begin{scriptsize}
             \centering\includegraphics[width=\textwidth]{LEM_zoom.png}
             \begin{columns}
@@ -297,7 +298,7 @@
                 \end{column}
                 \begin{column}{0.5\textwidth}
                     \begin{itemize}
-                        \item PCB recouvert de cuivre
+                        \item PCB (epoxy FR4) recouvert de cuivre
                         \item 50$\times$\SI{50}{\centi\meter\squared}
                         \item \SI{1}{\milli\meter} d'épaisseur
                         \item 400k trous
@@ -308,10 +309,10 @@
         \end{scriptsize}
     \end{frame}
     
-    \begin{frame}{Le CRP}
+    \begin{frame}{Le CRP}{Plan de lecture de charge}
    		\begin{minipage}{0.43\textwidth}
    			\begin{scriptsize}
-	   			\textbf{Gain effectif:}\\
+	   			\textbf{Gain effectif (avalanche de Townsend):}\\
 	   		\end{scriptsize}
    			$G_{eff} = \mathcal{T}e^{A\rho d e^{-B\rho d/V}}$\\
    			\begin{scriptsize}
@@ -350,7 +351,7 @@
         \end{scriptsize}
     \end{frame}
         
-        \begin{frame}{Le charging up}
+        \begin{frame}{Le charging up}{Accumulation d'électrons sur le FR4}
             \begin{scriptsize}
                 \begin{columns}
            			\begin{column}{0.5\textwidth}
@@ -404,21 +405,21 @@
 		\end{scriptsize}
    	\end{frame}
    	
-   	\begin{frame}{Le prototype de \TOO{}}
+   	\begin{frame}{Le prototype de \TOO{}}{Principaux résultats}
        	\begin{scriptsize}
            	\begin{columns}
                	\begin{column}{0.5\textwidth}
                    	\textbf{Construit en 2016--2017, opéré entre Juin et Novembre 2017, Publication en 2018}\\
-                   	\textcolor{red}{A démontré le fonctionnement de DLArTPC à \SI{4}{\tonne}}
        	           	\begin{itemize}
+           	           	\item Fonctionnement d'une DLArTPC de \SI{4}{\tonne} : \textcolor{green}{\checkmark}
        	               	\item Champs stables (10h):
        	               	\begin{itemize}\begin{scriptsize}
        	                   	\item Extraction (liquide) \SI{1.9}{\kilo\volt\per\centi\meter}
        	                   	\item Amplification \SI{28}{\kilo\volt\per\centi\meter}
        	                   	\item Induction \SI{1.5}{\kilo\volt\per\centi\meter}\end{scriptsize}
        	               	\end{itemize}
-       	               	\item Impuretés $<\SI{0.075}{ppb}$
-       	               	\item Scintillation clairement détectée
+       	               	\item Impuretés $<\SI{0.075}{ppb}$ : \textcolor{green}{\checkmark}
+       	               	\item Scintillation clairement détectée : \textcolor{green}{\checkmark}
        	           	\end{itemize}
        	           	\hspace{-0.3cm}\includegraphics[width=1.2\textwidth]{./pictures/events.png}
                	\end{column}
@@ -429,11 +430,11 @@
        	\end{scriptsize}
    	\end{frame}
 	    
-    \begin{frame}{Le prototype de \TOO{}}
+    \begin{frame}{Le prototype de \TOO{}}{L'analyse}
        	\begin{scriptsize}
        		\vfill
        		\begin{columns}
-       			\begin{column}{0.35\textwidth}
+       			\begin{column}{0.32\textwidth}
        				\textbf{Difficultés rencontrées:} 
        				\begin{itemize}
        					\item Grille limitée à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
@@ -442,10 +443,16 @@
        				\end{itemize}
        				\textbf{$\Rightarrow$ Solutions apportées dans le \SSS{}} \\
        				\vspace{0.3cm}
-       				\textbf{Analyse principale :} Gain (vs amplification, vs extraction, stabilité)\\
+       				\textbf{Analyse principale :} Gain
+       				\begin{itemize}
+           				\item vs amplification
+           				\item vs extraction
+           				\item vs temps
+           				\item stabilité
+       				\end{itemize}
        				$\Rightarrow$ Utilise les muons cosmiques (MIP).
        			\end{column}\hfill
-       			\begin{column}{0.65\textwidth}
+       			\begin{column}{0.72\textwidth}
        				\includegraphics[width=\textwidth]{./pictures/run840.png}\\
        			\end{column}
        		\end{columns}
@@ -454,18 +461,30 @@
 
     \subsection{Méthode d'analyse}
     
-    \begin{specialframe}
-        \begin{itemize}
-            \item Méthode d'analyse
-            \item Efficacité de collection
-            \item Principales incertitudes
-            \item Simulations : zones mortes
-            \item Charging up
-            \item Gain vs Amplification
-        \end{itemize}
-    \end{specialframe}
+    \begin{frame}{Le prototype de \TOO{}}{L'analyse}
+        \begin{scriptsize}
+       		\vfill
+       		\begin{columns}
+       			\begin{column}{0.32\textwidth}
+           			\textbf{Prochaines sections :}
+       				\begin{enumerate}
+                        \item Méthode d'analyse
+                        \item Efficacité de collection
+                        \item Principales incertitudes
+                        \item Simulations : zones mortes
+                        \item Charging up
+                        \item Gain vs Amplification
+                        \item Reconstruction à basse extraction
+                    \end{enumerate}
+       			\end{column}\hfill
+       			\begin{column}{0.72\textwidth}
+       				\includegraphics[width=\textwidth]{./pictures/run840.png}\\
+       			\end{column}
+       		\end{columns}
+\end{scriptsize}
+    \end{frame}
 
-    \begin{frame}{Mesure du gain avec des muons cosmiques}
+    \begin{frame}{Mesure du gain avec des muons cosmiques}{Distribution de Landau-Vavilov}
        	\begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.6\textwidth}
@@ -475,7 +494,7 @@
                     \begin{itemize}
           					\item Muon cosmique : MIP \\ $\Rightarrow$ dépôt d'énergie attendu connu
           					\item Valeur la plus probable (MPV) = \SI{1.7}{\mega\electronvolt\per\centi\meter}
-          					\item Après recombinaison avec les ions (loi de Birks) : \SI{8.26}{\femto\coulomb\per\centi\meter}
+          					\item Après recombinaison avec les ions (loi de Birks) : \textcolor{red}{\SI{8.26}{\femto\coulomb\per\centi\meter}}
           					\item $G_{eff}=\frac{MPV_0 + MPV_1}{MPV_{attendue}}$
           				\end{itemize}
                 \end{column}
@@ -486,7 +505,7 @@
 	    \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Sélection des muons}
+    \begin{frame}{Sélection des muons}{Algorithme \textit{Highway}}
         \begin{scriptsize}
         \includegraphics[width=\textwidth]{highway.png}
         \begin{columns}
@@ -530,11 +549,11 @@
 
     \subsection[Efficacités de collection]{Efficacités de collection}
 
-    \begin{frame}{Simulation : efficacités de collection}
+    \begin{frame}{Efficacités de collection}{Simulation}
 		\flushleft\includegraphics[width=\textwidth]{./pictures/coll_proba_2.png}
     \end{frame}
     
-    \begin{frame}{Outils de simulation}
+    \begin{frame}{Efficacités de collection}{Outils de simulation}
         \begin{scriptsize}
             \begin{columns}
                 \begin{column}{0.5\textwidth}
@@ -562,7 +581,7 @@
     \end{frame}
     
 
-    \begin{frame}{Simulation : efficacités de collection}
+    \begin{frame}{Efficacités de collection}{Résultats}
         \hbox{
         		$\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extr} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$
         	}\vspace{0.2cm}
@@ -596,7 +615,7 @@
         \end{columns}
     \end{frame}
     
-    \begin{frame}{Efficacités de collection : mesures à Saclay}{Argon gazeux, \SI{3.3}{\bar}, source $^{241}$Am}
+    \begin{frame}{Efficacités de collection}{Mesures à Saclay : argon gazeux, \SI{3.3}{\bar}, source $^{241}$Am}
         $\mathbf{G_{eff}=G_{LEM}\boldsymbol{\times}\boldsymbol{\epsilon}_{extr} \boldsymbol{\times}\textcolor{red}{\epsilon_{LEM}}\boldsymbol{\times} \textcolor{blue}{\epsilon_{anode}}}$\\\vspace{0.2cm}
         
         \begin{scriptsize}
@@ -629,7 +648,7 @@
         \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Efficacités de collection : mesures dans le \TOO{}}
+    \begin{frame}{Efficacités de collection}{Mesures dans le \TOO{}}
         \begin{scriptsize}
             \centering
             \includegraphics[width=0.75\textwidth]{./pictures/comp_311_eff.pdf}
@@ -653,7 +672,7 @@
         \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Efficacités de collection : impact sur la précision du gain}
+    \begin{frame}{Efficacités de collection}{Impact sur la précision du gain}
         \begin{center} \vspace{-0.5cm}\includegraphics[width=\textwidth]{CRP-metrologie.png} \end{center}
         \begin{scriptsize}
             \begin{columns}
@@ -689,7 +708,7 @@
 
   \subsection{Zones mortes}
     
-    \begin{frame}{Simulations : zones mortes}
+    \begin{frame}{Zones mortes}{Simulations}
        	\begin{scriptsize}
        		\begin{minipage}{0.38\textwidth}
        			\begin{center}
@@ -916,6 +935,12 @@
         \end{scriptsize}
     \end{frame}
     
+    \begin{frame}{Gain vs amplification}
+        \begin{scriptsize}
+            \centering \includegraphics[width=\textwidth]{./pictures/gain_vs_ampli_full.pdf} \\ 
+        \end{scriptsize}
+    \end{frame}
+    
     \section[Tests des LEMs]{Tests et mesures des détecteurs gazeux de type MPGD (LEMs) du démonstrateur de \SI{300}{\tonne}}
 
     {
@@ -936,7 +961,7 @@
                 \centering
     			\includegraphics[width=0.9\textwidth]{666_full.png}\\
     			\vfill
-    			\textbf{Nouvelle technologie : principaux défis :}\\
+    			\textbf{Nouvelle technologie -- principaux défis :}\\
     			\begin{minipage}{0.32\textwidth}
     				\begin{itemize}
     					\item \textcolor{red}{But: Gain $\geq 20$} \\(S/B $\geq 200$ pour une MIP)
@@ -958,7 +983,7 @@
     \end{frame}
     
     \begin{frame}{La mission de l'Irfu}
-        \centering \textbf{\textcolor{red}{Mission de l'Irfu}: }Production, test et caractérisation des LEMs et anodes de 2 des 4 CRPs.\\\vfill
+        \centering Production, test et caractérisation des LEMs et anodes de 2 des 4 CRPs.\\\vfill
     	\begin{scriptsize}
         	\begin{columns}
             	\begin{column}{0.5\textwidth}
@@ -1029,9 +1054,9 @@
         $\Rightarrow$ LEM prêts pour les tests hautes tensions et mesures de gain!
     \end{frame}
 
-    \subsection[Épaisseur]{Mesure de l'épaisseur des LEMs}
+    \subsection[Épaisseur]{Mesure de l'uniformité de l'épaisseur des LEMs}
 
-     \begin{frame}{Mesure de l'épaisseur des LEMs}{Méthode expérimentale}
+     \begin{frame}{Mesure de l'uniformité de l'épaisseur des LEMs}{Méthode expérimentale}
     	\begin{scriptsize}
     		\begin{columns}
     			\begin{column}{0.5\textwidth}
@@ -1057,7 +1082,7 @@
     	\end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Mesure de l'épaisseur des LEMs}{Résultats}
+    \begin{frame}{Mesure de l'uniformité de l'épaisseur des LEMs}{Résultats}
     	\begin{scriptsize}
     		\begin{columns}
     			\begin{column}{0.48\textwidth}
@@ -1110,7 +1135,7 @@
     \begin{frame}{Tenue en tension des LEMs}
     	\begin{scriptsize}
     		\begin{center}
-    			\textbf{Test des LEMs à la densité d'une DLArTPC dans une enceinte haute pression : stabilité en tension}\\
+    			\textbf{Test des LEMs à la densité d'une DLArTPC dans une enceinte haute pression.}\\
     			$G _{eff}= \mathcal{T}e^{A\textcolor{red}{\rho} d e^{-B\textcolor{red}{\rho}d/\textcolor{red}{V}}}$
     		\end{center} 
     		\begin{columns}
@@ -1236,14 +1261,11 @@
     	\begin{frame}[plain]
     	\end{frame}
     }
-    
     {
        	\setlength\pdfpagewidth{12.8cm}%
        	\setlength\pdfpageheight{9cm}%
-%       	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_bottom.png}}
+       	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_top.png}}
        	\begin{frame}[plain]
-       	%TODO
-       	 Vue de dessus
        	\end{frame}
     }
 
@@ -1251,9 +1273,8 @@
     	%the planarity obtained is within 1.2 mm over the entire plane (mail Dominique 21/09/2018)
    		\begin{columns}
    			\begin{column}{0.4\textwidth}
-   				\includegraphics[width=\textwidth]{./pictures/crp_inserting_coldbox.png}\\
-   				\includegraphics[width=\textwidth]{./pictures/in_coldbox.png}\\
-   				CERN, bâtiment 182
+   				\includegraphics[width=1.05\textwidth]{./pictures/crp_inserting_coldbox.png}\\
+   				\includegraphics[width=1.05\textwidth]{./pictures/in_coldbox.png}\\
     		\end{column}
     		\begin{column}{0.6\textwidth}
     			\begin{scriptsize}
@@ -1286,7 +1307,13 @@
 %        \includegraphics[width=\textwidth]{coldbox_current_voltage.pdf}
 %        Rajouter une slide avec tension vs time, expliquer que les résultats sont bons
 %    \end{frame}
-
+        {
+           	\setlength\pdfpagewidth{12.8cm}%
+           	\setlength\pdfpageheight{9cm}%
+           	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{CRP_installation.png}}
+           	\begin{frame}[plain]
+           	\end{frame}
+        }
        {
        	\setlength\pdfpagewidth{12.8cm}%
        	\setlength\pdfpageheight{11.5cm}%
@@ -1296,13 +1323,12 @@
        \end{frame}
 	    }
 	    {
-      	\setlength\pdfpagewidth{12.8cm}%
-      	\setlength\pdfpageheight{11.5cm}%
-%      	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./pictures/fisheye.png}}
-        \begin{frame}[plain]
-           	plus d'images
-        \end{frame}
- 	    }
+           	\setlength\pdfpagewidth{12.8cm}%
+           	\setlength\pdfpageheight{9cm}%
+           	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{top_cap.png}}
+           	\begin{frame}[plain]
+           	\end{frame}
+         }
 
     \begin{frame}{Les grandes étapes}
         \begin{columns}
@@ -1319,7 +1345,7 @@
                     \item \textbf{Mai 2019} : Fermeture
                     \item \textbf{Juin -- Juillet 2019} : Refroidissement et remplissage 
                     \item \textbf{Août 2019} : Mise en route
-                    \item \textbf{Fin août 2019} : 1ère traces à \SI{29}{\kilo\volt\per\centi\meter} ($>$\SI{4}{\tonne})
+                    \item \textbf{Fin août 2019} : \textcolor{red}{1ère traces} à \SI{29}{\kilo\volt\per\centi\meter} ($>\SI{4}{\tonne}$). Impuretés en diminution, actuellement autour de \SI{600}{ppt}.
                 \end{itemize}
             \end{column}
         \end{columns}
@@ -1359,22 +1385,23 @@
         \begin{specialframe}
             \hspace*{-1.8cm}\parbox[t]{\textwidth}{
                         \centering \begin{Huge}
-                        \vspace{2cm}
-                        \textbf{Conclusion}
-                        \vspace{1cm}
+                        \vspace{3cm}
                         \end{Huge}
+                        \textbf{Prototype de \TOO{} :}
                         \begin{itemize}
-                            \item Principe de la DLArTPC \textcolor{green}{\checkmark} à \SI{4}{\tonne}
-                            \item[$\Rightarrow$] Tenu en tension grille et LEMs : solutions apportées dans le \SSS{}
-                            \item Signal/Bruit $\sim$ 10 pour une MIP à une amplification de \SI{28}{\kilo\volt\per\centi\meter}.
-                            \item \SSS{} : début d'opération prometteur, premières traces observées
-                        \end{itemize}
+              	           	\item Fonctionnement d'une DLArTPC de \SI{4}{\tonne} : \textcolor{green}{\checkmark}
+        	               	\item Impuretés $<\SI{75}{ppt}$ : \textcolor{green}{\checkmark} (but $<\SI{100}{ppt}$)
+        	               	\item Scintillation clairement détectée --  utilisée comme déclencheur et $t_0$: \textcolor{green}{\checkmark}
+          	               	\item Signal/Bruit : $\sim$ 10 pour une MIP
+          	           	\end{itemize}
                         \vspace{0.3cm}
-                        \textbf{À suivre :}
+                        \textbf{ Démonstrateur de \SSS{} : }
                         \begin{itemize}
-                            \item Gain $> 20$?
-                            \item Pureté?
-                            \item Stabilité?
+                            \item Construction d'une DLArTPC de très grande taille : \textcolor{green}{\checkmark}
+                            \item 1ère traces : \textcolor{green}{\checkmark}
+                            \item Impuretés ?
+                            \item Gain $> 20$ ?
+                            \item Stabilité ?
                         \end{itemize}
                     }
         \end{specialframe}
@@ -1391,34 +1418,35 @@
     }
     
     {
-            \begin{specialframe}
-                \flushleft\hspace{-2cm}\includegraphics[width=0.49\textwidth]{sensitivity_CP_multi_exp.png}
-                \includegraphics[width=0.49\textwidth]{sensitivity_MO_multi_exp.png}
-            \end{specialframe}
-        }
-            
-            \begin{specialframe}
-                \begin{scriptsize}
-                    \centering \includegraphics[width=0.7\textwidth]{./pictures/scintillation.pdf}\\\vfill
-                    \centering Deux sources de lumières dans une DLArTPC:
-                    \begin{columns}
-                        \begin{column}{0.5\textwidth}
-                            Ionisation primaire :
-                            \begin{itemize}
-                                \item L'ionisation de l'argon produit une scintillation (\SI{128}{\nano\meter})
-                                \item L'argon est transparent à cette lumière
-                                \item Utilisée comme $t_0$
-                            \end{itemize}
-                        \end{column}
-                        \begin{column}{0.5\textwidth}
-                            Électroluminescence dans le gaz :
-                            \begin{itemize}
-                                \item Le passage d'électrons dans le gaz avec un champ de plus de \SI{2}{\kilo\volt\per\centi\meter} produit de l'électroluminescence
-                                \item Informe sur le gain et la pureté (N$_2$)
-                            \end{itemize}
-                        \end{column}
-                    \end{columns}
-                \end{scriptsize}
-            \end{specialframe}
+        \begin{specialframe}
+            \flushleft\hspace{-2cm}\includegraphics[width=0.49\textwidth]{sensitivity_CP_multi_exp.png}
+            \includegraphics[width=0.49\textwidth]{sensitivity_MO_multi_exp.png}
+        \end{specialframe}
+    }
+    {
+        \begin{specialframe}
+            \begin{scriptsize}
+                \centering \includegraphics[width=0.7\textwidth]{./pictures/scintillation.pdf}\\\vfill
+                \centering Deux sources de lumières dans une DLArTPC:
+                \begin{columns}
+                    \begin{column}{0.5\textwidth}
+                        Ionisation primaire :
+                        \begin{itemize}
+                            \item L'ionisation de l'argon produit une scintillation (\SI{128}{\nano\meter})
+                            \item L'argon est transparent à cette lumière
+                            \item Utilisée comme $t_0$
+                        \end{itemize}
+                    \end{column}
+                    \begin{column}{0.5\textwidth}
+                        Électroluminescence dans le gaz :
+                        \begin{itemize}
+                            \item Le passage d'électrons dans le gaz avec un champ de plus de \SI{2}{\kilo\volt\per\centi\meter} produit de l'électroluminescence
+                            \item Informe sur le gain et la pureté (N$_2$)
+                        \end{itemize}
+                    \end{column}
+                \end{columns}
+            \end{scriptsize}
+        \end{specialframe}
+    }
     
 \end{document}

@@ -38,7 +38,7 @@
 
   \section[Contexte]{Contexte physique et expérimental}
     
-    \begin{frame}{La plateforme neutrino du CERN}{ProtoDU$\nu$-SP et WA105/ProtoDU$\nu$-DP}
+    \begin{frame}{La plateforme neutrino du CERN}{ProtoDU$\nu$E--SP et WA105/ProtoDU$\nu$E--DP}
         \begin{columns}
             \begin{column}{0.5\textwidth}
                 \includegraphics[height=0.9\textheight]{./pictures/neutrino_platform.png}
@@ -47,7 +47,7 @@
                 \begin{scriptsize}
                     Stratégie Européenne de physique des particules de 2013 : implication du CERN dans la recherche mondiale en physique des neutrinos : \\ $\Rightarrow$ Extension du hall de test en faisceau du site de Prévessin.\vspace{0.4cm}
                     \begin{itemize}
-                        \item Prototypage de \textbf{Chambres à Projection Temporelle à Argon Liquide} : ProtoDU$\nu$-SP et \textcolor{red}{WA105/ProtoDU$\nu$E-DP}
+                        \item Prototypage de \textbf{Chambres à Projection Temporelle à Argon Liquide} : ProtoDU$\nu$-SP et \textcolor{red}{WA105/ProtoDU$\nu$E--DP}
                         \item Technologie choisie pour la future expérience d'oscillation des neutrinos DU$\nu$E
                         \item Tests en faisceaux et/ou en cosmiques
                     \end{itemize}
@@ -55,8 +55,6 @@
             \end{column}
         \end{columns}
     \end{frame}
-        
-    \subsection{DU$\nu$E}
         
     \begin{frame}{Oscillations des neutrinos : les grandes inconnues}{Ordre des masses et violation de CP}
         \begin{columns}
@@ -82,7 +80,7 @@
     \end{frame}
 
     \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Une expérience d'oscillation de neutrinos d'accélérateur à longue ligne de base}
-        \includegraphics[width=\textwidth]{./pictures/dune.png}\\
+        \includegraphics[width=\textwidth]{./pictures/dune.pdf}\\
         \begin{scriptsize}
         \vspace{0.4cm}
         \begin{columns}
@@ -94,12 +92,14 @@
                  \begin{itemize}
                      \item Les $\nu_{\mu}$ initiaux ont une probabilité $P(\nu_{\mu}\to\nu_e)$ d'être des $\nu_e$ à l'arrivée
                      \item \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$} vs $E$ dépend de \textcolor{red}{$\delta_{CP}$} et de l'\textcolor{red}{ordre des masses}
-                     \item 50\,\% $\nu_{\mu}$ / 50\,\% $\overline{\nu}_{\mu}$ \\ $>$ 15 ans à partir de fin 2026
+                     \item 50\,\% $\nu_{\mu}$ / 50\,\% $\overline{\nu}_{\mu}$ \\ $>$ 15 ans de prise de données à partir de fin 2026
                  \end{itemize}
             \end{column}
         \end{columns}
         \end{scriptsize}
     \end{frame}
+    
+    \subsection{DU$\nu$E}
     
     \begin{frame}{DU$\nu$E : Deep Underground Neutrino Experiment}{Sensibilités}
         \begin{scriptsize}
@@ -107,7 +107,7 @@
                 \begin{column}{0.45\textwidth}
                     \centering
 %                    \includegraphics[width=\textwidth]{oscillation_CP.png} \\ \vspace{0.2cm}
-                    \includegraphics[width=1\textwidth]{sensitivities.png}
+                    \includegraphics[width=1\textwidth]{sensitivities.pdf}
                 \end{column}\hfill
                 \begin{column}{0.55\textwidth}
                         \begin{tabular}{|l|l|}
@@ -154,10 +154,10 @@
                 \end{column}
                  \begin{column}{0.5\textwidth}
                     \begin{itemize}
-                        \item Détection de neutrino
+                        \item Détection de neutrinos
                         \item Différencier $\nu_e$ et $\nu_{\mu}$ : \\ - $\neq dE/dx$ \\ - Gap en début de gerbe $\mathcal{O}(\si{\centi\meter})$
-                        \item Neutrino de supernovæ : \\ - très rare \\ - \SI{2}{\tera\byte\per\second} de données
-                        \item Désintégration du proton $p\to \overline{\nu} + K^+$: \\ - trace de kaon $\mathcal{O}(\si{\centi\meter})$ \\ - Besoin d'un $t_0$
+                        \item Neutrinos de supernovæ : \\ - très rare \\ - \SI{2}{\tera\byte\per\second} de données
+                        \item Désintégration du proton $p\to \overline{\nu} + K^+$: \\ - trace de kaon $\mathcal{O}(\si{\centi\meter})$ \\ - Besoin d'un $t_0$ pour veto les bruits de fond
                     \end{itemize}
                     \begin{itemize}
                         \item[$\Rightarrow$] Multi-kilotonne
@@ -178,7 +178,7 @@
            			\centering
            			\includegraphics[width=\textwidth]{./pictures/SP_evt.png}\\
            			\flushleft
-           			\begin{footnotesize}\textit{Événements dans ProtoDU$\nu$E-SP (08/2018)}\\
+           			\begin{footnotesize}\textit{Événements dans ProtoDU$\nu$E--SP (08/2018)}\\
            			\textcolor{red}{Bruit $<$ \numprint{1000} $e^{-}$}\end{footnotesize}
            		\end{column}
            		\begin{column}{0.4\textwidth}
@@ -201,37 +201,13 @@
         \end{scriptsize}
     \end{frame}
 
-    \begin{frame}{Les 4 modules du détecteur lointain}
-        \includegraphics[width=\textwidth]{FD_full.png}
-%        \begin{scriptsize}
-%            \centering Le détecteur lointain\\
-%            \includegraphics[width=0.45\textwidth]{./pictures/FD.png}\\
-%            \begin{columns}
-%                \begin{column}{0.55\textwidth}
-%                    \centering Module simple phase\\
-%                    \includegraphics[width=\textwidth]{./pictures/module_SP.png}\\
-%                    \centering Module double phase (gauche) et intérieur de ProtoDU$\nu$E-DP (droite)\\
-%                    \includegraphics[width=0.9\textwidth]{./pictures/module_DP.png}
-%                \end{column}
-%                \begin{column}{0.45\textwidth}
-%                    \begin{itemize}
-%                        \item Détecteur lointain = $4\times\SI{10}{\kilo\tonne}$ modules de LArTPC
-%                        \item 2 Simple Phase (SP), 1 Double phase (DP), 1 à déterminer
-%                    \end{itemize}\vspace{0.4cm}
-%                    \textbf{Premier module (SP)} : 2024.\\
-%                    \textbf{Second module (DP)} : 2025.\\
-%                    \textbf{Premières données} : 2026\\
-%                    \textbf{Troisième module (SP)} : 2027\\\vspace{0.4cm}
-%                    $\Rightarrow$\textcolor{red}{\textbf{WA105/ProtoDU$\nu$E-DP}} est le prototype de la version \textcolor{red}{\textbf{Double Phase}}, ou DLArTPC.\\
-%                \end{column}
-%            \end{columns}
-%%            Timeline\\
-%        \end{scriptsize}
+    \begin{frame}{Les 4 modules du détecteur lointain}{Deux SP, 1 DP, 1 à déterminer}
+        \includegraphics[width=\textwidth]{FD_full.pdf}
     \end{frame}
                 
     \begin{frame}{La technologie LArTPC}{Chambres à Projection Temporelle à Argon Liquide}
        	\begin{scriptsize}
-       			\centering\includegraphics[width=0.85\textwidth]{tpcs.png}\\
+       			\centering\includegraphics[width=0.95\textwidth]{./pictures/tpcs.pdf}\\
        			\begin{columns}
        				\begin{column}{0.5\textwidth}
        					\begin{itemize}
@@ -250,40 +226,15 @@
        				\end{column}
        			\end{columns}
        			\vfill
-       			\textbf{$\Rightarrow$ Nécessite électronique bas bruit et impuretés $<\SI{100}{ppt}$ equiv. $O_2$} (ProtoDU$\nu$E--SP $\sim\SI{55}{ppt}$)
+       			\textbf{$\Rightarrow$ Électronique bas bruit et impuretés $\mathbf{<\SI{100}{ppt}}$ equiv. $\mathbf{O_2}$} (ProtoDU$\nu$E--SP : $\sim\SI{55}{ppt}$)
        	\end{scriptsize}
     \end{frame}
     
-    \subsection{WA105}
-
-%    \begin{frame}{Le projet WA105/ProtoDU$\nu$E--DP}{WA105/\texorpdfstring{ProtoDU$\nu$E}{ProtoDUNE}--DP au CERN}
-%        \begin{scriptsize}
-%            \begin{columns}
-%                \begin{column}{0.75\textwidth}
-%                    \centering
-%                    \includegraphics[width=\textwidth]{./pictures/wa105.png}
-%                \end{column}
-%                \begin{column}{0.25\textwidth}
-%                    \textbf{Démonstrateur de \SSS{} (\SI{300}{\tonne})}\\
-%                    \begin{itemize}
-%                        \item Teste DLArTPC à grande échelle
-%                        \item Directement extrapolable à DU$\nu$E
-%                        \item Mis en route en août 2019
-%                    \end{itemize}
-%                    \vspace{1cm}
-%                    \textbf{$+$ 1 premier prototype de \TOO{} (\SI{4}{\tonne})}\\
-%                    \begin{itemize}
-%                        \item Teste certains choix technologiques du \SSS{}
-%                        \item Opéré en 2017
-%                    \end{itemize}
-%                \end{column}
-%            \end{columns}
-%        \end{scriptsize}
-%    \end{frame}
+   \subsection{WA105}
 
     \begin{frame}{Le projet WA105/ProtoDU$\nu$E--DP}{Au CERN, depuis 2015}
         \centering
-       	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.png}
+       	\vspace{-0.5cm}\hspace{-0.4cm}\includegraphics[width=1.03\linewidth]{wa105_scales.pdf}
     \end{frame}
         
     \begin{frame}{Le CRP}{Plan de lecture de charge}
@@ -294,7 +245,7 @@
    			$G_{eff} = \mathcal{T}e^{A\rho d e^{-B\rho d/V}}$\\
    			\begin{scriptsize}
     			\begin{itemize}
-    				\item $\mathcal{T}$: Transparence au électrons
+    				\item $\mathcal{T}$: Transparence aux électrons
     				\item $A,B$: coefficients, dépendent du gaz
     				\item $d$: distance d'amplification (\SI{1}{\milli\meter})
     				\item $V$: tension d'amplification ($\sim$\SI{3}{\kilo\volt})
@@ -304,7 +255,7 @@
    			\vfill\centering\includegraphics[width=0.8\textwidth]{./pictures/gain_3L.pdf}\\\tiny{C. Cantini et al., 2014, doi : 10.1088/1748-0221/10/03/P03017}
    		\end{minipage}\hfill
    		\begin{minipage}{0.52\textwidth}
-   			\includegraphics[width=\textwidth]{lem_anode.png}
+   			\includegraphics[width=\textwidth]{lem_anode.pdf}
    		\end{minipage}
     \end{frame}
     
@@ -335,7 +286,7 @@
            			\includegraphics[width=\textwidth]{CU_time.png}
        			\end{column}\hfill
        			\begin{column}{0.5\textwidth}
-       				\includegraphics[width=\textwidth]{CU.png}\\\vspace{1cm}
+       				\includegraphics[width=\textwidth]{CU.pdf}\\\vspace{1cm}
            			\textbf{Rim autour des trous :}
        				\begin{itemize}
        					\item[$\Rightarrow$] Lignes de champ traversent le FR4\\
@@ -355,7 +306,7 @@
                			\includegraphics[width=\textwidth]{CU_ampli.png}
            			\end{column}\hfill
            			\begin{column}{0.5\textwidth}
-           				\includegraphics[width=\textwidth]{CU.png}\\\vspace{1cm}
+           				\includegraphics[width=\textwidth]{CU.pdf}\\\vspace{1cm}
                			\textbf{Rim autour des trous :}
            				\begin{itemize}
            					\item[$\Rightarrow$] Lignes de champ traversent le FR4\\
@@ -390,16 +341,13 @@
                     \vspace{1cm}
                     \begin{itemize}
                         \item Présentation du prototype et principaux résultats
-                        \item Analyse du gain effectif
+                        \item Analyse du gain effectif et simulations
                         \item Reconstruction de traces à bas champ d'extraction
                     \end{itemize}
                 \end{center}
             }
         \end{specialframe}
     }
-
-    
-    \subsection[Présentation]{Présentation du prototype et principaux résultats}
    
     \begin{frame}{Le prototype de \TOO{}}
    		\begin{scriptsize}
@@ -427,11 +375,13 @@
        	           	\hspace{-0.3cm}\includegraphics[width=1.2\textwidth]{./pictures/events.png}
                	\end{column}
                	\begin{column}{0.5\textwidth}
-                   	\flushright\includegraphics[width=0.95\textwidth]{./pictures/scintillation.png}
+                   	\flushright\includegraphics[width=0.95\textwidth]{./pictures/scintillation.pdf}
                	\end{column}
            	\end{columns}
        	\end{scriptsize}
    	\end{frame}
+   	
+   	\subsection{Méthode d'analyse}
 	    
     \begin{frame}{Le prototype de \TOO{}}{L'analyse}
        	\begin{scriptsize}
@@ -441,7 +391,7 @@
        				\textbf{Difficultés rencontrées:} 
        				\begin{itemize}
        					\item \textcolor{red}{Grille limitée} à \SI{5}{\kilo\volt} (nominale : \SI{7}{\kilo\volt})
-       					\item \textcolor{red}{Instabilité à haute} tension à travers les LEMs
+       					\item \textcolor{red}{Instabilité} à haute tension à travers les LEMs
        					\item \textcolor{red}{Déformation du CRP} $\sim\SI{3}{\milli\meter}$
        				\end{itemize}
        				\textbf{$\Rightarrow$ Améliorations apportées dans le \SSS{}} \\
@@ -451,7 +401,7 @@
            				\item vs champ d'amplification
            				\item vs champ d'extraction
            				\item vs temps
-           				\item stabilité
+           				\item à travers le CRP
        				\end{itemize}
        				$\Rightarrow$ Utilise les muons cosmiques (MIP)
        			\end{column}\hfill
@@ -462,7 +412,6 @@
 	    \end{scriptsize}
     \end{frame}
 
-    \subsection{Méthode d'analyse}
     
     \begin{frame}{Le prototype de \TOO{}}{L'analyse}
         \begin{scriptsize}
@@ -472,7 +421,7 @@
            			\textbf{Prochaines sections :}
        				\begin{enumerate}
                         \item Méthode d'analyse
-                        \item Efficacité de collection
+                        \item Efficacités de collection
                         \item Principales incertitudes
                         \item Simulations : zones mortes
                         \item Charging up
@@ -515,7 +464,7 @@
             \begin{column}{0.5\textwidth}
                 \begin{itemize}
                     \item Muon : trace longue, droite et nette \\ $\Rightarrow$ Coupure sur $\frac{Q_A-Q_B}{Q_A} < 0.1$
-                    \item Coupures supplémentaires : \begin{itemize}\begin{scriptsize}\item longueur $>\SI{50}{\centi\meter}$. \item \SI{2}{\degree} autour de la verticale, de l'horizontale, et des directions parallèle aux canaux des anodes.\end{scriptsize}\end{itemize}
+                    \item Coupures supplémentaires : \begin{itemize}\begin{scriptsize}\item longueur $>\SI{50}{\centi\meter}$. \item \SI{2}{\degree} autour de la verticale, de l'horizontale, et des directions parallèles aux canaux des anodes.\end{scriptsize}\end{itemize}
                 \end{itemize}
             \end{column}
             \begin{column}{0.5\textwidth}
@@ -553,7 +502,7 @@
     \subsection[Efficacités de collection]{Efficacités de collection}
 
     \begin{frame}{Efficacités de collection}{Simulation}
-		\flushleft\includegraphics[width=\textwidth]{./pictures/coll_proba_2.png}
+		\includegraphics[width=\textwidth]{./pictures/coll_proba_2.pdf}
     \end{frame}
     
     \begin{frame}{Efficacités de collection}{Outils de simulation}
@@ -644,7 +593,7 @@
             \begin{column}{0.5\textwidth}
                 \begin{itemize}
                     \item Comportement similaire, mais différences allant jusqu'à 15\,\%
-                    \item[\danger] Mesures faites après charging up, simulations faites avant charging up!
+                    \item[\textcolor{red}{\danger}] Mesures faites après charging up, simulations faites avant charging up!
                 \end{itemize}
             \end{column}
         \end{columns}
@@ -724,8 +673,8 @@
        				\item Trous des vis.
        				\item Connecteurs haute tension.
        			\end{itemize}
-       			$\Rightarrow$ Collection de charge?\\
-       			$\Rightarrow$ Résolution en énergie?\\
+       			$\Rightarrow$ Pertes de charges\\
+       			$\Rightarrow$ Dégrade la résolution en énergie\\
        		\end{minipage}
        		\begin{minipage}{0.58\textwidth}
        			\centering
@@ -738,7 +687,7 @@
        			\end{minipage}\hfill
        			\begin{minipage}{0.48\textwidth}
        				\centering
-       				\textbf{Charge collectée d'un électron \SI{3}{\giga\eV}}\\
+       				\textbf{Charge collectée d'électrons de \SI{3}{\giga\eV}}\\
        				\includegraphics[width=1.2\textwidth]{./pictures/electron.png}
        			\end{minipage}
        		\end{minipage}
@@ -760,7 +709,7 @@
                 \begin{column}{0.5\textwidth}
                     \begin{itemize}
                         \item 35\,\% inférieure à la MPV mesurée sur les autres canaux.
-                        \item Prédiction des simulations : 60\,\% inférieure
+                        \item Prédiction des simulations : 60\,\% de pertes
                     \end{itemize}
                 \end{column}
                 \begin{column}{0.5\textwidth}
@@ -777,10 +726,10 @@
     \subsection{Charging up}
     \begin{frame}{Charging up dans le \TOO{}}
         \begin{scriptsize}
-            \includegraphics[width=\textwidth]{charging_up.png}
+            \includegraphics[width=\textwidth]{charging_up.pdf}
             \begin{itemize}
-                \item Charging up $\sim$ linéaire sur les durées des runs du \TOO{}
-                \item pris en compte dans la mesure du gain
+                \item Charging up $\sim$ linéaire
+                \item Pris en compte dans la mesure du gain effectif
                 \item Persiste une fois la tension coupée
             \end{itemize}
         \end{scriptsize}
@@ -861,8 +810,8 @@
                         \item Soustraction de cette moyenne par bin de temps dans chaque canal d'ADC
                     \end{itemize} 
                     \vspace{0.3cm}
-                    \textbf{ Exemple d'un canal d'ADC avant et après suppression du bruit cohérent dans le run à \SI{30}{\kilo\volt\per\centi\meter} }: \\Le coup n'est pas vu et n'est pas ignoré pour le calcul du bruit cohérent. \\
-                     Suppression trop forte $\Rightarrow$ coup supprimé \\
+                    \textbf{ Exemple d'un canal d'ADC avant et après suppression du bruit cohérent dans le run à \SI{30}{\kilo\volt\per\centi\meter} }: \\Le coup n'est pas vu et n'est pas ignoré pour le calcul du bruit cohérent.  Suppression trop forte \\
+                    $\Rightarrow$ coup supprimé \\
                     $\Rightarrow$ Trace segmentée \\
                     $\Rightarrow$ Mauvaise reconstruction avec LArSoft \\
                 \end{column}
@@ -886,15 +835,15 @@
                 \begin{column}{0.5\textwidth}
                     \textbf{Reconstruction avec LArSoft :}
                     \begin{enumerate}
-                        \item Identification des région d'intérêts (ROI, potentiels dépôts de charges)
+                        \item Identification des régions de signal
                         \item Nombreux passages de suppression de bruit
-                        \item Identifications des coups dans chaque vue séparément et regroupements en amas 2D
-                        \item Identification des amas 3D et calcul de $dQ/ds$
+                        \item Identification des coups dans chaque vue, regroupement en amas 2D, calcul de $dQ$
+                        \item Identification des amas 3D et calcul de $ds$
                     \end{enumerate}
                 \end{column}
                 \begin{column}{0.5\textwidth}
-                    $\Rightarrow$ Si trop de coups sont ignorés, la trace est segmentée et de nombreuses petites traces sont reconstruites\\
-                    $\Rightarrow$ Mauvaise identifications des amas 3D et mauvais calcul de $ds$, et donc de $dQ/ds$
+                    Coups sont ignorés $\Rightarrow$ trace segmentée\\
+                    $\Rightarrow$ Mauvaise identifications des amas 3D et mauvais calcul de $ds$
                 \end{column}
             \end{columns}
         \end{scriptsize}
@@ -902,7 +851,7 @@
     
     \begin{frame}{Solution : transformation de Hough}
         \textbf{Paramétrisation d'une droite }: $r=x\cos(\theta)+y\sin(\theta)$\\
-        \textbf{Calcul de $\boldsymbol{r}$ pour $\boldsymbol{\theta\in[0,\pi]}$} : un point dans un repère cartésien correspond à une sinusoïdale dans l'espace de Hough\\
+        \textbf{Calcul de $\boldsymbol{r}$ pour $\boldsymbol{\theta\in[0,\pi]}$} : un point dans un repère cartésien correspond à une sinusoïde dans l'espace de Hough\\
         $\Rightarrow$ Un ensemble de points sur une même droite dans un repère cartésien correspond à un point dans l'espace de Hough\\
         $\Rightarrow$ \textcolor{red}{Trouver une droite revient à trouver un maximum local}\\\vfill
         \includegraphics[width=\textwidth]{./pictures/HT.pdf}
@@ -914,13 +863,13 @@
                 \begin{column}{0.5\textwidth}
                     \textbf{Nouvelle méthode de reconstruction :}
                     \begin{enumerate}
-                        \item Identification des ROI
+                        \item Identification des régions de signal
                         \item Un passage de suppression de bruit cohérent
-                        \item Identifications des coups
+                        \item Identification des coups
                         \item \textbf{Transformation de Hough} : \textcolor{red}{cherche des droites et non des segments}
                         \item \textbf{Seconde suppression du bruit sachant où sont les traces}, calcul de $dQ/ds$
                     \end{enumerate}
-                    $\Rightarrow$ Une trace segmentée peut être reconstruite
+                    $\Rightarrow$ Une trace segmentée peut être reconstruite comme une droite
                 \end{column}
                 \begin{column}{0.5\textwidth}
                     \centering \includegraphics[width=0.8\textwidth]{HT_real_data.pdf}
@@ -935,11 +884,11 @@
             \begin{center} \includegraphics[width=0.8\textwidth]{./pictures/cnsub_fromtrack.pdf} \end{center}
             \begin{columns}
                 \begin{column}{0.6\textwidth}
-                    Transformation de Hough\\
+                    \centering Transformation de Hough\\
                     \includegraphics[width=0.95\textwidth]{1197_dQds_0.pdf}
                 \end{column}
                 \begin{column}{0.4\textwidth}
-                    LArSoft\\
+                    \centering LArSoft\\
                     \includegraphics[width=\textwidth]{dQds_1197_0.pdf}
                 \end{column}
             \end{columns}
@@ -980,7 +929,7 @@
     \begin{frame}{Le démonstrateur de \SSS{}}
     	\begin{scriptsize}
                 \centering
-    			\vspace{-0.45cm}\includegraphics[width=\textwidth]{666_full.png}\\
+    			\vspace{-0.45cm}\includegraphics[width=\textwidth]{666_full.pdf}\\
     			\vfill
     			\textbf{Nouvelle technologie -- principaux défis :}\\
     			\vfill
@@ -1032,7 +981,7 @@
     
     \begin{frame}{Test de continuité des anodes}
         \begin{scriptsize}
-            \includegraphics[width=\textwidth]{anode_cards_2.png}
+            \includegraphics[width=\textwidth]{anode_cards_2.pdf}
             \begin{columns}
                 \begin{column}{0.65\textwidth}
                     \centering\includegraphics[width=0.75\textwidth]{anode_test_probleme.png}
@@ -1040,8 +989,10 @@
                 \begin{column}{0.45\textwidth}
                     \begin{itemize}
                         \item Réalisation de 4 cartes de test
-                        \item Testé $>$ 100 anodes
-                        \item[$\Rightarrow$] 90\,\% correctes
+                        \item 72 testées
+                        \item 64 sans problèmes
+                        \item 6 avec 1 canal du bord endommagés (zone morte)
+                        \item 2 avec 1 canal endommagé
                     \end{itemize}
                 \end{column}\hfill
             \end{columns}
@@ -1184,10 +1135,17 @@
     \end{frame}
     
     \begin{frame}{Tenue en tension des LEMs}{Résultats}
-        resultats
+        \begin{scriptsize}
+            \centering\includegraphics[width=0.8\textwidth]{LEM_results.pdf}\\
+            \begin{itemize}
+                \item 74 LEMs CFR-35 testés
+                \item Tous ont passé les tests : 48 à \SI{3.5}{\kilo\volt}, 26 $>$ \SI{3.4}{\kilo\volt} 
+            \end{itemize}
+        \end{scriptsize}
     \end{frame}
 
     \begin{frame}{Tenue en tension des LEMs}{Nouveau design}
+        \vspace{-0.4cm}
    		\begin{columns}
     		\begin{column}{0.5\textwidth}
     			\begin{center}
@@ -1417,7 +1375,7 @@
                     -- couche résistive sur la face haute (proto près)\\
                     -- ou couche isolante sur les bords (en fabrication)
             \end{itemize}
-            Choix final pour DU$\nu$E $\sim$ 2022
+            Choix final pour DU$\nu$E : $\sim$ 2022
         \end{scriptsize}
     \end{frame}
 
@@ -1433,7 +1391,7 @@
                         \begin{itemize}
               	           	\item Simulations de la dérive des électrons à travers le CRP afin d'étudier le gain effectif
         	               	\item Étude du gain et comparaison aux résultats du prototype de \SI{3}{\liter}
-          	               	\item Développement d'un logiciel de reconstruction de traces à basse extraction afin d'avoir des mesures à \SI{30}{\kilo\volt\per\centi\meter} -- \SI{31}{\kilo\volt\per\centi\meter}
+          	               	\item Développement d'un logiciel de reconstruction de traces à basse extraction afin d'avoir des mesures à \SI{30}{\kilo\volt\per\centi\meter} et \SI{31}{\kilo\volt\per\centi\meter}
           	           	\end{itemize}
                         \vspace{0.3cm}
                         \textbf{ Démonstrateur de \SSS{} : }
@@ -1465,10 +1423,10 @@
            \hspace{-2cm}\begin{tabular}{l|l|l|l|l|}
            \cline{2-5}
             & \multicolumn{1}{c|}{CP} & \multicolumn{1}{c|}{MO} & \multicolumn{1}{c|}{L} & \multicolumn{1}{c|}{Maxima} \\ \hline
-           \multicolumn{1}{|l|}{DU$\nu$E} & \begin{tabular}[c]{@{}l@{}}+ \\ ($5\sigma$ $50\,\%$ $\delta_{CP}$, \SI{10}{\year})\end{tabular} & \begin{tabular}[c]{@{}l@{}}+++ \\ ($5\sigma$ $\forall\delta_{CP}$, \SI{2}{\year})\end{tabular} & \SI{1300}{\kilo\meter} & 2 \\
+           \multicolumn{1}{|l|}{DU$\nu$E} & \begin{tabular}[c]{@{}l@{}}+ \\ ($5\sigma$ $50\,\%$ $\delta_{CP}$, \SI{10}{\year})\end{tabular} & \begin{tabular}[c]{@{}l@{}}+++ \\ ($5\sigma$ $\forall\delta_{CP}$, \SI{2}{\year})\end{tabular} & \SI{1300}{\kilo\meter} & 1 et 2 \\
            \multicolumn{1}{|l|}{T2HK} & ++ &  & \SI{295}{\kilo\meter} & 1 \\
-           \multicolumn{1}{|l|}{T2HKK} & +++ & + & \SI{295}{\kilo\meter} et  \SI{1100}{\kilo\meter} & 2 \\
-           \multicolumn{1}{|l|}{ESS$\nu$SB} & \begin{tabular}[c]{@{}l@{}}+++\\ ($5\sigma$ $60\,\%$ $\delta_{CP}$, \SI{10}{\year})\end{tabular} &  & \SI{540}{\kilo\meter} & 2nd \\ \hline
+           \multicolumn{1}{|l|}{T2HKK} & +++ & + & \SI{295}{\kilo\meter} et  \SI{1100}{\kilo\meter} & 1 et 2 \\
+           \multicolumn{1}{|l|}{ESS$\nu$SB} & \begin{tabular}[c]{@{}l@{}}+++\\ ($5\sigma$ $60\,\%$ $\delta_{CP}$, \SI{10}{\year})\end{tabular} &  & \SI{540}{\kilo\meter} & 2 \\ \hline
            \end{tabular}
             \begin{scriptsize}
                 \flushleft\textbf{Note :} JUNO (réacteur longue ligne de base) : MO $4\sigma$, \SI{6}{\year} (2017)

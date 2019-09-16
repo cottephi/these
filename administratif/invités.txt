@@ -21,7 +21,6 @@ Maman: ok
 Mamie: ok
 Bernard: ok
 Annette: ok
-Marine: ok
 Cloé G-C: ok
 Corentin: ok
 Guillaume_D: ok
@@ -29,10 +28,6 @@ Toinou : ok
 Jimmy : ok
 Adrien: ok
 Kiki : ok
-
-Joey: ?
-Alan: ?
-Alain V: ?
 
 Philippe: non
 Marina: Non

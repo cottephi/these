@@ -1,6 +1,6 @@
 \include{head}
 
-\tracksfalse
+\trackstrue
 
 \begin{document}
 
@@ -92,7 +92,7 @@
                  \begin{itemize}
                      \item Les $\nu_{\mu}$ initiaux ont une probabilité $P(\nu_{\mu}\to\nu_e)$ d'être des $\nu_e$ à l'arrivée
                      \item \textcolor{red}{$P(\nu_{\mu}\to\nu_e)$} vs $E$ dépend de \textcolor{red}{$\delta_{CP}$} et de l'\textcolor{red}{ordre des masses}
-                     \item 50\,\% $\nu_{\mu}$ / 50\,\% $\overline{\nu}_{\mu}$ \\ $>$ 15 ans de prise de données à partir de fin 2026
+                     \item 50\,\% $\nu_{\mu}$ / 50\,\% $\overline{\nu}_{\mu}$ \\ $>$ 15 ans de prise de données à partir de 2028(?)
                  \end{itemize}
             \end{column}
         \end{columns}
@@ -543,7 +543,7 @@
                 \includegraphics[width=\textwidth]{./pictures/eff_lem_alone.pdf}
             \end{column}\hfill
             \begin{column}{0.5\textwidth}
-                \centering $\textcolor{blue}{\epsilon_{Anode}}$
+                \centering $\textcolor{blue}{\epsilon_{anode}}$
                 \includegraphics[width=\textwidth]{eff_anode.pdf}
             \end{column}
         \end{columns}
@@ -578,7 +578,7 @@
                 \includegraphics[width=\textwidth]{./pictures/eff_lem_gamelle.pdf}
             \end{column}\hfill
             \begin{column}{0.5\textwidth}
-                \centering $\textcolor{blue}{\epsilon_{Anode}}$
+                \centering $\textcolor{blue}{\epsilon_{anode}}$
                 \includegraphics[width=\textwidth]{./pictures/eff_anode_gamelle.pdf}
             \end{column}
         \end{columns}
@@ -752,7 +752,7 @@
 %                    Petite différence avec \SI{3}{\liter} :
 %                    \begin{itemize}
 %                        \item Différences d'épaisseur? 
-%                        \item $\textcolor{blue}{\epsilon_{Anode}}$?
+%                        \item $\textcolor{blue}{\epsilon_{anode}}$?
 %                    \end{itemize}
 %                \end{column}
 %            \end{columns}
@@ -906,7 +906,7 @@
            	\item Fonctionnement d'une DLArTPC de \SI{4}{\tonne} : \textcolor{green}{\checkmark}
             \item Gain vs champ d'amplification en bon accord avec les résultats précédents : \textcolor{green}{\checkmark}
          	\item Impuretés $<\SI{75}{ppt}$ equiv. $O_2$ : \textcolor{green}{\checkmark} (but $<\SI{100}{ppt}$)
-         	\item Scintillation clairement détectée --  utilisée comme déclencheur et $t_0$: \textcolor{green}{\checkmark}
+         	\item Scintillation : S1 et S2 clairement détectés --  S1 utilisé comme déclencheur et $t_0$: \textcolor{green}{\checkmark}
 %           	\item Signal/Bruit : $\sim$ 10 pour une MIP
        	\end{itemize}
    	\end{frame}
@@ -1330,7 +1330,7 @@
                         \item \textbf{Mai 2019} : Fermeture du cryostat
                         \item \textbf{Juin -- Juillet 2019} : Refroidissement et remplissage 
                         \item \textbf{Août 2019} : Mise en route
-                        \item \textbf{Fin août 2019} : \textcolor{red}{1ère traces}. Impuretés en diminution, actuellement autour de \SI{500}{ppt} equiv. $O_2$
+                        \item \textbf{Fin août 2019} : \textcolor{red}{1ère traces} observées sur \SI{18}{\meter\squared}. LAr en phase de purification.
                     \end{itemize}
                 \end{scriptsize}
             \end{column}
@@ -1348,7 +1348,7 @@
     
     {\iftracks
        	\setlength\pdfpagewidth{12.8cm}%
-       	\setlength\pdfpageheight{7cm}%
+       	\setlength\pdfpageheight{6.95cm}%
        	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{tracks_666.png}}
        	\begin{frame}[plain]
        	\end{frame}
@@ -1358,24 +1358,22 @@
         \begin{scriptsize}
             \textbf{Résultats} :
             \begin{itemize}
-                \item Construction d'une DLArTPC de très grande taille : \textcolor{green}{\checkmark}
-                \item Mise en route : \textcolor{green}{\checkmark}
-                \item impuretés en constante diminution
-                \item 1ère traces
-                    \iftracks vues à \SI{29}{\kilo\volt\per\centi\meter} avec une surface de \SI{18}{\meter\squared}  : \textcolor{green}{\checkmark} \else : Communiqué de presse à venir \fi
+                \item Construction d'une DLArTPC de très grande taille (\SI{705}{\tonne}) : \textcolor{green}{\checkmark} \\ $\to$ Irfu responsable de la production et caractérisation des 72 LEMs--anodes. 
+                \item Mise en service en cours
+                \item 1ère traces cosmiques observées, communiqué de presse à venir très bientôt
             \end{itemize}\vspace{0.2cm}\pause
             \textbf{Perspectives} :
             \begin{itemize}
                 \item Étude des performances : gain, stabilité, pureté
-                \item Étude de l'impact du retour des ions vers la phase liquide
-                \item Possibilité d'avoir du faisceau après le \textit{Long Shutdown}? \\
+                \item Étude de la charge d'espace et du retour des ions
+                \item Possibilité d'avoir du faisceau après le \textit{Long Shutdown} \\
                 -- Demande faite au SPSC\\
                 -- Besoin de 4 CRPs complets
-                \item CERN : nouveaux designs de LEMs pour maximiser la surface active ($>95\,\%$) \\
-                    -- couche résistive sur la face haute (proto près)\\
-                    -- ou couche isolante sur les bords (en fabrication)
+                \item Irfu/CERN : nouveaux designs de LEMs pour maximiser la surface active ($>95\,\%$) et la tenu en haute tension\\
+                    -- LEM résistif (proto en cours de caractérisation)\\
+                    -- Couche isolante sur les zones mortes (proto en fabrication)
             \end{itemize}
-            Choix final pour DU$\nu$E : $\sim$ 2022
+            Choix final pour DU$\nu$E : $\sim$ 2021
         \end{scriptsize}
     \end{frame}
 

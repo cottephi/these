@@ -1,0 +1,41 @@
+newlines = []
+with open("Chapitre_1/Chapitre_1.tex") as chap1:
+  lines = chap1.readlines()
+  for line in lines:
+    if not "\\cite" in line:
+      newlines.append(line)  # If the current line does not contain citations,
+                             # do not modify it
+      continue
+    else:
+      newline = ""  # will contain the modified line. Actually contains several
+                    # lines separated by \n
+      last_six_char = ""  # Used to test whether \cite{ just appeared
+      inside = False  # Set to True when \cite{ is encoutered
+      for c in line:
+        if inside:  # We are insinde a citation. newline should contain \n\cite{
+          newline += c  # recored current char
+          if c == "}":  # End of citation. skip line, add to newline,
+                        # set inside to False
+            newline += "\n"
+            inside = False
+        else:  # If not inside
+          if len(last_six_char) < 6:  # If there are less than 6 previous char,
+                                      # we can not be in a citation. Record the
+                                      # current char in last_six_char
+            last_six_char += c
+          else:  # update last_six_char and save the char that is to be
+                 # discarded in newline
+            newline += last_six_char[0]
+            last_six_char = last_six_char[1:] + c
+          if last_six_char == "\\cite{":  # If we just started a citation,
+                                          # set inside to True. Break the
+                                          # current line and append \cite{.
+                                          # Reinitialise last_six_char.
+            inside = True
+            newline += "\n" + last_six_char
+            last_six_char = ""
+      newline += last_six_char
+      newlines.append(newline)
+with open("Chapitre_1/Chapitre_1_modified.tex","w") as chap1:
+  for line in newlines:
+    chap1.write(line)

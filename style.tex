@@ -17,7 +17,7 @@
 \maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
 
 \makeatletter
-%\patchcmd{\@fancyhead}{\rlap}{\color{pheniics_purple}\rlap}{}{}
+\patchcmd{\@fancyhead}{\rlap}{\color{pheniics_purple}\rlap}{}{}
 \patchcmd{\headrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
 \patchcmd{\@fancyfoot}{\rlap}{\color{pheniics_purple}\rlap}{}{}
 \patchcmd{\footrule}{\hrule}{\color{pheniics_purple}\hrule}{}{}
@@ -38,6 +38,4 @@
     \addcontentsline{toc}{chapter}{Annexes}
 }
 
-%tcolorbox style
-%\tcbset{colback=green!10!white}
 \tcbsetforeverylayer{colframe=pheniics_purple}
